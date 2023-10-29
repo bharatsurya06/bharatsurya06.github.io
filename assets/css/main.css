@@ -21,7 +21,7 @@
 :root {
   --background-color: #ffffff;
   --background-color-rgb: 255, 255, 255;
-  --default-color: #212529;
+  --default-color: #ffffff;
   --default-color-rgb: 33, 37, 41;
   --primary-color: #4a45e8;
   --primary-color-rgb: 232, 69, 69;
@@ -715,9 +715,9 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--default-color-rgb), 0.5);
+  border: 1px solid rgba(var(--default-color), 0.5);
   font-size: 16px;
-  color: rgba(var(--default-color-rgb), 0.5);
+  color: rgba(var(--default-color), 0.5);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -762,7 +762,7 @@ section {
 }
 
 .footer .footer-links ul a {
-  color: rgba(var(--default-color-rgb), 0.8);
+  color: rgba(var(--default-color), 0.8);
   display: inline-block;
   line-height: 1;
 }
