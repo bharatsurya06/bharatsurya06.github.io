@@ -34,11 +34,11 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: #3a3939;
-  --nav-hover-color: #e84545;
+  --nav-hover-color:  #042d8e;
   --nav-dropdown-color: #3a3939;
-  --nav-dropdown-hover-color: #e84545;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-hover-color:  #042d8e;
+  --nav-dropdown-background-color: #042d8e;
+  --nav-mobile-background-color: #042d8e;
 }
 
 /* Smooth scroll */
