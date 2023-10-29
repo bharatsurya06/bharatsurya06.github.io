@@ -24,7 +24,7 @@
   --default-color: #ffffff;
   --default-color-rgb: 33, 37, 41;
   --primary-color: #042d8e;
-  --primary-color-rgb: 232, 69, 69;
+  /* --primary-color-rgb: 232, 69, 69; */
   --secondary-color: #ffffff;
   --secondary-color-rgb: 150, 53, 58;
   --contrast-color: #ffffff;
@@ -208,7 +208,7 @@ section {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
-  background: rgba(var(--primary-color-rgb), 0.85);
+  background: rgba(var(--primary-color), 0.85);
 }
 
 @media (max-width: 1200px) {
@@ -481,7 +481,7 @@ section {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: rgba(var(--primary-color-rgb), 0.1);
+    background-color: rgba(var(--primary-color), 0.1);
   }
 
   .navmenu a i:hover,
@@ -576,7 +576,7 @@ section {
 }
 
 .scroll-top:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.8);
+  background-color: rgba(var(--primary-color), 0.8);
   color: #ffffff;
 }
 
@@ -875,7 +875,7 @@ section {
 }
 
 .hero .sign-up-form input[type=submit]:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.9);
+  background-color: rgba(var(--primary-color), 0.9);
 }
 
 @media (max-width: 768px) {
@@ -931,7 +931,7 @@ section {
   font-weight: 500;
   line-height: 19px;
   padding: 10px 20px;
-  background: rgba(var(--primary-color-rgb), 0.05);
+  background: rgba(var(--primary-color), 0.05);
   color: var(--primary-color);
   border-radius: 7px;
   display: inline-block;
@@ -968,7 +968,7 @@ section {
 }
 
 .about .content .read-more:hover {
-  background: rgba(var(--primary-color-rgb), 0.8);
+  background: rgba(var(--primary-color), 0.8);
   padding-right: 19px;
 }
 
@@ -995,7 +995,7 @@ section {
   font-size: 32px;
   line-height: 0;
   transition: all 0.4s ease-out 0s;
-  background-color: rgba(var(--primary-color-rgb), 0.05);
+  background-color: rgba(var(--primary-color), 0.05);
   color: var(--primary-color);
 }
 
@@ -1132,7 +1132,7 @@ section {
   content: "";
   height: 30px;
   width: 30px;
-  background: rgba(var(--primary-color-rgb), 0.3);
+  background: rgba(var(--primary-color), 0.3);
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
@@ -1188,7 +1188,7 @@ section {
 }
 
 .features .features-item .btn-get-started:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.9);
+  background-color: rgba(var(--primary-color), 0.9);
 }
 
 .features .features-item ul {
@@ -1361,7 +1361,7 @@ section {
 
 /* Pricing Section - Home Page
 ------------------------------*/
-.pricing {
+/* .pricing {
   padding: 60px 0 120px 0;
 }
 
@@ -1410,7 +1410,7 @@ section {
   height: 86px;
   width: 86px;
   border-radius: 50%;
-  background: rgba(var(--primary-color-rgb), 0.2);
+  background: rgba(var(--primary-color), 0.2);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1421,7 +1421,7 @@ section {
   height: 102px;
   width: 102px;
   border-radius: 50%;
-  background: rgba(var(--primary-color-rgb), 0.1);
+  background: rgba(var(--primary-color), 0.1);
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-2px);
 }
@@ -1514,11 +1514,11 @@ section {
   .pricing .featured {
     transform: scale(1.15);
   }
-}
+} */
 
 /* Faq Section - Home Page
 ------------------------------*/
-.faq .content h3 {
+/* .faq .content h3 {
   font-weight: 400;
   font-size: 34px;
 }
@@ -1601,11 +1601,11 @@ section {
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
   color: var(--primary-color);
-}
+} */
 
 /* Team Section - Home Page
 ------------------------------*/
-.team {
+/* .team {
   --background-color: #f4f4f4;
 }
 
@@ -1685,11 +1685,11 @@ section {
   padding-bottom: 0;
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /* Call-to-action Section - Home Page
 ------------------------------*/
-.call-to-action {
+/* .call-to-action {
   --default-color: #ffffff;
   --background-color: #000000;
   --background-color-rgb: 0, 0, 0;
@@ -1746,16 +1746,16 @@ section {
   margin: 10px;
   border: 2px solid var(--contrast-color);
   color: var(--contrast-color);
-}
+} */
 
-.call-to-action .cta-btn:hover {
+/* .call-to-action .cta-btn:hover {
   background: var(--primary-color);
   border: 2px solid var(--primary-color);
-}
+} */
 
 /* Testimonials Section - Home Page
 ------------------------------*/
-.testimonials {
+/* .testimonials {
   --background-color: #f4f4f4;
 }
 
@@ -1868,7 +1868,7 @@ section {
   .testimonials .testimonial-item {
     margin: 15px;
   }
-}
+} */
 
 /* Recent-posts Section - Home Page
 ------------------------------*/
@@ -2037,7 +2037,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(var(--primary-color-rgb), 0.8);
+  background: rgba(var(--primary-color), 0.8);
 }
 
 @keyframes animate-loading {
@@ -2143,7 +2143,7 @@ section {
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
-  background: rgba(var(--primary-color-rgb), 0.8);
+  background: rgba(var(--primary-color), 0.8);
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -2186,7 +2186,7 @@ section {
 
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: rgba(var(--primary-color-rgb), 0.5);
+  color: rgba(var(--primary-color), 0.5);
   font-size: 26px;
   line-height: 0;
 }
@@ -2263,7 +2263,7 @@ section {
 }
 
 .service-details .services-list a:hover {
-  background-color: rgba(var(--primary-color-rgb), 0.05);
+  background-color: rgba(var(--primary-color), 0.05);
   color: var(--primary-color);
 }
 
@@ -2644,7 +2644,7 @@ section {
 }
 
 .blog-details .sidebar .search-form form button:hover {
-  background: rgba(var(--primary-color-rgb), 0.8);
+  background: rgba(var(--primary-color), 0.8);
 }
 
 .blog-details .sidebar .categories ul {
@@ -2886,5 +2886,5 @@ section {
 
 .blog-details .comments .reply-form .btn-primary:hover {
   color: var(--contrast-color);
-  background-color: rgba(var(--primary-color-rgb), 0.8);
+  background-color: rgba(var(--primary-color), 0.8);
 }
