@@ -230,10 +230,10 @@ section {
 /* Global Header on page scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #ffffff;
+  --background-color: #000000;
   --secondary-color: #444444;
   --nav-color: #444444;
-  --nav-hover-color: #e84545;
+  --nav-hover-color:#042d8e;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
