@@ -33,7 +33,7 @@
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #ffffff;
+  --nav-color: #000000;
   --nav-hover-color:  #042d8e;
   --nav-dropdown-color: #ffffff;
   --nav-dropdown-hover-color:  #042d8e;
