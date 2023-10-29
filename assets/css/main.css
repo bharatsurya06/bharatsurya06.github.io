@@ -30,6 +30,7 @@
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
   --page-text-color: #000000;
+  --blue-color:#042d8e;
 }
 
 /* Nav Menu Colors */
@@ -262,8 +263,8 @@ section {
 ------------------------------*/
 .index-page.scrolled .header {
   --background-color: #000000;
-  --secondary-color: #444444;
-  --nav-color: #444444;
+  --secondary-color: #ffffff;
+  --nav-color: #ffffff;
   --nav-hover-color: #042d8e;
 }
 
@@ -383,7 +384,7 @@ section {
     margin: 0;
     padding: 10px;
     background: var(--nav-dropdown-background-color);
-    box-shadow: 0px 0px 20px rgba(var(--default-color-rgb), 0.1);
+    box-shadow: 0px 0px 20px rgba(var(--blue-color), 0.1);
     display: block;
     position: absolute;
     top: 130%;
