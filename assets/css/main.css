@@ -30,7 +30,8 @@
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
   --page-text-color: #000000;
-  --blue-color:#042d8e;
+  --blue-color:#969ba6;
+  --text-color-black: #000000;
 }
 
 /* Nav Menu Colors */
@@ -1340,7 +1341,7 @@ section {
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: rgba(var(--default-color-rgb), 0.7);
+  color: var(--text-color-black);
   transition: 0.3s;
   line-height: 0;
 }
