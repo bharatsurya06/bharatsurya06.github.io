@@ -1425,7 +1425,7 @@ section {
   font-size: 16px;
 }
 .CVbutton:hover{
-  color: var(--secondary-color);
+  color: red;
 }
 /* unvisited link */
 a-link:link {
