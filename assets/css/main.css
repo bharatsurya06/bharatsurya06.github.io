@@ -126,7 +126,7 @@ section {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
 }
 
 .page-title .heading {
