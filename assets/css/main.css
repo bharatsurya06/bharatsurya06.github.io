@@ -1413,6 +1413,37 @@ section {
   margin: 0 10px 0 0;
 }
 
+
+/* unvisited link */
+a-link:link {
+  color: rgb(255, 255, 255);
+}
+
+/* visited link */
+a-link:visited {
+  color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+a-link:hover {
+  color: rgb(7, 53, 189);
+}
+
+/* selected link */
+a-link:active {
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
 .portfolio-details .portfolio-description .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
