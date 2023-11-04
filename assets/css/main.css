@@ -1425,6 +1425,7 @@ section {
   font-size: 16px;
 }
 .CVbutton:hover{
+  background:black;
   color: red;
 }
 /* unvisited link */
