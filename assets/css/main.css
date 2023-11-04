@@ -65,7 +65,7 @@ a {
 }
 
 a:hover {
-  color: rgba(var(--primary-color));
+  color: var(--primary-color);
   text-decoration: none;
 }
 
