@@ -1414,7 +1414,7 @@ section {
 }
 
 .CVbutton {
-  background-color: #050389; /* Green */
+  background-color:rgb(170, 160, 91); /* Green */
   border: none;
   border-radius : 50px;
   color: white;
