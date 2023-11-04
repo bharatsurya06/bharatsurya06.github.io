@@ -1426,7 +1426,7 @@ section {
 }
 .CVbutton:hover{
   background:rgb(170, 160, 91);
-  color: red;
+  color:var(--primary-color);
 }
 /* unvisited link */
 a-link:link {
