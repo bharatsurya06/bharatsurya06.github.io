@@ -1399,7 +1399,7 @@ section {
 
 .img-about 
 {
-  width: 90px;
+  width: 360px;
   border-radius: 50px;
   border: 6px solid var(--background-color);
   float: left;
