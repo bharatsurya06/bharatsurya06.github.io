@@ -771,7 +771,7 @@ section {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--primary-color);
+  color: red ;
 }
 
 .footer .footer-contact p {
