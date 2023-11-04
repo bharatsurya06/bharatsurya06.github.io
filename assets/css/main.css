@@ -59,7 +59,7 @@ body {
 }
 
 a {
-  color: var( --background-color);
+  color: var( --primary-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -726,7 +726,7 @@ section {
 }
 
 .footer .social-links a:hover {
-  color: var(--primary-color);
+  color: rgb(170, 160, 91);
   border-color: var(--primary-color);
 }
 
@@ -771,7 +771,7 @@ section {
 }
 
 .footer .footer-links ul a:hover {
-  color: red ;
+  color:rgb(170, 160, 91) ;
 }
 
 .footer .footer-contact p {
@@ -1414,7 +1414,7 @@ section {
 }
 
 .CVbutton {
-  background-color:rgb(170, 160, 91); /* Green */
+  background-color:var(--primary-color); /* Green */
   border: none;
   border-radius : 50px;
   color: white;
@@ -1425,7 +1425,7 @@ section {
   font-size: 16px;
 }
 .CVbutton:hover{
-  background:black;
+  background:rgb(170, 160, 91);
   color: red;
 }
 /* unvisited link */
