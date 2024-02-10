@@ -233,10 +233,10 @@ section {
 ------------------------------*/
 .scrolled .header {
   --background-color: #380c0c;
-  --secondary-color: #444444;
-  --nav-color: #444444;
+  --secondary-color: #ffffff;
+  --nav-color: #ffffff;
   --nav-hover-color:#042d8e;
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 10px rgb(0, 0, 0);
 }
 
 /* Global Scroll Margin Top
