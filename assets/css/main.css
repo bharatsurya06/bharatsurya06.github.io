@@ -232,7 +232,7 @@ section {
 /* Global Header on page scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #000000;
+  --background-color: #380c0cb8;
   --secondary-color: #444444;
   --nav-color: #444444;
   --nav-hover-color:#042d8e;
