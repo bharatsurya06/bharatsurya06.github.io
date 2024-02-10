@@ -726,7 +726,7 @@ section {
 }
 
 .footer .social-links a:hover {
-  color: rgb(170, 160, 91);
+  color: #4190b7;
   border-color: var(--primary-color);
 }
 
@@ -782,7 +782,7 @@ section {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: var(--primary-color);
+  background-color: var(--default-color);
 }
 
 .footer .copyright p {
