@@ -23,7 +23,7 @@
   --background-color-rgb: 255, 255, 255;
   --default-color: #ffffff;
   --default-color-rgb: 33, 37, 41;
-  --primary-color: #380c0cb8;
+  --primary-color: #380c0c;
   /* --primary-color-rgb: 232, 69, 69; */
   --secondary-color: #ffffff;
   --secondary-color-rgb: 150, 53, 58;
@@ -232,7 +232,7 @@ section {
 /* Global Header on page scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #380c0cb8;
+  --background-color: #380c0c;
   --secondary-color: #444444;
   --nav-color: #444444;
   --nav-hover-color:#042d8e;
@@ -263,7 +263,7 @@ section {
 /* Home Page Custom Header on page scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #380c0cb8;
+  --background-color:var(--primary-color);
   --secondary-color: #ffffff;
   --nav-color: #ffffff;
   --nav-hover-color: #4190b7;
