@@ -24,6 +24,7 @@
   --default-color: #ffffff;
   --default-color-rgb: 33, 37, 41;
   --primary-color: #380c0c;
+  --hover-color-all:#4190b7;
   /* --primary-color-rgb: 232, 69, 69; */
   --secondary-color: #ffffff;
   --secondary-color-rgb: 150, 53, 58;
@@ -235,7 +236,7 @@ section {
   --background-color: #380c0c;
   --secondary-color: #ffffff;
   --nav-color: #ffffff;
-  --nav-hover-color:#042d8e;
+  --nav-hover-color: var( --hover-color-all);
   box-shadow: 0 0 30px 10px rgb(0, 0, 0);
 }
 
