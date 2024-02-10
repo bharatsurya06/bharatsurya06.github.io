@@ -263,7 +263,7 @@ section {
 /* Home Page Custom Header on page scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #000000;
+  --background-color: #380c0cb8;
   --secondary-color: #ffffff;
   --nav-color: #ffffff;
   --nav-hover-color: #4190b7;
@@ -792,6 +792,7 @@ section {
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
+  color: rgba(var(--default-color), 0.8);
 }
 
 /*--------------------------------------------------------------
