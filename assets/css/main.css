@@ -782,7 +782,7 @@ section {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: var(--default-color);
+  background-color: var(--primary-color);
 }
 
 .footer .copyright p {
