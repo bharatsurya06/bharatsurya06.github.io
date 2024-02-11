@@ -1524,7 +1524,7 @@ a-link:active {
 
 .blog .posts-list .post-category {
   font-size: 16px;
-  color: rgba(var(--default-color-rgb), 0.6);
+  color: rgba(var(--default-color), 0.6);
   margin-bottom: 10px;
 }
 
@@ -1541,7 +1541,7 @@ a-link:active {
 }
 
 .blog .posts-list .title a:hover {
-  color: var(--primary-color);
+  color: var(--hover-color-all);
 }
 
 .blog .posts-list .post-author-img {
@@ -1557,13 +1557,13 @@ a-link:active {
 
 .blog .posts-list .post-date {
   font-size: 14px;
-  color: rgba(var(--default-color-rgb), 0.6);
+  color: rgba(var(--default-color), 0.6);
   margin-bottom: 0;
 }
 
 .blog .pagination {
   margin-top: 30px;
-  color: rgba(var(--default-color-rgb), 0.6);
+  color: rgba(var(--default-color), 0.6);
 }
 
 .blog .pagination ul {
@@ -1579,7 +1579,7 @@ a-link:active {
 }
 
 .blog .pagination li a {
-  color: rgba(var(--default-color-rgb), 0.6);
+  color: rgba(var(--default-color), 0.6);
   padding: 7px 16px;
   display: flex;
   align-items: center;
@@ -1589,7 +1589,7 @@ a-link:active {
 .blog .pagination li.active,
 .blog .pagination li:hover {
   background: var(--primary-color);
-  color: var(--contrast-color);
+  color: var(--hover-color-all);
 }
 
 .blog .pagination li.active a,
