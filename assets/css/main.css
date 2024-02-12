@@ -42,7 +42,7 @@
   --nav-dropdown-color: #ffffff;
   --nav-dropdown-hover-color:  #4190b7;
   --nav-dropdown-background-color: #000000;
-  --nav-mobile-background-color: #042d8e;
+  --nav-mobile-background-color: #380c0c;
 }
 
 /* Smooth scroll */
@@ -1633,7 +1633,7 @@ a-link:active {
 
 .blog-details .content blockquote {
   overflow: hidden;
-  background-color: rgba(var(--default-color-rgb), 0.05);
+  background-color: var(--primary-color);
   padding: 60px;
   position: relative;
   text-align: center;
