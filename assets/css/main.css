@@ -1641,7 +1641,7 @@ a-link:active {
 }
 
 .blog-details .content blockquote p {
-  color: var(--default-color);
+  color: var(--hover-color-all);
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
