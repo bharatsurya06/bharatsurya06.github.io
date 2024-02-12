@@ -1603,7 +1603,8 @@ a-link:active {
 /* Blog-details Section - Blog Details Page
 ------------------------------*/
 .blog-details .article {
-  box-shadow: 0 4px 16px rgba(var(--hover-color-all), 0.1);
+  box-shadow: var(--hover-color-all);
+  /* box-shadow: 0 4px 16px rgba(var(--hover-color-all), 0.1); */
   padding: 30px;
 }
 
@@ -1613,7 +1614,7 @@ a-link:active {
 }
 
 .blog-details .title {
-  color: var(--secondary-color);
+  color: var(--hover-color-all);
   font-size: 28px;
   font-weight: 700;
   padding: 0;
