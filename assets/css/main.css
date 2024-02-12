@@ -1526,7 +1526,7 @@ a-link:active {
   font-size: 16px;
   color: rgba(var(--default-color), 0.6);
   margin-bottom: 10px;
-  background-color: rgba(var(--primary-color0), 0.6);
+  background-color: rgba(var(--primary-color), 0.6);
 }
 
 .blog .posts-list .title {
