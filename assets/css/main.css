@@ -1526,6 +1526,7 @@ a-link:active {
   font-size: 16px;
   color: rgba(var(--default-color), 0.6);
   margin-bottom: 10px;
+  background-color: rgba(var(--primary-color0), 0.6);
 }
 
 .blog .posts-list .title {
@@ -1533,11 +1534,13 @@ a-link:active {
   font-weight: 700;
   padding: 0;
   margin: 0 0 20px 0;
+  
 }
 
 .blog .posts-list .title a {
   color: var(--secondary-color);
   transition: 0.3s;
+  background-color: rgba(var(--primary-color0), 0.6);
 }
 
 .blog .posts-list .title a:hover {
