@@ -1603,7 +1603,7 @@ a-link:active {
 /* Blog-details Section - Blog Details Page
 ------------------------------*/
 .blog-details .article {
-  box-shadow: 0 4px 16px rgba(var(--default-color-rgb), 0.1);
+  box-shadow: 0 4px 16px rgba(var(--hover-color-all), 0.1);
   padding: 30px;
 }
 
