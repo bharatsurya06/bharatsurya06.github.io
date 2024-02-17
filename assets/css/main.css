@@ -170,7 +170,7 @@ section {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #000000;
+  
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
