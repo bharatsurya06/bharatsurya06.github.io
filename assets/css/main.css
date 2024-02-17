@@ -1532,7 +1532,7 @@ a-link:active {
 .blog .posts-list .title {
   font-size: 22px;
   font-weight: 700;
-  padding: 0;
+  padding: 50;
   margin: 0 0 20px 0;
   
 }
