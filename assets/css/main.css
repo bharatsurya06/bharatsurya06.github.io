@@ -171,7 +171,7 @@ section {
 --------------------------------------------------------------*/
 .header {
   
-  color: var(--default-color);
+  color: var(--primary-color);
   background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
@@ -199,7 +199,7 @@ section {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
+  color: var(--hover-color-all);
   background: var(--primary-color);
   font-size: 14px;
   padding: 8px 26px;
