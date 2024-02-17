@@ -210,7 +210,7 @@ section {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
+  color: var(--hover-color-all);
   background: rgba(var(--primary-color), 0.85);
 }
 
