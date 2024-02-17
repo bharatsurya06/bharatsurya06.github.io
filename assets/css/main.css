@@ -19,11 +19,11 @@
 
 /* Global Colors */
 :root {
-  --background-color:#342f2f;
+  --background-color:#929292;
   --background-color-rgb: 255, 255, 255;
   --default-color: #ffffff;
   --default-color-rgb: 33, 37, 41;
-  --primary-color: #380c0c;
+  --primary-color: #272626;
   --hover-color-all:#4190b7;
   /* --primary-color-rgb: 232, 69, 69; */
   --secondary-color: #ffffff;
