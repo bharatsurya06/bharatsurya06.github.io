@@ -1637,7 +1637,7 @@ a-link:active {
 .blog-details .content blockquote {
   overflow: hidden;
   background-color: var(--primary-color);
-  padding: 60px;
+  padding: 20px;
   position: relative;
   text-align: center;
   margin: 20px 0;
