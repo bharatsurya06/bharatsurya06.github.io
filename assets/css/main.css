@@ -21,8 +21,7 @@
 :root {
   --background-color:#929292;
   --background-color-rgb: 255, 255, 255;
-  --default-color: #ffffff;
-  --default-color-rgb: 33, 37, 41;
+  --default-color: #000000;
   --primary-color: #272626;
   --hover-color-all:#4190b7;
   /* --primary-color-rgb: 232, 69, 69; */
