@@ -843,7 +843,7 @@ section {
 .hero h2 {
   color: var(--contrast-color);
   margin: 0;
-  font-size: 44px;
+  font-size: 100px;
   font-weight: 700;
 }
 
@@ -1428,7 +1428,7 @@ section {
   font-size: 16px;
 }
 .CVbutton:hover{
-  background:rgb(170, 160, 91);
+  background:var(--hover-color-all);
   color:var(--primary-color);
 }
 /* unvisited link */
