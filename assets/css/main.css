@@ -172,7 +172,7 @@ section {
 .header {
   
   color: var(--primary-color);
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
