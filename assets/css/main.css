@@ -31,8 +31,7 @@
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
   --page-text-color: #000000;
-  --blue-color:#969ba6;
-  --text-color-black: #000000;
+
 }
 
 /* Nav Menu Colors */
@@ -54,7 +53,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  color: var(--page-text-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
