@@ -126,7 +126,7 @@ section {
 # Page Title & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
+  color: var(--primary-color)s;
   background-color: var(--background-color) ;
 }
 
