@@ -698,7 +698,7 @@ section {
 }
 
 .footer .footer-about .logo span {
-  color: var(--secondary-color);
+  color: var(--default-color);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -764,7 +764,7 @@ section {
 }
 
 .footer .footer-links ul a {
-  color: rgba(var(--default-color), 0.8);
+  color: var(--secondary-colorcolor);
   display: inline-block;
   line-height: 1;
 }
@@ -781,7 +781,7 @@ section {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .footer .copyright p {
@@ -791,7 +791,7 @@ section {
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
-  color: rgba(var(--default-color), 0.8);
+  color: var(--secondary-color);
   
 }
 
