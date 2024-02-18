@@ -680,12 +680,12 @@ section {
   --background-color: var(--primary-color);
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 14px;
-  padding-bottom: 10px;
+  font-size: 12px;
+  padding-bottom: 5px;
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .footer .footer-about .logo {
