@@ -719,7 +719,7 @@ section {
   border-radius: 50%;
   border: 1px solid rgba(var(--default-color), 0.5);
   font-size: 16px;
-  color: rgba(var(--default-color), 0.5);
+  color: var(--secondary-color);
   margin-right: 10px;
   transition: 0.3s;
 }
