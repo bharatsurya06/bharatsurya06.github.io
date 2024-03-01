@@ -1400,7 +1400,7 @@ section {
 
 .img-about 
 {
-  width: 160px;
+  width: 100px;
   border-radius: 0px;
   border: 6px solid var(--background-color);
   float: left;
