@@ -1417,7 +1417,7 @@ section {
 .CVbutton {
   background-color:var(--primary-color); /* Green */
   border: none;
-  border-radius : 50px;
+  border-radius : 0px;
   color: white;
   padding: 15px 32px;
   text-align: center;
