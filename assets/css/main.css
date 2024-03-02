@@ -2063,7 +2063,7 @@ a-link:active {
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .blog .card{
@@ -2077,7 +2077,7 @@ a-link:active {
 
 .blog .card img{
   width:100%;
-  height:auto;
+  height:250px;
 }
 
 .blog .card-content{
