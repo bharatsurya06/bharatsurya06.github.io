@@ -1516,7 +1516,7 @@ a-link:active {
 }
 
 .blog .posts-list .post-img {
-  max-height: 100px;
+  max-height: 10px;
   margin: 0px 10px 0px 0px;
    
 }
