@@ -1404,7 +1404,7 @@ section {
   border-radius: 0px;
   border: 6px solid var(--background-color);
   float: left;
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
 }
 .portfolio-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;
