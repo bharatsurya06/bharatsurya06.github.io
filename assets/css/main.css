@@ -2063,6 +2063,7 @@ a-link:active {
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .blog .card{
