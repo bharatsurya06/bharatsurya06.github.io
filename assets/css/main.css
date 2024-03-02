@@ -2085,9 +2085,9 @@ a-link:active {
 }
 
 .blog .card-content h2 {
-font-size:16px;
+font-size:30px;
 color:var(--primary-color);
-margin-bottom: 2px;
+margin-bottom: 4px;
 
 }
 
