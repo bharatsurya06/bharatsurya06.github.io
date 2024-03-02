@@ -1402,7 +1402,7 @@ section {
 {
   width: 360px;
   border-radius: 0px;
-  border: 6px solid var(--background-color);
+  
   float: left;
   margin: 10px 10px 0 0;
 }
