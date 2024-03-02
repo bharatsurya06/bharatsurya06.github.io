@@ -1508,7 +1508,7 @@ a-link:active {
 /* Blog Section - Blog Page
 ------------------------------*/
 .blog .posts-list article {
-  box-shadow: color(--hover-color-all);
+  box-shadow: var(--hover-color-all);
   padding: 30px;
   height: 100%;
   border-radius: 10px;
