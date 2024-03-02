@@ -2057,4 +2057,13 @@ a-link:active {
   background-color: rgba(var(--primary-color), 0.8);
 }
 
+*{
+margin: 0px;
+padding:0px;
+box-sizing : border-box;
+
+}
+
+
+
 
