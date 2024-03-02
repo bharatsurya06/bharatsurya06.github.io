@@ -2065,6 +2065,13 @@ a-link:active {
   flex-wrap: wrap;
 }
 
+.card{
+  width: 325px;
+  background-color: #059652;
+  border-radius: 10px;
+  overflow:hidden;
+}
+
 .card img{
   width:100%;
   height:auto;
