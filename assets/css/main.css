@@ -1536,14 +1536,14 @@ a-link:active {
   font-size: 16px;
   font-weight: 300;
   padding: 10;
-  margin: 0 0 0 0;
+  margin: 10px 10px 0 0;
   
 }
 
 .blog .posts-list .title a {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   transition: 0.3s;
-  background-color: var(--primary-color);
+  
 }
 
 .blog .posts-list .title a:hover {
