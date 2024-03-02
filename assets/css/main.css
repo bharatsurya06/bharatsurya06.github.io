@@ -1521,6 +1521,10 @@ a-link:active {
    
 }
 
+.blog .posts-list .post-img a:hover {
+  color: var(--hover-color-all);
+}
+
 .blog .posts-list .post-category {
   font-size: 16px;
   color: var(--default-color);
