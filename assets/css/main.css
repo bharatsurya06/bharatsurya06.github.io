@@ -1524,7 +1524,7 @@ a-link:active {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #f60000;
-  border-radius: 10px;
+  border-radius: 100px;
   box-sizing: border-box;
 }
 
