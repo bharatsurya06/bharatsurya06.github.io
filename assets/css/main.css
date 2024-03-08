@@ -1517,7 +1517,16 @@ a-link:active {
   padding: 0;
 }
 
+.portfolio-detials .form input[type=text] {
 
+  width : 100%;
+  padding: 40px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #f60000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 
 /*--------------------------------------------------------------
 # Blog Page
