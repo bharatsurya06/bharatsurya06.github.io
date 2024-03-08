@@ -93,7 +93,19 @@
     <section id="hero" class="hero">
 
       <img src="assets/img/rocket.jpg" alt="" data-aos="fade-in">
+      <span id="element"></span>
 
+      <!-- Load library from the CDN -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed('#element', {
+          strings: ['Hello..!!', '&amp; నమస్కారం'],
+          typeSpeed: 50,
+          loop: true
+        });
+      </script>
 
 
 
@@ -124,19 +136,7 @@
     
   </main>
 
-  <span id="element"></span>
 
-  <!-- Load library from the CDN -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-      typeSpeed: 50,
-      loop: true
-    });
-  </script>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
