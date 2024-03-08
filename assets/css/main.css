@@ -1517,7 +1517,7 @@ a-link:active {
   padding: 0;
 }
 
-.portfolio-detials .portfolio-description  input[type=text] {
+.portfolio-detials .portfolio-description  .input text{
 
   width : 100%;
   padding: 40px 20px;
