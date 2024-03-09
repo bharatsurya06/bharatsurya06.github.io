@@ -2120,7 +2120,7 @@ margin-bottom: 8px;
 }
 
 .blog .card-content .btn{
-  display:inline;
+  display:inline-flex;
   padding: 8px 16px;
   background-color : var(--primary-color);
   text-decoration:none;
