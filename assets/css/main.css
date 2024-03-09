@@ -2095,7 +2095,7 @@ a-link:active {
 }
 
 .blog .card{
-  width: 450px;
+  width: 80%;
   background-color: #ffffff;
   border-radius: 10px;
   overflow:hidden;
