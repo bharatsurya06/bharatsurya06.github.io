@@ -2121,17 +2121,17 @@ margin-bottom: 8px;
 
 .blog .card-content .btn{
   display:inline-flex;
-  padding: 8px 16px;
+  padding: 4px 16px;
   background-color : var(--primary-color);
   text-decoration:none;
   border-radius: 4 px;
-  margin-top: 16px;
+  margin-top: 8px;
   color:#ffffff
 
 }
 
 .blog .card-content .btn:hover{
-  color:#059652
+  color: var(--hover-color-all);
 } 
 
 
