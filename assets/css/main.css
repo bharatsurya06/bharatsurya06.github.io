@@ -1517,13 +1517,7 @@ a-link:active {
   padding: 0;
 }
 
-.portfolio-details .container {
-display:flex;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 10px;
-align-items: center;
-}
+
 
 .portfolio-details .portfolio-description .form-group .input[type="text"] {
 
