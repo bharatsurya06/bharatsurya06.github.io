@@ -2096,16 +2096,16 @@ a-link:active {
 
 .blog .card{
   width: 450px;
-  background-color: #678fa8bc;
+  background-color: #ffffff;
   border-radius: 10px;
   overflow:hidden;
   box-shadow: 0px, 2px, 4px rgba(0,0,0,0,0.2);
-  margin : 80px;
+  margin : 0px;
 }
 
 .blog .card img{
   width:80%;
-  height:100px;
+  height: 80px;
 }
 
 .blog .card-content{
