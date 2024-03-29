@@ -1416,7 +1416,7 @@ section {
   background: rgba(var(--primary-color), 0.8);
 }
 
-.portfolio-details .portfolio-description h2 {
+/* .portfolio-details .portfolio-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1424,7 +1424,7 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
-}
+} */
 
 .portfolio-details .portfolio-description .testimonial-item {
   padding: 30px 30px 0 30px;
