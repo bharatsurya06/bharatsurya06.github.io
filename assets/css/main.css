@@ -1273,8 +1273,8 @@ section {
   width: 180px;
   border-radius: 10px;
   
-  float: left;
-  margin: 10px 10px 0 0;
+  float: center;
+  /* margin: 10px 10px 0 0; */
 }
 .portfolio-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;
