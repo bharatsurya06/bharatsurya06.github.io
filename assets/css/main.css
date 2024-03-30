@@ -1270,8 +1270,8 @@ section {
 
 .img-about 
 {
-  width: 360px;
-  border-radius: 0px;
+  width: 180px;
+  border-radius: 10px;
   
   float: left;
   margin: 10px 10px 0 0;
@@ -1287,9 +1287,9 @@ section {
 .CVbutton {
   background-color:var(--primary-color); /* Green */
   border: none;
-  border-radius : 0px;
+  border-radius : 1px;
   color: white;
-  padding: 15px 20px;
+  padding: 15px 1px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
