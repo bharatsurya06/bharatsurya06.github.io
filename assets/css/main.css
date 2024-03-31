@@ -680,23 +680,7 @@ section {
   justify-content: center;
 }
 
-/* .footer .footer-about .logo {
-  line-height: 0;
-  margin-bottom: 25px;
-}
 
-.footer .footer-about .logo img {
-  max-height: 100px;
-  margin-right: 2px;
-}
-
-.footer .footer-about .logo span {
-  color: var(--default-color);
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-family: var(--heading-font);
-} */
 
 .footer .footer-about p {
   font-size: 14px;
@@ -729,7 +713,6 @@ section {
   font-weight: bold;
   justify-content: center;
   align-items:center;
-  padding-bottom: 12px;
 }
 
 .footer .footer-links {
@@ -768,10 +751,7 @@ section {
   color:#4190b7 ;
 }
 
-.footer .footer-contact p {
-  margin-bottom: 5px;
-  margin-left:55px;
-}
+
 
 .footer .copyright {
   padding-top: 25px;
