@@ -1378,6 +1378,7 @@ a-link:active {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 .blog .card{
@@ -1394,7 +1395,8 @@ a-link:active {
 .blog .card img{
   width:100%;
   height: 100px;
-  object-fit:cover
+  object-fit:cover;
+  border-radius: 10px;
 }
 
 .blog .card-content{
