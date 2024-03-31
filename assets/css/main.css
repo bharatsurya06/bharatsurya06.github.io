@@ -724,9 +724,9 @@ section {
 
 .footer h1 {
   color: var(--secondary-color);
-  font-size: 16px;
+  font-size: 40px;
   font-weight: bold;
-  position: relative;
+  justify-content: :center;
   padding-bottom: 12px;
 }
 
