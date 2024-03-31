@@ -1277,8 +1277,16 @@ section {
   /* margin: 10px 10px 0 0; */
 }
 
+.portfolio .container{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
 
 .CVbutton {
+
   background-color:var(--primary-color); /* Green */
   border: none;
   border-radius : 1px;
