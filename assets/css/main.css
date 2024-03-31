@@ -293,6 +293,7 @@ section {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    display:flex;
     justify-content: center
   }
 
@@ -305,7 +306,8 @@ section {
   }
 
   .navmenu li {
-    position: relative;
+    justify-content: center
+    /* position: relative; */
   }
 
   .navmenu a,
