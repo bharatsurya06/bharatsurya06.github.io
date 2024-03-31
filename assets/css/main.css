@@ -677,6 +677,7 @@ section {
 
 .footer .footer-top {
   padding-top: 10px;
+  justify-content: center;
 }
 
 /* .footer .footer-about .logo {
