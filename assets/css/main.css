@@ -54,7 +54,7 @@
 body {
   color: var(--page-text-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: "Helvetica Neue";
 }
 
 a {
@@ -1445,8 +1445,9 @@ a-link:active {
 }
 
 .blog .card img{
-  width:100%;
+  width:200%;
   height: 100px;
+  object-fit:cover
 }
 
 .blog .card-content{
