@@ -213,38 +213,9 @@ section {
   padding-left: 3px;
 }
 
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  color: var(--hover-color-all);
-  background: var(--primary-color);
-  font-size: 14px;
-  padding: 8px 26px;
-  margin: 0;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  color: var(--hover-color-all);
-  background: rgba(var(--primary-color), 0.85);
-}
-
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .btn-getstarted {
-    order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 20px;
-  }
-
-  .header .navmenu {
+ .header .navmenu {
     order: 3;
   }
-}
 
 /* Global Header on page scroll
 ------------------------------*/
@@ -305,10 +276,10 @@ section {
     align-items: center;
   }
 
-  .navmenu li {
+  /* .navmenu li {
     justify-content: center
     /* position: relative; */
-  }
+  /* } */ 
 
   .navmenu a,
   .navmenu a:focus {
