@@ -671,12 +671,12 @@ section {
   --background-color: var(--primary-color);
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 12px;
+  font-size: 10px;
   padding-bottom: 5px;
 }
 
 .footer .footer-top {
-  padding-top: 10px;
+  padding-top: 5px;
   justify-content: center;
 }
 
