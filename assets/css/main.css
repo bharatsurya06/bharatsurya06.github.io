@@ -679,7 +679,7 @@ section {
   padding-top: 100px;
 }
 
-.footer .footer-about .logo {
+/* .footer .footer-about .logo {
   line-height: 0;
   margin-bottom: 25px;
 }
@@ -695,7 +695,7 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
-}
+} */
 
 .footer .footer-about p {
   font-size: 14px;
