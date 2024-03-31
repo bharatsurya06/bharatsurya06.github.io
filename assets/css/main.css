@@ -826,7 +826,7 @@ section {
 }
 
 .hero .container {
-  display:flex
+  display:flex;
   
   position: relative;
   z-index: 3;
