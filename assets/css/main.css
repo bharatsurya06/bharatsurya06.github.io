@@ -673,6 +673,7 @@ section {
   background-color: var(--background-color);
   font-size: 10px;
   padding-bottom: 5px;
+  align-items: center;
 }
 
 .footer .footer-top {
