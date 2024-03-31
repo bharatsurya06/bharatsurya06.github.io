@@ -1445,7 +1445,7 @@ a-link:active {
 }
 
 .blog .card img{
-  width:200%;
+  width:600%;
   height: 100px;
   object-fit:cover
 }
