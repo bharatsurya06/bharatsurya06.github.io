@@ -727,6 +727,7 @@ section {
   font-size: 40px;
   font-weight: bold;
   justify-content: center;
+  align-items:center;
   padding-bottom: 12px;
 }
 
