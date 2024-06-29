@@ -1382,6 +1382,7 @@ a-link:active {
 
 .blog .card-content{
   padding:16px;
+  color: var(--background-color);
 }
 
 .blog .card-content h2 {
