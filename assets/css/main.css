@@ -1366,7 +1366,7 @@ a-link:active {
   overflow:hidden;
   box-shadow: 0px, 2px, 4px rgba(0,0,0,0,0.2);
   margin : 0px;
-  color: var(--background-color);
+  background: var(--background-color);
 }
 
 .blog .card:hover{
