@@ -1208,7 +1208,7 @@ section {
 
   background-color:var(--primary-color); /* Green */
   border: none;
-  border-radius : 50px;
+  border-radius : 20px;
   color: white;
   padding: 15px 15px ;
   text-align: center;
