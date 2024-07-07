@@ -1191,7 +1191,8 @@ section {
 {
   width: 180px;
   border-radius: 360px;
-  
+  display: block;
+  margin: 0 auto;
   float: center;
   /* margin: 10px 10px 0 0; */
 }
