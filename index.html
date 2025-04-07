@@ -1,228 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Basic CSS Styles (Combined from previous examples) */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>About-CBSRadon</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+        /* Navigation Bar Styles */
+        nav {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/logo.png" rel="apple-touch-icon">
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 0 20px; /* Add padding to the sides */
+        }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Ensure list items are in a row */
+            justify-content: center; /* Center the list items */
+            align-items: center;
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+        nav li {
+            margin: 0 10px;
+        }
 
-  <!-- =======================================================
-  * Template Name: Append
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px; /* Add padding for button appearance */
+            border-radius: 5px; /* Add rounded corners */
+            background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background */
+            transition: background-color 0.3s ease; /* Add a smooth transition */
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Darken background on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* For gradient overlay */
+            margin-top: 60px;
+            overflow: hidden; /* Hide the cursor initially */
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)); /* Gradient overlay */
+        }
+        .hero-section > * {
+            position: relative; /* Bring content above the gradient */
+            z-index: 1;
+        }
+
+       /* Typewriting Effect Styles */
+        .typewriter {
+            font-family: 'Inconsolata', monospace;
+            font-size: 3em;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid white; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation:
+                    typing 3.5s steps(40, end),
+                    blink-caret .75s step-end infinite;
+            width: fit-content;
+
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+        }
+
+        /* Footer Styles (From Footer Code) */
+        footer {
+            background-color: #333; /* Dark background for the footer */
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Left Side: Logo */
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Center: Social Links */
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .footer-social li {
+            margin: 0 10px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 1.5em; /* Size of the icons */
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #bbb; /* Lighter color on hover */
+        }
+
+        /* Right Side: Contact Info */
+        .footer-contact {
+            text-align: right;
+        }
+    </style>
 </head>
+<body>
 
-<body class="portfolio-details-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+    <!-- 1. Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">Bharat Surya</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header sticky-top d-flex align-items-center">
-    <div class="container-fluid d-flex align-items-center justify-content-center">
+    <!-- 2. Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="typewriter">Hi, I'm Bharat Surya.</div>
+        <p class="tagline">[Your Concise Tagline Here - e.g., Aspiring Web Developer]</p>
+        <p class="intro-text">[A sentence or two introducing yourself and your main focus.]</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </header>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
-      </a>
+    <main>
 
-      <!-- Nav Menu -->
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="about.html" >About </a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="Contact" class="active">Contact</a></li>
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav><!-- End Nav Menu -->
-
-
-
-    </div>
-  </header><!-- End Header -->
-
-  <main id="main">
-
-
-
-    <!-- Portfolio-details Section - Portfolio Details Page -->
-    <section id="portfolio-details" class="portfolio-details">
-
-      <div class="container" data-aos="fade-up">
-
-
-
-        <div class="row justify-content-between gy-4 mt-4">
-          <!-- <div class="col-lg-2" data-aos="fade-up"> </div> -->
-          <div class="col-lg-1" data-aos="fade-up"></div>
-          <div class="col-lg-4" data-aos="fade-up">
-            <div class="portfolio-description">
-              <h2><span style = "color:#272626">Get in Touch</span></h2>
-              <form action="action_page.php" method="POST">
-
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                  />
-                </div>  
-                
-                <br>
-                
-                <div class="form-group">
-                  <input
-                    type="text" name="subject"
-                    class="form-control"
-                    id="subject"
-                    placeholder="Subject" />
-                </div>
-                  
-                <br>
-
-                <div class="form-group">
-                  <textarea
-                    class="form-control"
-                    rows="5" name="message"
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-                <br>
-
-                <input class="CVbutton" type ="submit">
-
-          
-              </form>
-                
-
+        <!-- 3. About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    [Write a paragraph or two here about your background, passion, interests within your field,
+                    what problems you enjoy solving, and perhaps your career goals. Make it engaging!]
+                </p>
             </div>
-          </div>
+        </section>
 
-          
-          <div class="col-lg-2" data-aos="fade-up"></div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-description">
-            <h2><span style = "color:#272626">Address</span></h2>
-            <p>Cryogenic Engineering Centre, IIT Kharagpur, India</p>
-            <div class="row gy-4">
-              <p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.939548750791!2d87.30998950924048!3d22.318125879589015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d441b5c5e5271%3A0x387477706cd6d103!2sCryogenic%20Engineering%20Centre!5e0!3m2!1sen!2sin!4v1709953248763!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </p>
+        <!-- 4. Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2>Skills</h2>
+                <p>[Placeholder: Skills will be listed here - perhaps using lists or icons later]</p>
+                <ul>
+                    <li>Languages: [e.g., Python, JavaScript, HTML, CSS]</li>
+                    <li>Frameworks/Libraries: [e.g., React, Node.js, Django]</li>
+                    <li>Tools: [e.g., Git, Docker, VS Code]</li>
+                    <li>Databases: [e.g., SQL, MongoDB]</li>
+                </ul>
             </div>
-            <p>
-              bharatsurya06@kgpian.iitkgp.ac.in 
-              <br>
-              cbs.radon@gmail.com
-              
-            </p>
+        </section>
 
-          </div>
-        </div>
-        <div class="col-lg-1" data-aos="fade-up"></div>
+        <!-- 5. Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <p>[Placeholder: Project cards/details will go here]</p>
+                <!-- Example Structure for ONE Project (Repeat for others) -->
+                <article class="project-card">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of the project, its purpose, and key features.</p>
+                    <p><strong>Tech Stack:</strong> [List technologies used, e.g., React, Node.js, CSS]</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
+        <!-- 6. Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>[Write a short message here, e.g., "I'm currently open to new opportunities and collaborations. Feel free to reach out!"]</p>
+                <ul>
+                    <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">Your Profile</a></li>
+                    <li>GitHub: <a href="https://github.com/bharatsurya06" target="_blank" rel="noopener noreferrer">bharatsurya06</a></li>
+                </ul>
+            </div>
+        </section>
 
-        </div>
+    </main>
 
-      </div>
+    <!-- 7. Footer (Correctly Placed) -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Bharat Surya</div> <!-- Replace with your logo image if you have one -->
 
-    </section>
-    <!-- End Portfolio-details Section -->
+            <ul class="footer-social">
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li> <!-- Replace with your GitHub URL -->
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li> <!-- Replace with your ResearchGate URL -->
+                 <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li> <!-- Replace with your Google Scholar URL -->
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li> <!-- Replace with your LinkedIn URL -->
+            </ul>
 
-    
-
-
-
-  </main>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-
-      <div class="row gy-4">
-        <div class="col-lg-2 footer-about"></div>
-        <div class="col-lg-2 col-md-12 d-flex mt-4 footer-about">
-          <a href="index.html" >
-            <h1>CBS.</h1>
-          </a>
-        </div>
-        <div class="col-lg-1 footer-about"></div>
-
-        <div class="col-lg-2 col-md-12 footer-about">
-            <div class="social-links d-flex mt-4">
-            <a href="https://twitter.com/bharatsurya3"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.facebook.com/bharat.surya06"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/bharat.surya06/"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/bharatsurya06/"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.github.com/bharatsurya06"><i class="bi bi-github "></a></i>
-            <a href="https://scholar.google.com/citations?user=9iVyE50AAAAJ&hl=en"><i class="bi bi-google-scholar"></a></i>
+            <div class="footer-contact">
+                <p>+1-555-123-4567</p> <!-- Replace with your phone number -->
+                <p>123 Main St, Anytown, USA</p> <!-- Replace with your address -->
             </div>
         </div>
-        
-        <div class="col-lg-1 footer-about"></div>
-        <div class="col-lg-2 col-md-12 footer-about ">
-          <p class="mt-4"><span style = "color:#ffffff">+91 94XXXXX40</span></p>
-          <p><span style = "color:#ffffff">bharatsurya06@kgpian.iitkgp.ac.in</span></p>
-        </div>
-        <div class="col-lg-2 footer-about"></div>
-
-      </div>
-
-    </div>
-
-
-
-  </footer><!-- End Footer -->
-
-<!-- Scroll Top Button -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-<!-- Preloader -->
-<div id="preloader">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+    </footer>
+     <script>
+        // Simple script to update the year automatically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+     </script>
 
 </body>
-
 </html>
