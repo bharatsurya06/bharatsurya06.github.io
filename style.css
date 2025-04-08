@@ -98,7 +98,7 @@ nav a:hover {
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation:
-            typing 3.5s steps(40, end),
+            typing 3.5s steps(40, 100),
             blink-caret .75s step-end infinite;
     width: fit-content;
 
@@ -183,3 +183,42 @@ footer .container {
     text-align: right;
 }
 
+.tab-container {
+    margin-top: 20px;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* Align tabs to the left */
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #ddd;
+    /* Lighter gray on hover */
+}
+
+.tab-content {
+    display: none;
+    /* Initially hide all content */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+    /* Align content to the left */
+}
