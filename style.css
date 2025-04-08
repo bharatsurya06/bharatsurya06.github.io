@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #2e2b2b; /* Light gray background */
 }
 
 /* Navigation Bar Styles */
@@ -230,7 +230,7 @@ footer .container {
     display: flex;
     justify-content: flex-start;
     /* Align tabs to the left */
-    background-color: #f0f0f0;
+    background-color: #e07676;
     border-bottom: 1px solid #ccc;
 }
 
