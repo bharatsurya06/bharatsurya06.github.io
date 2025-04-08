@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 /* Navigation Bar Styles */
@@ -65,6 +66,7 @@ nav a {
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.3);
     /* Darken background on hover */
+    color: lightblue;
 }
 
 /* Hero Section Styles */
@@ -238,12 +240,17 @@ footer .container {
     border: none;
     background: none;
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    /* Added transitions */
 }
 
+/* Add vibrant colors and shadow to the hover effect */
 .tab-link:hover {
-    background-color: #ddd;
-    /* Lighter gray on hover */
+    background-color: #6495ED;
+    /* Light blue */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
 }
 
 .tab-content {
