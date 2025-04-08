@@ -1,5 +1,5 @@
-
 /* Basic CSS Styles (Combined from previous examples) */
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -22,9 +22,11 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
+    /* Adjust as needed */
     margin: 0 auto;
-    padding: 0 20px; /* Add padding to the sides */
+    padding: 0 20px;
+    /* Add padding to the sides */
 }
 
 .nav-logo {
@@ -36,8 +38,10 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Ensure list items are in a row */
-    justify-content: center; /* Center the list items */
+    display: flex;
+    /* Ensure list items are in a row */
+    justify-content: center;
+    /* Center the list items */
     align-items: center;
 }
 
@@ -48,19 +52,25 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 8px 12px; /* Add padding for button appearance */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a subtle background */
-    transition: background-color 0.3s ease; /* Add a smooth transition */
+    padding: 8px 12px;
+    /* Add padding for button appearance */
+    border-radius: 5px;
+    /* Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Optional: Add a subtle background */
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition */
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Darken background on hover */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Darken background on hover */
 }
 
 /* Hero Section Styles */
 .hero-section {
-    background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); /* Replace with your image URL */
+    background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -70,10 +80,13 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; /* For gradient overlay */
+    position: relative;
+    /* For gradient overlay */
     margin-top: 60px;
-    overflow: hidden; /* Hide the cursor initially */
+    overflow: hidden;
+    /* Hide the cursor initially */
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -81,10 +94,13 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)); /* Gradient overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    /* Gradient overlay */
 }
-.hero-section > * {
-    position: relative; /* Bring content above the gradient */
+
+.hero-section>* {
+    position: relative;
+    /* Bring content above the gradient */
     z-index: 1;
 }
 
@@ -92,28 +108,42 @@ nav a:hover {
 .typewriter {
     font-family: 'Inconsolata', monospace;
     font-size: 3em;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation:
-            typing 3.5s steps(40, 100),
-            blink-caret .75s step-end infinite;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
     width: fit-content;
-
 }
 
 /* The typing effect */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
 }
 
 .hero-section p {
@@ -135,7 +165,8 @@ section {
 
 /* Footer Styles (From Footer Code) */
 footer {
-    background-color: #333; /* Dark background for the footer */
+    background-color: #333;
+    /* Dark background for the footer */
     color: white;
     padding: 20px 0;
 }
@@ -169,13 +200,15 @@ footer .container {
 
 .footer-social a {
     color: white;
-    font-size: 1.5em; /* Size of the icons */
+    font-size: 1.5em;
+    /* Size of the icons */
     display: inline-block;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-    color: #bbb; /* Lighter color on hover */
+    color: #bbb;
+    /* Lighter color on hover */
 }
 
 /* Right Side: Contact Info */
@@ -183,6 +216,7 @@ footer .container {
     text-align: right;
 }
 
+/* Tab Styles */
 .tab-container {
     margin-top: 20px;
 }
@@ -221,4 +255,66 @@ footer .container {
     background-color: #fff;
     text-align: left;
     /* Align content to the left */
+}
+
+/* About Section Customizations */
+.about-section {
+    background-color: #f9f9f9;
+    /* Light gray background */
+    padding: 50px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center the content */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.img-about {
+    border-radius: 50%;
+    /* Circular image */
+    max-width: 200px;
+    /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    /* Center the image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Shadow behind the image */
+}
+
+.CVbutton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    /* Green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.CVbutton:hover {
+    background-color: #367c39;
+    /* Darker green on hover */
 }
