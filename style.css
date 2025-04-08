@@ -230,7 +230,7 @@ footer .container {
     display: flex;
     justify-content: flex-start;
     /* Align tabs to the left */
-    background-color: #e07676;
+    background-color: #fbf9f9;
     border-bottom: 1px solid #ccc;
 }
 
@@ -277,7 +277,7 @@ footer .container {
     /* Center the content */
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(233, 118, 118);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
 }
