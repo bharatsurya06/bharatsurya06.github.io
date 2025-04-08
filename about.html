@@ -116,7 +116,37 @@
                     </div>
                 </div>
             </footer>
+            <script>
+              // Simple script to update the year automatically
+              document.getElementById('current-year').textContent = new Date().getFullYear();
+           </script>
+      
+        </section>
+    </main>
+    <script>
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
 
+        tabLinks.forEach(link => {
+            link.addEventListener('mouseover', function () {
+                const tab = this.dataset.tab;
+
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                document.getElementById(tab).style.display = 'block';
+            });
+        });
+
+                // Show the education section by default
+          tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                document.getElementById("education").style.display = 'block';
+
+    </script>
 </body>
 
 </html>
