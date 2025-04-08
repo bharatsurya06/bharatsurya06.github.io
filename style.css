@@ -32,12 +32,10 @@ nav .container {
 .nav-logo {
     font-size: 1.5em;
     font-weight: bold;
+    width:70px;
 }
 
-.logo-image {
-    width: 10px;
-    height: auto;
-}
+
 
 nav ul {
     list-style: none;
