@@ -157,6 +157,13 @@ section {
     margin-bottom: 30px;
 }
 
+body.research-page {
+    font-family: sans-serif;
+    margin: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
 .research-image {
     width: 100%; /* Adjust as needed */
     max-width: 600px; /* Adjust as needed */
