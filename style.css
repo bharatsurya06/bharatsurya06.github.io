@@ -153,6 +153,47 @@ section {
     padding: 40px 0;
 }
 
+.research-content {
+    margin-bottom: 30px;
+}
+
+.research-image {
+    width: 100%; /* Adjust as needed */
+    max-width: 600px; /* Adjust as needed */
+    margin: 20px 0;
+}
+
+.journal-container {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.journal-container h2 {
+    text-align: left;
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 10px;
+}
+
+.journal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.journal-item {
+    margin-bottom: 10px;
+}
+
+.journal-item a {
+    text-decoration: none;
+    color: blue; /* Or your desired link color */
+}
+
+.arrow-icon {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
 /* Footer Styles (From Footer Code) */
 footer {
     background-color: #000000;
