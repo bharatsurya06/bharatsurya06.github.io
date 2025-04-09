@@ -56,7 +56,7 @@ header p {
 }
 
 .blog-post a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .post-description {
@@ -74,7 +74,7 @@ header p {
 }
 
 .read-more:hover {
-    background-color: #0056b3;
+    background-color: #00e917;
     text-decoration: none;
 }
 
