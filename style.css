@@ -59,7 +59,7 @@ nav {
 
 /* Hero Section Styles */
 .hero-section {
-    background-image: url('assets/img/rocket.jpg')
+    background-image: url('assets/img/rocket.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
