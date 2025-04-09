@@ -66,7 +66,7 @@ header p {
 
 .read-more {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #000000;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
@@ -79,14 +79,6 @@ header p {
 }
 
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9em;
-}
 
 /* Responsive Design (Optional) */
 @media (max-width: 600px) {
