@@ -64,7 +64,7 @@
   .tab-content {
     flex: 1; /* Take up remaining space */
     width: 600px; /* Fixed width for the content box */
-    border: 1px solid #ccc;
+    border: 1px solid #ec0000;
     padding: 20px;
     min-height: 200px; /*Minimum height to maintain*/
   }
