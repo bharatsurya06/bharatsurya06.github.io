@@ -24,6 +24,14 @@ nav {
     font-size: 1em;  /* Adjust size as needed */
     font-weight: bold; /* Make it stand out */
   }
+
+  .logo img { /*Assuming you have <img> tag inside of logo div*/
+    width: 50px; /* Adjust this value to change the width */
+    height: auto;  /* Let the height adjust automatically */
+    /* OR */
+    /* width: auto;   /!* Let the width adjust automatically *!/
+    height: 50px;  /!* Adjust this value to change the height *!/ */
+  }
   
   /* Navigation Links Styles */
   .nav-links {
