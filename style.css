@@ -26,7 +26,7 @@ nav {
   }
 
   .logo img { /*Assuming you have <img> tag inside of logo div*/
-    width: 50px; /* Adjust this value to change the width */
+    width: 100px; /* Adjust this value to change the width */
     height: auto;  /* Let the height adjust automatically */
     /* OR */
     /* width: auto;   /!* Let the width adjust automatically *!/
