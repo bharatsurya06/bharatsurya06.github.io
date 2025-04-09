@@ -11,69 +11,42 @@ body {
 nav {
     background-color: black;
     color: white;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-
-
-nav .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    /* Adjust as needed */
-    margin: 0 auto;
-    padding: 0 20px;
-    /* Add padding to the sides */
-}
-
-
-
-.nav-logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    width:70px;
-}
-
-
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* Ensure list items are in a row */
-    justify-content: center;
-    /* Center the list items */
-    align-items: center;
-}
-
-nav li {
-    margin: 0 10px;
-}
-
-/* nav a {
+    justify-content: space-between; /* Distribute space between logo and links */
+    align-items: center;          /* Vertically center items */
+    padding: 10px 20px;           /* Add some padding */
+  }
+  
+  /* Logo Styles */
+  .logo a {
     color: white;
     text-decoration: none;
-    padding: 8px 12px;
-    /* Add padding for button appearance */
-    /* border-radius: 5px; */
-    /* Add rounded corners */
-    /* background-color: rgba(255, 255, 255, 0.1); */
-    /* Optional: Add a subtle background */
-    /* transition: background-color 0.3s ease; */
-    /* Add a smooth transition */
-/* } */ */
-
-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Darken background on hover */
-    color: rgb(245, 0, 253);
-}
+    font-size: 1.5em;  /* Adjust size as needed */
+    font-weight: bold; /* Make it stand out */
+  }
+  
+  /* Navigation Links Styles */
+  .nav-links {
+    display: flex;              /* Arrange links horizontally */
+    align-items: center;          /* Center vertically */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;            /* Add spacing between links */
+    font-size: 1.1em;          /* Adjust font size */
+    transition: font-size 0.2s ease; /* Smooth transition for hover effect */
+  }
+  
+  .nav-links span {
+    color: white;              /* Color for the separators */
+    margin: 0 10px;            /* Adjust spacing */
+  }
+  
+  .nav-links a:hover {
+    font-size: 1.3em;         /* Increase font size on hover */
+  }
 
 /* Hero Section Styles */
 .hero-section {
