@@ -26,7 +26,7 @@ nav {
   }
 
   .logo img { /*Assuming you have <img> tag inside of logo div*/
-    width: 100px; /* Adjust this value to change the width */
+    width: 250px; /* Adjust this value to change the width */
     height: auto;  /* Let the height adjust automatically */
     /* OR */
     /* width: auto;   /!* Let the width adjust automatically *!/
@@ -53,7 +53,7 @@ nav {
   }
   
   .nav-links a:hover {
-    font-size: 1.3em; 
+    font-size: 2em; 
     color:#6495ED        /* Increase font size on hover */
   }
 
