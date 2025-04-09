@@ -153,6 +153,11 @@ section {
     padding: 40px 0;
 }
 
+.page-content {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
 .research-content {
     margin-bottom: 30px;
 }
@@ -160,8 +165,6 @@ section {
 body.research-page {
     font-family: sans-serif;
     margin: 20px;
-    padding-left: 20%;
-    padding-right: 20%;
   }
 
 .research-image {
