@@ -1,0 +1,78 @@
+/* Overall container for the About page content */
+.about-container {
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto; /* Center the content */
+    font-family: sans-serif;
+  }
+  
+  /* Bio Section (Image and Description) */
+  .bio-section {
+    display: flex;
+    align-items: center;  /* Vertically center image and text */
+    margin-bottom: 30px;
+  }
+  
+  .bio-text {
+    flex: 1; /* Take up remaining space */
+    padding-right: 20px;
+  }
+  
+  .bio-image {
+    flex: 0 0 300px; /* Don't grow, don't shrink, initial width of 300px */
+    text-align: right;  /* Align image to the right */
+  }
+  
+  .bio-image img {
+    width: 100%; /* Make the image fill its container */
+    max-width: 300px; /* Limit image size */
+    border-radius: 10px; /* Optional: Rounded corners */
+  }
+  
+  /* Content Section (Tabs and Content) */
+  .content-section {
+    display: flex;
+  }
+  
+  /* Tab List */
+  .tab-list {
+    width: 200px; /* Adjust as needed */
+    padding-right: 20px;
+  }
+  
+  .tab-button {
+    display: block; /* Make buttons fill the width */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #eee;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab-button.active {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    flex: 1; /* Take up remaining space */
+    width: 600px; /* Fixed width for the content box */
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-height: 200px; /*Minimum height to maintain*/
+  }
+  
+  .content-box {
+    display: none; /* Initially hide all content boxes */
+  }
+  
+  .content-box.active {
+    display: block; /* Show the active content box */
+  }

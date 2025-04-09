@@ -2,33 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>About - Chamarthi Bharat Surya</title>
-    <meta content="Learn more about Chamarthi Bharat Surya, his background, research interests, and skills."
-        name="description">
-    <meta content="Chamarthi Bharat Surya, About, Biography, Research Interests, Skills" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/logo.png" rel="icon">
-    <link href="assets/img/logo.png" rel="apple-touch-icon">
-
-    <!-- Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Template Main CSS File -->
-    <link href="style.css" rel="stylesheet">
-
-
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
 </head>
+
 
 <body>
     <nav>
@@ -45,52 +28,47 @@
           <a href="blog.html">Blog</a>
         </div>
       </nav>
+    
+    <div class="about-container">
 
- 
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <img class="img-about" src="assets/img/photo.jpg" alt="Photo">
-                    <h2>Chamarthi Bharat Surya</h2>
-                    <p>
-                        I am currently pursuing Ph.D at the Cryogenic Engineering Centre, Indian Institute of
-                        Technology Kharagpur, India. My research primarily focusses on the thermal performance of
-                        packed beds for cryogenic energy storage.
-                    </p>
+        <div class="bio-section">
+          <div class="bio-text">
+            <h2>About Me</h2>
+            <p>
+                I am currently pursuing Ph.D at the Cryogenic Engineering Centre, Indian Institute of
+                Technology Kharagpur, India. My research primarily focusses on the thermal performance of
+                packed beds for cryogenic energy storage.
+            </p>
+          </div>
+          <div class="bio-image">
+            <img src="assets/img/photo.jpg" alt="Your Photo">  <!-- Replace your-image.jpg -->
+        </div>
+    </div>
 
-                    <a class="CVbutton" href="assets/img/resume.pdf">Download CV</a>
+    <div class="content-section">
+        <div class="tab-list">
+          <button class="tab-button active" data-content="education">Education</button>
+          <button class="tab-button" data-content="skills">Skills</button>
+          <button class="tab-button" data-content="research">Research Interests</button>
+        </div>
+  
+        <div class="tab-content">
+          <div id="education" class="content-box active">
+            [Your Education Details Here]
+          </div>
+          <div id="skills" class="content-box">
+            [Your Skills Details Here]
+          </div>
+          <div id="research" class="content-box">
+            [Your Research Interests Details Here]
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <script src="about.js"></script>
 
-                    <!-- Tabs -->
-                    <div class="tab-container">
-                        <ul class="tabs">
-                            <li class="tab-link" data-tab="education">Education</li>
-                            <li class="tab-link" data-tab="skills">Skills</li>
-                            <li class="tab-link" data-tab="research">Research</li>
-                        </ul>
-
-                        <div id="education" class="tab-content">
-                            <p><b>M.Tech</b> | Mechanical Engineering (Cryogenic and Vacuum Technology) | National
-                                Institute of
-                                Technology Rourkela, Rourkela, India</p>
-                            <p><b>B.tech</b> | Mechanical Engineering | Raghu Engineering College, Visakhapatnam,
-                                India</p>
-                        </div>
-
-                        <div id="skills" class="tab-content">
-                            <p><b>MATLAB</b>, Python, C++, HTML/CSS, LaTeX, MS Office, FLUENT, SOLIDWORKS</p>
-                        </div>
-
-                        <div id="research" class="tab-content">
-                            <p><b>Cryogenic energy storage</b>, Thermal energy storage, Packed bed heat transfer,
-                                Computational Fluid Dynamics, Thermal performance Optimization</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            <footer>
                 <div class="container">
                     <div class="footer-logo">Bharat Surya</div>
                     <!-- Replace with your logo image if you have one -->
@@ -125,8 +103,7 @@
               document.getElementById('current-year').textContent = new Date().getFullYear();
            </script>
       
-        </section>
-    </main>
+  
     <script>
         const tabLinks = document.querySelectorAll('.tab-link');
         const tabContents = document.querySelectorAll('.tab-content');
