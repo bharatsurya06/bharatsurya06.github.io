@@ -65,12 +65,12 @@ nav {
     color:#6495ED        /* Increase font size on hover */
   }
 
-/* Hero Section Styles */
+
+
 .hero-section {
     background-image: url('assets/img/rocket.jpg');
     background-size: cover;
     background-position: center;
-    height: 500px;
     color: white;
     text-align: center;
     display: flex;
@@ -78,11 +78,17 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* For gradient overlay */
-    margin-top: 0;
+
+    /* Flex-grow to expand the hero section  vertically */
+    flex-grow:1;
+    padding-bottom: 60px;
+    
+    /* OverflowHidden */
     overflow: hidden;
     /* Hide the cursor initially */
 }
+
+
 
 .hero-section::before {
     content: '';
