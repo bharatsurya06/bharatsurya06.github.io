@@ -6,6 +6,15 @@ html, body {
     padding: 0;
 }
 
+body {
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    /* Make nav stick to top */
+    position: relative;
+    min-height: 100vh; 
+}
+
 /* Navigation Bar Styles */
 nav {
     background-color: black;
