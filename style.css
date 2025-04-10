@@ -1,11 +1,9 @@
 /* Basic CSS Styles (Combined from previous examples) */
-body {
-    font-family: sans-serif;
+/*General styling for the page*/
+html, body {
+    height: 100%; /* Ensure html and body take up full height */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f0f0f0; /* Light gray background */
-    
 }
 
 /* Navigation Bar Styles */
