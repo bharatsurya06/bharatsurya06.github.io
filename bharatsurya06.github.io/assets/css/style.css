@@ -1,0 +1,231 @@
+/* filepath: a:\bharatsurya06.github.io\assets\css\style.css */
+/* Basic CSS Styles (Combined from previous examples) */
+/*General styling for the page*/
+html, body {
+    height: 100%; /* Ensure html and body take up full height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    /* Make nav stick to top */
+    position: relative;
+    min-height: 100vh; 
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and links */
+    align-items: center;          /* Vertically center items */
+    padding: 10px 20px;           /* Add some padding */
+}
+  
+/* Logo Styles */
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;  /* Adjust size as needed */
+    font-weight: bold; /* Make it stand out */
+}
+
+.logo img { /*Assuming you have <img> tag inside of logo div*/
+    width: 250px; /* Adjust this value to change the width */
+    height: auto;  /* Let the height adjust automatically */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;              /* Arrange links horizontally */
+    align-items: center;          /* Center vertically */
+}
+  
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;            /* Add spacing between links */
+    font-size: 1.1em;          /* Adjust font size */
+    transition: font-size 0.2s ease; /* Smooth transition for hover effect */
+}
+  
+.nav-links span {
+    color: white;              /* Color for the separators */
+    margin: 0 10px;            /* Adjust spacing */
+}
+  
+.nav-links a:hover {
+    font-size: 2em; 
+    color:#6495ED        /* Increase font size on hover */
+}
+
+/* Overall container for the About page content */
+.about-container {
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto; /* Center the content */
+    font-family: sans-serif;
+}
+
+/* Footer Styles (From Footer Code) */
+footer {
+    background-color: #000000;
+    /* Dark background for the footer */
+    color: white;
+    padding: 20px 0;
+    width:100%;
+}
+
+footer .container {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Side: Logo */
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Center: Social Links */
+.footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-social li {
+    margin: 0 10px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5em;
+    /* Size of the icons */
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #bbb;
+    /* Lighter color on hover */
+}
+
+/* Right Side: Contact Info */
+.footer-contact {
+    text-align: right;
+}
+
+/* Tab Styles */
+.tab-container {
+    margin-top: 20px;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* Align tabs to the left */
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    /* Added transitions */
+}
+
+/* Add vibrant colors and shadow to the hover effect */
+.tab-link:hover {
+    background-color: #6495ED;
+    /* Light blue */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.tab-content {
+    display: none;
+    /* Initially hide all content */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+}
+
+/* About Section Customizations */
+.about-section {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 50px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center the content */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white; /* Card background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.img-about {
+    border-radius: 50%;
+    /* Circular image */
+    max-width: 200px;
+    /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    /* Center the image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Shadow behind the image */
+}
+
+.CVbutton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    /* Green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.CVbutton:hover {
+    background-color: #367c39;
+    /* Darker green on hover */
+}
