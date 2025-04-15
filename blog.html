@@ -1,95 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radon - Blog</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="blog.css">
-    
+    <title>Blog</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar"></div>
 
-
-  <nav>
-    <div class="logo">
-      <a href="index.html"> <img src="assets/img/logo.png"></a>
+    <div class="blog-container">
+        <h1>Blog Posts</h1>
+        <p>Welcome to my blog! Here you will find my latest posts and updates.</p>
+        <!-- Blog posts will be added here -->
     </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <span>|</span>
-      <a href="about.html">About</a>
-      <span>|</span>
-      <a href="research.html">Research</a>
-      <span>|</span>
-      <a href="blog.html">Blog</a>
-    </div>
-  </nav>
 
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Radon</div>
+            <ul class="footer-social">
+                <li><a href="https://github.com/bharatsurya06" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.researchgate.net/profile/Bharat-Surya-Chamarthi?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="https://scholar.google.com/citations?user=9iVyE50AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/bharatsurya06/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
 
-  <main>
-    <section class="blog-posts">
+            <div class="footer-contact">
+                <p>+91-79085-52683</p>
+                <p>Cryogenic Engineering Centre</p>
+                <p>IIT Kharagpur, India</p>
+            </div>
+        </div>
+    </footer>
 
-        <article class="blog-post">
-            <a href="post1.html">
-                <h2>Cryogenics for dummies # 1</h2>
-            </a>
-            <p class="post-description">Cryogenics - What does it even mean.</p>
-            <a href="post1.html" class="read-more">Read More →</a>
-        </article>
-
-        <article class="blog-post">
-            <a href="post2.html">
-                <h2>Cryogenics for dummies # 2</h2>
-            </a>
-            <p class="post-description">In #2, we explore the history of cryogenic</p>
-            <a href="post2.html" class="read-more">Read More →</a>
-        </article>
-
-        <article class="blog-post">
-            <a href="post3.html">
-                <h2>Cryogenics for dummies # 3</h2>
-            </a>
-            <p class="post-description">In #3, we idneofy how cryogenics impacts our day to day lives.</p>
-            <a href="post3.html" class="read-more">Read More →</a>
-        </article>
-
-    </section>
-</main>
-
-<footer>
-  <div class="container">
-      <div class="footer-logo">Radon</div>
-      <!-- Replace with your logo image if you have one -->
-
-      <ul class="footer-social">
-          <li><a href="https://github.com/bharatsurya06" target="_blank"
-                  rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-          <!-- Replace with your GitHub URL -->
-          <li><a href="https://www.researchgate.net/profile/Bharat-Surya-Chamarthi?ev=hdr_xprf"
-                  target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
-          </li>
-          <!-- Replace with your ResearchGate URL -->
-          <li><a href="https://scholar.google.com/citations?user=9iVyE50AAAAJ&hl=en&oi=ao"
-                  target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
-          </li>
-          <!-- Replace with your Google Scholar URL -->
-          <li><a href="https://www.linkedin.com/in/bharatsurya06/" target="_blank"
-                  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-          <!-- Replace with your LinkedIn URL -->
-      </ul>
-
-      <div class="footer-contact">
-          <p>+91-79085-52683</p>
-          <p>Cryogenic Engineering Centre</p>
-          <!-- Replace with your phone number -->
-          <p>IIT Kharagpur, India</p>
-          <!-- Replace with your address -->
-      </div>
-  </div>
-</footer>
-
+    <script>
+        // Load the navigation bar
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

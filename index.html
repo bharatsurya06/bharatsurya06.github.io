@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <title>Bharat Surya Chamarthi - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
 <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar"></div>
 
-    <nav>
-        <div class="logo">
-          <a href="index.html"> <img src="assets/img/logo.png"></a>
-        </div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <span>|</span>
-          <a href="about.html">About</a>
-          <span>|</span>
-          <a href="research.html">Research</a>
-          <span>|</span>
-          <a href="blog.html">Blog</a>
-        </div>
-      </nav>
-    
-    <!-- 2. Hero Section -->
     <div class="hero-section">
-        <div class="typewriter">Hi, there.</div>
-        <p class="tagline">[Radon - mysterious but fascinating]</p>
-        
-   
+        <h1>Welcome to My Personal Website</h1>
+        <p>Explore my research, blog, and more!</p>
     </div>
 
-</body>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Bharat Surya Chamarthi. All rights reserved.</p>
+        </div>
+    </footer>
 
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
 
 </html>
