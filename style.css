@@ -36,7 +36,7 @@ nav {
 }
 
 .logo img { /*Assuming you have <img> tag inside of logo div*/
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -61,6 +61,7 @@ nav {
   
 .nav-links a:hover {
     color: #6495ED;
+    font-size:  1.2em
 }
 
 /* Hero Section Background */
