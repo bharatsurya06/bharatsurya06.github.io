@@ -24,6 +24,7 @@ nav {
     justify-content: space-between; /* Distribute space between logo and links */
     align-items: center;          /* Vertically center items */
     padding: 10px 20px;           /* Add some padding */
+    height: auto;
 }
   
 /* Logo Styles */
@@ -35,8 +36,8 @@ nav {
 }
 
 .logo img { /*Assuming you have <img> tag inside of logo div*/
-    width: 250px; /* Adjust this value to change the width */
-    height: auto;  /* Let the height adjust automatically */
+    height: 50px;
+    width: auto;
 }
 
 /* Navigation Links Styles */
@@ -50,7 +51,7 @@ nav {
     text-decoration: none;
     margin: 0 15px;            /* Add spacing between links */
     font-size: 1.1em;          /* Adjust font size */
-    transition: font-size 0.2s ease; /* Smooth transition for hover effect */
+    transition: color 0.2s ease; /* Smooth transition for hover effect */
 }
   
 .nav-links span {
@@ -59,8 +60,21 @@ nav {
 }
   
 .nav-links a:hover {
-    font-size: 2em; 
-    color:#6495ED        /* Increase font size on hover */
+    color: #6495ED;
+}
+
+/* Hero Section Background */
+.hero-section {
+    background-image: url('assets/img/rocket.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
 /* Overall container for the About page content */
