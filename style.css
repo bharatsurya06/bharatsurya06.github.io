@@ -313,3 +313,23 @@ footer .container {
 .cv-button:hover {
     background-color: #367c39; /* Darker green on hover */
 }
+
+/* Align icons next to the text for professional and social links */
+.professional-links a, .social-links a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px; /* Add spacing between links */
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.professional-links a i, .social-links a i {
+    margin-right: 8px; /* Add spacing between icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.professional-links a:hover, .social-links a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
