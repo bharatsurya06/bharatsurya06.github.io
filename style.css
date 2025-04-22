@@ -333,3 +333,28 @@ footer .container {
 .professional-links a:hover, .social-links a:hover {
     color: #4CAF50; /* Change color on hover */
 }
+
+/* Ensure professional links appear inline */
+.professional-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    gap: 10px; /* Add spacing between links */
+}
+
+.professional-links h3 {
+    margin-right: 10px; /* Add spacing between the heading and links */
+}
+
+.professional-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.professional-links a i {
+    margin-right: 5px; /* Add spacing between icon and text */
+}
