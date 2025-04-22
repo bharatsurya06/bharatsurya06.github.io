@@ -1,0 +1,7 @@
+/* Ensure footer spans the full width of the page */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #f8f9fa; /* Optional: Add a background color for better visibility */
+    padding: 10px 0;
+}
