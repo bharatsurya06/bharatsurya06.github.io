@@ -776,3 +776,50 @@ footer .container {
         padding: 18px 0 10px 0;
     }
 }
+
+/* Blog Recent Posts Card Layout */
+.blog-recent-posts {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+.blog-card {
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(80,80,80,0.10);
+    overflow: hidden;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(80,80,80,0.18);
+}
+.blog-card-image {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+.blog-card-content {
+    padding: 22px 18px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+@media (max-width: 1000px) {
+    .blog-recent-posts {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .blog-card {
+        width: 95vw;
+        max-width: 400px;
+    }
+}
