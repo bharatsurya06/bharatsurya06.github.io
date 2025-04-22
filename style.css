@@ -85,9 +85,10 @@ nav {
 
 /* Footer Styles (From Footer Code) */
 footer {
+    background-color: black; /* Set footer background to black */
+    color: white; /* Set footer text color to white */
     width: 100%;
     text-align: center;
-    background-color: #000000; /* Optional: Add a background color for better visibility */
     padding: 10px 0;
 }
 
