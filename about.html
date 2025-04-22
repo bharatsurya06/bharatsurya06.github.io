@@ -9,11 +9,22 @@
 </head>
 
 <body>
+  <!-- Include the consistent navigation bar -->
+  <div id="navbar"></div>
+
   <footer>
     <div class="container">
         <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+  </script>
 </body>
 
 </html>
