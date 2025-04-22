@@ -22,6 +22,10 @@ body {
     flex-direction: column;
 }
 
+main, .blog-section, .about-section, .research-section {
+    flex: 1 0 auto;
+}
+
 /* Navigation Bar Styles */
 nav {
     background-color: black;
@@ -100,6 +104,9 @@ footer {
     text-align: center;
     padding: 10px 0;
     flex-shrink: 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 footer .container {
