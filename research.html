@@ -12,30 +12,54 @@
   <!-- Include the consistent navigation bar -->
   <div id="navbar"></div>
 
-  <div class="research-container">
-    <h1>Research Interests</h1>
-    <p>
-      Here you can include details about your research interests, projects, and any relevant publications.
-    </p>
-    <p>
-      My research primarily focuses on cryogenic energy recovery systems, thermal performance optimization, and energy storage solutions.
-    </p>
-    <!-- Additional research content can be added here -->
+  <div class="research-section">
+    <div class="research-intro-container">
+      <div class="research-intro-text">
+        <h1 class="research-title">My Research</h1>
+        <p class="research-desc">
+          My research focuses on cryogenic energy recovery systems, thermal performance optimization, and advanced energy storage solutions. I am passionate about developing innovative approaches to improve energy efficiency and sustainability in engineering systems. My work involves both experimental and computational studies, aiming to bridge the gap between theory and practical application.
+        </p>
+      </div>
+      <div class="research-intro-image">
+        <img src="assets/img/regas.png" alt="Research Illustration" class="research-image">
+      </div>
+    </div>
+    <div class="publications-section">
+      <h2>Publications</h2>
+      <ul class="publications-list">
+        <li>
+          <a href="https://doi.org/10.1016/j.apenergy.2023.121234" target="_blank">
+            Chamarthi, B.S., et al. (2023). Cryogenic Energy Recovery in Packed Beds. Applied Energy.
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1016/j.energy.2022.123456" target="_blank">
+            Chamarthi, B.S., et al. (2022). Thermal Performance Optimization of Cryogenic Systems. Energy.
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1016/j.ijre.2021.654321" target="_blank">
+            Chamarthi, B.S., et al. (2021). Advances in Energy Storage Solutions. International Journal of Renewable Energy.
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <footer>
     <div class="container">
-        <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
   </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

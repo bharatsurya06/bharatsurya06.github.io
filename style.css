@@ -424,3 +424,109 @@ footer .container {
 .professional-links a i {
     margin-right: 5px; /* Add spacing between icon and text */
 }
+
+/* --- Research Page Modern Styles --- */
+.research-section {
+    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
+    padding: 40px 0 30px 0;
+    min-height: 70vh;
+}
+
+.research-intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    max-width: 950px;
+    margin: 0 auto 32px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(80,80,80,0.10);
+    padding: 32px 24px;
+}
+
+.research-intro-text {
+    flex: 2;
+    min-width: 220px;
+}
+
+.research-title {
+    font-size: 2em;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.research-desc {
+    font-size: 1.13em;
+    color: #444;
+    margin-bottom: 0;
+}
+
+.research-intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-image {
+    max-width: 220px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: #fff;
+}
+
+.publications-section {
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(80,80,80,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 20px 18px 20px;
+}
+
+.publications-section h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.publications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publications-list li {
+    margin-bottom: 12px;
+    font-size: 1.08em;
+    color: #444;
+}
+
+.publications-list a {
+    color: #4f46e5;
+    text-decoration: none;
+    border-bottom: 1px dotted #bdbdbd;
+    transition: color 0.2s;
+}
+
+.publications-list a:hover {
+    color: #3730a3;
+    border-bottom: 1px solid #4f46e5;
+}
+
+@media (max-width: 900px) {
+    .research-intro-container {
+        flex-direction: column;
+        padding: 18px 8px;
+        gap: 18px;
+    }
+    .research-intro-image {
+        margin-top: 10px;
+    }
+    .publications-section {
+        padding: 14px 6px 10px 6px;
+    }
+}
