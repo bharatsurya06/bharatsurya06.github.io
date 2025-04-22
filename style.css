@@ -81,16 +81,12 @@ nav {
 
 /* Overall container for the About page content */
 .about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Transparent greyish background */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the container */
 }
 
 /* Footer Styles (From Footer Code) */
