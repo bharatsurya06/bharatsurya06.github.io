@@ -17,6 +17,9 @@ body {
     /* Make nav stick to top */
     position: relative;
     min-height: 100vh; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Bar Styles */
@@ -96,6 +99,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px 0;
+    flex-shrink: 0;
 }
 
 footer .container {
@@ -430,6 +434,7 @@ footer .container {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 40px 0 30px 0;
     min-height: 70vh;
+    flex: 1 0 auto;
 }
 
 .research-intro-container {
