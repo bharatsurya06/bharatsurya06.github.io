@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- Include the navigation bar -->
+  <!-- Include the consistent navigation bar -->
   <div id="navbar"></div>
 
   <div class="research-container">
@@ -25,29 +25,16 @@
 
   <footer>
     <div class="container">
-      <div class="footer-logo">Radon</div>
-      <ul class="footer-social">
-        <li><a href="https://github.com/bharatsurya06" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-        <li><a href="https://www.researchgate.net/profile/Bharat-Surya-Chamarthi?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li>
-        <li><a href="https://scholar.google.com/citations?user=9iVyE50AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/bharatsurya06/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-      </ul>
-
-      <div class="footer-contact">
-        <p>+91-79085-52683</p>
-        <p>Cryogenic Engineering Centre</p>
-        <p>IIT Kharagpur, India</p>
-      </div>
+        <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Load the navigation bar
     fetch('components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
   </script>
 </body>
 
