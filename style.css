@@ -295,3 +295,21 @@ footer .container {
     background-color: #367c39;
     /* Darker green on hover */
 }
+
+/* Style for the CV download button */
+.cv-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Green color matching the gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cv-button:hover {
+    background-color: #367c39; /* Darker green on hover */
+}
