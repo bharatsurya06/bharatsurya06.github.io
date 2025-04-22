@@ -629,3 +629,150 @@ footer .container {
         max-width: 98vw;
     }
 }
+
+/* --- Blog Section Modern Creative Styles --- */
+.blog-section {
+    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
+    padding: 40px 0 30px 0;
+    min-height: 70vh;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.blog-header h1 {
+    font-size: 2.3em;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.blog-header p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 18px;
+}
+
+.blog-category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+
+.blog-btn {
+    padding: 10px 22px;
+    border-radius: 24px;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #4f46e5 60%, #6366f1 100%);
+    box-shadow: 0 2px 8px rgba(80,80,80,0.08);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.blog-btn.cryo-btn {
+    background: linear-gradient(90deg, #00c6ff 60%, #0072ff 100%);
+}
+
+.blog-btn.barca-btn {
+    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%);
+}
+
+.blog-btn:hover {
+    transform: translateY(-2px) scale(1.04);
+    filter: brightness(1.1);
+}
+
+.blog-featured {
+    display: flex;
+    flex-direction: row;
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(80,80,80,0.10);
+    margin: 0 auto 28px auto;
+    max-width: 900px;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.blog-featured-image {
+    flex: 1 1 220px;
+    min-width: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px 0 0 18px;
+}
+
+.blog-featured-content {
+    flex: 2 1 0;
+    padding: 28px 28px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-category {
+    display: inline-block;
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding: 4px 14px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.blog-category.cryo {
+    background: linear-gradient(90deg, #00c6ff 60%, #0072ff 100%);
+}
+
+.blog-category.barca {
+    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%);
+}
+
+.blog-title {
+    font-size: 1.4em;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.blog-excerpt {
+    color: #444;
+    font-size: 1.08em;
+    margin-bottom: 12px;
+}
+
+.read-more {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 6px;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #3730a3;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .blog-featured {
+        flex-direction: column;
+        min-height: 0;
+    }
+    .blog-featured-image {
+        border-radius: 18px 18px 0 0;
+        min-height: 180px;
+    }
+    .blog-featured-content {
+        padding: 18px 12px 12px 12px;
+    }
+    .blog-section {
+        padding: 18px 0 10px 0;
+    }
+}

@@ -12,18 +12,33 @@
     <!-- Include the consistent navigation bar -->
     <div id="navbar"></div>
 
-    <script>
-        fetch('components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            });
-    </script>
-
-    <div class="blog-container">
-        <h1>Blog Posts</h1>
-        <p>Welcome to my blog! Here you will find my latest posts and updates.</p>
-        <!-- Blog posts will be added here -->
+    <div class="blog-section">
+        <div class="blog-header">
+            <h1>Blog</h1>
+            <p>Explore my latest posts on Cryogenics for Dummies and FC Barcelona Match Reviews!</p>
+            <div class="blog-category-buttons">
+                <a href="#" class="blog-btn cryo-btn">Cryogenics for Dummies</a>
+                <a href="#" class="blog-btn barca-btn">FC Barcelona Match Reviews</a>
+            </div>
+        </div>
+        <div class="blog-featured">
+            <div class="blog-featured-image" style="background-image: url('assets/img/rocket1.jpg');"></div>
+            <div class="blog-featured-content">
+                <span class="blog-category cryo">Cryogenics for Dummies</span>
+                <h2 class="blog-title">Understanding the Basics of Cryogenics</h2>
+                <p class="blog-excerpt">Kickstart your journey into the world of cryogenics with this beginner-friendly guide. Learn what cryogenics is, its applications, and why it matters in today's world...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="blog-featured">
+            <div class="blog-featured-image" style="background-image: url('assets/img/barca.jpg');"></div>
+            <div class="blog-featured-content">
+                <span class="blog-category barca">FC Barcelona Match Review</span>
+                <h2 class="blog-title">FC Barcelona vs Real Madrid: El Clásico Review</h2>
+                <p class="blog-excerpt">A creative and tactical breakdown of the latest El Clásico, featuring key moments, player performances, and what this means for Barcelona's season...</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -31,6 +46,15 @@
             <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
