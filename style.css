@@ -86,8 +86,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Transparent greyish background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Footer Styles (From Footer Code) */
@@ -201,8 +204,11 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Transparent greyish background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .about-left {
@@ -215,6 +221,16 @@ footer .container {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
+}
+
+.about-left h2 {
+    font-size: 1.5em; /* Smaller heading size */
+    margin-bottom: 10px; /* Reduce space below headings */
+    color: #333;
+}
+
+.about-left ul {
+    margin-bottom: 15px; /* Reduce space between sections */
 }
 
 .about-left p {
