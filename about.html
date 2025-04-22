@@ -13,63 +13,76 @@
   <div id="navbar"></div>
 
   <div class="about-section">
-    <div class="about-container">
+    <div class="about-container restructured">
+      <!-- Left Side: Image, Contact, and Message Form -->
       <div class="about-left">
-        <h1>Bharat Surya Chamarthi</h1>
-        <p>
-          Hello! My name is Bharat Surya Chamarthi. I am passionate about cryogenic energy recovery systems, thermal performance optimization, and energy storage solutions. I enjoy exploring innovative solutions to complex problems and sharing my knowledge with others.
-        </p>
-        <h2>Education</h2>
-        <ul>
-          <li><strong>M.Tech:</strong> Thermal Engineering, XYZ University</li>
-          <li><strong>B.Tech:</strong> Mechanical Engineering, ABC University</li>
-        </ul>
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Cryogenic energy recovery systems</li>
-          <li>Thermal performance optimization</li>
-          <li>Energy storage solutions</li>
-        </ul>
-        <h2>Skills</h2>
-        <ul>
-          <li>Thermal analysis and simulation</li>
-          <li>Data analysis and visualization</li>
-          <li>Project management</li>
-        </ul>
-        <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
-
-        <div class="professional-links">
-          <h3>Professional Profiles:</h3>
-          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>,
-          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>,
-          <a href="https://researchgate.net" target="_blank"><i class="fas fa-flask"></i> ResearchGate</a>,
-          <a href="https://scholar.google.com" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+        <div class="profile-image-box">
+          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" class="about-image">
         </div>
-
-        <div class="social-links">
-          <h3>Follow Me:</h3>
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>,
-          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <div class="contact-box">
+          <h2>Contact</h2>
+          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         </div>
+        <form class="message-form" action="#" method="post">
+          <h3>Send me a message</h3>
+          <input type="email" name="sender_email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
+      <!-- Right Side: About, Education, Research, Skills, CV -->
       <div class="about-right">
-        <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" class="about-image">
+        <h1>Bharat Surya Chamarthi</h1>
+        <p class="about-desc">
+          Passionate about cryogenic energy recovery systems, thermal performance optimization, and energy storage solutions. I enjoy exploring innovative solutions to complex problems and sharing my knowledge with others.
+        </p>
+        <div class="about-info-box">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>M.Tech:</strong> Thermal Engineering, XYZ University</li>
+            <li><strong>B.Tech:</strong> Mechanical Engineering, ABC University</li>
+          </ul>
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Cryogenic energy recovery systems</li>
+            <li>Thermal performance optimization</li>
+            <li>Energy storage solutions</li>
+          </ul>
+          <h3>Skills</h3>
+          <ul>
+            <li>Thermal analysis and simulation</li>
+            <li>Data analysis and visualization</li>
+            <li>Project management</li>
+          </ul>
+        </div>
+        <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
+      </div>
+    </div>
+    <!-- Professional and Social Links -->
+    <div class="about-links">
+      <div class="profile-links">
+        <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://researchgate.net" target="_blank" title="ResearchGate"><i class="fas fa-flask"></i></a>
+        <a href="https://scholar.google.com" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
 
   <footer>
     <div class="container">
-        <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
   </script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>

@@ -190,140 +190,194 @@ footer .container {
 
 /* About Section Styles */
 .about-section {
-    background: linear-gradient(to right, #d3d3d3, #f0f0f0); /* Grey gradient background */
-    padding: 50px 0;
+    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
+    padding: 30px 0 10px 0;
 }
 
-.about-container {
+.about-container.restructured {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 950px;
+    margin: 0 auto 20px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(80,80,80,0.10);
+    padding: 28px 24px;
+}
+
+.about-left, .about-right {
+    flex: 1 1 0;
+    min-width: 260px;
+}
+
+.profile-image-box {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Transparent greyish background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-.about-left {
-    flex: 1;
-    padding-right: 20px;
-    text-align: left; /* Ensure text is aligned to the left */
-}
-
-.about-left h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-left h2 {
-    font-size: 1.5em; /* Smaller heading size */
-    margin-bottom: 10px; /* Reduce space below headings */
-    color: #333;
-}
-
-.about-left ul {
-    margin-bottom: 15px; /* Reduce space between sections */
-}
-
-.about-left p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-}
-
-.about-right {
-    flex: 1;
-    text-align: right; /* Ensure image is aligned to the right */
+    margin-bottom: 18px;
 }
 
 .about-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* About Section Customizations */
-.about-section {
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 50px 0;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    /* Center the content */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white; /* Card background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-}
-
-.about-content h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
-    text-align: justify;
-}
-
-.img-about {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
     border-radius: 50%;
-    /* Circular image */
-    max-width: 200px;
-    /* Adjust size as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-    /* Center the image */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    /* Shadow behind the image */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border: 4px solid #fff;
 }
 
-.CVbutton {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50;
-    /* Green button */
-    color: white;
+.contact-box {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    font-size: 0.98em;
+}
+
+.contact-box h2 {
+    font-size: 1.1em;
+    margin: 0 0 6px 0;
+    color: #444;
+}
+
+.contact-box a {
+    color: #4f46e5;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    word-break: break-all;
 }
 
-.CVbutton:hover {
-    background-color: #367c39;
-    /* Darker green on hover */
+.message-form {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 14px 16px 10px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* Style for the CV download button */
+.message-form h3 {
+    font-size: 1em;
+    margin: 0 0 4px 0;
+    color: #444;
+}
+
+.message-form input, .message-form textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 1em;
+    font-family: inherit;
+    background: #fff;
+    resize: none;
+}
+
+.message-form button {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background 0.2s;
+}
+
+.message-form button:hover {
+    background: #3730a3;
+}
+
+.about-right h1 {
+    font-size: 1.7em;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.about-desc {
+    font-size: 1.08em;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.about-info-box {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 10px 16px 6px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.about-info-box h3 {
+    font-size: 1.08em;
+    margin: 10px 0 4px 0;
+    color: #444;
+}
+
+.about-info-box ul {
+    margin: 0 0 6px 18px;
+    padding: 0;
+    font-size: 0.98em;
+    color: #555;
+}
+
 .cv-button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50; /* Green color matching the gradient */
-    color: white;
+    padding: 10px 22px;
+    background: linear-gradient(90deg, #4f46e5 60%, #6366f1 100%);
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(80,80,80,0.08);
+    transition: background 0.2s;
 }
 
 .cv-button:hover {
-    background-color: #367c39; /* Darker green on hover */
+    background: linear-gradient(90deg, #3730a3 60%, #6366f1 100%);
+}
+
+.about-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.profile-links {
+    display: flex;
+    gap: 18px;
+}
+
+.profile-links a {
+    color: #4f46e5;
+    font-size: 1.7em;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.profile-links a:hover {
+    color: #3730a3;
+}
+
+@media (max-width: 900px) {
+    .about-container.restructured {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px 8px;
+    }
+    .about-left, .about-right {
+        min-width: 0;
+    }
+    .about-links {
+        margin-top: 10px;
+    }
 }
 
 /* Align icons next to the text for professional and social links */
