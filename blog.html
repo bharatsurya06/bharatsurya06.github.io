@@ -24,50 +24,52 @@
         </div>
         <div class="blog-carousel-container">
             <button class="carousel-btn left" onclick="moveCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
-            <div class="blog-carousel">
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('assets/img/rocket1.jpg');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category cryo">Cryogenics for Dummies</span>
-                        <h2 class="blog-title">Understanding the Basics of Cryogenics</h2>
-                        <p class="blog-excerpt">Kickstart your journey into the world of cryogenics with this beginner-friendly guide. Learn what cryogenics is, its applications, and why it matters in today's world...</p>
-                        <a href="#" class="read-more">Read More</a>
+            <div class="blog-carousel-viewport">
+                <div class="blog-carousel">
+                    <div class="blog-card">
+                        <div class="blog-card-image" style="background-image: url('assets/img/rocket1.jpg');"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category cryo">Cryogenics for Dummies</span>
+                            <h2 class="blog-title">Understanding the Basics of Cryogenics</h2>
+                            <p class="blog-excerpt">Kickstart your journey into the world of cryogenics with this beginner-friendly guide. Learn what cryogenics is, its applications, and why it matters in today's world...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('assets/img/barca.jpg');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category barca">FC Barcelona Match Review</span>
-                        <h2 class="blog-title">FC Barcelona vs Real Madrid: El Clásico Review</h2>
-                        <p class="blog-excerpt">A creative and tactical breakdown of the latest El Clásico, featuring key moments, player performances, and what this means for Barcelona's season...</p>
-                        <a href="#" class="read-more">Read More</a>
+                    <div class="blog-card">
+                        <div class="blog-card-image" style="background-image: url('assets/img/barca.jpg');"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category barca">FC Barcelona Match Review</span>
+                            <h2 class="blog-title">FC Barcelona vs Real Madrid: El Clásico Review</h2>
+                            <p class="blog-excerpt">A creative and tactical breakdown of the latest El Clásico, featuring key moments, player performances, and what this means for Barcelona's season...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('assets/img/features-light-1.jpg');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category cryo">Cryogenics for Dummies</span>
-                        <h2 class="blog-title">Cryogenic Storage: Safety and Innovations</h2>
-                        <p class="blog-excerpt">Explore the latest innovations and safety protocols in cryogenic storage, making the field safer and more efficient for everyone involved...</p>
-                        <a href="#" class="read-more">Read More</a>
+                    <div class="blog-card">
+                        <div class="blog-card-image" style="background-image: url('assets/img/features-light-1.jpg');"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category cryo">Cryogenics for Dummies</span>
+                            <h2 class="blog-title">Cryogenic Storage: Safety and Innovations</h2>
+                            <p class="blog-excerpt">Explore the latest innovations and safety protocols in cryogenic storage, making the field safer and more efficient for everyone involved...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('assets/img/features-light-2.jpg');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category cryo">Cryogenics for Dummies</span>
-                        <h2 class="blog-title">Applications of Cryogenics in Modern Industry</h2>
-                        <p class="blog-excerpt">Discover how cryogenics is revolutionizing various industries and what the future holds...</p>
-                        <a href="#" class="read-more">Read More</a>
+                    <div class="blog-card">
+                        <div class="blog-card-image" style="background-image: url('assets/img/features-light-2.jpg');"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category cryo">Cryogenics for Dummies</span>
+                            <h2 class="blog-title">Applications of Cryogenics in Modern Industry</h2>
+                            <p class="blog-excerpt">Discover how cryogenics is revolutionizing various industries and what the future holds...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('assets/img/features-light-3.jpg');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category barca">FC Barcelona Match Review</span>
-                        <h2 class="blog-title">Barça's Champions League Journey</h2>
-                        <p class="blog-excerpt">A review of Barcelona's latest Champions League campaign and key takeaways...</p>
-                        <a href="#" class="read-more">Read More</a>
+                    <div class="blog-card">
+                        <div class="blog-card-image" style="background-image: url('assets/img/features-light-3.jpg');"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category barca">FC Barcelona Match Review</span>
+                            <h2 class="blog-title">Barça's Champions League Journey</h2>
+                            <p class="blog-excerpt">A review of Barcelona's latest Champions League campaign and key takeaways...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,18 +90,22 @@
                 document.getElementById('navbar').innerHTML = data;
             });
 
-        // Carousel functionality for blog posts
+        // Improved Carousel functionality for blog posts (looping, 3 at a time)
         let carouselIndex = 0;
         const visibleCards = 3;
-        function moveCarousel(direction) {
+        const totalCards = 5;
+        function updateCarousel() {
             const carousel = document.querySelector('.blog-carousel');
-            const cards = document.querySelectorAll('.blog-carousel .blog-card');
-            const maxIndex = cards.length - visibleCards;
-            carouselIndex += direction;
-            if (carouselIndex < 0) carouselIndex = 0;
-            if (carouselIndex > maxIndex) carouselIndex = maxIndex;
+            carousel.style.transition = 'transform 0.5s cubic-bezier(.77,0,.18,1)';
             carousel.style.transform = `translateX(-${carouselIndex * (100 / visibleCards)}%)`;
         }
+        function moveCarousel(direction) {
+            carouselIndex += direction;
+            if (carouselIndex < 0) carouselIndex = totalCards - visibleCards;
+            if (carouselIndex > totalCards - visibleCards) carouselIndex = 0;
+            updateCarousel();
+        }
+        window.addEventListener('DOMContentLoaded', updateCarousel);
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
