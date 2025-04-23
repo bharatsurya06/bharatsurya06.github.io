@@ -90,22 +90,59 @@
                 document.getElementById('navbar').innerHTML = data;
             });
 
-        // Improved Carousel functionality for blog posts (looping, 3 at a time)
-        let carouselIndex = 0;
+        // Continuous Carousel functionality for blog posts (infinite loop, 3 at a time)
         const visibleCards = 3;
-        const totalCards = 5;
-        function updateCarousel() {
-            const carousel = document.querySelector('.blog-carousel');
-            carousel.style.transition = 'transform 0.5s cubic-bezier(.77,0,.18,1)';
-            carousel.style.transform = `translateX(-${carouselIndex * (100 / visibleCards)}%)`;
+        const carousel = document.querySelector('.blog-carousel');
+        const cards = Array.from(document.querySelectorAll('.blog-carousel .blog-card'));
+        let carouselIndex = 0;
+
+        // Clone first and last few cards for infinite effect
+        function setupCarousel() {
+            // Remove any previous clones
+            document.querySelectorAll('.blog-carousel .clone').forEach(e => e.remove());
+            // Clone last N and prepend
+            for (let i = cards.length - visibleCards; i < cards.length; i++) {
+                const clone = cards[i].cloneNode(true);
+                clone.classList.add('clone');
+                carousel.prepend(clone);
+            }
+            // Clone first N and append
+            for (let i = 0; i < visibleCards; i++) {
+                const clone = cards[i].cloneNode(true);
+                clone.classList.add('clone');
+                carousel.append(clone);
+            }
+            // Set initial position
+            carouselIndex = visibleCards;
+            updateCarousel(true);
         }
+
+        function updateCarousel(jump) {
+            const cardWidth = document.querySelector('.blog-card').offsetWidth + 12; // 12px margin
+            carousel.style.transition = jump ? 'none' : 'transform 0.5s cubic-bezier(.77,0,.18,1)';
+            carousel.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+        }
+
         function moveCarousel(direction) {
-            carouselIndex += direction;
-            if (carouselIndex < 0) carouselIndex = totalCards - visibleCards;
-            if (carouselIndex > totalCards - visibleCards) carouselIndex = 0;
+            const total = cards.length;
+            carouselIndex += direction * visibleCards;
             updateCarousel();
+            // After transition, jump if at clone
+            setTimeout(() => {
+                if (carouselIndex < visibleCards) {
+                    carouselIndex = total + (carouselIndex % total);
+                    updateCarousel(true);
+                } else if (carouselIndex >= total + visibleCards) {
+                    carouselIndex = visibleCards;
+                    updateCarousel(true);
+                }
+            }, 510);
         }
-        window.addEventListener('DOMContentLoaded', updateCarousel);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupCarousel();
+            window.addEventListener('resize', () => updateCarousel(true));
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
