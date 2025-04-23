@@ -945,3 +945,62 @@ footer .container {
         grid-template-columns: 1fr;
     }
 }
+
+/* Blog Carousel Styles */
+.blog-carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 32px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog-carousel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+.blog-card {
+    min-width: 300px;
+    max-width: 300px;
+    margin: 0 12px;
+    flex-shrink: 0;
+}
+.carousel-btn {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    color: #4f46e5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: background 0.2s, color 0.2s;
+}
+.carousel-btn:hover {
+    background: #4f46e5;
+    color: #fff;
+}
+.blog-carousel-container .left {
+    margin-right: 10px;
+}
+.blog-carousel-container .right {
+    margin-left: 10px;
+}
+@media (max-width: 1000px) {
+    .blog-carousel {
+        max-width: 98vw;
+    }
+    .blog-card {
+        min-width: 90vw;
+        max-width: 90vw;
+    }
+}
