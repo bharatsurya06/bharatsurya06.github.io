@@ -833,22 +833,15 @@ footer .container {
 
 /* Blog Tile List for Category Pages - 4 Tiles Per Row, Modern Overlay & Hover */
 .blog-tile-list {
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 32px;
     justify-items: center;
-    margin-bottom: 32px;
 }
-@media (max-width: 1200px) {
-    .blog-tile-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 700px) {
-    .blog-tile-list {
-        grid-template-columns: 1fr;
-    }
-}
+
 .blog-tile {
     position: relative;
     background: rgba(255,255,255,0.97);
@@ -861,8 +854,9 @@ footer .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: 260px;
 }
+
 .blog-tile:hover {
     transform: translateY(-8px) scale(1.04);
     box-shadow: 0 16px 40px rgba(80,80,80,0.18);
@@ -937,4 +931,17 @@ footer .container {
 }
 .blog-tile:hover .read-more-symbol {
     transform: translateX(4px) scale(1.2);
+}
+
+@media (max-width: 1200px) {
+    .blog-tile-list {
+        width: 95vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .blog-tile-list {
+        width: 99vw;
+        grid-template-columns: 1fr;
+    }
 }
