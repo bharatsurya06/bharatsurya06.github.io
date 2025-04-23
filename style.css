@@ -834,9 +834,9 @@ footer .container {
 /* Blog Tile List for Category Pages - 4 Tiles Per Row, Modern Overlay & Hover */
 .blog-tile-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 32px;
-    justify-content: center;
+    justify-items: center;
     margin-bottom: 32px;
 }
 @media (max-width: 1200px) {
@@ -860,6 +860,8 @@ footer .container {
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 320px;
 }
 .blog-tile:hover {
     transform: translateY(-8px) scale(1.04);
