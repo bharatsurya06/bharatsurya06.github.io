@@ -957,21 +957,22 @@ footer .container {
 }
 .blog-carousel-viewport {
     width: 100%;
-    max-width: 900px;
+    max-width: 936px; /* 3 cards * 312px (card + margin) */
     overflow: hidden;
     position: relative;
     display: flex;
 }
 .blog-carousel {
     display: flex;
-    width: calc(300px * 5); /* 5 cards, each 300px */
     transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    will-change: transform;
 }
 .blog-card {
     min-width: 300px;
     max-width: 300px;
-    margin: 0 12px;
+    margin: 0 6px;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 .carousel-btn {
     background: #fff;
@@ -1007,8 +1008,5 @@ footer .container {
     .blog-card {
         min-width: 90vw;
         max-width: 90vw;
-    }
-    .blog-carousel {
-        width: calc(90vw * 5);
     }
 }
