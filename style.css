@@ -801,10 +801,11 @@ footer .container {
     display: flex;
     flex-direction: column;
     min-height: 420px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
 }
 .blog-card:hover {
-    transform: translateY(-6px) scale(1.03);
+    transform: scale(1.06);
+    z-index: 2;
     box-shadow: 0 12px 32px rgba(80,80,80,0.18);
 }
 .blog-card-image {
@@ -964,7 +965,7 @@ footer .container {
 }
 .blog-carousel {
     display: flex;
-    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    transition: transform 0.6s cubic-bezier(.77,0,.18,1);
     will-change: transform;
 }
 .blog-card {
@@ -973,6 +974,12 @@ footer .container {
     margin: 0 6px;
     flex-shrink: 0;
     box-sizing: border-box;
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+}
+.blog-card:hover {
+    transform: scale(1.06);
+    z-index: 2;
+    box-shadow: 0 12px 32px rgba(80,80,80,0.18);
 }
 .carousel-btn {
     background: #fff;
