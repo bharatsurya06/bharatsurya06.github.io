@@ -23,13 +23,13 @@
             <h2 class="recent-posts-title">Recent Posts</h2>
         </div>
         <div class="blog-carousel-container">
-            <button class="carousel-btn left" onclick="moveCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn left" id="carousel-left"><i class="fas fa-chevron-left"></i></button>
             <div class="blog-carousel-viewport">
                 <div class="blog-carousel" id="blog-carousel-js">
                     <!-- JS will render 3 cards here -->
                 </div>
             </div>
-            <button class="carousel-btn right" onclick="moveCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+            <button class="carousel-btn right" id="carousel-right"><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
 
@@ -92,34 +92,54 @@
 
         let carouselStart = 0;
         const visibleCards = 3;
+        let isSliding = false;
 
-        function renderCarousel() {
+        function renderCarousel(slideDirection = 0) {
             const carousel = document.getElementById('blog-carousel-js');
-            carousel.innerHTML = '';
-            for (let i = 0; i < visibleCards; i++) {
-                const idx = (carouselStart + i) % blogPosts.length;
-                const post = blogPosts[idx];
-                carousel.innerHTML += `
-                    <div class="blog-card">
-                        <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
-                        <div class="blog-card-content">
-                            <span class="blog-category ${post.categoryClass}">${post.category}</span>
-                            <h2 class="blog-title">${post.title}</h2>
-                            <p class="blog-excerpt">${post.excerpt}</p>
-                            <a href="${post.link}" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                `;
+            // For sliding, create 3+3 cards (prev, current, next)
+            let cardsToShow = [];
+            for (let i = -visibleCards; i < 2 * visibleCards; i++) {
+                const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
+                cardsToShow.push(blogPosts[idx]);
             }
+            carousel.innerHTML = cardsToShow.map(post => `
+                <div class="blog-card">
+                    <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
+                    <div class="blog-card-content">
+                        <span class="blog-category ${post.categoryClass}">${post.category}</span>
+                        <h2 class="blog-title">${post.title}</h2>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                        <a href="${post.link}" class="read-more">Read More</a>
+                    </div>
+                </div>
+            `).join('');
+            // Set initial transform for sliding
+            const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
+            carousel.style.transition = slideDirection === 0 ? 'none' : 'transform 0.6s cubic-bezier(.77,0,.18,1)';
+            carousel.style.transform = `translateX(-${cardWidth * visibleCards}px)`;
         }
 
         function moveCarousel(direction) {
-            carouselStart = (carouselStart + direction * visibleCards + blogPosts.length) % blogPosts.length;
-            renderCarousel();
+            if (isSliding) return;
+            isSliding = true;
+            const carousel = document.getElementById('blog-carousel-js');
+            const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
+            // Animate slide
+            carousel.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1)';
+            carousel.style.transform = `translateX(-${cardWidth * (visibleCards + direction * visibleCards)}px)`;
+            setTimeout(() => {
+                // Update start index
+                carouselStart = (carouselStart + direction * visibleCards + blogPosts.length) % blogPosts.length;
+                renderCarousel(direction);
+                isSliding = false;
+            }, 600);
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             renderCarousel();
+            document.getElementById('carousel-left').onclick = () => moveCarousel(-1);
+            document.getElementById('carousel-right').onclick = () => moveCarousel(1);
+            window.addEventListener('resize', () => renderCarousel());
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
