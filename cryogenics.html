@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryogenics for Dummies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="blog-section">
+    <div class="blog-header">
+      <h1>Cryogenics for Dummies</h1>
+      <p>All posts in the Cryogenics for Dummies series.</p>
+    </div>
+    <div class="blog-tile-list">
+      <!-- Example tiles, add more as needed -->
+      <div class="blog-tile">
+        <img src="assets/img/rocket1.jpg" alt="Cryogenics Post 1">
+        <div class="blog-tile-content">
+          <h2>Understanding the Basics of Cryogenics</h2>
+          <p>Kickstart your journey into the world of cryogenics with this beginner-friendly guide...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <div class="blog-tile">
+        <img src="assets/img/features-light-1.jpg" alt="Cryogenics Post 2">
+        <div class="blog-tile-content">
+          <h2>Cryogenic Storage: Safety and Innovations</h2>
+          <p>Explore the latest innovations and safety protocols in cryogenic storage...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <!-- Add more tiles as needed -->
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    fetch('components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

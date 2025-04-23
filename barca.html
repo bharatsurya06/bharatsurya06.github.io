@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Barcelona Match Reviews</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="blog-section">
+    <div class="blog-header">
+      <h1>FC Barcelona Match Reviews</h1>
+      <p>All posts in the FC Barcelona Match Reviews series.</p>
+    </div>
+    <div class="blog-tile-list">
+      <!-- Example tiles, add more as needed -->
+      <div class="blog-tile">
+        <img src="assets/img/barca.jpg" alt="Barca Post 1">
+        <div class="blog-tile-content">
+          <h2>FC Barcelona vs Real Madrid: El Clásico Review</h2>
+          <p>A creative and tactical breakdown of the latest El Clásico, featuring key moments...</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <!-- Add more tiles as needed -->
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    fetch('components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
