@@ -870,11 +870,11 @@ footer .container {
 }
 
 .blog-card.cryo .blog-hover-overlay {
-    background: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
+    background: linear-gradient(120deg, #00c8ff8b 60%, #0072ff 100%);
 }
 
 .blog-card.barca .blog-hover-overlay {
-    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%);
+    background: linear-gradient(90deg, #fc466a85 60%, #3f5efb 100%);
 }
 
 .read-full-blog {
