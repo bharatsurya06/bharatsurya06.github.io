@@ -124,12 +124,12 @@
             isSliding = true;
             const carousel = document.getElementById('blog-carousel-js');
             const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
-            // Animate slide
+            // Animate slide by 1 card
             carousel.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1)';
-            carousel.style.transform = `translateX(-${cardWidth * (visibleCards + direction * visibleCards)}px)`;
+            carousel.style.transform = `translateX(-${cardWidth * (visibleCards + direction)}px)`;
             setTimeout(() => {
-                // Update start index
-                carouselStart = (carouselStart + direction * visibleCards + blogPosts.length) % blogPosts.length;
+                // Update start index by 1
+                carouselStart = (carouselStart + direction + blogPosts.length) % blogPosts.length;
                 renderCarousel(direction);
                 isSliding = false;
             }, 600);
