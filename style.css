@@ -848,15 +848,9 @@ footer .container {
     color: #444;
     font-size: 1em;
     margin-bottom: 10px;
-    opacity: 0;
-    max-height: 0;
-    transition: opacity 0.3s, max-height 0.3s;
-}
-
-.blog-card:hover .blog-excerpt {
     opacity: 1;
     max-height: 200px;
-    margin-bottom: 10px;
+    transition: opacity 0.3s, max-height 0.3s;
 }
 
 .blog-hover-overlay {
@@ -876,11 +870,11 @@ footer .container {
 }
 
 .blog-card.cryo .blog-hover-overlay {
-    background: linear-gradient(120deg, rgba(0,198,255,0.85) 0%, rgba(0,114,255,0.85) 100%);
+    background: linear-gradient(120deg, rgba(0,198,255,0.55) 0%, rgba(0,114,255,0.55) 100%);
 }
 
 .blog-card.barca .blog-hover-overlay {
-    background: linear-gradient(90deg, rgba(252,70,107,0.85) 60%, rgba(63,94,251,0.85) 100%);
+    background: linear-gradient(90deg, rgba(252,70,107,0.55) 60%, rgba(63,94,251,0.55) 100%);
 }
 
 .read-full-blog {
