@@ -46,7 +46,6 @@
                 document.getElementById('navbar').innerHTML = data;
             });
 
-        // Data for 5 recent posts
         const blogPosts = [
             {
                 image: 'assets/img/rocket1.jpg',
@@ -94,11 +93,10 @@
         const visibleCards = 3;
         let isSliding = false;
 
-        function renderCarousel(slideDirection = 0) {
+        function renderCarousel() {
             const carousel = document.getElementById('blog-carousel-js');
-            // For sliding, create 3+3 cards (prev, current, next)
             let cardsToShow = [];
-            for (let i = -visibleCards; i < 2 * visibleCards; i++) {
+            for (let i = -1; i < visibleCards + 1; i++) {
                 const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
                 cardsToShow.push(blogPosts[idx]);
             }
@@ -113,10 +111,9 @@
                     </div>
                 </div>
             `).join('');
-            // Set initial transform for sliding
             const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
-            carousel.style.transition = slideDirection === 0 ? 'none' : 'transform 0.6s cubic-bezier(.77,0,.18,1)';
-            carousel.style.transform = `translateX(-${cardWidth * visibleCards}px)`;
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(-${cardWidth}px)`;
         }
 
         function moveCarousel(direction) {
@@ -124,15 +121,14 @@
             isSliding = true;
             const carousel = document.getElementById('blog-carousel-js');
             const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
-            // Animate slide by 1 card
             carousel.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1)';
-            carousel.style.transform = `translateX(-${cardWidth * (visibleCards + direction)}px)`;
-            setTimeout(() => {
-                // Update start index by 1
+            carousel.style.transform = `translateX(-${cardWidth * (1 + direction)}px)`;
+            carousel.addEventListener('transitionend', onTransitionEnd, { once: true });
+            function onTransitionEnd() {
                 carouselStart = (carouselStart + direction + blogPosts.length) % blogPosts.length;
-                renderCarousel(direction);
+                renderCarousel();
                 isSliding = false;
-            }, 600);
+            }
         }
 
         window.addEventListener('DOMContentLoaded', () => {
