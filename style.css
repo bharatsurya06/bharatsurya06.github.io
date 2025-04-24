@@ -853,11 +853,36 @@ footer .container {
     transition: opacity 0.3s, max-height 0.3s;
 }
 
+/* Blog card gradient overlay on hover for category */
+.blog-card.cryo::before,
+.blog-card.barca::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s;
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.blog-card.cryo::before {
+    background: linear-gradient(120deg, #00c6ff 0%, #0072ff 100%);
+}
+
+.blog-card.barca::before {
+    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%);
+}
+
+.blog-card:hover::before {
+    opacity: 0.85;
+}
+
 .blog-hover-overlay {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     opacity: 0;
-    z-index: 10;
+    z-index: 3;
     transition: opacity 0.3s;
     display: flex;
     align-items: center;
