@@ -102,9 +102,9 @@
                 cardsToShow.push(`
                     <div class="blog-card ${post.categoryClass}">
                         <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
-                        <div class="blog-hover-overlay">
+                        <a href="${post.link}" class="blog-hover-overlay" tabindex="-1">
                           <span class="read-full-blog">Read Full Blog</span>
-                        </div>
+                        </a>
                         <div class="blog-card-content">
                             <span class="blog-category ${post.categoryClass}">${post.category}</span>
                             <h2 class="blog-title">${post.title}</h2>
