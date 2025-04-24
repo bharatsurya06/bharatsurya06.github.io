@@ -99,11 +99,12 @@
             for (let i = -1; i < visibleCards + 1; i++) {
                 const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
                 const post = blogPosts[idx];
-                // Add overlay for hover effect
                 cardsToShow.push(`
                     <div class="blog-card ${post.categoryClass}">
                         <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
-                        <div class="blog-hover-overlay"></div>
+                        <div class="blog-hover-overlay">
+                          <span class="read-full-blog">Read Full Blog</span>
+                        </div>
                         <div class="blog-card-content">
                             <span class="blog-category ${post.categoryClass}">${post.category}</span>
                             <h2 class="blog-title">${post.title}</h2>
