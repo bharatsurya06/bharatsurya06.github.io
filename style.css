@@ -881,7 +881,7 @@ footer .container {
     color: #fff;
     font-size: 1.2em;
     font-weight: bold;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    text-shadow: 0 2px 8px rgb(0, 0, 0);
     letter-spacing: 1px;
     padding: 12px 24px;
     border-radius: 8px;
