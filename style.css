@@ -857,24 +857,36 @@ footer .container {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     opacity: 0;
-    z-index: 3;
+    z-index: 10;
     transition: opacity 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
+    pointer-events: auto;
+    text-decoration: none;
+    border-radius: 18px;
 }
 
 .blog-card:hover .blog-hover-overlay {
     opacity: 1;
 }
 
-.blog-card.cryo .blog-hover-overlay {
-    background: linear-gradient(120deg, #00c8ff8b 60%, #0072ff 100%);
+.blog-hover-overlay .read-full-blog {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.10);
+    pointer-events: none;
+    text-align: center;
 }
 
-.blog-card.barca .blog-hover-overlay {
-    background: linear-gradient(90deg, #fc466a85 60%, #3f5efb 100%);
+.blog-hover-overlay:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0072ff;
 }
 
 .read-full-blog {
