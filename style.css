@@ -885,7 +885,7 @@ footer .container {
     letter-spacing: 1px;
     padding: 12px 24px;
     border-radius: 8px;
-    background: rgba(0,0,0,0.10);
+    background: rgb(0, 0, 0);
     pointer-events: none;
 }
 
