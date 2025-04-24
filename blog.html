@@ -98,19 +98,21 @@
             let cardsToShow = [];
             for (let i = -1; i < visibleCards + 1; i++) {
                 const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
-                cardsToShow.push(blogPosts[idx]);
-            }
-            carousel.innerHTML = cardsToShow.map(post => `
-                <div class="blog-card">
-                    <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
-                    <div class="blog-card-content">
-                        <span class="blog-category ${post.categoryClass}">${post.category}</span>
-                        <h2 class="blog-title">${post.title}</h2>
-                        <p class="blog-excerpt">${post.excerpt}</p>
-                        <a href="${post.link}" class="read-more">Read More</a>
+                const post = blogPosts[idx];
+                // Add overlay for hover effect
+                cardsToShow.push(`
+                    <div class="blog-card ${post.categoryClass}">
+                        <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
+                        <div class="blog-hover-overlay"></div>
+                        <div class="blog-card-content">
+                            <span class="blog-category ${post.categoryClass}">${post.category}</span>
+                            <h2 class="blog-title">${post.title}</h2>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                        </div>
                     </div>
-                </div>
-            `).join('');
+                `);
+            }
+            carousel.innerHTML = cardsToShow.join('');
             const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
             carousel.style.transition = 'none';
             carousel.style.transform = `translateX(-${cardWidth}px)`;
