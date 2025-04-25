@@ -72,6 +72,34 @@ nav {
 
 .logo { display: none; }
 
+/* Unique transparent card-style navbar for index.html only */
+body.index-page nav {
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 4px 24px rgba(80,80,80,0.10);
+    border-radius: 18px;
+    padding: 0 32px;
+    height: 54px;
+    min-height: 0;
+    width: fit-content;
+    margin: 32px auto 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body.index-page .nav-links.nav-center {
+    gap: 0.8em;
+}
+body.index-page .nav-links a, body.index-page .nav-links span {
+    color: #222;
+    line-height: 54px;
+    font-size: 1.15em;
+}
+body.index-page .nav-links a:hover {
+    color: #0072ff;
+    font-size: 1.22em;
+}
+
 /* Hero Section Background */
 .hero-section {
     background-image: url('../assets/img/rocket.jpg');
