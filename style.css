@@ -77,7 +77,7 @@ body.index-page {
     background: none !important;
 }
 body.index-page .hero-section {
-    background-image: url('assets/img/hero-bg.jpg');
+    background-image: url('assets/img/rocket.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
