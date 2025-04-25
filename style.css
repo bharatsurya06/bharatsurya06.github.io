@@ -818,6 +818,12 @@ footer .container {
     height: 100%;
 }
 
+/* Remove underline from blog card links and all text inside */
+.blog-card,
+.blog-card * {
+    text-decoration: none !important;
+}
+
 .blog-card-image {
     width: 100%;
     height: 180px;
