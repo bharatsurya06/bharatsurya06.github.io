@@ -144,6 +144,16 @@ body.index-page .nav-links a:hover {
 }
 
 /* Footer Styles (From Footer Code) */
+footer .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
 footer {
     background-color: black; /* Set footer background to black */
     color: white; /* Set footer text color to white */
@@ -154,15 +164,6 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-}
-
-footer .container {
-    max-width: 1200px;
-    /* margin: 0 auto; */
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Left Side: Logo */
