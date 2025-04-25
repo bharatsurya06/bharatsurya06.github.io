@@ -73,6 +73,23 @@ nav {
 .logo { display: none; }
 
 /* Unique transparent card-style navbar for index.html only */
+body.index-page {
+    background: none !important;
+}
+body.index-page .hero-section {
+    background-image: url('assets/img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 body.index-page nav {
     background: rgba(255,255,255,0.7);
     box-shadow: 0 4px 24px rgba(80,80,80,0.10);
@@ -82,7 +99,11 @@ body.index-page nav {
     min-height: 0;
     width: fit-content;
     margin: 32px auto 0 auto;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
