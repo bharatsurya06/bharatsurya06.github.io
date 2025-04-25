@@ -100,7 +100,7 @@
                 const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
                 const post = blogPosts[idx];
                 cardsToShow.push(`
-                    <div class="blog-card ${post.categoryClass}">
+                    <a href="${post.link}" class="blog-card ${post.categoryClass}" tabindex="0">
                         <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
                         <div class="blog-hover-overlay"></div>
                         <div class="blog-card-content">
@@ -108,7 +108,7 @@
                             <h2 class="blog-title">${post.title}</h2>
                             <p class="blog-excerpt">${post.excerpt}</p>
                         </div>
-                    </div>
+                    </a>
                 `);
             }
             carousel.innerHTML = cardsToShow.join('');
