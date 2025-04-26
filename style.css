@@ -1406,3 +1406,62 @@ footer {
         max-width: 90vw;
     }
 }
+
+/* --- Blaugrana (FC Barcelona) Blog Theme Enhancements --- */
+
+/* Blaugrana gradient border for blog cards */
+.blog-card.barca {
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
+    border-image-slice: 1;
+    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
+}
+
+/* Blaugrana gradient border for blog tiles */
+.blog-tile.barca {
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
+    border-image-slice: 1;
+    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
+}
+
+/* Blaugrana button and category enhancements */
+.blog-btn.barca-btn {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
+    color: #fff;
+    border: 2px solid #FC466B;
+    box-shadow: 0 2px 12px rgba(63, 94, 251, 0.13);
+}
+
+.blog-btn.barca-btn:hover {
+    background: linear-gradient(90deg, #FC466B 0%, #3f5efb 100%) !important;
+    color: #fff;
+    border: 2px solid #3f5efb;
+    filter: brightness(1.08);
+}
+
+.blog-category.barca {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
+    color: #fff;
+    border: 1.5px solid #FC466B;
+}
+
+/* Blog card hover effect for Blaugrana */
+.blog-card.barca:hover {
+    box-shadow: 0 16px 40px rgba(252, 70, 107, 0.18), 0 8px 32px rgba(63, 94, 251, 0.18);
+    transform: scale(1.07);
+}
+
+/* Optional: Add a subtle background to the blog section for Barca posts */
+.blog-section.barca-theme {
+    background: linear-gradient(120deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%, #fff 120%);
+}
+
+/* Optional: Accent headings for Barca blog */
+.blog-header.barca-theme h1 {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
