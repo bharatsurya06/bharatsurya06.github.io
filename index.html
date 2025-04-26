@@ -12,7 +12,9 @@
     <!-- Include the consistent navigation bar -->
     <div id="navbar"></div>
 
-    <div class="hero-section"></div>
+    <div class="hero-section">
+        <div class="hello-graphic" id="hello-graphic"></div>
+    </div>
 
     <footer>
         <div class="container">
@@ -26,6 +28,32 @@
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
             });
+
+        // Animated Hello! text effect
+        const helloText = "Hello !";
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=~";
+        const helloDiv = document.getElementById('hello-graphic');
+        let revealSteps = 0;
+        function animateHello() {
+            let display = '';
+            for (let i = 0; i < helloText.length; i++) {
+                if (i < revealSteps) {
+                    display += helloText[i];
+                } else if (helloText[i] === ' ') {
+                    display += ' ';
+                } else {
+                    display += chars[Math.floor(Math.random() * chars.length)];
+                }
+            }
+            helloDiv.textContent = display;
+            if (revealSteps < helloText.length) {
+                setTimeout(() => {
+                    revealSteps += 1;
+                    animateHello();
+                }, 120);
+            }
+        }
+        animateHello();
     </script>
 </body>
 

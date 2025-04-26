@@ -133,6 +133,33 @@ body.index-page .nav-links a:hover {
     text-align: center;
 }
 
+/* Animated Hello! graphic style for landing page */
+.hello-graphic {
+    font-size: 4.5em;
+    font-weight: 800;
+    background: linear-gradient(90deg, #0072ff 20%, #00c6ff 60%, #fc466b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 18vh;
+    letter-spacing: 0.08em;
+    text-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    user-select: none;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    width: 100%;
+    max-width: 100vw;
+    transition: color 0.3s;
+}
+@media (max-width: 700px) {
+    .hello-graphic {
+        font-size: 2.2em;
+        margin-top: 10vh;
+    }
+}
+
 /* Overall container for the About page content */
 .about-container {
     background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
