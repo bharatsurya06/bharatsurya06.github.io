@@ -743,9 +743,11 @@ footer {
 /* Publication link hover effect */
 .pub-link-hover {
     transition: color 0.2s;
+    text-decoration: none;
 }
 .pub-link-hover:hover {
     color: #fa0000 !important;
+    text-decoration: none;
 }
 
 @media (max-width: 900px) {
