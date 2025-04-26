@@ -559,6 +559,32 @@ footer {
   margin-right: 0;
 }
 
+/* --- Connect Card: Single Row with Vertical Bar --- */
+.connect-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+.connect-vbar {
+  display: inline-block;
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(180deg, #4f46e5 0%, #14b8a6 100%);
+  margin: 0 14px;
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .connect-row {
+    gap: 10px;
+  }
+  .connect-vbar {
+    height: 22px;
+    margin: 0 7px;
+  }
+}
+
 /* --- Research Page Modern Styles --- */
 .research-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
