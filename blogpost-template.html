@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Include the consistent navigation bar -->
+    <div id="navbar"></div>
+
+    <main class="blogpost-main" style="max-width: 700px; margin: 40px auto 60px auto; padding: 0 16px;">
+        <article style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 32px 24px;">
+            <h1 style="font-size: 2.2rem; margin-bottom: 0.5em;">Blog Post Title</h1>
+            <p style="color: #888; font-size: 1rem; margin-bottom: 2em;">April 26, 2025 &bull; Author Name</p>
+            <div class="blogpost-content" style="font-size: 1.15rem; line-height: 1.7; color: #222;">
+                <p>Your blog content goes here. This is a minimal template for a blog post. You can add images, code, and more using standard HTML.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
