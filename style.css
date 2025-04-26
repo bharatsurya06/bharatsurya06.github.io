@@ -72,6 +72,7 @@ nav {
 .nav-links a:hover {
     color: #fa0000;
     font-size: 1.2em;
+    font-weight: 800;
 }
 
 .logo { display: none; }
@@ -121,8 +122,9 @@ body.index-page .nav-links a, body.index-page .nav-links span {
     font-size: 1.15em;
 }
 body.index-page .nav-links a:hover {
-    color: #0072ff;
+    color: #fa0000;
     font-size: 1.22em;
+    font-weight: 800;
 }
 
 /* Hero Section Background */
