@@ -740,6 +740,14 @@ footer {
     color: #3730a3;
 }
 
+/* Publication link hover effect */
+.pub-link-hover {
+    transition: color 0.2s;
+}
+.pub-link-hover:hover {
+    color: #fa0000 !important;
+}
+
 @media (max-width: 900px) {
     .research-intro-container {
         flex-direction: column;
