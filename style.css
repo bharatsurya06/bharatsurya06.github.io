@@ -607,6 +607,9 @@ footer {
     padding: 32px 28px 28px 28px;
     max-width: 1000px;
     margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .research-intro-flex {
@@ -628,6 +631,26 @@ footer {
     border-radius: 16px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.13);
     background: #fff;
+}
+
+.research-image-center {
+    width: 100%;
+    max-width: 600px;
+    margin: 32px auto 18px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-image-xl {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: #fff;
+    display: block;
 }
 
 .publications-section-modern {
@@ -703,6 +726,12 @@ footer {
         padding: 16px 6px 12px 6px;
     }
     .research-image-large {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .research-image-xl {
         max-width: 98vw;
     }
 }
