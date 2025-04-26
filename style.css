@@ -759,6 +759,51 @@ footer {
     }
 }
 
+/* Research page: Make text span full card width and image fully visible, centered below text */
+.research-container-vibrant.research-report-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+    background: linear-gradient(90deg, #cac4bc 0%, #c2bdbb 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(80,80,80,0.13);
+    padding: 32px 28px 28px 28px;
+}
+.research-full-width {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 18px auto;
+    text-align: left;
+}
+.research-image-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px auto;
+}
+.research-image-xl.research-image-report {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: #fff;
+    display: block;
+}
+@media (max-width: 950px) {
+    .research-container-vibrant.research-report-layout {
+        max-width: 99vw;
+        padding: 12px 2vw 12px 2vw;
+    }
+    .research-full-width, .research-image-xl.research-image-report {
+        max-width: 98vw;
+    }
+}
+
 /* --- Blog Section Modern Creative Styles --- */
 .blog-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
