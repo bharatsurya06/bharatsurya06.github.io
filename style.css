@@ -1,6 +1,10 @@
 /* filepath: a:\bharatsurya06.github.io\assets\css\style.css */
 /* Basic CSS Styles (Combined from previous examples) */
 /*General styling for the page*/
+html, body, body * {
+    font-family: 'Exo 2', Arial, Helvetica, sans-serif !important;
+}
+
 html, body {
     height: 100%; /* Ensure html and body take up full height */
     margin: 0;
