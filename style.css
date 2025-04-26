@@ -543,7 +543,7 @@ footer {
 
 /* --- Social & Professional Icon Size and Hover Color for About Page --- */
 .contact-links .contact-icon {
-  font-size: 1.8em !important;
+  font-size: 1.3em !important;
   color: #888 !important;
   transition: color 0.25s, transform 0.18s;
   margin-right: 12px;
