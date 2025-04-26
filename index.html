@@ -50,7 +50,13 @@
                 setTimeout(() => {
                     revealSteps += 1;
                     animateHello();
-                }, 350); // Increased delay for slower reveal
+                }, 350);
+            } else {
+                // After revealing, wait and restart the animation
+                setTimeout(() => {
+                    revealSteps = 0;
+                    animateHello();
+                }, 1800);
             }
         }
         animateHello();
