@@ -32,7 +32,7 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background-color: black;
+    background-color: rgb(158, 153, 153);
     color: white;
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #fa0000;
+    color: #000000;
     font-size: 1.2em;
     font-weight: 800;
 }
