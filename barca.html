@@ -14,40 +14,7 @@
       <h1>FC Barcelona Match Reviews</h1>
       <p>All posts in the FC Barcelona Match Reviews series.</p>
     </div>
-    <div class="blog-tile-list">
-      <div class="blog-tile" onclick="window.location.href='barca1.html'">
-        <img src="assets/img/barca.jpg" alt="Barca Post 1">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>FC Barcelona vs Real Madrid: El Clásico Review</h2>
-          <p>A creative and tactical breakdown of the latest El Clásico, featuring key moments...</p>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='barca2.html'">
-        <img src="assets/img/features-light-1.jpg" alt="Barca Post 2">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Barça's Tactical Evolution in 2025</h2>
-          <p>How Xavi's tactics are shaping the new era of FC Barcelona and what to expect next...</p>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='barca3.html'">
-        <img src="assets/img/features-light-2.jpg" alt="Barca Post 3">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Young Talents: The Future of Barça</h2>
-          <p>Spotlight on the rising stars in the Barcelona squad and their impact on the team...</p>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='barca4.html'">
-        <img src="assets/img/features-light-3.jpg" alt="Barca Post 4">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Barça's Champions League Journey</h2>
-          <p>A review of Barcelona's latest Champions League campaign and key takeaways...</p>
-        </div>
-      </div>
-    </div>
+    <div class="blog-tile-list" id="barca-blog-list"></div>
   </div>
   <footer>
     <div class="container">
@@ -59,6 +26,23 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
+      });
+
+    // Dynamically load Barca blog posts from JSON
+    fetch('blogposts-barca.json')
+      .then(response => response.json())
+      .then(posts => {
+        const list = document.getElementById('barca-blog-list');
+        list.innerHTML = posts.map((post, idx) => `
+          <div class="blog-tile" onclick="window.location.href='blogpost-template.html?id=${idx}&src=barca'">
+            <img src="${post.image}" alt="${post.title}">
+            <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
+            <div class="blog-tile-content">
+              <h2>${post.title}</h2>
+              <p>${post.headline}</p>
+            </div>
+          </div>
+        `).join('');
       });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "FC Barcelona vs Real Madrid: El Clásico Review",
+    "headline": "A creative and tactical breakdown of the latest El Clásico, featuring key moments...",
+    "date": "2025-04-20",
+    "author": "Bharat Surya Chamarthi",
+    "image": "assets/img/barca.jpg",
+    "category": "FC Barcelona Match Review",
+    "content": "<p>Full HTML content of the El Clásico review goes here...</p>"
+  },
+  {
+    "title": "Barça's Tactical Evolution in 2025",
+    "headline": "How Xavi's tactics are shaping the new era of FC Barcelona and what to expect next...",
+    "date": "2025-04-13",
+    "author": "Bharat Surya Chamarthi",
+    "image": "assets/img/features-light-1.jpg",
+    "category": "FC Barcelona Match Review",
+    "content": "<p>Full HTML content of the tactical evolution post goes here...</p>"
+  },
+  {
+    "title": "Young Talents: The Future of Barça",
+    "headline": "Spotlight on the rising stars in the Barcelona squad and their impact on the team...",
+    "date": "2025-04-06",
+    "author": "Bharat Surya Chamarthi",
+    "image": "assets/img/features-light-2.jpg",
+    "category": "FC Barcelona Match Review",
+    "content": "<p>Full HTML content of the young talents post goes here...</p>"
+  },
+  {
+    "title": "Barça's Champions League Journey",
+    "headline": "A review of Barcelona's latest Champions League campaign and key takeaways...",
+    "date": "2025-03-30",
+    "author": "Bharat Surya Chamarthi",
+    "image": "assets/img/features-light-3.jpg",
+    "category": "FC Barcelona Match Review",
+    "content": "<p>Full HTML content of the Champions League journey post goes here...</p>"
+  }
+]
