@@ -540,6 +540,24 @@ footer {
     margin-right: 5px; /* Add spacing between icon and text */
 }
 
+/* --- Social & Professional Icon Size and Hover Color for About Page --- */
+.contact-links .contact-icon {
+  font-size: 2.2em !important;
+  color: #888 !important;
+  transition: color 0.25s, transform 0.18s;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.contact-links .contact-icon:hover {
+  color: #14b8a6 !important; /* Teal */
+  transform: scale(1.13);
+}
+
+/* Optional: Remove last margin on last icon */
+.contact-links-group .contact-icon:last-child {
+  margin-right: 0;
+}
+
 /* --- Research Page Modern Styles --- */
 .research-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
