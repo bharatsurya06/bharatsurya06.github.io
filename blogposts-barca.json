@@ -1,38 +1,38 @@
 [
   {
     "title": "FC Barcelona vs Real Madrid: El Clásico Review",
-    "headline": "A creative and tactical breakdown of the latest El Clásico, featuring key moments...",
+    "headline": "A creative and tactical breakdown of the latest El Clásico, featuring key moments and tactical shifts that defined the match.",
     "date": "2025-04-20",
     "author": "Bharat Surya Chamarthi",
     "image": "assets/img/barca.jpg",
-    "category": "FC Barcelona Match Review",
-    "content": "<p>Full HTML content of the El Clásico review goes here...</p>"
+    "category": "El Clásico",
+    "content": "<p>Barcelona and Real Madrid clashed in another unforgettable El Clásico. The match was a showcase of tactical brilliance, with Xavi’s pressing game and Madrid’s counter-attacks providing end-to-end action. Key moments included Lewandowski’s opener, a stunning save by Ter Stegen, and a late winner from Ansu Fati. The tactical battle in midfield, especially between Pedri and Modric, was a joy to watch. Ultimately, Barcelona’s resilience and tactical discipline secured a memorable victory at Camp Nou.</p>"
   },
   {
     "title": "Barça's Tactical Evolution in 2025",
-    "headline": "How Xavi's tactics are shaping the new era of FC Barcelona and what to expect next...",
+    "headline": "How Xavi's tactics are shaping the new era of FC Barcelona and what to expect next in La Liga and Europe.",
     "date": "2025-04-13",
     "author": "Bharat Surya Chamarthi",
     "image": "assets/img/features-light-1.jpg",
-    "category": "FC Barcelona Match Review",
-    "content": "<p>Full HTML content of the tactical evolution post goes here...</p>"
+    "category": "Tactics & Analysis",
+    "content": "<p>Xavi’s Barcelona has evolved tactically in 2025, focusing on high pressing, positional play, and fluid attacking transitions. The use of inverted full-backs and a double pivot in midfield has allowed for greater control and flexibility. Youngsters like Gavi and Balde have thrived in this system, while veterans provide stability. The team’s adaptability has made them a formidable force in both domestic and European competitions.</p>"
   },
   {
     "title": "Young Talents: The Future of Barça",
-    "headline": "Spotlight on the rising stars in the Barcelona squad and their impact on the team...",
+    "headline": "Spotlight on the rising stars in the Barcelona squad and their impact on the team’s present and future.",
     "date": "2025-04-06",
     "author": "Bharat Surya Chamarthi",
     "image": "assets/img/features-light-2.jpg",
-    "category": "FC Barcelona Match Review",
-    "content": "<p>Full HTML content of the young talents post goes here...</p>"
+    "category": "Youth & Development",
+    "content": "<p>Barcelona’s academy continues to produce world-class talent. Lamine Yamal, Pau Cubarsí, and Marc Guiu are just a few of the young stars making their mark. Their technical ability, tactical intelligence, and fearlessness have injected new energy into the squad. The club’s commitment to youth development remains a cornerstone of its philosophy, promising a bright future for Barça fans.</p>"
   },
   {
     "title": "Barça's Champions League Journey",
-    "headline": "A review of Barcelona's latest Champions League campaign and key takeaways...",
+    "headline": "A review of Barcelona’s latest Champions League campaign and key takeaways for the next season.",
     "date": "2025-03-30",
     "author": "Bharat Surya Chamarthi",
     "image": "assets/img/features-light-3.jpg",
-    "category": "FC Barcelona Match Review",
-    "content": "<p>Full HTML content of the Champions League journey post goes here...</p>"
+    "category": "Champions League",
+    "content": "<p>Barcelona’s Champions League run this season was filled with drama and excitement. After topping their group, they faced tough knockout opponents. Memorable performances from Ter Stegen and decisive goals from Ferran Torres highlighted the campaign. Although the journey ended in the semifinals, the experience gained by the young squad bodes well for future European adventures.</p>"
   }
 ]
