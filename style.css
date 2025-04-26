@@ -601,7 +601,7 @@ footer {
 
 /* --- Vibrant Research Container Styles --- */
 .research-container-vibrant {
-    background: linear-gradient(90deg, #ffecd2 0%, #c2bdbb 100%);
+    background: linear-gradient(90deg, #cac4bc 0%, #c2bdbb 100%);
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(80,80,80,0.13);
     padding: 32px 28px 28px 28px;
