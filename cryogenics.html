@@ -14,44 +14,7 @@
       <h1>Cryogenics for Dummies</h1>
       <p>All posts in the Cryogenics for Dummies series.</p>
     </div>
-    <div class="blog-tile-list">
-      <div class="blog-tile" onclick="window.location.href='post1.html'">
-        <img src="assets/img/rocket1.jpg" alt="Cryogenics Post 1">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Understanding the Basics of Cryogenics</h2>
-          <p>Kickstart your journey into the world of cryogenics with this beginner-friendly guide...</p>
-          <span class="read-more">Read More <span class="read-more-symbol">&rarr;</span></span>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='post2.html'">
-        <img src="assets/img/features-light-1.jpg" alt="Cryogenics Post 2">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Cryogenic Storage: Safety and Innovations</h2>
-          <p>Explore the latest innovations and safety protocols in cryogenic storage...</p>
-          <span class="read-more">Read More <span class="read-more-symbol">&rarr;</span></span>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='post3.html'">
-        <img src="assets/img/features-light-2.jpg" alt="Cryogenics Post 3">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Applications of Cryogenics in Modern Industry</h2>
-          <p>Discover how cryogenics is revolutionizing various industries and what the future holds...</p>
-          <span class="read-more">Read More <span class="read-more-symbol">&rarr;</span></span>
-        </div>
-      </div>
-      <div class="blog-tile" onclick="window.location.href='post4.html'">
-        <img src="assets/img/features-light-3.jpg" alt="Cryogenics Post 4">
-        <div class="blog-tile-overlay"><span>Read Full Blog</span></div>
-        <div class="blog-tile-content">
-          <h2>Liquid Nitrogen: Handling and Hazards</h2>
-          <p>Learn about the safe handling of liquid nitrogen and the hazards associated with it...</p>
-          <span class="read-more">Read More <span class="read-more-symbol">&rarr;</span></span>
-        </div>
-      </div>
-    </div>
+    <div class="blog-tile-list" id="cryogenics-tile-list"></div>
   </div>
   <footer>
     <div class="container">
@@ -63,6 +26,24 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
+      });
+
+    // Dynamically load blog tiles from JSON
+    fetch('blogposts-cryogenics.json')
+      .then(response => response.json())
+      .then(posts => {
+        const tileList = document.getElementById('cryogenics-tile-list');
+        tileList.innerHTML = posts.map((post, idx) => `
+          <div class=\"blog-tile\" onclick=\"window.location.href='blogpost-cryogenics.html?id=${idx}&src=cryogenics'\">
+            <img src=\"${post.image}\" alt=\"${post.title}\">
+            <div class=\"blog-tile-overlay\"><span>Read Full Blog</span></div>
+            <div class=\"blog-tile-content\">
+              <h2>${post.title}</h2>
+              <p>${post.headline}</p>
+              <span class=\"read-more\">Read More <span class=\"read-more-symbol\">&rarr;</span></span>
+            </div>
+          </div>
+        `).join('');
       });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
