@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryogenics for Dummies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 60%, #e3f2fd 100%); min-height: 100vh;">
+    <div id="navbar"></div>
+    <div class="blogpost-layout">
+        <aside class="blogpost-sidebar">
+            <h3>All Cryogenics Posts</h3>
+            <ul class="blogpost-list" id="blogpost-sidebar-list"></ul>
+        </aside>
+        <main class="blogpost-main cryogenics-theme" style="flex:1;">
+            <div id="cryogenics-article-card" class="cryogenics-article-card">
+                <article id="cryogenics-article" class="cryogenics"></article>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const src = getQueryParam('src');
+        const id = parseInt(getQueryParam('id'), 10) || 0;
+        // For cryogenics, use a dedicated JSON file (e.g., blogposts-cryogenics.json)
+        const jsonFile = src === 'cryogenics' ? 'blogposts-cryogenics.json' : 'blogposts.json';
+
+        fetch(jsonFile)
+            .then(response => response.json())
+            .then(posts => {
+                // Sidebar list
+                const sidebarList = document.getElementById('blogpost-sidebar-list');
+                sidebarList.innerHTML = posts.map((post, idx) => `
+                    <li>
+                        <a class="blogpost-link${idx === id ? ' active' : ''}" href="blogpost-cryogenics.html?id=${idx}&src=cryogenics">${post.title}</a>
+                    </li>
+                `).join('');
+
+                // Main article
+                const post = posts[id];
+                if (!post) {
+                    document.getElementById('cryogenics-article').innerHTML = '<p>Post not found.</p>';
+                    return;
+                }
+                document.title = post.title;
+                document.getElementById('cryogenics-article').innerHTML = `
+                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5em; background: linear-gradient(90deg, #007cf0 0%, #00dfd8 60%, #b2ebf2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;">${post.title}</h1>
+                    <h2 style="font-size: 1.3rem; color: #007cf0; margin-bottom: 1.5em;">${post.headline}</h2>
+                    <p style="color: #00bcd4; font-size: 1rem; margin-bottom: 0.5em;">${post.date} &bull; ${post.author}</p>
+                    <span style="display:inline-block;background:#00bcd4;color:#fff;padding:2px 10px;border-radius:12px;font-size:0.95em;margin-bottom:1.5em;">${post.category}</span>
+                    <img src="${post.image}" alt="Blog image" style="display: block; margin: 32px auto; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,188,212,0.13); border: 2px solid #00bcd4;">
+                    <div class="blogpost-content" style="font-size: 1.15rem; line-height: 1.7; color: #1a237e; margin-top: 1.5em;">
+                        ${post.content}
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>

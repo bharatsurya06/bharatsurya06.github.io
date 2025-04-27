@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Understanding the Basics of Cryogenics",
+    "headline": "Kickstart your journey into the world of cryogenics with this beginner-friendly guide.",
+    "date": "April 27, 2025",
+    "author": "Bharat Surya Chamarthi",
+    "category": "Cryogenics 101",
+    "image": "assets/img/rocket1.jpg",
+    "content": "<p>Cryogenics is the study of the production and behavior of materials at very low temperatures. In this post, we break down the fundamental concepts, from what 'cryogenic' means to the key temperature thresholds and why this field is so important in science and industry.</p>"
+  },
+  {
+    "title": "Cryogenic Storage: Safety and Innovations",
+    "headline": "Explore the latest innovations and safety protocols in cryogenic storage.",
+    "date": "April 20, 2025",
+    "author": "Bharat Surya Chamarthi",
+    "category": "Storage & Safety",
+    "image": "assets/img/features-light-1.jpg",
+    "content": "<p>Storing substances at cryogenic temperatures requires specialized equipment and strict safety measures. This article covers the types of storage vessels, insulation techniques, and the latest advancements that make cryogenic storage safer and more efficient.</p>"
+  },
+  {
+    "title": "Applications of Cryogenics in Modern Industry",
+    "headline": "Discover how cryogenics is revolutionizing various industries and what the future holds.",
+    "date": "April 13, 2025",
+    "author": "Bharat Surya Chamarthi",
+    "category": "Industry Applications",
+    "image": "assets/img/features-light-2.jpg",
+    "content": "<p>Cryogenics plays a vital role in fields like medicine, space exploration, and food preservation. Learn about real-world applications and how ongoing research is expanding the possibilities of this fascinating science.</p>"
+  },
+  {
+    "title": "Liquid Nitrogen: Handling and Hazards",
+    "headline": "Learn about the safe handling of liquid nitrogen and the hazards associated with it.",
+    "date": "April 6, 2025",
+    "author": "Bharat Surya Chamarthi",
+    "category": "Safety",
+    "image": "assets/img/features-light-3.jpg",
+    "content": "<p>Liquid nitrogen is one of the most commonly used cryogenic liquids. This post explains its properties, the risks involved in handling it, and the best practices to ensure safety in labs and industry.</p>"
+  }
+]
