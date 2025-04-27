@@ -47,52 +47,34 @@
                 document.getElementById('navbar').innerHTML = data;
             });
 
-        const blogPosts = [
-            {
-                image: 'assets/img/rocket1.jpg',
-                category: 'Cryogenics for Dummies',
-                categoryClass: 'cryo',
-                title: 'Understanding the Basics of Cryogenics',
-                excerpt: "Kickstart your journey into the world of cryogenics with this beginner-friendly guide. Learn what cryogenics is, its applications, and why it matters in today's world...",
-                link: 'post1.html'
-            },
-            {
-                image: 'assets/img/barca.jpg',
-                category: 'FC Barcelona Match Review',
-                categoryClass: 'barca',
-                title: 'FC Barcelona vs Real Madrid: El Clásico Review',
-                excerpt: "A creative and tactical breakdown of the latest El Clásico, featuring key moments, player performances, and what this means for Barcelona's season...",
-                link: 'barca1.html'
-            },
-            {
-                image: 'assets/img/features-light-1.jpg',
-                category: 'Cryogenics for Dummies',
-                categoryClass: 'cryo',
-                title: 'Cryogenic Storage: Safety and Innovations',
-                excerpt: "Explore the latest innovations and safety protocols in cryogenic storage, making the field safer and more efficient for everyone involved...",
-                link: 'post2.html'
-            },
-            {
-                image: 'assets/img/features-light-2.jpg',
-                category: 'Cryogenics for Dummies',
-                categoryClass: 'cryo',
-                title: 'Applications of Cryogenics in Modern Industry',
-                excerpt: "Discover how cryogenics is revolutionizing various industries and what the future holds...",
-                link: 'post3.html'
-            },
-            {
-                image: 'assets/img/features-light-3.jpg',
-                category: 'FC Barcelona Match Review',
-                categoryClass: 'barca',
-                title: "Barça's Champions League Journey",
-                excerpt: "A review of Barcelona's latest Champions League campaign and key takeaways...",
-                link: 'barca2.html'
-            }
-        ];
-
+        // Fetch posts from both JSON files, merge, sort, and display 5 most recent
+        let blogPosts = [];
         let carouselStart = 0;
         const visibleCards = 3;
         let isSliding = false;
+
+        function parseDate(dateStr) {
+            // Try to parse various date formats
+            let d = Date.parse(dateStr);
+            if (!isNaN(d)) return new Date(d);
+            // Try to handle custom formats (e.g., '2025-04-27 05:30 (IST)')
+            let match = dateStr.match(/(\d{4}-\d{2}-\d{2})/);
+            if (match) return new Date(match[1]);
+            return new Date(0); // fallback to epoch
+        }
+
+        function mapPost(post, categoryOverride) {
+            // Map post to carousel card format
+            return {
+                image: post.image,
+                category: categoryOverride || post.category,
+                categoryClass: (categoryOverride || post.category).toLowerCase().includes('barca') ? 'barca' : 'cryo',
+                title: post.title,
+                excerpt: post.headline || post.excerpt || '',
+                link: (categoryOverride && categoryOverride.includes('Barca')) ? `blogpost-template.html?cat=barca&title=${encodeURIComponent(post.title)}` : `blogpost-cryogenics.html?title=${encodeURIComponent(post.title)}`,
+                date: parseDate(post.date)
+            };
+        }
 
         function renderCarousel() {
             const carousel = document.getElementById('blog-carousel-js');
@@ -133,8 +115,26 @@
             }
         }
 
-        window.addEventListener('DOMContentLoaded', () => {
+        async function loadAndRenderPosts() {
+            const [cryoRes, barcaRes] = await Promise.all([
+                fetch('blogposts-cryogenics.json'),
+                fetch('blogposts-barca.json')
+            ]);
+            const cryoPosts = await cryoRes.json();
+            const barcaPosts = await barcaRes.json();
+            // Map and merge posts
+            let allPosts = [
+                ...cryoPosts.map(p => mapPost(p, 'Cryogenics for Dummies')),
+                ...barcaPosts.map(p => mapPost(p, 'FC Barcelona Match Review'))
+            ];
+            // Sort by date descending
+            allPosts.sort((a, b) => b.date - a.date);
+            blogPosts = allPosts.slice(0, 5);
             renderCarousel();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadAndRenderPosts();
             document.getElementById('carousel-left').onclick = () => moveCarousel(-1);
             document.getElementById('carousel-right').onclick = () => moveCarousel(1);
             window.addEventListener('resize', () => renderCarousel());
