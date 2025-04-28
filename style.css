@@ -505,7 +505,7 @@ footer {
     margin-right: 15px; /* Add spacing between links */
     text-decoration: none;
     color: #333; /* Default text color */
-    font-size: 1.1em;
+    font-size: 1.1em; /* Adjust icon size */
     transition: color 0.3s ease;
 }
 
@@ -1755,6 +1755,27 @@ body.dark-mode .contact-links .contact-icon:hover {
 }
 body.dark-mode .connect-vbar {
     background: linear-gradient(180deg, #8ab4f8 0%, #fa0000 100%) !important;
+}
+body.dark-mode .pub-title,
+body.dark-mode .pub-meta,
+body.dark-mode .publications-list-modern,
+body.dark-mode .publications-section-modern h2 {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .pub-link-hover {
+    color: #8ab4f8 !important;
+}
+body.dark-mode .pub-link-hover:hover {
+    color: #fa0000 !important;
+}
+body.dark-mode .message-form h3 {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .message-form input,
+body.dark-mode .message-form textarea {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
 }
 
 /* Sun/Moon Animated Dark Mode Switch */
