@@ -1281,7 +1281,7 @@ footer {
 .blog-tile-overlay-barca {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, #007cf0 0%, #00dfd8 100%); /* Default Blue gradient */
+    background: linear-gradient(120deg, #b92a2a 0%, #00dfd8 100%); /* Default Blue gradient */
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 2;
