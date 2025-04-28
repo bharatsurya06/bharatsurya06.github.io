@@ -1578,3 +1578,181 @@ footer {
         border-radius: 10px;
     }
 }
+
+/* ===================== DARK MODE SUPPORT ===================== */
+body.dark-mode {
+    background: linear-gradient(to bottom, #181a1b, #23272a) !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode nav {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+body.dark-mode .nav-links a,
+body.dark-mode .nav-links span {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .nav-links a:hover {
+    color: #fa0000 !important;
+}
+body.dark-mode .blog-section,
+body.dark-mode .about-section,
+body.dark-mode .research-section {
+    background: linear-gradient(120deg, #23272a 0%, #181a1b 100%) !important;
+}
+body.dark-mode .about-container,
+body.dark-mode .about-container.restructured,
+body.dark-mode .about-info-box,
+body.dark-mode .contact-box,
+body.dark-mode .message-form,
+body.dark-mode .publications-section,
+body.dark-mode .publications-section-modern,
+body.dark-mode .research-container-vibrant,
+body.dark-mode .research-container-vibrant.research-report-layout {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.30);
+}
+body.dark-mode .about-info-box h3,
+body.dark-mode .contact-box h2,
+body.dark-mode .about-right h1,
+body.dark-mode .research-title {
+    color: #fff !important;
+}
+body.dark-mode .about-desc,
+body.dark-mode .about-info-box ul,
+body.dark-mode .about-info-box,
+body.dark-mode .about-info-box h3,
+body.dark-mode .about-info-box ul,
+body.dark-mode .about-info-box li,
+body.dark-mode .about-info-box strong {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .cv-button,
+body.dark-mode .cv-button:hover {
+    background: #444 !important;
+    color: #fff !important;
+}
+body.dark-mode .profile-links a {
+    color: #8ab4f8 !important;
+}
+body.dark-mode .profile-links a:hover {
+    color: #fa0000 !important;
+}
+body.dark-mode .footer-logo,
+body.dark-mode .footer-social a,
+body.dark-mode .footer-contact {
+    color: #e0e0e0 !important;
+}
+body.dark-mode footer {
+    background: #181a1b !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .tab-content {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+body.dark-mode .tabs {
+    background: #181a1b !important;
+    border-bottom: 1px solid #444 !important;
+}
+body.dark-mode .tab-link {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .tab-link:hover {
+    background: #333 !important;
+    color: #fa0000 !important;
+}
+body.dark-mode .about-image-rect,
+body.dark-mode .about-image,
+body.dark-mode .research-image,
+body.dark-mode .research-image-large,
+body.dark-mode .research-image-xl,
+body.dark-mode .blog-card-image,
+body.dark-mode .blog-tile img {
+    background: #23272a !important;
+    border-color: #444 !important;
+}
+body.dark-mode .blog-header h1,
+body.dark-mode .blog-header p {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .blog-featured,
+body.dark-mode .blog-card,
+body.dark-mode .blog-tile,
+body.dark-mode .blog-featured-content,
+body.dark-mode .blog-card-content,
+body.dark-mode .blog-tile-content {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.30);
+}
+body.dark-mode .blog-category.cryo {
+    background: linear-gradient(90deg, #007cf0 60%, #00dfd8 100%) !important;
+    color: #fff !important;
+}
+body.dark-mode .blog-category.barca {
+    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%) !important;
+    color: #fff !important;
+}
+body.dark-mode .read-more,
+body.dark-mode .blog-tile-content .read-more {
+    color: #8ab4f8 !important;
+}
+body.dark-mode .read-more:hover,
+body.dark-mode .blog-tile-content .read-more:hover {
+    color: #fa0000 !important;
+}
+body.dark-mode .blog-hover-overlay .read-full-blog,
+body.dark-mode .read-full-blog {
+    background: #23272a !important;
+    color: #fff !important;
+}
+body.dark-mode .blogpost-sidebar {
+    background: #181a1b !important;
+    color: #e0e0e0 !important;
+    border-image: linear-gradient(180deg, #23272a 0%, #444 100%) 1 !important;
+}
+body.dark-mode .blogpost-link {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .blogpost-link.active,
+body.dark-mode .blogpost-link:hover {
+    background: linear-gradient(90deg, #23272a 60%, #181a1b 100%) !important;
+    color: #fa0000 !important;
+    border-left: 4px solid #fa0000 !important;
+}
+body.dark-mode .barca-article-card,
+body.dark-mode .cryogenics-article-card {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+    border-image: linear-gradient(90deg, #23272a 0%, #444 100%) 1 !important;
+}
+body.dark-mode .blogpost-content {
+    color: #e0e0e0 !important;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #181a1b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+}
+body.dark-mode .message-form button {
+    background: #444 !important;
+    color: #fff !important;
+}
+body.dark-mode .message-form button:hover {
+    background: #fa0000 !important;
+}
+body.dark-mode .contact-links .contact-icon {
+    color: #8ab4f8 !important;
+}
+body.dark-mode .contact-links .contact-icon:hover {
+    color: #fa0000 !important;
+}
+body.dark-mode .connect-vbar {
+    background: linear-gradient(180deg, #8ab4f8 0%, #fa0000 100%) !important;
+}

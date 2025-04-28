@@ -126,6 +126,25 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
+        // Dark mode logic
+        function applyDarkModeSetting() {
+          const isDark = localStorage.getItem('darkMode') === 'true';
+          document.body.classList.toggle('dark-mode', isDark);
+          const toggle = document.getElementById('darkModeToggle');
+          if (toggle) toggle.checked = isDark;
+        }
+        setTimeout(() => {
+          const toggle = document.getElementById('darkModeToggle');
+          if (toggle) {
+            toggle.checked = localStorage.getItem('darkMode') === 'true';
+            toggle.addEventListener('change', function() {
+              document.body.classList.toggle('dark-mode', this.checked);
+              localStorage.setItem('darkMode', this.checked);
+            });
+          }
+          applyDarkModeSetting();
+        }, 50);
+        applyDarkModeSetting();
       });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
