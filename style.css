@@ -1781,13 +1781,13 @@ body.dark-mode .moon svg {
   fill: #fff !important;
 }
 
-/* Sun/Moon Animated Dark Mode Switch */
+/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
 .switch {
   font-size: 17px;
   position: relative;
   display: inline-block;
   width: 64px;
-  height: 30px;
+  height: 34px;
 }
 .switch input {
   opacity: 0;
@@ -1819,20 +1819,23 @@ body.dark-mode .moon svg {
 }
 .sun svg {
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 36px;
   z-index: 1;
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
 .moon svg {
-  fill: #73C0FC;
   position: absolute;
   top: 5px;
   left: 5px;
   z-index: 1;
   width: 24px;
   height: 24px;
+  pointer-events: none;
+  transition: fill 0.4s;
+  fill: #73C0FC;
 }
 .switch:hover .sun svg {
   animation: rotate 15s linear infinite;
@@ -1858,4 +1861,10 @@ body.dark-mode .moon svg {
 }
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+.input:checked + .slider .moon svg {
+  fill: #fff !important;
+}
+.input:checked + .slider .sun svg {
+  opacity: 0.5;
 }
