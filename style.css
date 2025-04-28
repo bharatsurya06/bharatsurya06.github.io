@@ -1854,10 +1854,10 @@ body.dark-mode .moon svg {
   100% { transform: rotate(0deg); }
 }
 .input:checked + .slider {
-  background-color: #183153;
+  background-color: #d432327a;
 }
 .input:focus + .slider {
-  box-shadow: 0 0 1px #183153;
+  box-shadow: 0 0 1px #d432327a;
 }
 .input:checked + .slider:before {
   transform: translateX(30px);
