@@ -126,15 +126,15 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
-        // Dark mode logic
+        // Dark mode logic for animated switch
         function applyDarkModeSetting() {
           const isDark = localStorage.getItem('darkMode') === 'true';
           document.body.classList.toggle('dark-mode', isDark);
-          const toggle = document.getElementById('darkModeToggle');
+          const toggle = document.querySelector('.input#darkModeToggle');
           if (toggle) toggle.checked = isDark;
         }
         setTimeout(() => {
-          const toggle = document.getElementById('darkModeToggle');
+          const toggle = document.querySelector('.input#darkModeToggle');
           if (toggle) {
             toggle.checked = localStorage.getItem('darkMode') === 'true';
             toggle.addEventListener('change', function() {
