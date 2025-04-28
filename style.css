@@ -1868,3 +1868,12 @@ body.dark-mode .moon svg {
 .input:checked + .slider .sun svg {
   opacity: 0.5;
 }
+
+body.dark-mode .research-section, 
+body.dark-mode .research-section *,
+body.dark-mode .research-container-vibrant,
+body.dark-mode .research-container-vibrant *,
+body.dark-mode .research-title,
+body.dark-mode .research-desc {
+    color: #fff !important;
+}
