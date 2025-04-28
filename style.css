@@ -1261,27 +1261,10 @@ footer {
 .blog-tile:hover img {
     filter: brightness(0.7) blur(1px);
 }
-.blog-tile-overlay-cryo {
+.blog-tile-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, #007cf0 0%, #00dfd8 100%); /* Default Blue gradient */
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 1.2em;
-    padding: 24px 16px 16px 16px;
-    text-align: center;
-}
-
-.blog-tile-overlay-barca {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(120deg, #b92a2a 0%, #00dfd8 100%); /* Default Blue gradient */
+    background: linear-gradient(120deg, #007cf07c 0%, #48585832 100%); /* Default Blue gradient */
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 2;
@@ -1297,7 +1280,7 @@ footer {
 
 
 
-.blog-tile:hover .blog-tile-overlay-barca {
+.blog-tile:hover .blog-tile-overlay{
     opacity: 1;
 }
 .blog-tile-content {
