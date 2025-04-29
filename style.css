@@ -1138,17 +1138,7 @@ footer {
     pointer-events: none;
 }
 
-.blog-card.cryo::before {
-    background: linear-gradient(120deg, #00c6ff 20%, #0073ff51 100%);
-}
 
-.blog-card.barca::before {
-    background: linear-gradient(90deg, #fc466b 20%, #3f5efb5c 100%);
-}
-
-.blog-card:hover::before {
-    opacity: 0.85;
-}
 
 .blog-hover-overlay {
     position: absolute;
@@ -1677,7 +1667,7 @@ body.dark-mode .research-image-xl,
 body.dark-mode .blog-card-image,
 body.dark-mode .blog-tile img {
     background: #222 !important;
-    filter: brightness(1.05) !important;
+    filter: brightness(1.15) contrast(1.08) !important;
     border-color: #444 !important;
 }
 body.dark-mode .blog-header h1,
