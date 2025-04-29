@@ -103,7 +103,7 @@
                 const post = blogPosts[idx];
                 cardsToShow.push(`
                     <a href="${post.link}" class="blog-card ${post.categoryClass}" tabindex="0">
-                        <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
+                        <div class="blog-card-image" style="background-image: url('${post.image}'); background-color: #222; background-blend-mode: lighten;"></div>
                         <div class="blog-hover-overlay"></div>
                         <div class="blog-card-content">
                             <span class="blog-category ${post.categoryClass}">${post.category}</span>
