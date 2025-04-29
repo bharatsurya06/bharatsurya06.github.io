@@ -95,6 +95,10 @@ body.index-page .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    transition: background-image 0.7s cubic-bezier(.77,0,.18,1), background 0.7s cubic-bezier(.77,0,.18,1);
+}
+body.index-page.dark-mode .hero-section {
+    background-image: url('assets/img/rocket-2.jpg');
 }
 body.index-page nav {
     background: rgba(255,255,255,0.7);
