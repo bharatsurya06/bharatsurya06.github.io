@@ -1892,3 +1892,39 @@ body.dark-mode .research-title,
 body.dark-mode .research-desc {
     color: #fff !important;
 }
+
+/* Info Modal and Icon Styles */
+.info-modal {
+  position: fixed;
+  top: 70px;
+  right: 40px;
+  background: #fff;
+  color: #23272a;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 22px 28px;
+  max-width: 340px;
+  z-index: 100;
+  font-size: 1.08em;
+  transition: background 0.3s, color 0.3s;
+}
+.info-modal-close {
+  margin-top: 14px;
+  background: #007cf0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+body.dark-mode .info-modal {
+  background: #23272a;
+  color: #fff;
+}
+#info-icon i {
+  color: #007cf0;
+  transition: color 0.3s;
+}
+body.dark-mode #info-icon i {
+  color: #a8ff78;
+}

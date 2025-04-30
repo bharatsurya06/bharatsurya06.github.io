@@ -11,15 +11,17 @@
 
 <body class="index-page">
     <!-- Include the consistent navigation bar -->
-    <div id="navbar"></div>
-
-    <div id="info-icon" style="position: absolute; top: 18px; right: 32px; z-index: 20; display: flex; align-items: center; cursor: pointer;">
-        <i class="fas fa-info-circle" style="font-size: 1.7em; color: #007cf0;"></i>
+    <div style="position: relative;">
+        <div id="navbar"></div>
+        <div id="info-icon" style="position: absolute; top: 0; right: 0; height: 100%; display: flex; align-items: center; z-index: 20; cursor: pointer;">
+            <i class="fas fa-info-circle" style="font-size: 1.7em;"></i>
+        </div>
     </div>
-    <div id="info-modal" style="display:none; position: fixed; top: 70px; right: 40px; background: rgba(30,32,34,0.97); color: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 22px 28px; max-width: 340px; z-index: 100; font-size: 1.08em;">
+
+    <div id="info-modal" class="info-modal" style="display:none;">
         <strong>Background Image Info</strong>
-        <p style="margin: 12px 0 0 0;">The Joy Chandi Pahar (Hill) as captured from a moving train.</p>
-        <button id="close-info-modal" style="margin-top: 14px; background: #007cf0; color: #fff; border: none; border-radius: 6px; padding: 6px 16px; cursor: pointer;">Close</button>
+        <p style="margin: 12px 0 0 0;">The background image is a symbolic representation of cryogenic engineering and space exploration, featuring a rocket launch. In dark mode, the image changes to a night-themed rocket scene (assets/img/rocket-2.jpg).</p>
+        <button id="close-info-modal" class="info-modal-close">Close</button>
     </div>
 
     <div class="hero-section">
