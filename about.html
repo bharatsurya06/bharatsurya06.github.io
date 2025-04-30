@@ -74,7 +74,7 @@
       <!-- Right Side: Large Rectangular Image, Contact, and Message Form -->
       <div class="about-right">
         <div class="profile-image-box">
-          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" class="about-image-rect">
+          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" class="about-image-rect" id="profile-photo">
         </div>
         <div class="contact-box">
           <h2>Contact Email</h2>
@@ -147,6 +147,17 @@
         }, 50);
         applyDarkModeSetting();
       });
+
+    // Switch profile photo on dark mode
+    function switchProfilePhoto() {
+      const img = document.getElementById('profile-photo');
+      if (!img) return;
+      const isDark = document.body.classList.contains('dark-mode');
+      img.src = isDark ? 'assets/img/photo -dark.jpg' : 'assets/img/photo.jpg';
+    }
+    document.addEventListener('DOMContentLoaded', switchProfilePhoto);
+    const observer = new MutationObserver(switchProfilePhoto);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
     // Message form submission to save as JSON
     document.addEventListener('DOMContentLoaded', function() {
