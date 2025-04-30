@@ -104,11 +104,12 @@
           </div>
         </div>
         
-        <form class="message-form" action="#" method="post">
+        <form class="message-form" id="about-message-form" action="#" method="post">
           <h3>Send me a message</h3>
           <input type="email" name="sender_email" placeholder="Your Email" required>
           <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
           <button type="submit">Send</button>
+          <div id="form-status" style="margin-top:8px;font-size:0.98em;"></div>
         </form>
         
       </div>
@@ -146,6 +147,33 @@
         }, 50);
         applyDarkModeSetting();
       });
+
+    // Message form submission to save as JSON
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('about-message-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = form.sender_email.value;
+          const message = form.message.value;
+          const statusDiv = document.getElementById('form-status');
+          statusDiv.textContent = 'Sending...';
+          fetch('http://localhost:5000/save_message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, message })
+          })
+          .then(res => res.json())
+          .then(data => {
+            statusDiv.textContent = data.message || 'Message sent!';
+            form.reset();
+          })
+          .catch(() => {
+            statusDiv.textContent = 'Failed to send. Please try again later.';
+          });
+        });
+      }
+    });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
