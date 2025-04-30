@@ -13,15 +13,15 @@
     <!-- Include the consistent navigation bar -->
     <div style="position: relative;">
         <div id="navbar"></div>
-        <div id="info-icon" style="position: fixed; top: 75vh; left: 50%; transform: translateX(-50%); height: 48px; display: flex; align-items: center; z-index: 20; cursor: pointer;">
+        <div id="info-icon" style="position: fixed; top: 70vh; left: 50%; transform: translateX(-50%); height: 48px; display: flex; align-items: center; z-index: 20; cursor: pointer;">
             <i class="fas fa-info-circle" style="font-size: 1.7em;"></i>
         </div>
     </div>
 
-    <div id="info-modal" class="info-modal" style="display:none;">
-        <strong>Background Image Info</strong>
-        <p style="margin: 12px 0 0 0;">The Joychandi Pahar (Hill in Adra, India) as captured from a moving train.</p>
-        <button id="close-info-modal" class="info-modal-close">Close</button>
+    <div id="info-modal" class="info-modal" style="display:none; position:fixed; top:60vh; left:50%; transform:translate(-50%, -50%); max-width:unset; min-width:unset; padding:14px 32px; text-align:center; white-space:nowrap;">
+        <span style="display:inline-block; font-size:1.08em;">
+            The Joychandi Pahar (Hill in Adra, India) as captured from a moving train.
+        </span>
     </div>
 
     <div class="hero-section">
@@ -65,12 +65,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             const infoIcon = document.getElementById('info-icon');
             const infoModal = document.getElementById('info-modal');
-            const closeBtn = document.getElementById('close-info-modal');
             infoIcon.addEventListener('click', function(e) {
                 infoModal.style.display = infoModal.style.display === 'block' ? 'none' : 'block';
-            });
-            closeBtn.addEventListener('click', function() {
-                infoModal.style.display = 'none';
             });
             // Optional: Hide modal when clicking outside
             document.addEventListener('mousedown', function(e) {
