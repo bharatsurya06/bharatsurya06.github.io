@@ -82,15 +82,21 @@
             return new Date(0); // fallback to epoch
         }
 
-        function mapPost(post, categoryOverride) {
+        function mapPost(post, categoryOverride, idx, src) {
             // Map post to carousel card format
+            let link = '';
+            if ((categoryOverride || post.category).toLowerCase().includes('barca')) {
+                link = `blogpost-template.html?id=${idx}&src=barca`;
+            } else {
+                link = `blogpost-cryogenics.html?id=${idx}&src=cryogenics`;
+            }
             return {
                 image: post.image,
                 category: categoryOverride || post.category,
                 categoryClass: (categoryOverride || post.category).toLowerCase().includes('barca') ? 'barca' : 'cryo',
                 title: post.title,
                 excerpt: post.headline || post.excerpt || '',
-                link: (categoryOverride && categoryOverride.includes('Barca')) ? `blogpost-template.html?cat=barca&title=${encodeURIComponent(post.title)}` : `blogpost-cryogenics.html?title=${encodeURIComponent(post.title)}`,
+                link,
                 date: parseDate(post.date)
             };
         }
@@ -141,10 +147,10 @@
             ]);
             const cryoPosts = await cryoRes.json();
             const barcaPosts = await barcaRes.json();
-            // Map and merge posts
+            // Map and merge posts with correct links
             let allPosts = [
-                ...cryoPosts.map(p => mapPost(p, 'Cryogenics for Dummies')),
-                ...barcaPosts.map(p => mapPost(p, 'FC Barcelona Match Review'))
+                ...cryoPosts.map((p, idx) => mapPost(p, 'Cryogenics for Dummies', idx, 'cryogenics')),
+                ...barcaPosts.map((p, idx) => mapPost(p, 'FC Barcelona Match Review', idx, 'barca'))
             ];
             // Sort by date descending
             allPosts.sort((a, b) => b.date - a.date);
