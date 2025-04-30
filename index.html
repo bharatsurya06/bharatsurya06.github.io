@@ -13,6 +13,15 @@
     <!-- Include the consistent navigation bar -->
     <div id="navbar"></div>
 
+    <div id="info-icon" style="position: absolute; top: 18px; right: 32px; z-index: 20; display: flex; align-items: center; cursor: pointer;">
+        <i class="fas fa-info-circle" style="font-size: 1.7em; color: #007cf0;"></i>
+    </div>
+    <div id="info-modal" style="display:none; position: fixed; top: 70px; right: 40px; background: rgba(30,32,34,0.97); color: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 22px 28px; max-width: 340px; z-index: 100; font-size: 1.08em;">
+        <strong>Background Image Info</strong>
+        <p style="margin: 12px 0 0 0;">The Joy Chandi Pahar (Hill) as captured from a moving train.</p>
+        <button id="close-info-modal" style="margin-top: 14px; background: #007cf0; color: #fff; border: none; border-radius: 6px; padding: 6px 16px; cursor: pointer;">Close</button>
+    </div>
+
     <div class="hero-section">
         <div class="hello-graphic" id="hello-graphic"></div>
     </div>
@@ -23,6 +32,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
     <script>
         fetch('components/navbar.html')
             .then(response => response.text())
@@ -48,6 +58,25 @@
                 }, 50);
                 applyDarkModeSetting();
             });
+
+        // Info icon modal logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoIcon = document.getElementById('info-icon');
+            const infoModal = document.getElementById('info-modal');
+            const closeBtn = document.getElementById('close-info-modal');
+            infoIcon.addEventListener('click', function(e) {
+                infoModal.style.display = infoModal.style.display === 'block' ? 'none' : 'block';
+            });
+            closeBtn.addEventListener('click', function() {
+                infoModal.style.display = 'none';
+            });
+            // Optional: Hide modal when clicking outside
+            document.addEventListener('mousedown', function(e) {
+                if (infoModal.style.display === 'block' && !infoModal.contains(e.target) && !infoIcon.contains(e.target)) {
+                    infoModal.style.display = 'none';
+                }
+            });
+        });
 
         // Animated Hello! text effect
         const helloText = "Hello !";
