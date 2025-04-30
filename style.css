@@ -1719,6 +1719,9 @@ body.dark-mode .blogpost-sidebar {
     color: #e0e0e0 !important;
     border-image: linear-gradient(180deg, #23272a 0%, #444 100%) 1 !important;
 }
+body.dark-mode .blogpost-sidebar h3 {
+    color: #a8ff78 !important;
+}
 body.dark-mode .blogpost-link {
     color: #e0e0e0 !important;
 }
@@ -1734,6 +1737,14 @@ body.dark-mode .cryogenics-article-card {
     color: #e0e0e0 !important;
     box-shadow: 0 8px 32px rgba(0,0,0,0.30);
     border-image: linear-gradient(90deg, #23272a 0%, #444 100%) 1 !important;
+}
+body.dark-mode .barca-article-card h1,
+body.dark-mode #barca-article h1 {
+    background: linear-gradient(90deg, #a8ff78 0%, #fa0000 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
 }
 body.dark-mode .blogpost-content {
     color: #e0e0e0 !important;
