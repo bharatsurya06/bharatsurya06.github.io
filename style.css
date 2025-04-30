@@ -1671,7 +1671,7 @@ body.dark-mode .blog-tile img {
 }
 body.dark-mode .blog-carousel .blog-card-image {
     filter: brightness(1.18) contrast(1.12) !important;
-    background: #222 !important;
+    
 }
 body.dark-mode .blog-header h1,
 body.dark-mode .blog-header p {
