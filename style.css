@@ -54,7 +54,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1em;
@@ -64,17 +64,24 @@ nav {
 }
 
 .nav-links span {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0 6px;
     font-size: 1.1em;
     line-height: 48px;
 }
 
 .nav-links a:hover {
-    color: #000000;
+    background: #007cf0;
+    color: #ffffff;
     font-size: 1.2em;
     font-weight: 800;
+    border-radius: 8px;
+    padding: 0 10px;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
+
 }
+
+
 
 .logo { display: none; }
 
