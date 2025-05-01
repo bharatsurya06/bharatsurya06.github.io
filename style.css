@@ -72,12 +72,16 @@ nav {
 
 .nav-links a:hover {
     background: #548ad29c;
-    color: #000000;
-    font-size: 1.2em;
+    color: #ffffff;
+    font-size: 1.1em;
     font-weight: 800;
     border-radius: 8px;
     padding: 0 30px;
     transition: background 0.2s, color 0.2s, font-size 0.2s;
+    height: 38px;           /* Set the height of the hover background */
+    line-height: 38px;      /* Vertically center the text */
+    display: inline-block;  /* Ensure height and line-height apply */
+    box-sizing: border-box; /* Include padding in height */
 
 }
 
