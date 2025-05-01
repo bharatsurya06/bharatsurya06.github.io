@@ -138,9 +138,18 @@ body.index-page .nav-links a, body.index-page .nav-links span {
     font-size: 1.15em;
 }
 body.index-page .nav-links a:hover {
+    background: #000000;
     color: #ffffff;
-    font-size: 1.22em;
+    font-size: 1.15em;
     font-weight: 800;
+    border-radius: 0px;
+    padding: 0 10px;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
+    height: 25px;           /* Set the height of the hover background */
+    line-height: 25px;      /* Vertically center the text */
+    display: inline-block;  /* Ensure height and line-height apply */
+    box-sizing: border-box; /* Include padding in height */
+    
 }
 
 /* Hero Section Background */
