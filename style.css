@@ -33,7 +33,7 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background-color: rgb(158, 153, 153);
+    background-color: rgb(255, 255, 255,0.7);
     color: white;
     display: flex;
     justify-content: center;
@@ -200,8 +200,8 @@ footer .container p {
 }
 
 footer {
-    background-color: black; /* Set footer background to black */
-    color: white; /* Set footer text color to white */
+    background-color: rgba(255,255,255,0.7);; /* Set footer background to black */
+    color: rgb(0, 0, 0); /* Set footer text color to white */
     width: 100%;
     text-align: center;
     padding: 10px 0;
