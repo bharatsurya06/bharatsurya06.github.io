@@ -74,12 +74,12 @@ nav {
     background: #000000;
     color: #ffffff;
     font-size: 1.1em;
-    font-weight: 800;
-    border-radius: 8px;
-    padding: 0 30px;
+    /* font-weight: 800; */
+    border-radius: 0px;
+    padding: 0 10px;
     transition: background 0.2s, color 0.2s, font-size 0.2s;
-    height: 20px;           /* Set the height of the hover background */
-    line-height: 20px;      /* Vertically center the text */
+    height: 25px;           /* Set the height of the hover background */
+    line-height: 25px;      /* Vertically center the text */
     display: inline-block;  /* Ensure height and line-height apply */
     box-sizing: border-box; /* Include padding in height */
 
