@@ -33,7 +33,7 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background-color: rgb(255, 255, 255,0.7);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,0.92) 50%, rgba(255, 255, 255, 0) 100%) !important;
     color: white;
     display: flex;
     justify-content: center;
@@ -43,6 +43,7 @@ nav {
     min-height: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
+
   
 .nav-links.nav-center {
     display: flex;
