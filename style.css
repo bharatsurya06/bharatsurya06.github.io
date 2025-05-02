@@ -1949,10 +1949,11 @@ body.dark-mode textarea {
     border: 1px solid #444 !important;
 }
 body.dark-mode .message-form button {
-    background: #ffffff00 !important;
-    color: #ffffff !important;
-    border: 2px #ffffff;
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid #ffffff !important;
 }
+
 body.dark-mode .message-form button:hover {
     background: #ffffff  !important;
     color:  #181a1b  /*#145eb8*/ 
