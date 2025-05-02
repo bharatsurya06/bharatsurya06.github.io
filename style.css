@@ -463,9 +463,9 @@ footer {
     padding: 10px 22px;
     background: transparent!important;
     color: #000000;
+    border: 2px #000000;
     text-decoration: none;
     border-radius: 6px;
-    border: 2px #000000;
     font-size: 1em;
     font-weight: 600;
     margin-top: 8px;
@@ -1837,7 +1837,8 @@ body.dark-mode textarea {
 }
 body.dark-mode .message-form button {
     background: #ffffff00 !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    border: 2px #ffffff;
 }
 body.dark-mode .message-form button:hover {
     background: #ffffff  !important;
