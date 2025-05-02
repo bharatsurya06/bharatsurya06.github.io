@@ -1868,6 +1868,10 @@ body.dark-mode .moon svg {
   fill: #fff !important;
 }
 
+body.index-page #darkmode-toggle-navbar {
+    display: none !important;
+}
+
 /* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
 .switch {
   font-size: 17px;
