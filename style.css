@@ -1652,7 +1652,7 @@ body.blogpost-page {
     min-width: 340px;
     width: 100%;
     margin: 48px auto 32px auto;
-    background: linear-gradient(120deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%);
+    background: linear-gradient(120deg, #0a164e87 0%, #3f5efb9b 60%rgba(252, 70, 106, 0.503)6B 100%);
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(63,94,251,0.13), 0 2px 8px rgba(252,70,107,0.10);
     padding: 36px 28px 32px 28px;
@@ -1667,7 +1667,7 @@ body.blogpost-page {
     text-align: center;
     margin-bottom: 18px;
     font-size: 2em;
-    background: linear-gradient(90deg, #FC466B 0%, #042bed 100%);
+    background: linear-gradient(90deg, #FC466B 0% , #042bed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
