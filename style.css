@@ -2000,7 +2000,7 @@ body.dark-mode .info-modal {
   color: #fff;
 }
 #info-icon i {
-  color: #007cf0;
+  color: #007cf0 !important;
   transition: color 0.3s;
   animation: rgb-glow 2.5s linear infinite;
 }
