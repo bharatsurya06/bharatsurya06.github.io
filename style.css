@@ -409,7 +409,7 @@ footer {
 .message-form button {
     background: transparent !important;
     color: #000000;
-    border: none;
+    border:  2px #000000;
     border-radius: 6px;
     padding: 8px 0;
     font-size: 1em;
@@ -465,7 +465,7 @@ footer {
     color: #000000;
     text-decoration: none;
     border-radius: 6px;
-    border-color: #000000
+    border: 2px #000000;
     font-size: 1em;
     font-weight: 600;
     margin-top: 8px;
@@ -1836,18 +1836,18 @@ body.dark-mode textarea {
     border: 1px solid #444 !important;
 }
 body.dark-mode .message-form button {
-    background: #444 !important;
+    background: #ffffff00 !important;
     color: #fff !important;
 }
 body.dark-mode .message-form button:hover {
-    background: #ffffff !important;
-    color:  #8ab4f8  /*#145eb8*/ 
+    background: #ffffff  !important;
+    color:  #181a1b  /*#145eb8*/ 
 }
 body.dark-mode .contact-links .contact-icon {
-    color: #8ab4f8 !important;
+    color: #ffffff !important;
 }
 body.dark-mode .contact-links .contact-icon:hover {
-    color: #ffffff !important;
+    color: #8ab4f8 !important;
 }
 body.dark-mode .connect-vbar {
     background: linear-gradient(180deg, #8ab4f8 0%, #ffffff 100%) !important;
@@ -1859,11 +1859,11 @@ body.dark-mode .publications-section-modern h2 {
     color: #e0e0e0 !important;
 }
 body.dark-mode .pub-link-hover {
-    color: #8ab4f8 !important;
+    color: #ffffff !important;
 }
 body.dark-mode .pub-link-hover:hover {
   
-    color: #ffffff !important;
+    color: #8ab4f8 !important;
 }
 body.dark-mode .message-form h3 {
     color: #e0e0e0 !important;
