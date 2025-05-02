@@ -1580,7 +1580,7 @@ body.blogpost-page {
     border-left: 4px solid transparent;
     text-decoration: none;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
-    border-radius: 0 18px 18px 0;
+    border-radius: 0 0px 0px 0;
     cursor: pointer;
 }
 .blogpost-link.active,
@@ -1826,16 +1826,17 @@ body.dark-mode .message-form button {
     color: #fff !important;
 }
 body.dark-mode .message-form button:hover {
-    background: #fa0000 !important;
+    background: #ffffff !important;
+    color:  #8ab4f8 
 }
 body.dark-mode .contact-links .contact-icon {
     color: #8ab4f8 !important;
 }
 body.dark-mode .contact-links .contact-icon:hover {
-    color: #fa0000 !important;
+    color: #ffffff !important;
 }
 body.dark-mode .connect-vbar {
-    background: linear-gradient(180deg, #8ab4f8 0%, #fa0000 100%) !important;
+    background: linear-gradient(180deg, #8ab4f8 0%, #ffffff 100%) !important;
 }
 body.dark-mode .pub-title,
 body.dark-mode .pub-meta,
@@ -2011,7 +2012,7 @@ body.blogpost-page.dark-mode #cryogenics-article {
     box-shadow: none !important;
 }
 body.blogpost-page.dark-mode .blogpost-sidebar {
-    background: #181a1b !important;
+    background:  #23272a!important;
     color: #e0e0e0 !important;
     border-right: 1.5px solid #ffffff !important;
 }
