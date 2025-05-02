@@ -33,7 +33,7 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255,255,255,0.92) 100%, rgba(255, 255, 255, 0) 0%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  rgba(159, 158, 158, 0.667) 40%, rgba(159, 158, 158, 0.667) 50%,rgba(159, 158, 158, 0.667) 60% rgba(255, 255, 255, 0) 100%) !important;
     color: white;
     display: flex;
     justify-content: center;
@@ -113,7 +113,7 @@ body.index-page.dark-mode .hero-section {
     background-image: url('assets/img/rocket-2.jpg');
 }
 body.index-page nav {
-    background: rgba(255,255,255,0.7);
+    background:  rgba(159, 158, 158, 0.667);
     box-shadow: 0 4px 24px rgba(80,80,80,0.10);
     border-radius: 18px;
     padding: 0 32px;
@@ -221,7 +221,7 @@ footer .container p {
 }
 
 footer {
-    background-color: rgba(159, 158, 158, 0.667);; /* Set footer background to black */
+    background-color: rgba(159, 158, 158, 0.667); /* Set footer background to black */
     color: rgb(0, 0, 0); /* Set footer text color to white */
     width: 100%;
     text-align: center;
