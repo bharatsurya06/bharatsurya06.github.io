@@ -1994,3 +1994,33 @@ body.dark-mode .info-modal {
 body.dark-mode #info-icon i {
   color: #a8ff78;
 }
+
+body.blogpost-page.dark-mode {
+    background: #181a1b !important;
+}
+body.blogpost-page.dark-mode .blogpost-layout {
+    background: #23272a !important;
+}
+body.blogpost-page.dark-mode .blogpost-main,
+body.blogpost-page.dark-mode #barca-article-card,
+body.blogpost-page.dark-mode #cryogenics-article-card,
+body.blogpost-page.dark-mode #barca-article,
+body.blogpost-page.dark-mode #cryogenics-article {
+    background: #23272a !important;
+    color: #e0e0e0 !important;
+    box-shadow: none !important;
+}
+body.blogpost-page.dark-mode .blogpost-sidebar {
+    background: #181a1b !important;
+    color: #e0e0e0 !important;
+    border-right: 1.5px solid #ffffff !important;
+}
+body.blogpost-page.dark-mode .blogpost-link {
+    color: #e0e0e0 !important;
+}
+body.blogpost-page.dark-mode .blogpost-link.active,
+body.blogpost-page.dark-mode .blogpost-link:hover {
+    background: #ffffff !important;
+    color: #4447a1 !important;
+    /* border-left: 4px solid #fa0000 !important; */
+}
