@@ -9,27 +9,26 @@
 </head>
 <body>
     <div id="navbar"></div>
-    <div class="quiz-container" style="max-width: 540px; margin: 48px auto 32px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(80,80,80,0.10); padding: 32px 24px;">
-        <h1 style="text-align:center; margin-bottom: 18px;">Barça Quiz</h1>
+    <div class="quiz-container barca-quiz-card">
+        <h1 class="barca-quiz-title">Barça Quiz</h1>
         <div id="quiz-content">
-            <div id="quiz-question" style="font-size:1.18em; font-weight:600; margin-bottom:18px;"></div>
+            <div id="quiz-question" class="barca-quiz-question"></div>
             <form id="quiz-form">
-                <div id="quiz-options" style="margin-bottom:18px;"></div>
-                <div style="display:flex; align-items:center; justify-content:space-between;">
-                    <div id="timer" style="font-size:1.1em; color:#007cf0; font-weight:700;">20</div>
+                <div id="quiz-options"></div>
+                <div class="barca-quiz-controls">
+                    <div id="timer" class="barca-quiz-timer">20</div>
                     <div>
-                        <button type="button" id="submit-btn" style="margin-right:10px;">Submit</button>
-                        <button type="button" id="next-btn" disabled>Next</button>
+                        <button type="button" id="submit-btn" class="barca-quiz-btn">Submit</button>
+                        <button type="button" id="next-btn" class="barca-quiz-btn" disabled>Next</button>
                     </div>
                 </div>
             </form>
-            <div id="quiz-feedback" style="margin-top:12px; font-weight:600;"></div>
-            <div id="quiz-score" style="margin-top:18px; text-align:right; font-size:1.08em;"></div>
+            <div id="quiz-feedback" class="barca-quiz-feedback"></div>
         </div>
         <div id="quiz-end" style="display:none; text-align:center;">
-            <h2>Quiz Complete!</h2>
-            <div id="final-score"></div>
-            <button onclick="window.location.reload()">Restart Quiz</button>
+            <h2 class="barca-quiz-title">Quiz Complete!</h2>
+            <div id="final-score" class="barca-quiz-final-score"></div>
+            <button onclick="window.location.reload()" class="barca-quiz-btn">Restart Quiz</button>
         </div>
     </div>
     <footer>
@@ -73,6 +72,7 @@
     let answered = false;
     let selectedOption = null;
     let quizOrder = [];
+    const NUM_QUESTIONS = 10;
 
     function shuffleArray(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -86,6 +86,7 @@
         .then(data => {
             questions = data.questions.map(q => ({...q}));
             shuffleArray(questions);
+            questions = questions.slice(0, NUM_QUESTIONS);
             // For each question, pick 3 options (including the correct one)
             questions = questions.map(q => {
                 let opts = [q.correctAnswer];
@@ -114,13 +115,11 @@
         q.options.forEach((opt, idx) => {
             const id = `opt${idx}`;
             optionsDiv.innerHTML += `
-                <label style="display:block; margin-bottom:8px; cursor:pointer;">
+                <label for="${id}">
                     <input type="radio" name="option" value="${opt}" id="${id}" style="margin-right:8px;">${opt}
                 </label>
             `;
         });
-        document.getElementById('quiz-score').textContent = `Score: ${score} / ${quizOrder.length}`;
-        startTimer();
     }
 
     function startTimer() {
@@ -137,7 +136,6 @@
 
     function autoSubmit() {
         if (answered) return;
-        // If user selected an option, use it; else, no answer
         const selected = document.querySelector('input[name="option"]:checked');
         if (selected) selectedOption = selected.value;
         submitAnswer();
@@ -180,13 +178,19 @@
         document.getElementById('quiz-feedback').textContent = feedback;
         document.getElementById('submit-btn').disabled = true;
         document.getElementById('next-btn').disabled = false;
-        document.getElementById('quiz-score').textContent = `Score: ${score} / ${quizOrder.length}`;
     }
     function endQuiz() {
         document.getElementById('quiz-content').style.display = 'none';
         document.getElementById('quiz-end').style.display = 'block';
         document.getElementById('final-score').textContent = `Your final score: ${score} / ${quizOrder.length}`;
     }
+    // Start timer after rendering options
+    const observer = new MutationObserver(() => {
+        if (document.getElementById('quiz-content').style.display !== 'none') {
+            startTimer();
+        }
+    });
+    observer.observe(document.getElementById('quiz-options'), { childList: true });
     </script>
 </body>
 </html>
