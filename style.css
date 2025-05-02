@@ -1667,7 +1667,7 @@ body.blogpost-page {
     text-align: center;
     margin-bottom: 18px;
     font-size: 2em;
-    background: linear-gradient(90deg, #FC466B 0% ,#0A174E 60%, #042bed 100%);
+    background: linear-gradient(90deg, #FC466B 0%, #042bed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
