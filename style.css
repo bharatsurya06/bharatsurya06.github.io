@@ -375,7 +375,7 @@ footer {
 }
 
 .contact-box a {
-    color: #4f46e5;
+    color: #145eb8 ; 
     text-decoration: none;
     word-break: break-all;
 }
@@ -422,6 +422,7 @@ footer {
 .message-form button:hover {
     background: #000000 !important;
     color: #fff;
+    border-color: #000000;
 }
 
 .about-right h1 {
@@ -464,6 +465,7 @@ footer {
     color: #000000;
     text-decoration: none;
     border-radius: 6px;
+    border-color: #000000
     font-size: 1em;
     font-weight: 600;
     margin-top: 8px;
@@ -1695,10 +1697,16 @@ body.dark-mode .about-info-box li,
 body.dark-mode .about-info-box strong {
     color: #e0e0e0 !important;
 }
-body.dark-mode .cv-button,
-body.dark-mode .cv-button:hover {
-    background: #444 !important;
+body.dark-mode .cv-button
+{
+    background: transparent !important;
     color: #fff !important;
+    border: 2px solid #ffffff !important;
+     
+}
+body.dark-mode .cv-button:hover {
+    background: #ffffff !important;
+    color: #23272a!important;
 }
 body.dark-mode .profile-links a {
     color: #8ab4f8 !important;
