@@ -1096,22 +1096,12 @@ body.blogpost-page {
 .blogpost-sidebar {
     width: 260px;
     min-width: 180px;
-    padding: 0;
+    border-right: 1.5px solid #e0e0e0;
+    padding: 0 0 0 0;
     background: none;
     box-shadow: none;
     border-radius: 0;
     margin: 0;
-    border: none;
-    position: relative;
-}
-.blogpost-sidebar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1.5px;
-    height: 100%;
-    background: #e0e0e0;
 }
 .blogpost-sidebar h3 {
     text-align: center;
@@ -1149,10 +1139,22 @@ body.blogpost-page {
     border-left: 4px solid #3f5efb;
     font-weight: 700;
 }
-.blogpost-layout .blogpost-main {
+.blogpost-main {
     flex: 1;
     padding: 0 0 0 36px;
     background: none;
+}
+#barca-article-card, #cryogenics-article-card {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+#barca-article, #cryogenics-article {
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
 }
 @media (max-width: 900px) {
     .blogpost-layout {
@@ -1162,12 +1164,11 @@ body.blogpost-page {
     .blogpost-sidebar {
         width: 100%;
         min-width: 0;
+        border-right: none;
+        border-bottom: 1.5px solid #e0e0e0;
         margin-bottom: 24px;
     }
-    .blogpost-sidebar::after {
-        display: none;
-    }
-    .blogpost-layout .blogpost-main {
+    .blogpost-main {
         padding: 0;
     }
 }
