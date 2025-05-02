@@ -1706,7 +1706,7 @@ body.dark-mode .footer-contact {
     color: #e0e0e0 !important;
 }
 body.dark-mode footer {
-    background: #181a1b !important;
+    background:  #23272a!important;
     color: #e0e0e0 !important;
 }
 body.dark-mode .tab-content {
@@ -2007,12 +2007,12 @@ body.blogpost-page.dark-mode #barca-article-card,
 body.blogpost-page.dark-mode #cryogenics-article-card,
 body.blogpost-page.dark-mode #barca-article,
 body.blogpost-page.dark-mode #cryogenics-article {
-    background: #23272a !important;
+    background:  #181a1b   !important; /*#23272a*/
     color: #e0e0e0 !important;
     box-shadow: none !important;
 }
 body.blogpost-page.dark-mode .blogpost-sidebar {
-    background:  #23272a!important;
+    background:  #181a1b !important;
     color: #e0e0e0 !important;
     border-right: 1.5px solid #ffffff !important;
 }
