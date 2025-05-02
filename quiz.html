@@ -182,7 +182,31 @@
     function endQuiz() {
         document.getElementById('quiz-content').style.display = 'none';
         document.getElementById('quiz-end').style.display = 'block';
-        document.getElementById('final-score').textContent = `Your final score: ${score} / ${quizOrder.length}`;
+        let message = '';
+        let emoji = '';
+        let anim = '';
+        if (score === quizOrder.length) {
+            message = 'Congratulations! You are an <span class="barca-tier">Ultimate Culer</span>!';
+            emoji = '🏆';
+            anim = 'trophy-anim';
+        } else if (score >= 7) {
+            message = 'Great job! You are a <span class="barca-tier">True Blaugrana</span>!';
+            emoji = '🎉';
+            anim = 'confetti-anim';
+        } else if (score >= 5) {
+            message = 'Not bad! You are a <span class="barca-tier">Promising Culer</span>!';
+            emoji = '👏';
+            anim = 'clap-anim';
+        } else {
+            message = 'You will get there kiddo, keep supporting Barca!';
+            emoji = '💙❤️';
+            anim = 'heart-anim';
+        }
+        document.getElementById('final-score').innerHTML = `
+            <div class="barca-quiz-anim-container ${anim}">${emoji}</div>
+            <div style="margin-top:12px;">Your final score: <b>${score} / ${quizOrder.length}</b></div>
+            <div class="barca-quiz-tier-msg">${message}</div>
+        `;
     }
     // Start timer after rendering options
     const observer = new MutationObserver(() => {
