@@ -1659,7 +1659,8 @@ body.dark-mode .nav-links span {
     color: #e0e0e0 !important;
 }
 body.dark-mode .nav-links a:hover {
-    color: #fa0000 !important;
+    background: #ffffff;
+    color: #181a1b!important;
 }
 body.dark-mode .blog-section,
 body.dark-mode .about-section,
@@ -1853,7 +1854,8 @@ body.dark-mode .pub-link-hover {
     color: #8ab4f8 !important;
 }
 body.dark-mode .pub-link-hover:hover {
-    color: #fa0000 !important;
+  
+    color: #ffffff !important;
 }
 body.dark-mode .message-form h3 {
     color: #e0e0e0 !important;
