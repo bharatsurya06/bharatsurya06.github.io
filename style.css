@@ -1497,20 +1497,38 @@ body.blogpost-page {
     max-width: 1100px;
     margin: 40px auto 60px auto;
     padding: 0 16px;
-    gap: 0;
+    gap: 0; /*32px*/
     background: #fff;
 }
+
 .blogpost-sidebar {
     width: 260px;
     min-width: 180px;
-    padding: 0;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0;
-    border: none;
-    position: relative;
+    padding:0;
+
+    /* max-height: 80vh; */
+    /* background: #fff; */
+    border-radius: 0px;
+    /* border: 2.5px solid; */
+    /* border-image: linear-gradient(180deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%); */
+    border-image-slice: 1;
+    /* box-shadow: 0 2px 12px rgba(63,94,251,0.07); */
+    overflow-y: auto;
+    /* padding: 18px 0 18px 0; */
+    position: relative; /*sticky*/
+     /* top: 32px; */
 }
+
+.blogpost-sidebar h3 {
+    text-align: center;
+    font-size: 1.13em;
+    margin: 0 0 12px 0;
+    color: #0A174E;
+    letter-spacing: 0.5px;
+}
+
+
+
 .blogpost-sidebar::after {
     content: '';
     position: absolute;
@@ -1520,6 +1538,7 @@ body.blogpost-page {
     height: 100%;
     background: #e0e0e0;
 }
+
 .blogpost-layout .blogpost-main {
     flex: 1;
     padding: 0 0 0 36px;
@@ -1544,36 +1563,6 @@ body.blogpost-page {
 }
 
 /* --- Blog Post Template Styles --- */
-.blogpost-layout {
-    display: flex;
-    flex-direction: row;
-    max-width: 1100px;
-    margin: 40px auto 60px auto;
-    padding: 0 16px;
-    gap: 32px;
-}
-.blogpost-sidebar {
-    width: 260px;
-    min-width: 180px;
-    max-height: 80vh;
-    background: #fff;
-    border-radius: 10px;
-    border: 2.5px solid;
-    border-image: linear-gradient(180deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%);
-    border-image-slice: 1;
-    box-shadow: 0 2px 12px rgba(63,94,251,0.07);
-    overflow-y: auto;
-    padding: 18px 0 18px 0;
-    position: sticky;
-    top: 32px;
-}
-.blogpost-sidebar h3 {
-    text-align: center;
-    font-size: 1.13em;
-    margin: 0 0 12px 0;
-    color: #0A174E;
-    letter-spacing: 0.5px;
-}
 .blogpost-list {
     list-style: none;
     margin: 0;
