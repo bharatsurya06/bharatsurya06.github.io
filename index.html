@@ -10,7 +10,19 @@
 </head>
 
 <body class="index-page">
-    <!-- Include the consistent navigation bar -->
+    <div id="darkmode-toggle-index" style="position: fixed; top: 32px; right: 40px; z-index: 100;">
+      <label class="switch">
+        <input type="checkbox" class="input" id="darkModeToggleIndex">
+        <span class="slider">
+            <span class="sun">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="#FFD600"/></svg>
+            </span>
+            <span class="moon">
+                <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 0111.21 3a7 7 0 100 14A9 9 0 0121 12.79z" fill="#23272a"/></svg>
+            </span>
+        </span>
+      </label>
+    </div>
     <div style="position: relative;">
         <div id="navbar"></div>
         <div id="info-icon" style="position: fixed; top: 70vh; left: 50%; transform: translateX(-50%); height: 48px; display: flex; align-items: center; z-index: 20; cursor: pointer;">
@@ -74,6 +86,24 @@
                     infoModal.style.display = 'none';
                 }
             });
+
+            // Hide dark mode toggle in navbar for index page
+            const navSwitch = document.querySelector('nav .switch');
+            if (navSwitch) navSwitch.style.display = 'none';
+            // Sync dark mode toggle state
+            const toggle = document.getElementById('darkModeToggleIndex');
+            if (toggle) {
+                toggle.checked = localStorage.getItem('darkMode') === 'true';
+                toggle.addEventListener('change', function() {
+                    document.body.classList.toggle('dark-mode', this.checked);
+                    localStorage.setItem('darkMode', this.checked);
+                });
+            }
+            // Keep toggle in sync with localStorage changes
+            function syncToggle() {
+                if (toggle) toggle.checked = localStorage.getItem('darkMode') === 'true';
+            }
+            window.addEventListener('storage', syncToggle);
         });
 
         // Animated Hello! text effect
