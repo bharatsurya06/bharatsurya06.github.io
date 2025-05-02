@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barça Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="quiz-container" style="max-width: 540px; margin: 48px auto 32px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(80,80,80,0.10); padding: 32px 24px;">
+        <h1 style="text-align:center; margin-bottom: 18px;">Barça Quiz</h1>
+        <div id="quiz-content">
+            <div id="quiz-question" style="font-size:1.18em; font-weight:600; margin-bottom:18px;"></div>
+            <form id="quiz-form">
+                <div id="quiz-options" style="margin-bottom:18px;"></div>
+                <div style="display:flex; align-items:center; justify-content:space-between;">
+                    <div id="timer" style="font-size:1.1em; color:#007cf0; font-weight:700;">20</div>
+                    <div>
+                        <button type="button" id="submit-btn" style="margin-right:10px;">Submit</button>
+                        <button type="button" id="next-btn" disabled>Next</button>
+                    </div>
+                </div>
+            </form>
+            <div id="quiz-feedback" style="margin-top:12px; font-weight:600;"></div>
+            <div id="quiz-score" style="margin-top:18px; text-align:right; font-size:1.08em;"></div>
+        </div>
+        <div id="quiz-end" style="display:none; text-align:center;">
+            <h2>Quiz Complete!</h2>
+            <div id="final-score"></div>
+            <button onclick="window.location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    // Navbar and dark mode logic
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            function applyDarkModeSetting() {
+                const isDark = localStorage.getItem('darkMode') === 'true';
+                document.body.classList.toggle('dark-mode', isDark);
+                const toggle = document.querySelector('.input#darkModeToggle');
+                if (toggle) toggle.checked = isDark;
+            }
+            setTimeout(() => {
+                const toggle = document.querySelector('.input#darkModeToggle');
+                if (toggle) {
+                    toggle.checked = localStorage.getItem('darkMode') === 'true';
+                    toggle.addEventListener('change', function() {
+                        document.body.classList.toggle('dark-mode', this.checked);
+                        localStorage.setItem('darkMode', this.checked);
+                    });
+                }
+                applyDarkModeSetting();
+            }, 50);
+            applyDarkModeSetting();
+        });
+    </script>
+    <script>
+    // Quiz logic
+    let questions = [];
+    let current = 0;
+    let score = 0;
+    let timer = null;
+    let timeLeft = 20;
+    let answered = false;
+    let selectedOption = null;
+    let quizOrder = [];
+
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    }
+
+    fetch('barcaQuestions.json')
+        .then(res => res.json())
+        .then(data => {
+            questions = data.questions.map(q => ({...q}));
+            shuffleArray(questions);
+            // For each question, pick 3 options (including the correct one)
+            questions = questions.map(q => {
+                let opts = [q.correctAnswer];
+                let others = q.options.filter(opt => opt !== q.correctAnswer);
+                shuffleArray(others);
+                opts = opts.concat(others.slice(0,2));
+                shuffleArray(opts);
+                return {...q, options: opts};
+            });
+            quizOrder = questions;
+            showQuestion();
+        });
+
+    function showQuestion() {
+        answered = false;
+        selectedOption = null;
+        document.getElementById('quiz-feedback').textContent = '';
+        document.getElementById('submit-btn').disabled = false;
+        document.getElementById('next-btn').disabled = true;
+        timeLeft = 20;
+        document.getElementById('timer').textContent = timeLeft;
+        const q = quizOrder[current];
+        document.getElementById('quiz-question').textContent = `Q${current+1}. ${q.question}`;
+        const optionsDiv = document.getElementById('quiz-options');
+        optionsDiv.innerHTML = '';
+        q.options.forEach((opt, idx) => {
+            const id = `opt${idx}`;
+            optionsDiv.innerHTML += `
+                <label style="display:block; margin-bottom:8px; cursor:pointer;">
+                    <input type="radio" name="option" value="${opt}" id="${id}" style="margin-right:8px;">${opt}
+                </label>
+            `;
+        });
+        document.getElementById('quiz-score').textContent = `Score: ${score} / ${quizOrder.length}`;
+        startTimer();
+    }
+
+    function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('timer').textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                autoSubmit();
+            }
+        }, 1000);
+    }
+
+    function autoSubmit() {
+        if (answered) return;
+        // If user selected an option, use it; else, no answer
+        const selected = document.querySelector('input[name="option"]:checked');
+        if (selected) selectedOption = selected.value;
+        submitAnswer();
+    }
+
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+    document.getElementById('submit-btn').onclick = function() {
+        const selected = document.querySelector('input[name="option"]:checked');
+        if (!selected) {
+            document.getElementById('quiz-feedback').textContent = 'Please select an option!';
+            return;
+        }
+        selectedOption = selected.value;
+        submitAnswer();
+    };
+    document.getElementById('next-btn').onclick = function() {
+        current++;
+        if (current >= quizOrder.length) {
+            endQuiz();
+        } else {
+            showQuestion();
+        }
+    };
+    function submitAnswer() {
+        if (answered) return;
+        answered = true;
+        clearInterval(timer);
+        const q = quizOrder[current];
+        let feedback = '';
+        if (selectedOption === q.correctAnswer) {
+            score++;
+            feedback = 'Correct!';
+        } else if (selectedOption) {
+            feedback = `Wrong! Correct answer: ${q.correctAnswer}`;
+        } else {
+            feedback = `Time up! Correct answer: ${q.correctAnswer}`;
+        }
+        document.getElementById('quiz-feedback').textContent = feedback;
+        document.getElementById('submit-btn').disabled = true;
+        document.getElementById('next-btn').disabled = false;
+        document.getElementById('quiz-score').textContent = `Score: ${score} / ${quizOrder.length}`;
+    }
+    function endQuiz() {
+        document.getElementById('quiz-content').style.display = 'none';
+        document.getElementById('quiz-end').style.display = 'block';
+        document.getElementById('final-score').textContent = `Your final score: ${score} / ${quizOrder.length}`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "In what year was FC Barcelona founded?",
+        "options": ["1899", "1902", "1895", "1905"],
+        "correctAnswer": "1899",
+        "category": "history"
+        
+      },
+      {
+        "id": 2,
+        "question": "Who is FC Barcelona's all-time leading goal scorer?",
+        "options": ["Lionel Messi", "César Rodríguez", "Luis Suárez", "Ladislao Kubala"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 3,
+        "question": "How many Champions League/European Cup titles has FC Barcelona won?",
+        "options": ["5", "3", "6", "4"],
+        "correctAnswer": "5",
+        "category": "trophies"
+      },
+      {
+        "id": 4,
+        "question": "Who was the first president of FC Barcelona?",
+        "options": ["Walter Wild", "Joan Gamper", "Hans Gamper", "Arthur Witty"],
+        "correctAnswer": "Walter Wild",
+        "category": "history"
+      },
+      {
+        "id": 5,
+        "question": "Which player is known as 'The Flying Dutchman' at Barcelona?",
+        "options": ["Johan Cruyff", "Ronald Koeman", "Frank Rijkaard", "Patrick Kluivert"],
+        "correctAnswer": "Johan Cruyff",
+        "category": "players"
+      },
+      {
+        "id": 6,
+        "question": "In which year did Barcelona win their first European Cup/Champions League?",
+        "options": ["1992", "1986", "1999", "2006"],
+        "correctAnswer": "1992",
+        "category": "trophies"
+      },
+      {
+        "id": 7,
+        "question": "What is the name of FC Barcelona's stadium?",
+        "options": ["Camp Nou", "Nou Camp", "Estadi del Barça", "Estadi Olímpic"],
+        "correctAnswer": "Camp Nou",
+        "category": "general"
+      },
+      {
+        "id": 8,
+        "question": "Which manager led Barcelona to their first treble (La Liga, Copa del Rey, Champions League) in 2009?",
+        "options": ["Pep Guardiola", "Frank Rijkaard", "Luis Enrique", "Tito Vilanova"],
+        "correctAnswer": "Pep Guardiola",
+        "category": "history"
+      },
+      {
+        "id": 9,
+        "question": "What is FC Barcelona's motto?",
+        "options": ["Més que un club", "Audere est facere", "Mia san mia", "Superbia in Proelio"],
+        "correctAnswer": "Més que un club",
+        "category": "general"
+      },
+      {
+        "id": 10,
+        "question": "Which Barcelona player scored the winning goal in the 1992 European Cup final?",
+        "options": ["Ronald Koeman", "Michael Laudrup", "Hristo Stoichkov", "Andoni Zubizarreta"],
+        "correctAnswer": "Ronald Koeman",
+        "category": "history"
+      },
+      {
+        "id": 11,
+        "question": "Who is the only player to win two trebles with Barcelona?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Gerard Piqué"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 12,
+        "question": "How many La Liga titles has FC Barcelona won (as of 2023)?",
+        "options": ["26", "24", "30", "22"],
+        "correctAnswer": "26",
+        "category": "trophies"
+      },
+      {
+        "id": 13,
+        "question": "Who scored Barcelona's 6000th La Liga goal?",
+        "options": ["Lionel Messi", "Luis Suárez", "Samuel Eto'o", "Ronaldinho"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 14,
+        "question": "Which season did Barcelona win six trophies in a calendar year?",
+        "options": ["2008-2009", "2010-2011", "2014-2015", "2012-2013"],
+        "correctAnswer": "2008-2009",
+        "category": "trophies"
+      },
+      {
+        "id": 15,
+        "question": "What was the original name of FC Barcelona's first stadium?",
+        "options": ["Estadio de la Carretera de Horta", "Camp de la Indústria", "Camp del Fortí", "Camp de les Corts"],
+        "correctAnswer": "Camp de la Indústria",
+        "category": "history"
+      },
+      {
+        "id": 16,
+        "question": "Which player won the most trophies with Barcelona?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Sergio Busquets"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 17,
+        "question": "What is the nickname for the rivalry between FC Barcelona and Real Madrid?",
+        "options": ["El Clásico", "El Derby", "El Superclásico", "La Rivalidad"],
+        "correctAnswer": "El Clásico",
+        "category": "general"
+      },
+      {
+        "id": 18,
+        "question": "Which player is known as 'Don Andrés' at Barcelona?",
+        "options": ["Andrés Iniesta", "Andrés Palop", "Andrés Cuellar", "Andrés Guarda"],
+        "correctAnswer": "Andrés Iniesta",
+        "category": "players"
+      },
+      {
+        "id": 19,
+        "question": "In what year was Barça's famous 'La Masia' academy established?",
+        "options": ["1979", "1966", "1985", "1992"],
+        "correctAnswer": "1979",
+        "category": "history"
+      },
+      {
+        "id": 20,
+        "question": "Who scored Barcelona's winning goal in the 2011 Champions League final?",
+        "options": ["Lionel Messi", "David Villa", "Pedro", "Sergio Busquets"],
+        "correctAnswer": "Lionel Messi",
+        "category": "history"
+      },
+      {
+        "id": 21,
+        "question": "Which Brazilian player was nicknamed 'O Rei' (The King) while at Barcelona?",
+        "options": ["Ronaldinho", "Neymar Jr.", "Rivaldo", "Romario"],
+        "correctAnswer": "Ronaldinho",
+        "category": "players"
+      },
+      {
+        "id": 22,
+        "question": "How many Champions League finals has Barcelona lost?",
+        "options": ["4", "3", "5", "2"],
+        "correctAnswer": "4",
+        "category": "trophies"
+      },
+      {
+        "id": 23,
+        "question": "Who designed FC Barcelona's current logo?",
+        "options": ["Carles Comamala", "Joan Gamper", "Salvador Dalí", "Antoni Gaudí"],
+        "correctAnswer": "Carles Comamala",
+        "category": "history"
+      },
+      {
+        "id": 24,
+        "question": "Which Barcelona player has played the most matches for the club?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Carles Puyol"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 25,
+        "question": "What was Barcelona's first championship in history?",
+        "options": ["Copa Macaya", "La Liga", "Copa del Rey", "Campionat de Catalunya"],
+        "correctAnswer": "Copa Macaya",
+        "category": "history"
+      },
+      {
+        "id": 26,
+        "question": "Which player scored four goals in a Champions League match against Arsenal in 2010?",
+        "options": ["Lionel Messi", "Samuel Eto'o", "David Villa", "Thierry Henry"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 27,
+        "question": "Who is known as 'The Flea' at Barcelona?",
+        "options": ["Lionel Messi", "Andrés Iniesta", "Xavi Hernández", "Pedro"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 28,
+        "question": "What was the score in Barcelona's biggest ever win against Real Madrid?",
+        "options": ["5-0", "6-2", "5-1", "7-2"],
+        "correctAnswer": "5-0",
+        "category": "records"
+      },
+      {
+        "id": 29,
+        "question": "Who was Barcelona's first non-European signing?",
+        "options": ["Romario", "Diego Maradona", "Gary Lineker", "Ronaldo"],
+        "correctAnswer": "Diego Maradona",
+        "category": "history"
+      },
+      {
+        "id": 30,
+        "question": "Which former Barcelona player became known as 'The Phenomenon'?",
+        "options": ["Ronaldo", "Romario", "Rivaldo", "Ronaldinho"],
+        "correctAnswer": "Ronaldo",
+        "category": "players"
+      },
+      {
+        "id": 31,
+        "question": "How many goals did Lionel Messi score in the 2011-2012 season, setting a world record?",
+        "options": ["73", "91", "82", "68"],
+        "correctAnswer": "73",
+        "category": "records"
+      },
+      {
+        "id": 32,
+        "question": "What is the capacity of Camp Nou?",
+        "options": ["99,354", "105,000", "85,000", "120,000"],
+        "correctAnswer": "99,354",
+        "category": "general"
+      },
+      {
+        "id": 33,
+        "question": "Which coach was known for the 'Dream Team' era at Barcelona?",
+        "options": ["Johan Cruyff", "Frank Rijkaard", "Louis van Gaal", "Bobby Robson"],
+        "correctAnswer": "Johan Cruyff",
+        "category": "history"
+      },
+      {
+        "id": 34,
+        "question": "Who is FC Barcelona's record signing?",
+        "options": ["Philippe Coutinho", "Ousmane Dembélé", "Antoine Griezmann", "Neymar Jr."],
+        "correctAnswer": "Philippe Coutinho",
+        "category": "records"
+      },
+      {
+        "id": 35,
+        "question": "What color was Barcelona's first kit?",
+        "options": ["Blue and Red", "All Blue", "Blue and White", "Yellow and Red"],
+        "correctAnswer": "Blue and White",
+        "category": "history"
+      },
+      {
+        "id": 36,
+        "question": "Who scored Barcelona's 5000th La Liga goal?",
+        "options": ["Lionel Messi", "Samuel Eto'o", "Ronaldinho", "Thierry Henry"],
+        "correctAnswer": "Samuel Eto'o",
+        "category": "records"
+      },
+      {
+        "id": 37,
+        "question": "Which goalkeeper has kept the most clean sheets for Barcelona?",
+        "options": ["Víctor Valdés", "Andoni Zubizarreta", "Marc-André ter Stegen", "José Manuel Pinto"],
+        "correctAnswer": "Víctor Valdés",
+        "category": "records"
+      },
+      {
+        "id": 38,
+        "question": "What is Barcelona's women's team called?",
+        "options": ["FC Barcelona Femení", "Barcelona Ladies", "Barça Women", "FCB Female"],
+        "correctAnswer": "FC Barcelona Femení",
+        "category": "general"
+      },
+      {
+        "id": 39,
+        "question": "Which Barcelona legend returned as coach in 2008?",
+        "options": ["Pep Guardiola", "Frank Rijkaard", "Luis Enrique", "Johan Cruyff"],
+        "correctAnswer": "Pep Guardiola",
+        "category": "history"
+      },
+      {
+        "id": 40,
+        "question": "Which player scored the fastest goal in Barcelona's history?",
+        "options": ["Dani Alves", "Luis Suárez", "Lionel Messi", "Pedro"],
+        "correctAnswer": "Dani Alves",
+        "category": "records"
+      },
+      {
+        "id": 41,
+        "question": "How many Copa del Rey titles has Barcelona won (as of 2023)?",
+        "options": ["31", "28", "25", "33"],
+        "correctAnswer": "31",
+        "category": "trophies"
+      },
+      {
+        "id": 42,
+        "question": "Who was Barcelona's captain during their first Champions League triumph in 1992?",
+        "options": ["José Mari Bakero", "Ronald Koeman", "Hristo Stoichkov", "Michael Laudrup"],
+        "correctAnswer": "José Mari Bakero",
+        "category": "history"
+      },
+      {
+        "id": 43,
+        "question": "Which Barcelona player has won the most Champions League titles with the club?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Gerard Piqué"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 44,
+        "question": "What is the name of Barcelona's training ground?",
+        "options": ["Ciutat Esportiva Joan Gamper", "La Masia", "Camp Nou Training Centre", "Barça Athletic Ground"],
+        "correctAnswer": "Ciutat Esportiva Joan Gamper",
+        "category": "general"
+      },
+      {
+        "id": 45,
+        "question": "Which Barcelona player was nicknamed 'The Bullet'?",
+        "options": ["Hristo Stoichkov", "Ronaldo", "Thierry Henry", "Luis Suárez"],
+        "correctAnswer": "Hristo Stoichkov",
+        "category": "players"
+      },
+      {
+        "id": 46,
+        "question": "How many times has Barcelona won the UEFA Super Cup?",
+        "options": ["5", "3", "4", "6"],
+        "correctAnswer": "5",
+        "category": "trophies"
+      },
+      {
+        "id": 47,
+        "question": "Which Barcelona legend said 'Football is a game you play with your brain'?",
+        "options": ["Johan Cruyff", "Pep Guardiola", "Xavi Hernández", "Lionel Messi"],
+        "correctAnswer": "Johan Cruyff",
+        "category": "history"
+      },
+      {
+        "id": 48,
+        "question": "What is Barcelona's B team called?",
+        "options": ["FC Barcelona B", "Barcelona Atlètic", "Barça Juvenil", "Barcelona II"],
+        "correctAnswer": "FC Barcelona B",
+        "category": "general"
+      },
+      {
+        "id": 49,
+        "question": "Which Barcelona player wore the number 10 before Lionel Messi?",
+        "options": ["Ronaldinho", "Rivaldo", "Juan Román Riquelme", "Javier Saviola"],
+        "correctAnswer": "Ronaldinho",
+        "category": "players"
+      },
+      {
+        "id": 50,
+        "question": "What was the original nationality of Barcelona's founder, Joan Gamper?",
+        "options": ["Swiss", "German", "Austrian", "French"],
+        "correctAnswer": "Swiss",
+        "category": "history"
+      },
+      {
+        "id": 51,
+        "question": "Which Barcelona player scored in two different Champions League finals?",
+        "options": ["Samuel Eto'o", "Lionel Messi", "Pedro", "Andrés Iniesta"],
+        "correctAnswer": "Samuel Eto'o",
+        "category": "records"
+      },
+      {
+        "id": 52,
+        "question": "In what year did Barcelona win its first La Liga title?",
+        "options": ["1929", "1932", "1924", "1936"],
+        "correctAnswer": "1929",
+        "category": "history"
+      },
+      {
+        "id": 53,
+        "question": "Which Barcelona player was known as 'The Wall'?",
+        "options": ["Carles Puyol", "Ronald Koeman", "Gerard Piqué", "Javier Mascherano"],
+        "correctAnswer": "Carles Puyol",
+        "category": "players"
+      },
+      {
+        "id": 54,
+        "question": "How many times has Barcelona won the FIFA Club World Cup?",
+        "options": ["3", "2", "4", "1"],
+        "correctAnswer": "3",
+        "category": "trophies"
+      },
+      {
+        "id": 55,
+        "question": "Who scored Barcelona's winning goal in the 2009 Champions League final?",
+        "options": ["Lionel Messi", "Samuel Eto'o", "Andrés Iniesta", "Thierry Henry"],
+        "correctAnswer": "Lionel Messi",
+        "category": "history"
+      },
+      {
+        "id": 56,
+        "question": "Which country has provided the most foreign players to Barcelona?",
+        "options": ["Brazil", "Argentina", "Netherlands", "France"],
+        "correctAnswer": "Brazil",
+        "category": "records"
+      },
+      {
+        "id": 57,
+        "question": "Who was the first Barcelona player to win the Ballon d'Or?",
+        "options": ["Luis Suárez Miramontes", "Johan Cruyff", "Hristo Stoichkov", "Rivaldo"],
+        "correctAnswer": "Luis Suárez Miramontes",
+        "category": "history"
+      },
+      {
+        "id": 58,
+        "question": "What is the name of Barcelona's official anthem?",
+        "options": ["El Cant del Barça", "Himno del Centenari", "Força Barça", "Visca el Barça"],
+        "correctAnswer": "El Cant del Barça",
+        "category": "general"
+      },
+      {
+        "id": 59,
+        "question": "Which Barcelona manager has won the most La Liga titles?",
+        "options": ["Pep Guardiola", "Johan Cruyff", "Luis Enrique", "Frank Rijkaard"],
+        "correctAnswer": "Pep Guardiola",
+        "category": "records"
+      },
+      {
+        "id": 60,
+        "question": "How many goals did Lionel Messi score in his final season at Barcelona?",
+        "options": ["38", "31", "45", "29"],
+        "correctAnswer": "38",
+        "category": "records"
+      },
+      {
+        "id": 61,
+        "question": "Which player scored Barcelona's only goal in the 2006 Champions League final?",
+        "options": ["Samuel Eto'o", "Ronaldinho", "Ludovic Giuly", "Andrés Iniesta"],
+        "correctAnswer": "Samuel Eto'o",
+        "category": "history"
+      },
+      {
+        "id": 62,
+        "question": "Who is Barcelona's longest-serving president?",
+        "options": ["Josep Lluís Núñez", "Joan Laporta", "Josep Maria Bartomeu", "Sandro Rosell"],
+        "correctAnswer": "Josep Lluís Núñez",
+        "category": "history"
+      },
+      {
+        "id": 63,
+        "question": "Which defender scored the most goals for Barcelona?",
+        "options": ["Ronald Koeman", "Gerard Piqué", "Carles Puyol", "Dani Alves"],
+        "correctAnswer": "Ronald Koeman",
+        "category": "records"
+      },
+      {
+        "id": 64,
+        "question": "In what year was Barcelona's original logo created?",
+        "options": ["1899", "1910", "1920", "1905"],
+        "correctAnswer": "1899",
+        "category": "history"
+      },
+      {
+        "id": 65,
+        "question": "Who is known as 'The Doctor' at Barcelona?",
+        "options": ["Josep Guardiola", "Xavi Hernández", "Luis Enrique", "Andrés Iniesta"],
+        "correctAnswer": "Xavi Hernández",
+        "category": "players"
+      },
+      {
+        "id": 66,
+        "question": "Which Barcelona player was nicknamed 'El Guaje' (The Kid)?",
+        "options": ["David Villa", "Pedro", "Bojan Krkić", "Marc Bartra"],
+        "correctAnswer": "David Villa",
+        "category": "players"
+      },
+      {
+        "id": 67,
+        "question": "How many European Cup Winners' Cup titles has Barcelona won?",
+        "options": ["4", "3", "2", "5"],
+        "correctAnswer": "4",
+        "category": "trophies"
+      },
+      {
+        "id": 68,
+        "question": "Which player scored the most Champions League goals for Barcelona?",
+        "options": ["Lionel Messi", "Luis Suárez", "Rivaldo", "Samuel Eto'o"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 69,
+        "question": "What was the year of Barcelona's biggest transfer sale?",
+        "options": ["2017", "2018", "2019", "2021"],
+        "correctAnswer": "2017",
+        "category": "records"
+      },
+      {
+        "id": 70,
+        "question": "Which Barcelona player was known as 'El Ilusionista' (The Illusionist)?",
+        "options": ["Andrés Iniesta", "Ronaldinho", "Lionel Messi", "Xavi Hernández"],
+        "correctAnswer": "Andrés Iniesta",
+        "category": "players"
+      },
+      {
+        "id": 71,
+        "question": "How many Supercopa de España titles has Barcelona won (as of 2023)?",
+        "options": ["14", "13", "16", "12"],
+        "correctAnswer": "14",
+        "category": "trophies"
+      },
+      {
+        "id": 72,
+        "question": "Who coached Barcelona to their second treble in 2015?",
+        "options": ["Luis Enrique", "Pep Guardiola", "Tito Vilanova", "Ernesto Valverde"],
+        "correctAnswer": "Luis Enrique",
+        "category": "history"
+      },
+      {
+        "id": 73,
+        "question": "Which player has the nickname 'The Terminator' at Barcelona?",
+        "options": ["Carles Puyol", "Patrick Kluivert", "Luis Suárez", "Marc-André ter Stegen"],
+        "correctAnswer": "Patrick Kluivert",
+        "category": "players"
+      },
+      {
+        "id": 74,
+        "question": "What was Barcelona's home stadium before Camp Nou?",
+        "options": ["Camp de Les Corts", "Estadi Olímpic Lluís Companys", "Camp de la Indústria", "Camp del Fortí"],
+        "correctAnswer": "Camp de Les Corts",
+        "category": "history"
+      },
+      {
+        "id": 75,
+        "question": "Which Barcelona player scored the fastest hat-trick in Champions League history?",
+        "options": ["Lionel Messi", "Luis Suárez", "Neymar Jr.", "Rivaldo"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 76,
+        "question": "How many consecutive La Liga titles did Barcelona win between 2008 and 2011?",
+        "options": ["3", "2", "4", "5"],
+        "correctAnswer": "3",
+        "category": "trophies"
+      },
+      {
+        "id": 77,
+        "question": "Who was Barcelona's first non-Spanish manager?",
+        "options": ["Udo Lattek", "Terry Venables", "Johan Cruyff", "Bobby Robson"],
+        "correctAnswer": "Udo Lattek",
+        "category": "history"
+      },
+      {
+        "id": 78,
+        "question": "Which Barcelona player was known as 'The Octopus of Badia'?",
+        "options": ["Dani Alves", "Ronaldinho", "Romario", "Rivaldo"],
+        "correctAnswer": "Dani Alves",
+        "category": "players"
+      },
+      {
+        "id": 79,
+        "question": "How many Inter-Cities Fairs Cup titles has Barcelona won?",
+        "options": ["3", "2", "4", "1"],
+        "correctAnswer": "3",
+        "category": "trophies"
+      },
+      {
+        "id": 80,
+        "question": "Who has been Barcelona's youngest goal scorer in official competitions?",
+        "options": ["Ansu Fati", "Bojan Krkić", "Lionel Messi", "Gavi"],
+        "correctAnswer": "Ansu Fati",
+        "category": "records"
+      },
+      {
+        "id": 81,
+        "question": "In what year did Barcelona complete 'La Remontada' against PSG?",
+        "options": ["2017", "2016", "2018", "2019"],
+        "correctAnswer": "2017",
+        "category": "history"
+      },
+      {
+        "id": 82,
+        "question": "Which Barcelona goalkeeper has saved the most penalties?",
+        "options": ["Víctor Valdés", "Marc-André ter Stegen", "Andoni Zubizarreta", "Jasper Cillessen"],
+        "correctAnswer": "Víctor Valdés",
+        "category": "records"
+      },
+      {
+        "id": 83,
+        "question": "What is the name of Barcelona's sports newspaper?",
+        "options": ["Mundo Deportivo", "Sport", "El 9 Esportiu", "Barça Magazine"],
+        "correctAnswer": "Mundo Deportivo",
+        "category": "general"
+      },
+      {
+        "id": 84,
+        "question": "Who scored Barcelona's 3000th La Liga goal?",
+        "options": ["Gary Lineker", "Hristo Stoichkov", "Romario", "Ronald Koeman"],
+        "correctAnswer": "Gary Lineker",
+        "category": "records"
+      },
+      {
+        "id": 85,
+        "question": "Which Barcelona player was nicknamed 'El Pistolero' (The Gunman)?",
+        "options": ["Luis Suárez", "David Villa", "Samuel Eto'o", "Thierry Henry"],
+        "correctAnswer": "Luis Suárez",
+        "category": "players"
+      },
+      {
+        "id": 86,
+        "question": "How many players from La Masia were in Barcelona's starting 11 against Levante in 2012?",
+        "options": ["11", "9", "7", "10"],
+        "correctAnswer": "11",
+        "category": "records"
+      },
+      {
+        "id": 87,
+        "question": "What is the name of Barcelona's basketball team?",
+        "options": ["FC Barcelona Bàsquet", "Barcelona Baskets", "FCB Basket", "Barça Hoops"],
+        "correctAnswer": "FC Barcelona Bàsquet",
+        "category": "general"
+      },
+      {
+        "id": 88,
+        "question": "Which Barcelona player scored the club's 10,000th goal?",
+        "options": ["Lionel Messi", "Luis Suárez", "Neymar Jr.", "Andrés Iniesta"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      },
+      {
+        "id": 89,
+        "question": "Who was the first Barcelona player to score in five different official competitions in a single season?",
+        "options": ["Pedro", "Lionel Messi", "Luis Suárez", "Neymar Jr."],
+        "correctAnswer": "Pedro",
+        "category": "records"
+      },
+      {
+        "id": 90,
+        "question": "Which number did Johan Cruyff wear at Barcelona?",
+        "options": ["9", "14", "10", "8"],
+        "correctAnswer": "14",
+        "category": "history"
+      },
+      {
+        "id": 91,
+        "question": "How many clubs owned the rights to Neymar Jr. when Barcelona signed him?",
+        "options": ["2", "1", "3", "4"],
+        "correctAnswer": "2",
+        "category": "history"
+      },
+      {
+        "id": 92,
+        "question": "Who is the most expensive defender Barcelona has ever signed?",
+        "options": ["Clément Lenglet", "Samuel Umtiti", "Marc Cucurella", "Matthijs de Ligt"],
+        "correctAnswer": "Clément Lenglet",
+        "category": "records"
+      },
+      {
+        "id": 93,
+        "question": "Which Barcelona player was known as 'La Pulga Atómica' (The Atomic Flea)?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Dani Alves"],
+        "correctAnswer": "Lionel Messi",
+        "category": "players"
+      },
+      {
+        "id": 94,
+        "question": "How many goals did Barcelona score in La Liga during the 2012-2013 season, setting a record?",
+        "options": ["115", "102", "110", "121"],
+        "correctAnswer": "115",
+        "category": "records"
+      },
+      {
+        "id": 95,
+        "question": "Which player scored Barcelona's first goal in the new millennium?",
+        "options": ["Rivaldo", "Luis Enrique", "Patrick Kluivert", "Phillip Cocu"],
+        "correctAnswer": "Rivaldo",
+        "category": "history"
+      },
+      {
+        "id": 96,
+        "question": "What is the name of Barcelona's futsal team?",
+        "options": ["Barça Futsal", "FC Barcelona Sala", "FCB Indoor", "Barcelona Futbol Sala"],
+        "correctAnswer": "Barça Futsal",
+        "category": "general"
+      },
+      {
+        "id": 97,
+        "question": "Which Barcelona player was known as 'The Roadrunner'?",
+        "options": ["Marc Overmars", "Pedro", "Thierry Henry", "Alexis Sánchez"],
+        "correctAnswer": "Marc Overmars",
+        "category": "players"
+      },
+      {
+        "id": 98,
+        "question": "How many consecutive Copa del Rey titles did Barcelona win between 2015 and 2018?",
+        "options": ["4", "3", "5", "2"],
+        "correctAnswer": "4",
+        "category": "trophies"
+      },
+      {
+        "id": 99,
+        "question": "Who was Barcelona's goalkeeper in their first European Cup final in 1992?",
+        "options": ["Andoni Zubizarreta", "Víctor Valdés", "Carles Busquets", "Francisco Buyo"],
+        "correctAnswer": "Andoni Zubizarreta",
+        "category": "history"
+      },
+      {
+        "id": 100,
+        "question": "Which player holds the record for most assists in a single Barcelona season?",
+        "options": ["Lionel Messi", "Xavi Hernández", "Andrés Iniesta", "Dani Alves"],
+        "correctAnswer": "Lionel Messi",
+        "category": "records"
+      }
+    ]
+  }
