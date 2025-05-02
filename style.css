@@ -137,20 +137,25 @@ body.index-page .nav-links a, body.index-page .nav-links span {
     color: #222;
     line-height: 54px;
     font-size: 1.15em;
+    /* Prevent background size/height jump on hover */
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    box-sizing: border-box;
+    padding: 0 12px;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
 }
 body.index-page .nav-links a:hover {
     background: #000000;
     color: #ffffff;
-    /* font-size: 1.15em; */
-    /* font-weight: 800; */
     border-radius: 0px;
-    padding: 0 0px;
-    transition: background 0.2s, color 0.2s, font-size 0.2s;
-    height: 25px;           /* Set the height of the hover background */
-    line-height: 25px;      /* Vertically center the text */
-    display: inline-block;  /* Ensure height and line-height apply */
-    box-sizing: border-box; /* Include padding in height */
-    
+    /* Keep size consistent on hover */
+    font-size: 1.15em;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 12px;
 }
 
 /* Hero Section Background */
