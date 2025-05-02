@@ -1967,7 +1967,7 @@ body.dark-mode .research-desc {
   right: 40px;
   background: #fff;
   color: #23272a;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   padding: 22px 28px;
   max-width: 340px;
@@ -1991,9 +1991,13 @@ body.dark-mode .info-modal {
 #info-icon i {
   color: #007cf0;
   transition: color 0.3s;
+  animation: rgb-glow 2.5s linear infinite;
 }
-body.dark-mode #info-icon i {
-  color: #a8ff78;
+@keyframes rgb-glow {
+  0% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+  33% { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
+  66% { color: #0000ff; text-shadow: 0 0 8px #0000ff; }
+  100% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
 }
 
 body.blogpost-page.dark-mode {
