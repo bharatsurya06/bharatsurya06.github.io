@@ -199,9 +199,14 @@
             message = 'Not bad! You are a <span class="barca-tier">Promising Culer</span>!';
             emoji = '👏';
             anim = 'clap-anim';
+        } else if (score === 0) {
+            message = "You better stick to cricket!";
+            emoji = '🏏';
+            anim = 'heart-anim';
         } else {
-            message = 'You will get there kiddo, keep supporting Barca!';
-            emoji = '💙❤️';
+            message =  "With that score, you might get a call-up from Madrid’s academy! Keep supporting Barça!";
+            
+            emoji = '😅🤍';
             anim = 'heart-anim';
         }
         document.getElementById('final-score').innerHTML = `
@@ -220,4 +225,3 @@
     </script>
 </body>
 </html>
-``` 
