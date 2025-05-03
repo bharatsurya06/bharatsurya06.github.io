@@ -122,6 +122,15 @@
                 </label>
             `;
         });
+        const optionInputs = document.querySelectorAll('#quiz-options input[type="radio"]');
+        optionInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                document.querySelectorAll('#quiz-options label').forEach(lab => lab.classList.remove('selected'));
+                if (this.checked) {
+                    this.parentElement.classList.add('selected');
+                }
+            });
+        });
     }
 
     function startTimer() {
@@ -169,6 +178,20 @@
         clearInterval(timer);
         const q = quizOrder[current];
         let feedback = '';
+        const optionLabels = document.querySelectorAll('#quiz-options label');
+        optionLabels.forEach(label => {
+            const input = label.querySelector('input[type="radio"]');
+            label.classList.remove('correct', 'incorrect');
+            if (input.value === q.correctAnswer) {
+                label.classList.add('correct');
+            }
+            if (selectedOption && input.value === selectedOption && selectedOption !== q.correctAnswer) {
+                label.classList.add('incorrect');
+            }
+            if (input.checked) {
+                label.classList.add('selected');
+            }
+        });
         if (selectedOption === q.correctAnswer) {
             score++;
             feedback = 'Correct!';

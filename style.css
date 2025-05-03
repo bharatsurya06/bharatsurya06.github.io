@@ -1704,37 +1704,59 @@ body.dark-mode .barca-quiz-question {
     border: 2px solid #23272a;
     font-weight: 500;
     box-shadow: none;
+    position: relative;
 }
 #quiz-options input[type="radio"] {
     accent-color: #FC466B;
     margin-right: 8px;
 }
-#quiz-options label:hover {
+#quiz-options label:hover,
+#quiz-options label.selected {
     background: #FC466B;
     color: #fff;
     border-color: #FC466B;
 }
-#quiz-options input[type="radio"]:checked + label,
-#quiz-options input[type="radio"]:focus + label {
-    background: #3f5efb;
-    color: #fff;
-    border-color: #3f5efb;
+#quiz-options label.correct {
+    background: #2ecc40 !important;
+    color: #fff !important;
+    border-color: #2ecc40 !important;
+}
+#quiz-options label.incorrect {
+    background: #FC466B !important;
+    color: #fff !important;
+    border-color: #FC466B !important;
 }
 body.dark-mode #quiz-options label {
     background: #23272a;
     color: #fff;
     border: 2px solid #fff;
 }
-body.dark-mode #quiz-options label:hover {
+body.dark-mode #quiz-options label:hover,
+body.dark-mode #quiz-options label.selected {
     background: #FC466B;
     color: #fff;
     border-color: #FC466B;
 }
-body.dark-mode #quiz-options input[type="radio"]:checked + label,
-body.dark-mode #quiz-options input[type="radio"]:focus + label {
-    background: #3f5efb;
+body.dark-mode #quiz-options label.correct {
+    background: #2ecc40 !important;
+    color: #fff !important;
+    border-color: #2ecc40 !important;
+}
+body.dark-mode #quiz-options label.incorrect {
+    background: #FC466B !important;
+    color: #fff !important;
+    border-color: #FC466B !important;
+}
+.barca-quiz-feedback {
+    margin-top: 12px;
+    font-weight: 600;
+    min-height: 24px;
+    color: #23272a;
+    text-align: center;
+    transition: color 0.2s;
+}
+body.dark-mode .barca-quiz-feedback {
     color: #fff;
-    border-color: #3f5efb;
 }
 .barca-quiz-controls {
     display: flex;
@@ -1774,19 +1796,7 @@ body.dark-mode #quiz-options input[type="radio"]:focus + label {
 .barca-quiz-btn:hover:not(:disabled) {
     background: #3f5efb;
 }
-.barca-quiz-feedback {
-    margin-top: 12px;
-    font-weight: 600;
-    min-height: 24px;
-    color: #fff;
-    text-align: center;
-}
-.barca-quiz-final-score {
-    font-size: 1.3em;
-    margin: 18px 0 18px 0;
-    color: #fff;
-    font-weight: 700;
-}
+
 @media (max-width: 700px) {
     .barca-quiz-card {
         padding: 16px 4vw 16px 4vw;
