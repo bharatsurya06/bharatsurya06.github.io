@@ -1696,19 +1696,45 @@ body.dark-mode .barca-quiz-question {
     margin-bottom: 10px;
     cursor: pointer;
     font-size: 1.08em;
-    background: rgba(255,255,255,0.08);
+    background: #fff;
     border-radius: 8px;
     padding: 8px 12px;
-    transition: background 0.2s, color 0.2s;
-    color: #fff;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    color: #23272a;
+    border: 2px solid #23272a;
+    font-weight: 500;
+    box-shadow: none;
 }
 #quiz-options input[type="radio"] {
     accent-color: #FC466B;
     margin-right: 8px;
 }
-#quiz-options label:hover, #quiz-options input[type="radio"]:checked + label {
-    background: rgba(252,70,107,0.18);
+#quiz-options label:hover {
+    background: #FC466B;
     color: #fff;
+    border-color: #FC466B;
+}
+#quiz-options input[type="radio"]:checked + label,
+#quiz-options input[type="radio"]:focus + label {
+    background: #3f5efb;
+    color: #fff;
+    border-color: #3f5efb;
+}
+body.dark-mode #quiz-options label {
+    background: #23272a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+body.dark-mode #quiz-options label:hover {
+    background: #FC466B;
+    color: #fff;
+    border-color: #FC466B;
+}
+body.dark-mode #quiz-options input[type="radio"]:checked + label,
+body.dark-mode #quiz-options input[type="radio"]:focus + label {
+    background: #3f5efb;
+    color: #fff;
+    border-color: #3f5efb;
 }
 .barca-quiz-controls {
     display: flex;
