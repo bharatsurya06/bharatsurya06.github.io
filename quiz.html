@@ -12,11 +12,12 @@
     <div class="quiz-container barca-quiz-card">
         <h1 class="barca-quiz-title">Barça Quiz</h1>
         <div id="quiz-content">
+            <div id="quiz-qnum" class="barca-quiz-qnum"></div>
             <div id="quiz-question" class="barca-quiz-question"></div>
             <form id="quiz-form">
                 <div id="quiz-options"></div>
                 <div class="barca-quiz-controls">
-                    <div id="timer" class="barca-quiz-timer">20</div>
+                    <div id="timer" class="barca-quiz-timer"><span id="timer-icon" style="margin-right:6px;">⏰</span><span id="timer-value">20</span></div>
                     <div>
                         <button type="button" id="submit-btn" class="barca-quiz-btn">Submit</button>
                         <button type="button" id="next-btn" class="barca-quiz-btn" disabled>Next</button>
@@ -31,7 +32,7 @@
             <button onclick="window.location.reload()" class="barca-quiz-btn">Restart Quiz</button>
             <a href="barca.html" class="barca-quiz-btn" style="margin-top:12px;display:inline-block;">Back to Barça Blogs</a>
         </div>
-        <a href="barca.html" class="barca-quiz-btn" style="margin-top:18px;display:inline-block;">Back to Barça Blogs</a>
+        <a id="back-to-barca-btn" href="barca.html" class="barca-quiz-btn" style="margin-top:18px;display:inline-block;">Back to Barça Blogs</a>
     </div>
     <footer>
         <div class="container">
@@ -109,9 +110,11 @@
         document.getElementById('submit-btn').disabled = false;
         document.getElementById('next-btn').disabled = true;
         timeLeft = 20;
-        document.getElementById('timer').textContent = timeLeft;
+        document.getElementById('timer-value').textContent = timeLeft;
+        document.getElementById('timer').classList.remove('blink');
         const q = quizOrder[current];
-        document.getElementById('quiz-question').textContent = `Q${current+1}. ${q.question}`;
+        document.getElementById('quiz-qnum').textContent = `${current+1} / ${quizOrder.length}`;
+        document.getElementById('quiz-question').textContent = q.question;
         const optionsDiv = document.getElementById('quiz-options');
         optionsDiv.innerHTML = '';
         q.options.forEach((opt, idx) => {
@@ -137,7 +140,12 @@
         clearInterval(timer);
         timer = setInterval(() => {
             timeLeft--;
-            document.getElementById('timer').textContent = timeLeft;
+            document.getElementById('timer-value').textContent = timeLeft;
+            if (timeLeft <= 5) {
+                document.getElementById('timer').classList.add('blink');
+            } else {
+                document.getElementById('timer').classList.remove('blink');
+            }
             if (timeLeft <= 0) {
                 clearInterval(timer);
                 autoSubmit();
@@ -207,6 +215,7 @@
     function endQuiz() {
         document.getElementById('quiz-content').style.display = 'none';
         document.getElementById('quiz-end').style.display = 'block';
+        document.getElementById('back-to-barca-btn').style.display = 'none';
         let message = '';
         let emoji = '';
         let anim = '';
@@ -248,3 +257,4 @@
     </script>
 </body>
 </html>
+``` 
