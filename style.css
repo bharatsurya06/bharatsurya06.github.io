@@ -1652,16 +1652,20 @@ body.blogpost-page {
     min-width: 340px;
     width: 100%;
     margin: 48px auto 32px auto;
-    background: linear-gradient(120deg, rgba(10,23,78,0.82) 0%, rgba(63,95,251,0.78) 60%, rgba(252,70,107,0.72) 100%);
+    background: #fff;
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(63,94,251,0.13), 0 2px 8px rgba(252,70,107,0.10);
     padding: 36px 28px 32px 28px;
-    color: #fff;
-    transition: background 0.3s;
+    color: #23272a;
+    transition: background 0.3s, color 0.3s;
     min-height: 420px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+body.dark-mode .barca-quiz-card {
+    background: #23272a;
+    color: #fff;
 }
 .barca-quiz-title {
     text-align: center;
@@ -1679,8 +1683,13 @@ body.blogpost-page {
     font-size: 1.18em;
     font-weight: 600;
     margin-bottom: 18px;
-    color: #fff;
+    color: #23272a;
     text-shadow: 0 2px 8px rgba(10,23,78,0.08);
+    transition: color 0.3s;
+}
+body.dark-mode .barca-quiz-question {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(10,23,78,0.18);
 }
 #quiz-options label {
     display: block;
