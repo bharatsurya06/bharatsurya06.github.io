@@ -1792,8 +1792,16 @@ body.dark-mode .barca-quiz-feedback {
 
 .blink {
     animation: blink-timer 0.7s steps(2, start) infinite;
+    color: #FC466B !important;
 }
 @keyframes blink-timer {
+    0% { opacity: 1; color: #FC466B; }
+    50% { opacity: 0.2; color: #fff; }
+    100% { opacity: 1; color: #FC466B; }
+}
+
+@keyframes blink-timer {
+    
     0% { opacity: 1; }
     50% { opacity: 0.2; }
     100% { opacity: 1; }
