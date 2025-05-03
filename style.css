@@ -1787,7 +1787,18 @@ body.dark-mode .barca-quiz-feedback {
     cursor: pointer;
     transition: background 0.2s;
     box-shadow: 0 2px 8px rgba(63,94,251,0.10);
+    text-decoration: none !important;
 }
+
+.blink {
+    animation: blink-timer 0.7s steps(2, start) infinite;
+}
+@keyframes blink-timer {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
 .barca-quiz-btn:disabled {
     background: #888;
     color: #eee;
