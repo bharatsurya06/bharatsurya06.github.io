@@ -1823,6 +1823,15 @@ body.dark-mode .barca-quiz-feedback {
     }
 }
 
+.barca-quiz-anim-container {
+  font-size: 6.4em;
+  margin: 18px 0 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
+}
+
 /* ===================== DARK MODE SUPPORT ===================== */
 body.dark-mode {
     background: linear-gradient(to bottom, #181a1b, #23272a) !important;
