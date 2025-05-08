@@ -214,6 +214,11 @@
         document.getElementById('next-btn').disabled = false;
     }
     function endQuiz() {
+        // Hide the main quiz title
+        const mainQuizTitle = document.querySelector('.quiz-container > h1.barca-quiz-title');
+        if (mainQuizTitle) {
+            mainQuizTitle.style.display = 'none';
+        }
         document.getElementById('quiz-content').style.display = 'none';
         document.getElementById('quiz-end').style.display = 'block';
         document.getElementById('back-to-barca-btn').style.display = 'none';
@@ -237,7 +242,7 @@
             emoji = '🏏';
             anim = 'heart-anim';
         } else {
-            message =  "With that score, you might get a call-up from Madrid’s academy! Keep supporting Barça!";
+            message =  "With that score, you might get a call-up from Madrid's academy! Keep supporting Barça!";
             
             emoji = '😅🤍';
             anim = 'heart-anim';
