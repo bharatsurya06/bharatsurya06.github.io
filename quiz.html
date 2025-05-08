@@ -248,8 +248,8 @@
             anim = 'heart-anim';
         }
         document.getElementById('final-score').innerHTML = `
+            <h2 class="final-score-title">Your final <b>score</b>: <b>${score} / ${quizOrder.length}</b></h2>
             <div class="barca-quiz-anim-container ${anim}">${emoji}</div>
-            <div style="margin-top:12px;">Your final score: <b>${score} / ${quizOrder.length}</b></div>
             <div class="barca-quiz-tier-msg">${message}</div>
         `;
     }

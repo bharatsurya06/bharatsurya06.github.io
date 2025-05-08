@@ -1837,12 +1837,33 @@ body.dark-mode .barca-quiz-feedback {
 }
 
 .barca-quiz-anim-container {
-  font-size: 6.4em;
-  margin: 18px 0 8px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
+    font-size: 4em; /* Reduced emoji size */
+    margin: 18px 0 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
+}
+
+.barca-quiz-tier-msg {
+    font-size: 1.2em; /* Increased message font size */
+    margin-top: 25px; /* Increased space above the message */
+    color: #23272a; /* Ensure text color is readable in light mode */
+    font-weight: bold; /* Make the message bold */
+    /* Add other styling as needed, e.g., text-align */
+}
+
+/* Apply gradient color to the final score title */
+.final-score-title {
+    font-size: 1.5em; /* Adjust size to fit */
+    text-align: center;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #FC466B 0% , #042bed 100%); /* Apply gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 700; /* Ensure the whole title is bold */
 }
 
 /* ===================== DARK MODE SUPPORT ===================== */
@@ -2248,4 +2269,7 @@ body.blogpost-page.dark-mode .blogpost-link:hover {
     background: #ffffff !important;
     color: #4447a1 !important;
     /* border-left: 4px solid #fa0000 !important; */
+}
+body.dark-mode .barca-quiz-tier-msg {
+    color: #e0e0e0; /* Ensure text color is readable in dark mode */
 }
