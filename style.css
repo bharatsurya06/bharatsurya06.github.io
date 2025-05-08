@@ -51,36 +51,38 @@ nav {
     align-items: center;
     width: 100%;
     height: 100%;
-    gap: 0.5em;
+    gap: 1.5em; /* Increased gap */
 }
 
 .nav-links a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0; /* Remove margin, rely on gap */
     font-size: 1.1em;
     transition: color 0.2s ease;
-    line-height: 48px;
-    padding: 0 4px;
+    line-height: 48px; /* Match navbar height */
+    padding: 0 12px; /* Consistent padding */
+    display: inline-block; /* Ensure padding/height apply */
+    box-sizing: border-box; /* Include padding in total size */
 }
 
 .nav-links span {
     color: rgb(0, 0, 0);
-    margin: 0 6px;
+    margin: 0; /* Remove margin, rely on gap */
     font-size: 1.1em;
-    line-height: 48px;
+    line-height: 48px; /* Match navbar height */
 }
 
 .nav-links a:hover {
     background: #000000;
     color: #ffffff;
-    font-size: 1.1em;
+    font-size: 1.1em; /* Keep size consistent */
     /* font-weight: 800; */
     border-radius: 0px;
-    padding: 0 10px;
-    transition: background 0.2s, color 0.2s, font-size 0.2s;
-    height: 25px;           /* Set the height of the hover background */
-    line-height: 25px;      /* Vertically center the text */
+    padding: 0 12px; /* Keep padding consistent */
+    transition: background 0.2s, color 0.2s; /* Remove font-size from transition */
+    height: 48px; /* Match navbar height */
+    line-height: 48px; /* Vertically center the text */
     display: inline-block;  /* Ensure height and line-height apply */
     box-sizing: border-box; /* Include padding in height */
 
@@ -131,19 +133,19 @@ body.index-page nav {
     align-items: center;
 }
 body.index-page .nav-links.nav-center {
-    gap: 0.8em;
+    gap: 1.5em; /* Increased gap */
 }
 body.index-page .nav-links a, body.index-page .nav-links span {
     color: #222;
-    line-height: 54px;
+    line-height: 54px; /* Match index page navbar height */
     font-size: 1.15em;
     /* Prevent background size/height jump on hover */
     display: inline-block;
-    height: 38px;
-    line-height: 38px;
+    height: 54px; /* Match index page navbar height */
+    line-height: 54px; /* Vertically center */
     box-sizing: border-box;
-    padding: 0 12px;
-    transition: background 0.2s, color 0.2s, font-size 0.2s;
+    padding: 0 14px; /* Consistent padding */
+    transition: background 0.2s, color 0.2s; /* Remove font-size from transition */
 }
 body.index-page .nav-links a:hover {
     background: #000000;
@@ -151,11 +153,11 @@ body.index-page .nav-links a:hover {
     border-radius: 0px;
     /* Keep size consistent on hover */
     font-size: 1.15em;
-    height: 38px;
-    line-height: 38px;
+    height: 54px; /* Match index page navbar height */
+    line-height: 54px; /* Vertically center */
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 12px;
+    padding: 0 14px; /* Keep padding consistent */
 }
 
 /* Hero Section Background */
