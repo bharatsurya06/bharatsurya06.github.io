@@ -751,31 +751,18 @@ footer {
     min-width: 220px;
 }
 
-.research-image-large {
-    max-width: 320px;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
-    background: #fff;
-}
 
-.research-image-center {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 0 18px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 .research-image-xl {
     width: 100%;
     max-width: 600px;
     height: auto;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 0px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.13);
-    background: #fff;
+    background: #ffffff00;
     display: block;
 }
 
