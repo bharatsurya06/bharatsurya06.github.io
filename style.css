@@ -2210,11 +2210,21 @@ body.dark-mode .research-desc {
   color: #23272a;
   border-radius: 6px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  padding: 22px 28px;
+  padding: 14px; /* Reduced padding */
   max-width: 340px;
   z-index: 100;
   font-size: 1.08em;
   transition: background 0.3s, color 0.3s;
+  display: none; /* Default hidden */
+  position: fixed;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: unset; /* Allow to be smaller */
+  min-width: unset; /* Allow to be smaller */
+  padding: 14px; /* Reduced padding */
+  text-align: center;
+  white-space: nowrap;
 }
 .info-modal-close {
   margin-top: 14px;
@@ -2272,4 +2282,10 @@ body.blogpost-page.dark-mode .blogpost-link:hover {
 }
 body.dark-mode .barca-quiz-tier-msg {
     color: #e0e0e0; /* Ensure text color is readable in dark mode */
+}
+
+/* Style for the text inside the modal */
+.info-modal-text {
+    display: inline-block;
+    font-size: 1.08em;
 }
