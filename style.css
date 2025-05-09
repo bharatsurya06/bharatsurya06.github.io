@@ -877,16 +877,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 32px 0 18px 0;
+    margin: 20px auto; /* Center block element and provide vertical space */
 }
 .research-image-xl {
     width: 420px;
     height: 340px;
     max-width: 98vw;
     object-fit: cover;
-    border-radius: 0px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
-    background: #ffffff00;
+    display: block;
 }
 @media (max-width: 700px) {
     .research-image-xl {
@@ -926,9 +924,6 @@ footer {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 18px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
-    background: none;
     display: block;
 }
 @media (max-width: 950px) {
