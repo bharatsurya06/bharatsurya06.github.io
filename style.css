@@ -183,7 +183,7 @@ body.index-page .nav-links a:hover {
     text-align: center;
 }
 
-/* Animated Hello! graphic style for landing page */
+
 .hello-graphic {
     font-size: 4.5em;
     font-weight: 800;
@@ -211,15 +211,45 @@ body.index-page .nav-links a:hover {
     }
 }
 
-/* Overall container for the About page content */
-.about-container {
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto; /* Center the container */
+
+.info-modal {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+    background: #fff;
+    color: #23272a;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 14px; /* Reduced padding */
+    max-width: 340px;
+    z-index: 100;
+    font-size: 1.08em;
+    transition: background 0.3s, color 0.3s;
+    display: none; /* Default hidden */
+    position: fixed;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: unset; /* Allow to be smaller */
+    min-width: unset; /* Allow to be smaller */
+    padding: 14px; /* Reduced padding */
+    text-align: center;
+    white-space: nowrap;
+  }
+  .info-modal-close {
+    margin-top: 14px;
+    background: #007cf0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    cursor: pointer;
+  }
+  .info-modal-text {
+    display: inline-block;
+    font-size: 1.08em;
 }
+
 
 /* Footer Styles (From Footer Code) */
 footer, footer .container {
@@ -332,6 +362,19 @@ footer {
 }
 
 /* About Section Styles */
+
+
+/* Css for about page*/
+.about-container {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the container */
+}
+
+
 .about-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 30px 0 10px 0;
@@ -607,6 +650,7 @@ footer {
 }
 
 /* --- Connect Card: Single Row with Vertical Bar --- */
+
 .connect-row {
   display: flex;
   align-items: center;
@@ -632,7 +676,9 @@ footer {
   }
 }
 
-/* --- Research Page Modern Styles --- */
+/* --- Research Page css --- */
+
+
 .research-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 40px 0 30px 0;
@@ -657,7 +703,6 @@ footer {
     margin-bottom: 0;
 }
 
-/* --- Vibrant Research Container Styles --- */
 .research-container-vibrant {
     background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
     border-radius: 18px;
@@ -670,20 +715,6 @@ footer {
     align-items: center;
 }
 
-/* Center and enlarge the research image on research.html */
-.research-image-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto; /* Center block element and provide vertical space */
-}
-.research-image-xl {
-    width: 420px;
-    height: 340px;
-    max-width: 98vw;
-    object-fit: contain;
-    display: block;
-}
 
 /* Research page: Make text span full card width and image fully visible, centered below text */
 .research-container-vibrant.research-report-layout {
@@ -704,7 +735,6 @@ footer {
     text-align: left;
     padding: 0;
 }
-
 /* Re-added minimal rule for centering */
 .research-image-center {
     width: 100%; /* Take full width of parent */
@@ -712,11 +742,6 @@ footer {
     justify-content: center; /* Center content horizontally */
     align-items: center;
     margin: 20px 0; /* Add vertical space */
-}
-
-/* Consolidated and simplified rule for the research report image */
-.research-image-xl.research-image-report {
-    width: 100%; /* Allow image to scale up to max-width */
     max-width: 50%; /* Set max width to 50% */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the whole image is visible */
@@ -724,7 +749,10 @@ footer {
     box-shadow: none; /* Remove shadow */
     background: none; /* Remove background */
     display: block; /* Ensure it behaves as a block element for max-width */
+
 }
+
+
 
 /* --- Blog Section Modern Creative Styles --- */
 .blog-section {
@@ -1233,64 +1261,8 @@ footer {
     }
 }
 
-/* --- Blaugrana (FC Barcelona) Blog Theme Enhancements --- */
 
-/* Blaugrana gradient border for blog cards */
-/* .blog-card.barca {
-    border: 3px solid;
-    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
-    border-image-slice: 1;
-    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
-} */
 
-/* Blaugrana gradient border for blog tiles */
-/* .blog-tile.barca {
-    border: 3px solid;
-    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
-    border-image-slice: 1;
-    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
-} */
-
-/* Blaugrana button and category enhancements */
-/* .blog-btn.barca-btn {
-    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
-    color: #fff;
-    border: 2px solid #FC466B;
-    box-shadow: 0 2px 12px rgba(63, 94, 251, 0.13);
-} */
-
-/* .blog-btn.barca-btn:hover {
-    background: linear-gradient(90deg, #FC466B 0%, #3f5efb 100%) !important;
-    color: #fff;
-    border: 2px solid #3f5efb;
-    filter: brightness(1.08);
-} */
-
-/* .blog-category.barca {
-    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
-    color: #fff;
-    border: 1.5px solid #FC466B;
-} */
-
-/* Blog card hover effect for Blaugrana */
-/* .blog-card.barca:hover {
-    box-shadow: 0 16px 40px rgba(252, 70, 107, 0.18), 0 8px 32px rgba(63, 94, 251, 0.18);
-    transform: scale(1.07);
-} */
-
-/* Optional: Add a subtle background to the blog section for Barca posts */
-/* .blog-section.barca-theme {
-    background: linear-gradient(120deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%, #fff 120%);
-} */
-
-/* Optional: Accent headings for Barca blog */
-/* .blog-header.barca-theme h1 {
-    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-} */
 
 /* --- Blog Post Template Styles --- */
 body.blogpost-page {
@@ -1367,7 +1339,6 @@ body.blogpost-page {
     }
 }
 
-/* --- Blog Post Template Styles --- */
 .blogpost-list {
     list-style: none;
     margin: 0;
@@ -1524,38 +1495,7 @@ body.dark-mode .barca-quiz-question {
     color: #fff !important;
     border-color: #FC466B !important;
 }
-body.dark-mode #quiz-options label {
-    background: #23272a;
-    color: #fff;
-    border: 2px solid #fff;
-}
-body.dark-mode #quiz-options label:hover,
-body.dark-mode #quiz-options label.selected {
-    background: #FC466B;
-    color: #fff;
-    border-color: #FC466B;
-}
-body.dark-mode #quiz-options label.correct {
-    background: #2ecc40 !important;
-    color: #fff !important;
-    border-color: #2ecc40 !important;
-}
-body.dark-mode #quiz-options label.incorrect {
-    background: #FC466B !important;
-    color: #fff !important;
-    border-color: #FC466B !important;
-}
-.barca-quiz-feedback {
-    margin-top: 12px;
-    font-weight: 600;
-    min-height: 24px;
-    color: #23272a;
-    text-align: center;
-    transition: color 0.2s;
-}
-body.dark-mode .barca-quiz-feedback {
-    color: #fff;
-}
+
 .barca-quiz-controls {
     display: flex;
     align-items: center;
@@ -1651,7 +1591,95 @@ body.dark-mode .barca-quiz-feedback {
     font-weight: 700; /* Ensure the whole title is bold */
 }
 
-/* ===================== DARK MODE SUPPORT ===================== */
+/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  .sun svg {
+    position: absolute;
+    top: 5px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+  }
+  .moon svg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: fill 0.4s;
+    fill: #73C0FC;
+  }
+  .switch:hover .sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  @keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+  }
+  .switch:hover .moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  @keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .input:checked + .slider {
+    background-color: #d432327a;
+  }
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #d432327a;
+  }
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+  .input:checked + .slider .moon svg {
+    fill: #fff !important;
+  }
+  .input:checked + .slider .sun svg {
+    opacity: 0.5;
+  }
+
+  /* ===================== DARK MODE SUPPORT ===================== */
 body.dark-mode {
     background: linear-gradient(to bottom, #181a1b, #23272a) !important;
     color: #e0e0e0 !important;
@@ -1889,93 +1917,6 @@ body.index-page #darkmode-toggle-navbar {
     display: none !important;
 }
 
-/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
-.switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 34px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
-  border-radius: 30px;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 30px;
-  border-radius: 20px;
-  left: 2px;
-  bottom: 2px;
-  z-index: 2;
-  background-color: #e8e8e8;
-  transition: .4s;
-}
-.sun svg {
-  position: absolute;
-  top: 5px;
-  left: 36px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-}
-.moon svg {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  transition: fill 0.4s;
-  fill: #73C0FC;
-}
-.switch:hover .sun svg {
-  animation: rotate 15s linear infinite;
-}
-@keyframes rotate {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
-}
-.switch:hover .moon svg {
-  animation: tilt 5s linear infinite;
-}
-@keyframes tilt {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-10deg); }
-  75% { transform: rotate(10deg); }
-  100% { transform: rotate(0deg); }
-}
-.input:checked + .slider {
-  background-color: #d432327a;
-}
-.input:focus + .slider {
-  box-shadow: 0 0 1px #d432327a;
-}
-.input:checked + .slider:before {
-  transform: translateX(30px);
-}
-.input:checked + .slider .moon svg {
-  fill: #fff !important;
-}
-.input:checked + .slider .sun svg {
-  opacity: 0.5;
-}
 
 body.dark-mode .research-section, 
 body.dark-mode .research-section *,
@@ -1986,54 +1927,9 @@ body.dark-mode .research-desc {
     color: #fff !important;
 }
 
-/* Info Modal and Icon Styles */
-.info-modal {
-  position: fixed;
-  top: 70px;
-  right: 40px;
-  background: #fff;
-  color: #23272a;
-  border-radius: 6px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-  padding: 14px; /* Reduced padding */
-  max-width: 340px;
-  z-index: 100;
-  font-size: 1.08em;
-  transition: background 0.3s, color 0.3s;
-  display: none; /* Default hidden */
-  position: fixed;
-  top: 60vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: unset; /* Allow to be smaller */
-  min-width: unset; /* Allow to be smaller */
-  padding: 14px; /* Reduced padding */
-  text-align: center;
-  white-space: nowrap;
-}
-.info-modal-close {
-  margin-top: 14px;
-  background: #007cf0;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 16px;
-  cursor: pointer;
-}
 body.dark-mode .info-modal {
   background: #23272a;
   color: #fff;
-}
-#info-icon i {
-  color: #007cf0 !important;
-  transition: color 0.3s;
-  animation: rgb-glow 2.5s linear infinite;
-}
-@keyframes rgb-glow {
-  0% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
-  33% { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
-  66% { color: #0000ff; text-shadow: 0 0 8px #0000ff; }
-  100% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
 }
 
 body.blogpost-page.dark-mode {
@@ -2069,49 +1965,35 @@ body.dark-mode .barca-quiz-tier-msg {
     color: #e0e0e0; /* Ensure text color is readable in dark mode */
 }
 
-/* Style for the text inside the modal */
-.info-modal-text {
-    display: inline-block;
-    font-size: 1.08em;
+body.dark-mode #quiz-options label {
+    background: #23272a;
+    color: #fff;
+    border: 2px solid #fff;
 }
-
-/* Research page: Make text span full card width and image fully visible, centered below text */
-.research-container-vibrant.research-report-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    margin: 20px auto 20px auto;
-    background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(80,80,80,0.13);
-    padding: 28px 24px;
+body.dark-mode #quiz-options label:hover,
+body.dark-mode #quiz-options label.selected {
+    background: #FC466B;
+    color: #fff;
+    border-color: #FC466B;
 }
-.research-full-width {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 18px 0;
-    text-align: left;
-    padding: 0;
+body.dark-mode #quiz-options label.correct {
+    background: #2ecc40 !important;
+    color: #fff !important;
+    border-color: #2ecc40 !important;
 }
-/* Re-added minimal rule for centering */
-.research-image-center {
-    width: 100%; /* Take full width of parent */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center;
-    margin: 20px 0; /* Add vertical space */
+body.dark-mode #quiz-options label.incorrect {
+    background: #FC466B !important;
+    color: #fff !important;
+    border-color: #FC466B !important;
 }
-
-/* Consolidated and simplified rule for the research report image */
-.research-image-xl.research-image-report {
-    width: 100%; /* Allow image to scale up to max-width */
-    max-width: 50%; /* Set max width to 50% */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the whole image is visible */
-    border-radius: 0; /* Remove border radius */
-    box-shadow: none; /* Remove shadow */
-    background: none; /* Remove background */
-    display: block; /* Ensure it behaves as a block element for max-width */
+.barca-quiz-feedback {
+    margin-top: 12px;
+    font-weight: 600;
+    min-height: 24px;
+    color: #23272a;
+    text-align: center;
+    transition: color 0.2s;
 }
-
+body.dark-mode .barca-quiz-feedback {
+    color: #fff;
+}
