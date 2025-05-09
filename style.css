@@ -514,6 +514,31 @@ footer {
     color: #555;
 }
 
+.publications-list-modern li {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.publications-list-modern li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pub-link-hover {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pub-link-hover:hover {
+    color: rgb(0, 136, 255);
+    text-decoration: none;
+}
+
+
 .cv-button {
     display: inline-block;
     padding: 10px 22px;
@@ -1835,7 +1860,7 @@ body.dark-mode .read-full-blog {
 body.dark-mode .blogpost-sidebar {
     background: #181a1b !important;
     color: #e0e0e0 !important;
-    border-image: linear-gradient(180deg, #23272a 0%, #444 100%) 1 !important;
+    border-right: 1.5px solid #ffffff !important;
 }
 body.dark-mode .blogpost-sidebar h3 {
     color: #a8ff78 !important;
@@ -1847,7 +1872,7 @@ body.dark-mode .blogpost-link.active,
 body.dark-mode .blogpost-link:hover {
     background: linear-gradient(90deg, #23272a 60%, #181a1b 100%) !important;
     color: #fa0000 !important;
-    border-left: 4px solid #fa0000 !important;
+    /* border-left: 4px solid #fa0000 !important; */
 }
 body.dark-mode .barca-article-card,
 body.dark-mode .cryogenics-article-card {
@@ -2002,3 +2027,4 @@ body.dark-mode #quiz-options label.incorrect {
 body.dark-mode .barca-quiz-feedback {
     color: #fff;
 }
+
