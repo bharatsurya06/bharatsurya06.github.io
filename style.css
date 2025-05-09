@@ -515,18 +515,17 @@ footer {
 }
 
 .publications-list-modern li {
-    background: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     margin-bottom: 10px;
-    transition: none;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode .publications-list-modern li {
-    background: none;
-    color: #e0e0e0;
-    box-shadow: none;
+.publications-list-modern li:hover {
+    background: #000;
+    color: #fff;
 }
 
 .pub-link-hover {
@@ -1867,7 +1866,7 @@ body.dark-mode .read-full-blog {
     color: #fff !important;
 }
 body.dark-mode .blogpost-sidebar {
-    background: #181a1b !important;
+    background:  #181a1b !important;
     color: #e0e0e0 !important;
     border-right: 1.5px solid #ffffff !important;
 }
@@ -1879,8 +1878,8 @@ body.dark-mode .blogpost-link {
 }
 body.dark-mode .blogpost-link.active,
 body.dark-mode .blogpost-link:hover {
-    background: linear-gradient(90deg, #23272a 60%, #181a1b 100%) !important;
-    color: #fa0000 !important;
+    background: #ffffff !important;
+    color: #4447a1 !important;
     /* border-left: 4px solid #fa0000 !important; */
 }
 body.dark-mode .barca-article-card,
@@ -2049,6 +2048,17 @@ body.dark-mode .publications-list-modern li:hover {
 
 body.dark-mode .pub-link-hover:hover {
     color: #8ab4f8;
+}
+
+body.dark-mode .publications-list-modern li {
+    background: #23272a;
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .publications-list-modern li:hover {
+    background: #000;
+    color: #fff;
 }
 
 
