@@ -681,9 +681,9 @@ footer {
 .research-image {
     max-width: 220px;
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    background: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.10);
+    background: #ffffff00;
 }
 
 .publications-section {
