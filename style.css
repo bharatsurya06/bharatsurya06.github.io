@@ -742,6 +742,11 @@ footer {
     justify-content: center; /* Center content horizontally */
     align-items: center;
     margin: 20px 0; /* Add vertical space */
+}
+
+/* Consolidated and simplified rule for the research report image */
+.research-image-xl.research-image-report {
+    width: 100%; /* Allow image to scale up to max-width */
     max-width: 50%; /* Set max width to 50% */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the whole image is visible */
@@ -749,7 +754,6 @@ footer {
     box-shadow: none; /* Remove shadow */
     background: none; /* Remove background */
     display: block; /* Ensure it behaves as a block element for max-width */
-
 }
 
 
