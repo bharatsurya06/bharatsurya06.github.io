@@ -1978,7 +1978,6 @@ body.dark-mode .connect-vbar {
 }
 body.dark-mode .pub-title,
 body.dark-mode .pub-meta,
-body.dark-mode .publications-list-modern,
 body.dark-mode .publications-section-modern h2 {
     color: #ffffff!important;
 }
@@ -2087,9 +2086,19 @@ body.dark-mode .barca-quiz-feedback {
     color: #fff;
 }
 
-body.dark-mode .publications-list-modern li:hover {
-    background: #fff !important;
-    color: #000 !important;
+body.dark-mode.publications-list-modern li {
+    background: #23272a;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode.publications-list-modern li:hover {
+    background: #ffffff;
+    color: #23272a;
 }
 
 /* Preserve map styles in dark mode */
