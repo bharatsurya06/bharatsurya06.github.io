@@ -1930,8 +1930,14 @@ body.dark-mode .contact-links .contact-icon:hover {
 body.dark-mode .connect-vbar {
     background: linear-gradient(180deg, #8ab4f8 0%, #ffffff 100%) !important;
 }
-body.dark-mode .pub-title,
-body.dark-mode .pub-meta,
+body.dark-mode .pub-title:hover{
+    color: #23272a !important;
+}
+body.dark-mode .pub-meta:hover{
+    color: #23272a !important;
+}
+
+
 body.dark-mode .publications-section-modern h2 {
     color: #ffffff!important;
 }
