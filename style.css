@@ -2093,5 +2093,36 @@ body.dark-mode .publications-list-modern li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Preserve map styles in dark mode */
+body.dark-mode #lngMapContainer {
+    background: none !important;
+    border: 1px solid #ccc !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+}
+body.dark-mode #map {
+    background: none !important;
+}
+body.dark-mode .leaflet-popup-content-wrapper {
+    background: #f9f9f9 !important;
+    color: #333 !important;
+}
+body.dark-mode .leaflet-popup-content {
+    color: #333 !important;
+}
+body.dark-mode .leaflet-popup-content b {
+    color: #0056b3 !important;
+}
+body.dark-mode .legend {
+    background: rgba(255,255,255,0.9) !important;
+    color: #555 !important;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2) !important;
+}
+body.dark-mode .legend h4 {
+    color: #333 !important;
+}
+body.dark-mode .legend i {
+    border: 1px solid #777 !important;
+}
+
 
 
