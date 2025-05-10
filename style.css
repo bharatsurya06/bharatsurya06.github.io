@@ -463,9 +463,8 @@ footer {
 }
 
 .message-form button {
-    background: transparent !important;
-    color: #000000;
-    border:  2px #000000;
+    color: #23272a;
+    border:  2px #23272a !important;
     border-radius: 6px;
     padding: 8px 0;
     font-size: 1em;
@@ -476,9 +475,9 @@ footer {
 }
 
 .message-form button:hover {
-    background: #000000 !important;
+    background: #23272a !important;
     color: #fff;
-    border-color: #000000;
+    border-color: #23272a;
 }
 
 .about-right h1 {
