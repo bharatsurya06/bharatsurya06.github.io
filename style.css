@@ -542,7 +542,7 @@ footer {
 .publications-section-modern {
     background: none;
     box-shadow: none;
-    padding: 0;
+    padding: 10;
     margin: 0;
 }
 
@@ -1745,7 +1745,6 @@ body.dark-mode .about-container.restructured,
 body.dark-mode .about-info-box,
 body.dark-mode .contact-box,
 body.dark-mode .message-form,
-body.dark-mode .publications-section,
 body.dark-mode .publications-section-modern,
 body.dark-mode .research-container-vibrant,
 body.dark-mode .research-container-vibrant.research-report-layout {
@@ -1929,7 +1928,7 @@ body.dark-mode .pub-title,
 body.dark-mode .pub-meta,
 body.dark-mode .publications-list-modern,
 body.dark-mode .publications-section-modern h2 {
-    color: #181a1b!important;
+    color: #ffffff!important;
 }
 body.dark-mode .pub-link-hover {
     color: #ffffff !important;
@@ -2037,8 +2036,8 @@ body.dark-mode .barca-quiz-feedback {
 }
 
 body.dark-mode .publications-list-modern li {
-    background: #23272a;
-    color: #fff;
+    background: #23272a !important;
+    color: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
