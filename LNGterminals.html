@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive LNG Terminal Map (Data from JSON)</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Map container styling */
+        #lngMapContainer {
+            width: 90%;
+            max-width: 1200px; /* Max width for larger screens */
+            margin: 20px auto; /* Center the container */
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #map {
+            height: 650px;
+            width: 100%;
+        }
+
+        /* Leaflet Popup Customization */
+        .leaflet-popup-content-wrapper {
+            background: #f9f9f9;
+            color: #333;
+            border-radius: 5px;
+        }
+        .leaflet-popup-content {
+            margin: 10px !important;
+            min-width: 150px;
+        }
+        .leaflet-popup-content b {
+            color: #0056b3;
+        }
+
+        /* Legend styling */
+        .legend {
+            padding: 10px;
+            font-size: 14px;
+            background: white;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .legend h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+            color: #333;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.9;
+            border-radius: 50%;
+            border: 1px solid #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Global LNG Terminals (Data from JSON)</h1>
+    <p style="text-align:center; font-size:0.9em; color:#666;">
+        Note: This data is illustrative, based on Wikipedia searches, and may not be exhaustive or perfectly current.
+    </p>
+
+    <div id="lngMapContainer">
+        <div id="map"></div>
+    </div>
+
+    <script>
+        // --- Configuration ---
+        const EXPORT_COLOR = '#E60000'; // Brighter Red for Export
+        const IMPORT_COLOR = '#0033CC'; // Deeper Blue for Import
+
+        // --- Initialize Map ---
+        const map = L.map('map').setView([20, 10], 2.5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // --- Function to add markers (now uses data passed as argument) ---
+        function addTerminalMarkers(lngTerminals) {
+            lngTerminals.forEach(terminal => {
+                let markerColor;
+                let markerTypeLabel;
+
+                if (terminal.type === 'export') {
+                    markerColor = EXPORT_COLOR;
+                    markerTypeLabel = 'Export (Liquefaction)';
+                } else { // 'import'
+                    markerColor = IMPORT_COLOR;
+                    markerTypeLabel = 'Import (Regasification)';
+                }
+
+                const marker = L.circleMarker([terminal.lat, terminal.lon], {
+                    radius: 6,
+                    fillColor: markerColor,
+                    color: '#000',
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.85
+                }).addTo(map);
+
+                const popupContent = `
+                    <b>${terminal.name}</b><br>
+                    Type: ${markerTypeLabel}<br>
+                    Capacity: ${terminal.capacity}
+                `;
+                marker.bindPopup(popupContent);
+            });
+        }
+
+        // --- Add Legend ---
+        const legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) {
+            const div = L.DomUtil.create('div', 'info legend');
+            const types = [
+                { label: 'Export Terminal', color: EXPORT_COLOR },
+                { label: 'Import Terminal', color: IMPORT_COLOR }
+            ];
+            let legendHTML = '<h4>LNG Terminals</h4>';
+            types.forEach(type => {
+                legendHTML += `<i style="background:${type.color}"></i> ${type.label}<br>`;
+            });
+            div.innerHTML = legendHTML;
+            return div;
+        };
+        legend.addTo(map);
+
+        // --- Fetch LNG Terminal Data from JSON file ---
+        fetch('lng_terminals.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                addTerminalMarkers(data); // Call function to add markers with fetched data
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+                // Optionally, display an error message on the map or page
+                const mapDiv = document.getElementById('map');
+                mapDiv.innerHTML = `<p style="text-align:center; padding:20px; color:red;">Could not load LNG terminal data. Please ensure 'lng_terminals.json' is in the same directory and accessible.</p>`;
+            });
+
+    </script>
+
+</body>
+</html>

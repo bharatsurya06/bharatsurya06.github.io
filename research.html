@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
   <title>Research</title>
 </head>
 
@@ -30,7 +33,9 @@
         
         Moreover, the intergation of these two proecesses by a CER system shoudl not affect the process conditions of the parent system.  
       </p>
-
+      <div id="lngMapContainer">
+        <div id="map"></div>
+      </div>
     </div>
   </div>
 
@@ -67,6 +72,52 @@
       });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <script>
+    const EXPORT_COLOR = '#E60000';
+    const IMPORT_COLOR = '#0033CC';
+    const map = L.map('map').setView([20, 10], 2.5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    function addTerminalMarkers(lngTerminals) {
+      lngTerminals.forEach(terminal => {
+        const markerColor = terminal.type === 'export' ? EXPORT_COLOR : IMPORT_COLOR;
+        const markerTypeLabel = terminal.type === 'export' ? 'Export (Liquefaction)' : 'Import (Regasification)';
+        const marker = L.circleMarker([terminal.lat, terminal.lon], {
+          radius: 6,
+          fillColor: markerColor,
+          color: '#000',
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.85
+        }).addTo(map);
+        const popupContent = `<b>${terminal.name}</b><br>Type: ${markerTypeLabel}<br>Capacity: ${terminal.capacity}`;
+        marker.bindPopup(popupContent);
+      });
+    }
+    const legend = L.control({position: 'bottomright'});
+    legend.onAdd = map => {
+      const div = L.DomUtil.create('div', 'info legend');
+      const types = [
+        { label: 'Export Terminal', color: EXPORT_COLOR },
+        { label: 'Import Terminal', color: IMPORT_COLOR }
+      ];
+      let html = '<h4>LNG Terminals</h4>';
+      types.forEach(type => {
+        html += `<i style="background:${type.color}"></i> ${type.label}<br>`;
+      });
+      div.innerHTML = html;
+      return div;
+    };
+    legend.addTo(map);
+    fetch('lng_terminals.json')
+      .then(response => response.json())
+      .then(data => addTerminalMarkers(data))
+      .catch(error => console.error('Error loading LNG terminal data:', error));
+  </script>
 </body>
 
 </html>

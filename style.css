@@ -790,7 +790,59 @@ footer {
     display: block; /* Ensure it behaves as a block element for max-width */
 }
 
+/* Map container styling for Research Page */
+#lngMapContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
+#map {
+    height: 650px;
+    width: 100%;
+}
+
+/* Leaflet Popup Customization */
+.leaflet-popup-content-wrapper {
+    background: #f9f9f9;
+    color: #333;
+    border-radius: 5px;
+}
+.leaflet-popup-content {
+    margin: 10px !important;
+    min-width: 150px;
+}
+.leaflet-popup-content b {
+    color: #0056b3;
+}
+
+/* Legend styling */
+.legend {
+    padding: 10px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    line-height: 1.8;
+    color: #555;
+}
+.legend h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #333;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+    border-radius: 50%;
+    border: 1px solid #777;
+}
 
 /* --- Blog Section Modern Creative Styles --- */
 .blog-section {
@@ -2040,5 +2092,6 @@ body.dark-mode .publications-list-modern li {
     color: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 
