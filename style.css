@@ -2087,10 +2087,9 @@ body.dark-mode .barca-quiz-feedback {
     color: #fff;
 }
 
-body.dark-mode .publications-list-modern li {
-    background: #23272a !important;
-    color: #fff !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+body.dark-mode .publications-list-modern li:hover {
+    background: #fff !important;
+    color: #000 !important;
 }
 
 /* Preserve map styles in dark mode */
