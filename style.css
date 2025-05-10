@@ -475,7 +475,7 @@ footer {
 }
 
 .message-form button:hover {
-    background: #23272a !important;
+    background: #23272a ;
     color: #fff;
     border-color: #23272a;
 }
