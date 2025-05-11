@@ -1953,7 +1953,7 @@ body.dark-mode .pub-link-hover {
 }
 
 body.dark-mode .pub-link-hover:hover {
-    color: rgb(0, 136, 255);
+    color: rgb(0, 136, 255) !important;
     text-decoration: none;
 }
 
