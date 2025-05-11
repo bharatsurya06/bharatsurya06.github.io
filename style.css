@@ -1947,7 +1947,7 @@ body.dark-mode .publications-section-modern h2 {
 
 
 body.dark-mode .pub-link-hover {
-    color: #ffffff;
+    color:inherit;
     text-decoration: none;
     transition: color 0.3s ease;
 }
