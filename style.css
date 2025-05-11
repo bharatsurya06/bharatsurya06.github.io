@@ -736,7 +736,7 @@ footer {
 /* Consolidated and simplified rule for the research report image */
 .research-image-xl.research-image-report {
     width: 100%; /* Allow image to scale up to max-width */
-    max-width: 50%; /* Set max width to 50% */
+    max-width: 75%; /* Increased from 50% to enlarge image by 50% */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the whole image is visible */
     border-radius: 0; /* Remove border radius */
