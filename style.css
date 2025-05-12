@@ -1024,6 +1024,13 @@ footer {
     transition: opacity 0.3s, max-height 0.3s;
 }
 
+.blog-card-content .blog-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 6px;
+    display: block;
+}
+
 /* Blog card gradient overlay on hover for category */
 .blog-card.cryo::before,
 .blog-card.barca::before {
