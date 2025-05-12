@@ -83,17 +83,16 @@
         }
 
         function mapPost(post, categoryOverride, idx, src) {
-            // Map post to carousel card format
             let link = '';
-            if ((categoryOverride || post.category).toLowerCase().includes('barca')) {
+            if (src === 'barca') {
                 link = `blogpost-template.html?id=${idx}&src=barca`;
-            } else {
+            } else if (src === 'cryogenics') {
                 link = `blogpost-cryogenics.html?id=${idx}&src=cryogenics`;
             }
             return {
                 image: post.image,
                 category: categoryOverride || post.category,
-                categoryClass: (categoryOverride || post.category).toLowerCase().includes('barca') ? 'barca' : 'cryo',
+                categoryClass: src === 'barca' ? 'barca' : 'cryo',
                 title: post.title,
                 excerpt: post.headline || post.excerpt || '',
                 link,
