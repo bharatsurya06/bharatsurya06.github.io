@@ -271,6 +271,7 @@ footer .container p {
 
 footer {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     color: rgb(0, 0, 0); /* Set footer text color to white */
     width: 100%;
     text-align: center;
