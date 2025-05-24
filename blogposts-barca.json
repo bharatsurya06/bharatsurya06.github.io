@@ -1,4 +1,166 @@
-[  
+[ 
+  
+{
+  "title": "#7 Player Review : 2024-25",
+  "headline": "The surprises, and the disappointments",
+  "date": "2025-05-24 23:30 (IST)",
+  "author": "Bharat Surya Chamarthi",
+  "image": "assets/img/barca_blogs/Hansiflick.png",
+  "category": "Thoughts",
+  "content": [
+    {
+      "season_overview": "A season of continued transition and growth. While not without its challenges, the integration of youth with experienced players showed promise. The team fought hard on all fronts, with moments of brilliance interspersed with periods of inconsistency. Overall, a step forward.",
+      "introduction_paragraph": "<p>Now that the season is done, here are my thoughts on how each player has fared.</p>",
+      "attackers": [
+        {
+          "name": "Lamine Yamal",
+          "position": "RW/LW",
+          "category": "Key Player & Generational Talent",
+          "review": "Yamal built on his explosive breakout. Now a more consistent end-product player, his dribbling, creativity, and increasing goal threat made him Barcelona's most dangerous attacker. Still areas to refine in decision-making under pressure, but his ceiling is limitless. A true game-changer.",
+          "rating_out_of_10": 9.0
+        },
+        {
+          "name": "Vitor Roque",
+          "position": "ST",
+          "category": "Key Player & Developing Star",
+          "review": "After a full pre-season and better integration, 'Tigrinho' truly bared his teeth. His relentless pressing, intelligent movement, and clinical finishing (when chances were created) were vital. Showed he can lead the line, though still adapting to the physical demands and complex build-up play at times. Significant improvement.",
+          "rating_out_of_10": 8.0
+        },
+        {
+          "name": "Ansu Fati",
+          "position": "LW/ST",
+          "category": "Important Contributor & Comeback Story",
+          "review": "The fairytale return continued. While perhaps not the explosive force of his pre-injury self, Ansu demonstrated his intelligence and predatory instincts in front of goal. Managed his minutes well and contributed crucial goals. His leadership and experience were invaluable, especially for the younger forwards.",
+          "rating_out_of_10": 7.5
+        },
+        {
+          "name": "Ferran Torres",
+          "position": "LW/RW/ST",
+          "category": "Versatile Squad Player",
+          "review": "Ferran remained a valuable squad member due to his versatility and work rate. Contributed goals and assists, particularly effective when coming off the bench or starting against specific opponents. Consistency remains his biggest challenge, but his attitude and professionalism were commendable.",
+          "rating_out_of_10": 7.0
+        },
+        {
+          "name": "Marc Guiu",
+          "position": "ST",
+          "category": "Young Prospect & Impact Sub",
+          "review": "Guiu earned more first-team minutes and showed his poacher's instinct. A physical presence who offered a different profile up front. Still raw and needs to develop his all-around game, but proved he can make an impact, especially in tight matches. Promising.",
+          "rating_out_of_10": 6.5
+        }
+      ],
+      "midfielders": [
+        {
+          "name": "Pedri",
+          "position": "CM",
+          "category": "Key Player & Midfield Maestro",
+          "review": "When fit, Pedri was sublime. His vision, control, and ability to dictate tempo were world-class. The team's performance levels visibly rose with him on the pitch. Fitness management remained crucial, but his influence was undeniable. Added a few more goals to his game.",
+          "rating_out_of_10": 8.5
+        },
+        {
+          "name": "Gavi",
+          "position": "CM/LW",
+          "category": "Key Player & Heartbeat of the Team",
+          "review": "Returned from his long-term injury with his trademark tenacity and passion. His energy in pressing and ball-winning was infectious. Showed improved discipline and decision-making in the final third. An indispensable leader by example, despite his youth.",
+          "rating_out_of_10": 8.5
+        },
+        {
+          "name": "Frenkie de Jong",
+          "position": "CM/DM",
+          "category": "Key Player & Engine Room",
+          "review": "De Jong continued to be a vital cog, especially in progressing the ball from deep and breaking lines with his dribbling. Showed more authority and took on greater responsibility in build-up and defensive transitions. A consistent performer who often set the tempo.",
+          "rating_out_of_10": 8.0
+        },
+        {
+          "name": "Fermín López",
+          "position": "AM/CM",
+          "category": "Solid Contributor & Goal Threat",
+          "review": "Fermín cemented his place as an important squad player, offering energy, directness, and a surprising goal threat from midfield. His late runs into the box and powerful shooting were valuable assets. Still developing tactically but his impact was often immediate.",
+          "rating_out_of_10": 7.5
+        },
+        {
+          "name": "Noah Darvich",
+          "position": "AM/CM",
+          "category": "Emerging Talent",
+          "review": "Darvich began to get more consistent first-team exposure, primarily in cup games and as a late substitute. Showcased his technical quality, vision, and composure on the ball. Needs more physicality and defensive awareness, but the raw talent is evident. One for the future.",
+          "rating_out_of_10": 6.0
+        },
+        {
+          "name": "Marc Casadó",
+          "position": "DM",
+          "category": "Reliable Squad Option",
+          "review": "Casadó provided solid cover in the defensive midfield role. Disciplined, good positional sense, and tidy in possession. Lacked the dynamism of others but was a reliable option when called upon to provide balance and defensive security.",
+          "rating_out_of_10": 6.5
+        }
+      ],
+      "defenders_and_goalkeepers": [
+        {
+          "name": "Marc-André ter Stegen",
+          "position": "GK",
+          "category": "Key Player & World Class",
+          "review": "Another stellar season from the German wall. His shot-stopping, command of the area, and crucial saves won Barça points on numerous occasions. His distribution remained a key part of the team's build-up. A true leader.",
+          "rating_out_of_10": 9.0
+        },
+        {
+          "name": "Ronald Araújo",
+          "position": "CB/RB",
+          "category": "Key Player & Defensive Rock",
+          "review": "Araújo was the undisputed leader of the defense. His pace, power, and aerial ability were immense. Crucial in one-on-one duels and commanding in set-piece situations. A few lapses in concentration with the ball at feet, but defensively, he was a colossus.",
+          "rating_out_of_10": 8.5
+        },
+        {
+          "name": "Pau Cubarsí",
+          "position": "CB",
+          "category": "Key Player & Revelation",
+          "review": "Cubarsí built on his phenomenal breakthrough season, establishing himself as a starting center-back. His composure on the ball, passing range, and defensive intelligence were remarkable for his age. Formed a strong partnership with Araújo. A future captain in the making.",
+          "rating_out_of_10": 8.5
+        },
+        {
+          "name": "Alejandro Balde",
+          "position": "LB",
+          "category": "Key Player & Attacking Outlet",
+          "review": "Balde returned to his best, providing electrifying pace and attacking thrust down the left flank. His overlapping runs and crossing ability were key to unlocking defenses. Showed improvement in his defensive positioning and final ball.",
+          "rating_out_of_10": 8.0
+        },
+        {
+          "name": "Jules Koundé",
+          "position": "CB/RB",
+          "category": "Solid Contributor & Versatile Defender",
+          "review": "Koundé provided his usual blend of solidity and versatility, playing both at center-back and right-back. Generally reliable, though sometimes struggled against particularly pacy wingers when at RB. His ability on the ball remained an asset.",
+          "rating_out_of_10": 7.5
+        },
+        {
+          "name": "João Cancelo",
+          "position": "RB/LB",
+          "category": "Attacking Full-back & Creative Spark (if permanent deal secured)",
+          "review": "Assuming his stay was made permanent, Cancelo continued to be a unique attacking weapon from full-back. His creativity, passing range, and ability to drift infield caused constant problems for opponents. Defensive responsibilities were sometimes neglected, but his offensive output was often decisive.",
+          "rating_out_of_10": 7.5
+        },
+        {
+          "name": "Héctor Fort",
+          "position": "RB/LB",
+          "category": "Developing Youngster & Reliable Backup",
+          "review": "Fort gained more minutes and showed maturity beyond his years. Solid defensively and composed in possession, he proved a reliable option at both full-back positions. Still developing his attacking game but looks a very dependable squad member for years to come.",
+          "rating_out_of_10": 7.0
+        },
+        {
+          "name": "Mikayil Faye",
+          "position": "CB/LB",
+          "category": "Physical Prospect & Squad Depth",
+          "review": "Faye earned some first-team appearances, showcasing his impressive physique, speed, and aggression. Raw technically and tactically at times, but his potential is clear. Offered a different, more combative option in defense. Needs consistent game time to refine his abilities.",
+          "rating_out_of_10": 6.0
+        },
+        {
+          "name": "Iñaki Peña",
+          "position": "GK",
+          "category": "Reliable Backup",
+          "review": "Peña performed capably when called upon. A solid shot-stopper and decent with his feet. Proved himself a trustworthy deputy to Ter Stegen.",
+          "rating_out_of_10": 6.5
+        }
+      ]
+    }
+  ]
+}
+
 
 {
   "title": "#6 Season Review : 2024-25 ",
