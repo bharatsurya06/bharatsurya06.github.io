@@ -20,14 +20,14 @@
           "rating_out_of_10": 9.0
         },
         {
-          "name": "Vitor Roque",
+          "name": "Robert Lewandowski",
           "position": "ST",
           "category": "Key Player & Developing Star",
           "review": "After a full pre-season and better integration, 'Tigrinho' truly bared his teeth. His relentless pressing, intelligent movement, and clinical finishing (when chances were created) were vital. Showed he can lead the line, though still adapting to the physical demands and complex build-up play at times. Significant improvement.",
           "rating_out_of_10": 8.0
         },
         {
-          "name": "Ansu Fati",
+          "name": "Rapinha",
           "position": "LW/ST",
           "category": "Important Contributor & Comeback Story",
           "review": "The fairytale return continued. While perhaps not the explosive force of his pre-injury self, Ansu demonstrated his intelligence and predatory instincts in front of goal. Managed his minutes well and contributed crucial goals. His leadership and experience were invaluable, especially for the younger forwards.",
@@ -159,8 +159,7 @@
       ]
     }
   ]
-}
-
+},
 
 {
   "title": "#6 Season Review : 2024-25 ",
