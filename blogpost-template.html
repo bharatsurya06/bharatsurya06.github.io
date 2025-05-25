@@ -89,27 +89,39 @@
                         contentHtml += '<h2>Attackers</h2>';
                         data.attackers.forEach(att => {
                             contentHtml += `<h3>${att.name} (${att.position})</h3>`;
-                            contentHtml += `<p><strong>${att.category}</strong></p>`;
+                            if (att.category) {
+                                contentHtml += `<p><strong>${att.category}</strong></p>`;
+                            }
+                            if (att.Verdict) {
+                                contentHtml += `<p><strong>Verdict:</strong> ${att.Verdict}</p>`;
+                            }
                             contentHtml += `<p>${att.review}</p>`;
-                            contentHtml += `<p>Rating: ${att.rating_out_of_10}/10</p>`;
                         });
                     }
                     if (data.midfielders) {
                         contentHtml += '<h2>Midfielders</h2>';
                         data.midfielders.forEach(mid => {
                             contentHtml += `<h3>${mid.name} (${mid.position})</h3>`;
-                            contentHtml += `<p><strong>${mid.category}</strong></p>`;
+                            if (mid.category) {
+                                contentHtml += `<p><strong>${mid.category}</strong></p>`;
+                            }
+                            if (mid.Verdict) {
+                                contentHtml += `<p><strong>Verdict:</strong> ${mid.Verdict}</p>`;
+                            }
                             contentHtml += `<p>${mid.review}</p>`;
-                            contentHtml += `<p>Rating: ${mid.rating_out_of_10}/10</p>`;
                         });
                     }
                     if (data.defenders_and_goalkeepers) {
                         contentHtml += '<h2>Defenders & Goalkeepers</h2>';
                         data.defenders_and_goalkeepers.forEach(def => {
                             contentHtml += `<h3>${def.name} (${def.position})</h3>`;
-                            contentHtml += `<p><strong>${def.category}</strong></p>`;
+                            if (def.category) {
+                                contentHtml += `<p><strong>${def.category}</strong></p>`;
+                            }
+                            if (def.Verdict) {
+                                contentHtml += `<p><strong>Verdict:</strong> ${def.Verdict}</p>`;
+                            }
                             contentHtml += `<p>${def.review}</p>`;
-                            contentHtml += `<p>Rating: ${def.rating_out_of_10}/10</p>`;
                         });
                     }
                 }
