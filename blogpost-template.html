@@ -77,6 +77,42 @@
                     return;
                 }
                 document.title = post.title;
+                // Prepare content HTML
+                let contentHtml = '';
+                if (typeof post.content === 'string') {
+                    contentHtml = post.content;
+                } else if (Array.isArray(post.content)) {
+                    const data = post.content[0];
+                    if (data.season_overview) contentHtml += `<p>${data.season_overview}</p>`;
+                    if (data.introduction_paragraph) contentHtml += data.introduction_paragraph;
+                    if (data.attackers) {
+                        contentHtml += '<h2>Attackers</h2>';
+                        data.attackers.forEach(att => {
+                            contentHtml += `<h3>${att.name} (${att.position})</h3>`;
+                            contentHtml += `<p><strong>${att.category}</strong></p>`;
+                            contentHtml += `<p>${att.review}</p>`;
+                            contentHtml += `<p>Rating: ${att.rating_out_of_10}/10</p>`;
+                        });
+                    }
+                    if (data.midfielders) {
+                        contentHtml += '<h2>Midfielders</h2>';
+                        data.midfielders.forEach(mid => {
+                            contentHtml += `<h3>${mid.name} (${mid.position})</h3>`;
+                            contentHtml += `<p><strong>${mid.category}</strong></p>`;
+                            contentHtml += `<p>${mid.review}</p>`;
+                            contentHtml += `<p>Rating: ${mid.rating_out_of_10}/10</p>`;
+                        });
+                    }
+                    if (data.defenders_and_goalkeepers) {
+                        contentHtml += '<h2>Defenders & Goalkeepers</h2>';
+                        data.defenders_and_goalkeepers.forEach(def => {
+                            contentHtml += `<h3>${def.name} (${def.position})</h3>`;
+                            contentHtml += `<p><strong>${def.category}</strong></p>`;
+                            contentHtml += `<p>${def.review}</p>`;
+                            contentHtml += `<p>Rating: ${def.rating_out_of_10}/10</p>`;
+                        });
+                    }
+                }
                 document.getElementById('barca-article').innerHTML = `
                     <h1 style="font-size: 2.2rem; margin-bottom: 0.5em; background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;">${post.title}</h1>
                     <h2 style="font-size: 1.3rem; color: #FC466B; margin-bottom: 1.5em;">${post.headline}</h2>
@@ -84,7 +120,7 @@
                     <span style="display:inline-block;background:#FC466B;color:#fff;padding:2px 10px;border-radius:12px;font-size:0.95em;margin-bottom:1.5em;">${post.category}</span>
                     <img src="${post.image}" alt="Blog image" style="display: block; margin: 32px auto; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(63,94,251,0.13); border: 2px solid #FC466B;">
                     <div class="blogpost-content" style="font-size: 1.15rem; line-height: 1.7; color: #222; margin-top: 1.5em;">
-                        ${post.content}
+                        ${contentHtml}
                     </div>
                 `;
             });
