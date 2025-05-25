@@ -10,7 +10,7 @@
   "content": [
     {
       
-      "introduction_paragraph": "<p>Now that the season is done, here are my thoughts on how each player has fared. We will </p>",
+      "introduction_paragraph": "<p>Now that the season is done, here are my thoughts on how each player has fared. I will be giving my assesemnet based on the expectations and how the players have done.</p>",
       "attackers": [
         {
           "name": "Lamine Yamal",
@@ -41,14 +41,8 @@
           "position": "ST/LW",
           "review": "Never really got enough minutes to show wether he has improved or not. But while has on the pitch, he certianly tried to prove himself infront of the goal. It felt like he was trying too hard only for the goals. He still was tentaive with take-ons and did not seem to show any signs of wanting to track back and recover which is needed from wingers in Flick's system. It's better if he leaves barcelona this season and play in a less demanding leagure or team to save his football career. ",
           "Verdict":  "Disappointing"
-        },
-
-        {
-          "name": "Pau Torres",
-          "position": "ST/RW",
-          "review": "Same as Ansu, never really got enough minutes to show his skills. Always was put on the pitch to see off the game. A loan would be right for him at the moment given his lack of minutes.  ",
-          "Verdict":  "-"
         }
+
 
       ],
       "midfielders": [
@@ -78,85 +72,103 @@
         },
         {
           "name": "Dani Olmo",
-          "position": "AM/CM",
-          "category": "Emerging Talent",
-          "review": "Darvich began to get more consistent first-team exposure, primarily in cup games and as a late substitute. Showcased his technical quality, vision, and composure on the ball. Needs more physicality and defensive awareness, but the raw talent is evident. One for the future.",
-          "rating_out_of_10": 6.0
+          "position": "AMF",
+          "review": "Wasnt at his absolute best this season but still came up with some important goals and assists. The injury mid-seaon did affect his game. However, he still remains to be the player who can unlock low block teams.  ",
+          "Verdict":  "Average "
         },
         {
           "name": "Marc Casadó",
           "position": "DM",
           "category": "Reliable Squad Option",
-          "review": "Casadó provided solid cover in the defensive midfield role. Disciplined, good positional sense, and tidy in possession. Lacked the dynamism of others but was a reliable option when called upon to provide balance and defensive security.",
-          "rating_out_of_10": 6.5
+          "review": "Casadó has been the surpise of the season. Sad to see an injury finishing off his season, but was intense when he was on the pitch. He provided solid cover in the defensive midfield role. Came up with some key passes in UCL and La liga in big games.  Proably adding a bit of control to his game will make him a better player.",
+          "Verdict":  "Good"
         }
+
       ],
       "defenders_and_goalkeepers": [
         {
-          "name": "Marc-André ter Stegen",
-          "position": "GK",
-          "category": "Key Player & World Class",
-          "review": "Another stellar season from the German wall. His shot-stopping, command of the area, and crucial saves won Barça points on numerous occasions. His distribution remained a key part of the team's build-up. A true leader.",
-          "rating_out_of_10": 9.0
-        },
-        {
           "name": "Ronald Araújo",
           "position": "CB/RB",
-          "category": "Key Player & Defensive Rock",
-          "review": "Araújo was the undisputed leader of the defense. His pace, power, and aerial ability were immense. Crucial in one-on-one duels and commanding in set-piece situations. A few lapses in concentration with the ball at feet, but defensively, he was a colossus.",
-          "rating_out_of_10": 8.5
+          "review": "Araújo was an undisputed starter the season before. however, his poor positional awareness and lack of ball playing abiliites clearly kept him on the bench for major part of the season. Barring a couple of games, whenever he was put on , he had struggles to adjsut to the offisde trap. If not for his recovery pace, Araujo would be long gone from Barca. ",
+          "Verdict":  "Dissapointing"
         },
         {
           "name": "Pau Cubarsí",
           "position": "CB",
-          "category": "Key Player & Revelation",
-          "review": "Cubarsí built on his phenomenal breakthrough season, establishing himself as a starting center-back. His composure on the ball, passing range, and defensive intelligence were remarkable for his age. Formed a strong partnership with Araújo. A future captain in the making.",
-          "rating_out_of_10": 8.5
+          "review": "Cubarsí built on his phenomenal breakthrough season, establishing himself as a starting center-back. His line breaking passes and ball distribution ability was top notch. It is his postional sense that made Flick's ideas to work. He is one of the standout players this season and definitely has a long career in Barc's defence. ",
+          "Verdict":  "Outstanding"
         },
+
+        {
+          "name": "Inigo Martinez",
+          "position": "CB",
+          "review": " Similiar to Cubarsí, his ball distribution and positional awareness made Flick trust him for the starting spot. He was the leader in the Barca's defence and perfectly lead the defence to execute the offisde trap. Imagine being written off by the fans and then coming back to be the best defender in the team. ",
+          "Verdict":  "Outstanding"
+        },
+
+
+
         {
           "name": "Alejandro Balde",
           "position": "LB",
-          "category": "Key Player & Attacking Outlet",
-          "review": "Balde returned to his best, providing electrifying pace and attacking thrust down the left flank. His overlapping runs and crossing ability were key to unlocking defenses. Showed improvement in his defensive positioning and final ball.",
-          "rating_out_of_10": 8.0
+          "review": "Balde, right now is the best left back in the world. He has improved in two aspects this season: the  forward runs were with a purpose and often lead to goal scoring oppurtunities and secondly, he improved his defensive ability. His attacking abilities is what made rapinha be so effective this season. Unfornuate that he was injured at a crucial time of the season. ",
+          "Verdict":  "Good"
         },
         {
           "name": "Jules Koundé",
           "position": "CB/RB",
-          "category": "Solid Contributor & Versatile Defender",
-          "review": "Koundé provided his usual blend of solidity and versatility, playing both at center-back and right-back. Generally reliable, though sometimes struggled against particularly pacy wingers when at RB. His ability on the ball remained an asset.",
-          "rating_out_of_10": 7.5
+          "review": "Koundé this season around had a fixed role as a right back, His partnership with Yamal was crucail in teams sucess. He improved his attacking game often making overlapping runs on the right and  providing space for Lamine Yamal. Again, a case where injury at the wrong time costed us this season. However, he also had some games where he was completely rolled over by the opponents.",
+          "Verdict":  "Good"
         },
         {
-          "name": "João Cancelo",
-          "position": "RB/LB",
-          "category": "Attacking Full-back & Creative Spark (if permanent deal secured)",
-          "review": "Assuming his stay was made permanent, Cancelo continued to be a unique attacking weapon from full-back. His creativity, passing range, and ability to drift infield caused constant problems for opponents. Defensive responsibilities were sometimes neglected, but his offensive output was often decisive.",
-          "rating_out_of_10": 7.5
+          "name": "Gerard Martin",
+          "position": "LB",
+          "category": "No one was really sure as to what he provided to this team. I think Flick had no option but to start him. Barring the Inter Milan away game, never really showed where his stenghts lied. Defensively he was out of shape numerous times and attacking wise - his passes into the box and crosses were all a miss. I define his role as a fill in for Balde. For that reason, I would give him an average season as there were no expectations from him " ,
+          "Verdict":  "Average"
         },
         {
           "name": "Héctor Fort",
-          "position": "RB/LB",
-          "category": "Developing Youngster & Reliable Backup",
-          "review": "Fort gained more minutes and showed maturity beyond his years. Solid defensively and composed in possession, he proved a reliable option at both full-back positions. Still developing his attacking game but looks a very dependable squad member for years to come.",
-          "rating_out_of_10": 7.0
+          "position": "RB",
+          "review": "Fort did play a few minutes and showed he his better in attack, However, he still lacks the maturity in the final third. He has to work on his defensive aspects if he were to make himself as an reliable rigth back for the next season.",
+          "Verdict":  "Average"
         },
+
         {
-          "name": "Mikayil Faye",
-          "position": "CB/LB",
-          "category": "Physical Prospect & Squad Depth",
-          "review": "Faye earned some first-team appearances, showcasing his impressive physique, speed, and aggression. Raw technically and tactically at times, but his potential is clear. Offered a different, more combative option in defense. Needs consistent game time to refine his abilities.",
-          "rating_out_of_10": 6.0
+          "name": "Eric Garcia",
+          "position": "RB/CB/CDM",
+          "review": "Eric Garcia palyed multiple roles this season and did well to major extent. He was relaible as a right back and came up with some clutch goals this season. He has alos improved his positioanl awarness this time around. Barca would like to have him for the coming seasons  given his versatality.",
+          "Verdict":  "Good"
+        },
+
+
+        {
+          "name": "Marc-André ter Stegen",
+          "position": "GK",
+          "review": "I think its better if Ter Stegen accepts a secondary role at Barca from next season. He has been dissapointing between the sticks and you could see the shakiness in his game. Its time he accepts the fact that his levels have dropped off. With the high line now Barca plays, he would be facing more shots than before and I think he is simply not at the level to face them",
+          "Verdict":  "Average"
+        },
+
+        {
+          "name": "Woscjaik Schcezeny",
+          "position": "GK",
+          "review": "Had to wait for his chance to play.Was really shaky in the intial few matches and gave away penalties in many games. However, there were also games where he saved Barca from losing. He came up with some crucial one on one saves that helped us win the league.",
+          "Verdict":  "Good"
         },
         {
           "name": "Iñaki Peña",
           "position": "GK",
-          "category": "Reliable Backup",
-          "review": "Peña performed capably when called upon. A solid shot-stopper and decent with his feet. Proved himself a trustworthy deputy to Ter Stegen.",
-          "rating_out_of_10": 6.5
+          "review": "Pena inexplicably fell out of favour by the start of the year. While his performances were decent, never really felt that he would win us games on his own. ",
+          "Verdict":  "Average"
         }
-      ]
+
+
+      ],
+    
+      "conclusion_paragraph": "<p>I have omitted players like Bernal, Pablo Torre, Christensen and Pau Torres from this review. They were either injured or never really got enough minutes. If you ask the dramtic shifts this season, Flick managed to bring the best out of most of the players, improved the physical and mental conditioning of the playuers. I hope this continues in the seasons to come. </p>"
+
+
     }
+    
   ]
 },
 
