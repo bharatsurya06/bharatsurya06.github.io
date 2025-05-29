@@ -104,11 +104,84 @@
         font-size: clamp(1rem, 1.5vw, 1.25rem); 
     }
 
+    /* Education Section Specific Layout */
+    .education-layout-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Vertically center text and image deck */
+        width: 75vw; /* Overall section width */
+        max-width: 1200px; /* Match hero for consistency */
+        margin-left: auto; /* Center it if parent .about-page-content-container has align-items:center */
+        margin-right: auto;
+        padding-top: 20px; /* Add some top padding */
+        padding-bottom: 20px; /* Add some bottom padding */
+    }
+
+    .education-text-content {
+        flex-basis: 40%; /* Text takes 40% of the 75vw */
+        padding-right: 5%; /* Space between text and images */
+    }
+    .education-text-content h2 {
+        margin-bottom: 20px;
+    }
+    .education-text-content ul {
+        padding-left: 0; /* Remove default ul padding */
+        list-style: none; /* Remove default list bullets if icons are primary */
+    }
+    .education-text-content ul li {
+        margin-bottom: 15px; /* More space between edu items */
+        font-size: 1.05em;
+    }
+    .education-text-content ul li i {
+        margin-right: 10px; /* Space after icon */
+        color: var(--primary-color); /* Use theme color for icons */
+    }
+    body.dark-mode .education-text-content ul li i {
+        color: var(--dm-primary-color);
+    }
+
+    .education-image-deck {
+        flex-basis: 55%; /* Images part takes 55% (effectively the 35% + 5% spacing from text's padding-right) */
+        position: relative;
+        min-height: 250px; /* Adjust as needed to contain the cards, can be percentage too */
+        display: flex; /* To help center the absolute positioned cards if needed */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .deck-card {
+        position: absolute;
+        width: clamp(120px, 60%, 220px); /* Responsive width for cards */
+        aspect-ratio: 4 / 3; /* Common aspect ratio for photos */
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        border: 2px solid white; /* Adds a bit of definition */
+    }
+    .deck-card:hover {
+        transform: scale(1.05) translateY(-10px) !important; /* Override individual transforms for a lift effect */
+        z-index: 10 !important; /* Bring hovered card to front */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.25), 0 12px 40px rgba(0,0,0,0.22);
+    }
+
+    .deck-card.card-1 { /* IITKGP - Top card */
+        z-index: 3;
+        transform: rotate(5deg) translateX(10%) translateY(-5%);
+    }
+    .deck-card.card-2 { /* NITRKL - Middle card */
+        z-index: 2;
+        transform: rotate(-2deg) translateX(-5%) translateY(0%); 
+    }
+    .deck-card.card-3 { /* RAGHU - Bottom card */
+        z-index: 1;
+        transform: rotate(3deg) translateX(-15%) translateY(5%); 
+    }
+
     /* Subsequent sections styling */
-    .portfolio-section:not(.portfolio-hero) {
+    .portfolio-section:not(.portfolio-hero):not(.education-layout-section) {
         max-width: 900px; 
         padding: 15px 0; 
-        /* These are already covered by general .portfolio-section but reiterated for clarity if needed */
         background-color: transparent !important;
         border: none !important;
         box-shadow: none !important;
@@ -175,9 +248,41 @@
             flex-basis: auto; 
             text-align: center; 
         }
-        .portfolio-section:not(.portfolio-hero) {
+        .portfolio-section:not(.portfolio-hero):not(.education-layout-section) {
             padding: 10px 0; 
+            max-width: 90vw; /* Allow other sections to be wider too */
         }
+        .education-layout-section {
+            flex-direction: column; /* Stack text and images */
+            text-align: center; /* Center text */
+        }
+        .education-text-content {
+            flex-basis: auto; /* Reset basis */
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+        .education-image-deck {
+            flex-basis: auto; /* Reset basis */
+            width: 100%;
+            min-height: 280px; /* Adjust for stacked view */
+            margin-top: 20px;
+        }
+        .deck-card {
+            width: clamp(100px, 50%, 180px);
+        }
+        .deck-card.card-1 { transform: rotate(5deg) translateX(15%) translateY(-5%); }
+        .deck-card.card-2 { transform: rotate(-2deg) translateX(0%) translateY(0%); }
+        .deck-card.card-3 { transform: rotate(3deg) translateX(-10%) translateY(5%); }
+    }
+
+    @media (max-width: 992px) { /* Adjust breakpoint for education section */
+        .education-layout-section {
+            width: 90vw; /* Wider on medium screens */
+        }
+        .deck-card.card-1 { transform: rotate(5deg) translateX(5%) translateY(-5%); }
+        .deck-card.card-2 { transform: rotate(-2deg) translateX(-2%) translateY(0%); }
+        .deck-card.card-3 { transform: rotate(3deg) translateX(-8%) translateY(5%); }
     }
 
   </style>
@@ -205,13 +310,19 @@
         </div>
       </div>
 
-      <div class="portfolio-section" data-section-name="education">
-        <h2>Education</h2>
-        <img src="https://via.placeholder.com/100x100.png?text=Edu" alt="Education Icon" class="section-icon">
-        <ul>
-          <li><i class="fas fa-university"></i> <strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
-          <li><i class="fas fa-graduation-cap"></i> <strong>B.Tech:</strong> Mechanical Engineering, Raghu Engineering College, Visakhapatnam</li>
-        </ul>
+      <div class="portfolio-section education-layout-section" data-section-name="education">
+        <div class="education-text-content">
+          <h2>Education</h2>
+          <ul>
+            <li><i class="fas fa-university"></i> <strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
+            <li><i class="fas fa-graduation-cap"></i> <strong>B.Tech:</strong> Mechanical Engineering, Raghu Engineering College, Visakhapatnam</li>
+          </ul>
+        </div>
+        <div class="education-image-deck">
+          <img src="assets/img/iitkgp.jpg" alt="IIT Kharagpur" class="deck-card card-1">
+          <img src="assets/img/nitrkl.jpg" alt="NIT Rourkela" class="deck-card card-2">
+          <img src="assets/img/raghu.jpg" alt="Raghu Engineering College" class="deck-card card-3">
+        </div>
       </div>
 
       <div class="portfolio-section" data-section-name="research">
