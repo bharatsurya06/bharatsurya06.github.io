@@ -30,7 +30,6 @@
         flex-direction: column;
         align-items: center; /* Center content horizontally for subsequent sections */
         padding: 20px;
-        /* max-width: 900px; /* Removed to allow hero to be wider */
         margin: 0 auto; /* Center layout */
     }
 
@@ -44,22 +43,25 @@
         width: 75vw; /* Span 75% of the viewport width */
         max-width: 1200px; /* Optional: max width for very large screens */
         margin: 40px auto; /* Centering the hero section itself */
-        padding: 40px; /* Padding inside the hero section */
-        min-height: auto; /* Override min-height from .portfolio-section if needed */
-        background: transparent; /* Ensure no specific background */
+        padding: 2vw; /* Padding responsive to viewport width */
+        min-height: auto; 
+        background: transparent; 
     }
 
     .portfolio-hero-image {
-        flex: 0 0 200px; /* Image container fixed width */
-        margin-right: 40px;
+        /* (30vw / 75vw) * 100% = 40% of .portfolio-hero width */
+        flex: 0 0 40%; 
+        margin-right: 5%; /* Spacing: (75vw - 30vw - 45vw = 0, so using margin from image side) or could use gap on parent */
+        /* Or use gap on .portfolio-hero: gap: 5%; and remove margin-right here if preferred */
     }
 
     .portfolio-hero img#profile-photo {
-        width: 200px; /* Adjust size as needed */
-        height: 200px;
+        width: 100%; /* Make image responsive within its container */
+        aspect-ratio: 1 / 1; /* Maintain square aspect ratio, making height equal to width */
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid var(--primary-color);
+        max-width: 300px; /* Optional: Max pixel width for the image on very large screens, if 40% of 75vw becomes too large */
     }
     
     body.dark-mode .portfolio-hero img#profile-photo {
@@ -67,27 +69,32 @@
     }
 
     .portfolio-hero-text {
-        flex: 1; /* Text takes remaining space */
-        text-align: left; /* Align text to the left in the text column */
+        /* (45vw / 75vw) * 100% = 60% of .portfolio-hero width */
+        flex: 0 0 55%; /* Remaining space, adjusted for margin/gap*/
+        text-align: left; 
     }
 
     .portfolio-hero-text h1 {
         margin-bottom: 15px;
+        font-size: clamp(2rem, 4vw, 3.5rem); /* Responsive font size */
+    }
+    .portfolio-hero-text p {
+        font-size: clamp(1rem, 1.5vw, 1.25rem); /* Responsive font size */
     }
 
     /* Subsequent sections styling */
     .portfolio-section:not(.portfolio-hero) {
-        max-width: 900px; /* Constrain width for other sections */
-        width: 100%; /* Ensure they take up the centered layout width */
+        max-width: 900px; 
+        width: 100%; 
     }
 
     .portfolio-section h1, .portfolio-section h2, .portfolio-section h3 {
-        color: var(--text-color-headings); /* Adapts to dark/light mode */
+        color: var(--text-color-headings); 
         margin-bottom: 15px;
     }
     
     .portfolio-section p, .portfolio-section ul {
-        color: var(--text-color-body); /* Adapts to dark/light mode */
+        color: var(--text-color-body); 
         line-height: 1.7;
     }
 
@@ -120,6 +127,27 @@
     .cv-button-container {
         text-align: center;
         margin-top: 20px;
+    }
+
+    /* Responsive adjustments for hero section on smaller screens */
+    @media (max-width: 768px) {
+        .portfolio-hero {
+            flex-direction: column; /* Stack image and text vertically */
+            width: 90vw; /* Take more width on smaller screens */
+            padding: 20px;
+            text-align: center; /* Center text when stacked */
+        }
+        .portfolio-hero-image {
+            flex-basis: auto; /* Reset flex basis */
+            width: 50%; /* Image width relative to hero container */
+            max-width: 200px; /* Max image width on small screens */
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        .portfolio-hero-text {
+            flex-basis: auto; /* Reset flex basis */
+            text-align: center; /* Center hero text */
+        }
     }
 
   </style>
