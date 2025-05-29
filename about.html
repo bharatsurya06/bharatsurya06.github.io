@@ -7,6 +7,86 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
   <title>About</title>
+  <style>
+    /* Basic styling for portfolio sections and fade-in animation */
+    .portfolio-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      margin-bottom: 40px; /* Add some space between sections */
+      padding: 20px;
+      border-radius: 8px;
+     /* background-color: var(--background-color); /* Adapts to dark/light mode */
+     /* box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Subtle shadow */
+    }
+
+    .portfolio-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-container.portfolio-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        padding: 20px;
+    }
+
+    .portfolio-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .portfolio-hero img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid var(--primary-color); /* Using a CSS variable for border */
+    }
+    
+    body.dark-mode .portfolio-hero img {
+        border: 3px solid var(--dm-primary-color); /* Different border for dark mode if needed */
+    }
+
+    .portfolio-section h1, .portfolio-section h2, .portfolio-section h3 {
+        color: var(--text-color-headings); /* Adapts to dark/light mode */
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-section p, .portfolio-section ul {
+        color: var(--text-color-body); /* Adapts to dark/light mode */
+        line-height: 1.7;
+    }
+
+    .portfolio-section ul {
+        list-style-position: inside;
+        padding-left: 20px;
+    }
+    .portfolio-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        width: 100%;
+        max-width: 1000px; /* Limit width for better readability on large screens */
+    }
+    .contact-grid .contact-box, .contact-grid .message-form {
+        width: 100%; /* Ensure full width within grid cell */
+    }
+    .cv-button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -14,105 +94,106 @@
   <div id="navbar"></div>
 
   <div class="about-section">
-    <div class="about-container restructured">
-      <!-- Left Side: About, Education, Research, Skills, CV, Publications -->
-      <div class="about-left">
+    <div class="about-container portfolio-layout">
+
+      <div class="portfolio-hero portfolio-section">
+        <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
         <h1>Bharat Surya Chamarthi</h1>
         <p class="about-desc">
           I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
           My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
           enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
-          use of decision making tools and optimiation algorithms to design these systems.  
-          .
+          use of decision making tools and optimiation algorithms to design these systems.
         </p>
-        <div class="about-info-box">
-          <h3>Education</h3>
-          <ul>
-            <li><strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
-            <li><strong>B.Tech:</strong> Mechanical Engineering, Raghu Engineering College, Visakhapatnam</li>
-          </ul>
-          <h3>Research Interests</h3>
-          <ul>
-            <li>Cryogenic energy recovery</li>
-            <li>Enegry systems optimization</li>
-            <li>Waste heat recovery</li>
-          </ul>
-          <h3>Tools I use</h3>
-          <ul>
-            <li>MATLAB, Python</li>
-            <li>HTML, CSS</li>
-            <li>FLUENT, SOLIDWORKS, AUTOCAD</li>
-          </ul>
-        </div>
-        <div class="publications-section-modern">
-          <h2>Recent Publications</h2>
-          <ul class="publications-list-modern">
-            <li>
-              <a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a><br>
-              <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span><br>
-            </li>
-            <li>
-              <a href="https://dx.doi.org/10.2139/ssrn.5205398" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</span></a><br>
-              <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span><br>
-            </li>
-            <li> 
-              <a href="https://inis.iaea.org/records/avqgm-qvy37 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</span></a><br>
-              <span class="pub-meta">Indian Journal of Cryogenics, 2023</span><br>
-            </li>
-            <li>
-              <span class="pub-title">Artificial intelligence-based prediction of effective thermal conductivity of cryogenic insulations</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
-            </li>
-            <li>
-              <span class="pub-title">Numerical studies on thermal behavior of packed bed cryogenic energy storage system during standby period</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
-            </li>
-          </ul>
-        </div> <br>
-        <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
-
       </div>
-      <!-- Right Side: Large Rectangular Image, Contact, and Message Form -->
-      <div class="about-right">
-        <div class="profile-image-box">
-          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" class="about-image-rect" id="profile-photo">
-        </div>
-        <div class="contact-box">
-          <h2>Contact Email</h2>
-          <p><strong></strong> <a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a></p>
-          <p><a href="mailto:bharatsurya06@kgian.iitkgp.ac.in">bharatsurya06@kgian.iitkgp.ac.in</a></p>
-        </div>
-        <div class="contact-box">
-          <h2>Connect</h2>
-          <div class="contact-links connect-row">
-            <a href="https://github.com" target="_blank" title="GitHub" class="contact-icon"><i class="fab fa-github"></i></a>
-            <a href="https://researchgate.net" target="_blank" title="ResearchGate" class="contact-icon"><i class="fas fa-flask"></i></a>
-            <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="contact-icon"><i class="fab fa-linkedin"></i></a>
-            <span class="connect-vbar"></span>
-            <a href="https://facebook.com" target="_blank" title="Facebook" class="contact-icon"><i class="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank" title="Instagram" class="contact-icon"><i class="fab fa-instagram"></i></a>
+
+      <div class="portfolio-section">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
+          <li><strong>B.Tech:</strong> Mechanical Engineering, Raghu Engineering College, Visakhapatnam</li>
+        </ul>
+      </div>
+
+      <div class="portfolio-section">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Cryogenic energy recovery</li>
+          <li>Enegry systems optimization</li>
+          <li>Waste heat recovery</li>
+        </ul>
+      </div>
+
+      <div class="portfolio-section">
+        <h2>Tools I use</h2>
+        <ul>
+          <li>MATLAB, Python</li>
+          <li>HTML, CSS</li>
+          <li>FLUENT, SOLIDWORKS, AUTOCAD</li>
+        </ul>
+      </div>
+      
+      <div class="portfolio-section cv-button-container">
+        <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
+      </div>
+
+      <div class="portfolio-section publications-section-modern">
+        <h2>Recent Publications</h2>
+        <ul class="publications-list-modern">
+          <li>
+            <a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a><br>
+            <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span><br>
+          </li>
+          <li>
+            <a href="https://dx.doi.org/10.2139/ssrn.5205398" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</span></a><br>
+            <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span><br>
+          </li>
+          <li> 
+            <a href="https://inis.iaea.org/records/avqgm-qvy37 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</span></a><br>
+            <span class="pub-meta">Indian Journal of Cryogenics, 2023</span><br>
+          </li>
+          <li>
+            <span class="pub-title">Artificial intelligence-based prediction of effective thermal conductivity of cryogenic insulations</span><br>
+            <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
+          </li>
+          <li>
+            <span class="pub-title">Numerical studies on thermal behavior of packed bed cryogenic energy storage system during standby period</span><br>
+            <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
+          </li>
+        </ul>
+      </div>
+
+      <div class="portfolio-section contact-grid">
+          <div class="contact-box">
+            <h2>Contact Email</h2>
+            <p><a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a></p>
+            <p><a href="mailto:bharatsurya06@kgian.iitkgp.ac.in">bharatsurya06@kgian.iitkgp.ac.in</a></p>
+            <div class="contact-links connect-row" style="margin-top:15px;">
+              <a href="https://github.com" target="_blank" title="GitHub" class="contact-icon"><i class="fab fa-github"></i></a>
+              <a href="https://researchgate.net" target="_blank" title="ResearchGate" class="contact-icon"><i class="fas fa-flask"></i></a>
+              <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+              <span class="connect-vbar"></span>
+              <a href="https://facebook.com" target="_blank" title="Facebook" class="contact-icon"><i class="fab fa-facebook"></i></a>
+              <a href="https://instagram.com" target="_blank" title="Instagram" class="contact-icon"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
-        </div>
-        <!-- Address Card and Google Map -->
-        <div class="contact-box" style="margin-top:18px;">
-          <h2>Address</h2>
-          <p><strong>Process Intensification Labaratory</strong><br>
-          <p><strong>cryogenic Engineering Centre</strong><br>
-          Indian Institute of Technology Kharagpur<br>
-          Kharagpur, West Bengal 721302, India</p>
-          <div style="margin-top:10px; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-            <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="220" style="border:0; min-width:220px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="contact-box">
+            <h2>Address</h2>
+            <p><strong>Process Intensification Labaratory</strong><br>
+            <strong>Cryogenic Engineering Centre</strong><br>
+            Indian Institute of Technology Kharagpur<br>
+            Kharagpur, West Bengal 721302, India</p>
+            <div style="margin-top:10px; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+              <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="220" style="border:0; min-width:220px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
-        </div>
-        
-        <form class="message-form" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST">
-          <h3>Send me a message</h3>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
-          <button type="submit">Send</button>
-          <div id="form-status"></div>
-        </form>
-        
+          <form class="message-form portfolio-section" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST">
+            <h3>Send me a message</h3>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+            <button type="submit">Send</button>
+            <div id="form-status"></div>
+          </form>
       </div>
     </div>
   </div>
@@ -134,6 +215,7 @@
           document.body.classList.toggle('dark-mode', isDark);
           const toggle = document.querySelector('.input#darkModeToggle');
           if (toggle) toggle.checked = isDark;
+          switchProfilePhoto(); // Call switchProfilePhoto after dark mode is applied
         }
         setTimeout(() => {
           const toggle = document.querySelector('.input#darkModeToggle');
@@ -142,11 +224,12 @@
             toggle.addEventListener('change', function() {
               document.body.classList.toggle('dark-mode', this.checked);
               localStorage.setItem('darkMode', this.checked);
+              // switchProfilePhoto(); // Called by MutationObserver now
             });
           }
-          applyDarkModeSetting();
+          applyDarkModeSetting(); // Initial application
         }, 50);
-        applyDarkModeSetting();
+        // applyDarkModeSetting(); // Redundant if called inside setTimeout
       });
 
     // Switch profile photo on dark mode
@@ -154,38 +237,37 @@
       const img = document.getElementById('profile-photo');
       if (!img) return;
       const isDark = document.body.classList.contains('dark-mode');
-      img.src = isDark ? 'assets/img/photo -dark.jpg' : 'assets/img/photo.jpg';
+      img.src = isDark ? 'assets/img/photo-dark.jpg' : 'assets/img/photo.jpg'; // Corrected dark mode image name
     }
-    document.addEventListener('DOMContentLoaded', switchProfilePhoto);
-    const observer = new MutationObserver(switchProfilePhoto);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
-    // Message form submission to save as JSON
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('about-message-form');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = form.sender_email.value;
-          const message = form.message.value;
-          const statusDiv = document.getElementById('form-status');
-          statusDiv.textContent = 'Sending...';
-          fetch('http://localhost:5000/save_message', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, message })
-          })
-          .then(res => res.json())
-          .then(data => {
-            statusDiv.textContent = data.message || 'Message sent!';
-            form.reset();
-          })
-          .catch(() => {
-            statusDiv.textContent = 'Failed to send. Please try again later.';
-          });
-        });
-      }
+    // Ensure DOM is loaded for initial call, and observe for changes
+    document.addEventListener('DOMContentLoaded', () => {
+        switchProfilePhoto(); 
+        // Scroll reveal for portfolio sections
+        const sections = document.querySelectorAll('.portfolio-section');
+        const revealSection = () => {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                } else {
+                    // Optional: remove 'visible' to re-trigger animation on scroll up
+                    // section.classList.remove('visible'); 
+                }
+            });
+        };
+        window.addEventListener('scroll', revealSection);
+        revealSection(); // Initial check in case some sections are already in view
     });
+
+    const observer = new MutationObserver((mutationsList) => {
+        for(let mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                switchProfilePhoto();
+            }
+        }
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
     // AJAX for Formspree contact form
     const contactForm = document.getElementById('contact-form');
@@ -196,19 +278,29 @@
         const data = new FormData(form);
         const status = document.getElementById('form-status');
         status.textContent = "Sending...";
-        const res = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          status.textContent = "Thank you for your message! I will get back to you soon";
-          form.reset();
-        } else {
-          status.textContent = "Oops! There was a problem.";
+        try {
+            const res = await fetch(form.action, {
+              method: form.method,
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+              status.textContent = "Thank you for your message! I will get back to you soon.";
+              form.reset();
+            } else {
+              const resData = await res.json();
+              if (Object.hasOwn(resData, 'errors')) {
+                status.textContent = resData["errors"].map(error => error["message"]).join(", ");
+              } else {
+                status.textContent = "Oops! There was a problem submitting your form.";
+              }
+            }
+        } catch (error) {
+            status.textContent = "Oops! There was a problem submitting your form.";
         }
       });
     }
+    // Removed the old 'about-message-form' script as it seems to be for a different form or redundant.
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
