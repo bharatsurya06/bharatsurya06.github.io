@@ -17,6 +17,7 @@
       padding: 20px;
       border-radius: 8px;
       min-height: 200px; /* Ensure sections have some height for scroll trigger */
+      /* No explicit background here to avoid orangish color if inherited */
     }
 
     .portfolio-section.visible {
@@ -24,40 +25,60 @@
       transform: translateY(0);
     }
     
-    /* Hero section is visible by default */
-    .portfolio-hero {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
     .about-container.portfolio-layout {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content horizontally */
+        align-items: center; /* Center content horizontally for subsequent sections */
         padding: 20px;
-        max-width: 900px; /* Max width for content area */
+        /* max-width: 900px; /* Removed to allow hero to be wider */
         margin: 0 auto; /* Center layout */
     }
 
+    /* Hero section specific styling */
     .portfolio-hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 40px;
+        opacity: 1; /* Visible by default */
+        transform: translateY(0); /* Visible by default */
+        display: flex; /* For two-column layout */
+        flex-direction: row; /* Image left, text right */
+        align-items: center; /* Vertically align items in the center */
+        width: 75vw; /* Span 75% of the viewport width */
+        max-width: 1200px; /* Optional: max width for very large screens */
+        margin: 40px auto; /* Centering the hero section itself */
+        padding: 40px; /* Padding inside the hero section */
+        min-height: auto; /* Override min-height from .portfolio-section if needed */
+        background: transparent; /* Ensure no specific background */
     }
 
-    .portfolio-hero img {
-        width: 180px;
-        height: 180px;
+    .portfolio-hero-image {
+        flex: 0 0 200px; /* Image container fixed width */
+        margin-right: 40px;
+    }
+
+    .portfolio-hero img#profile-photo {
+        width: 200px; /* Adjust size as needed */
+        height: 200px;
         border-radius: 50%;
         object-fit: cover;
-        margin-bottom: 20px;
-        border: 3px solid var(--primary-color); /* Using a CSS variable for border */
+        border: 3px solid var(--primary-color);
     }
     
-    body.dark-mode .portfolio-hero img {
-        border: 3px solid var(--dm-primary-color); /* Different border for dark mode if needed */
+    body.dark-mode .portfolio-hero img#profile-photo {
+        border: 3px solid var(--dm-primary-color);
+    }
+
+    .portfolio-hero-text {
+        flex: 1; /* Text takes remaining space */
+        text-align: left; /* Align text to the left in the text column */
+    }
+
+    .portfolio-hero-text h1 {
+        margin-bottom: 15px;
+    }
+
+    /* Subsequent sections styling */
+    .portfolio-section:not(.portfolio-hero) {
+        max-width: 900px; /* Constrain width for other sections */
+        width: 100%; /* Ensure they take up the centered layout width */
     }
 
     .portfolio-section h1, .portfolio-section h2, .portfolio-section h3 {
@@ -72,20 +93,19 @@
 
     .portfolio-section ul {
         list-style-position: inside;
-        padding-left: 0; /* Remove default padding if icons are used before li */
+        padding-left: 0; 
     }
     .portfolio-section ul li {
         margin-bottom: 8px;
-        display: flex; /* For aligning icon and text */
-        align-items: center; /* For aligning icon and text */
+        display: flex; 
+        align-items: center; 
     }
 
     .section-icon {
-        width: 50px; /* Adjust as needed */
-        height: 50px; /* Adjust as needed */
+        width: 50px; 
+        height: 50px; 
         margin-right: 15px;
         margin-bottom: 15px;
-        /* Add styles for background, border-radius if using icons as images */
     }
 
     .contact-grid {
@@ -93,10 +113,9 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
         width: 100%;
-        max-width: 1000px; /* Limit width for better readability on large screens */
     }
     .contact-grid .contact-box, .contact-grid .message-form {
-        width: 100%; /* Ensure full width within grid cell */
+        width: 100%; 
     }
     .cv-button-container {
         text-align: center;
@@ -110,23 +129,25 @@
   <!-- Include the consistent navigation bar -->
   <div id="navbar"></div>
 
-  <div class="about-section">
-    <div class="about-container portfolio-layout">
+  <div class="about-container portfolio-layout">
 
       <div class="portfolio-hero portfolio-section">
-        <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
-        <h1>Bharat Surya Chamarthi</h1>
-        <p class="about-desc">
-          I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
-          My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
-          enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
-          use of decision making tools and optimiation algorithms to design these systems.
-        </p>
+        <div class="portfolio-hero-image">
+          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
+        </div>
+        <div class="portfolio-hero-text">
+          <h1>Bharat Surya Chamarthi</h1>
+          <p class="about-desc">
+            I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
+            My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
+            enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
+            use of decision making tools and optimiation algorithms to design these systems.
+          </p>
+        </div>
       </div>
 
       <div class="portfolio-section" data-section-name="education">
         <h2>Education</h2>
-        <!-- Placeholder for Education Image/Icon -->
         <img src="https://via.placeholder.com/100x100.png?text=Edu" alt="Education Icon" class="section-icon">
         <ul>
           <li><i class="fas fa-university"></i> <strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
