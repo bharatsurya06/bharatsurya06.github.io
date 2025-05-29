@@ -13,11 +13,12 @@
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      margin-bottom: 40px; /* Add some space between sections */
-      padding: 20px;
-      border-radius: 8px;
-      min-height: 200px; /* Ensure sections have some height for scroll trigger */
-      /* No explicit background here to avoid orangish color if inherited */
+      margin-bottom: 30px; /* Slightly reduced margin */
+      padding: 10px 0; /* Reduced padding, mainly vertical, no horizontal padding by default */
+      /* border-radius: 8px; */ /* Removed border-radius */
+      min-height: auto; /* Allow sections to be as tall as their content */
+      background-color: transparent !important; /* Ensure no background color from any source */
+      width: 100%; /* Sections will take full width of their container */
     }
 
     .portfolio-section.visible {
@@ -28,40 +29,38 @@
     .about-container.portfolio-layout {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content horizontally for subsequent sections */
+        align-items: center; 
         padding: 20px;
-        margin: 0 auto; /* Center layout */
+        margin: 0 auto; 
     }
 
     /* Hero section specific styling */
     .portfolio-hero {
-        opacity: 1; /* Visible by default */
-        transform: translateY(0); /* Visible by default */
-        display: flex; /* For two-column layout */
-        flex-direction: row; /* Image left, text right */
-        align-items: center; /* Vertically align items in the center */
-        width: 75vw; /* Span 75% of the viewport width */
-        max-width: 1200px; /* Optional: max width for very large screens */
-        margin: 40px auto; /* Centering the hero section itself */
-        padding: 2vw; /* Padding responsive to viewport width */
-        min-height: auto; 
-        background: transparent; 
+        opacity: 1; 
+        transform: translateY(0); 
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        width: 75vw; 
+        max-width: 1200px; 
+        margin: 40px auto; 
+        padding: 2vw; 
+        background-color: transparent !important; /* Ensure hero is also transparent */
+        border-radius: 0; /* Ensure hero also has no border-radius if .portfolio-section had it before */
     }
 
     .portfolio-hero-image {
-        /* (30vw / 75vw) * 100% = 40% of .portfolio-hero width */
         flex: 0 0 40%; 
-        margin-right: 5%; /* Spacing: (75vw - 30vw - 45vw = 0, so using margin from image side) or could use gap on parent */
-        /* Or use gap on .portfolio-hero: gap: 5%; and remove margin-right here if preferred */
+        margin-right: 5%; 
     }
 
     .portfolio-hero img#profile-photo {
-        width: 100%; /* Make image responsive within its container */
-        aspect-ratio: 1 / 1; /* Maintain square aspect ratio, making height equal to width */
+        width: 100%; 
+        aspect-ratio: 1 / 1; 
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid var(--primary-color);
-        max-width: 300px; /* Optional: Max pixel width for the image on very large screens, if 40% of 75vw becomes too large */
+        max-width: 300px; 
     }
     
     body.dark-mode .portfolio-hero img#profile-photo {
@@ -69,23 +68,23 @@
     }
 
     .portfolio-hero-text {
-        /* (45vw / 75vw) * 100% = 60% of .portfolio-hero width */
-        flex: 0 0 55%; /* Remaining space, adjusted for margin/gap*/
+        flex: 0 0 55%; 
         text-align: left; 
     }
 
     .portfolio-hero-text h1 {
         margin-bottom: 15px;
-        font-size: clamp(2rem, 4vw, 3.5rem); /* Responsive font size */
+        font-size: clamp(2rem, 4vw, 3.5rem); 
     }
     .portfolio-hero-text p {
-        font-size: clamp(1rem, 1.5vw, 1.25rem); /* Responsive font size */
+        font-size: clamp(1rem, 1.5vw, 1.25rem); 
     }
 
     /* Subsequent sections styling */
     .portfolio-section:not(.portfolio-hero) {
         max-width: 900px; 
-        width: 100%; 
+        padding: 15px 0; /* Adjusted padding for non-hero sections */
+        /* min-height from .portfolio-section is now auto, so this is fine */
     }
 
     .portfolio-section h1, .portfolio-section h2, .portfolio-section h3 {
@@ -132,21 +131,24 @@
     /* Responsive adjustments for hero section on smaller screens */
     @media (max-width: 768px) {
         .portfolio-hero {
-            flex-direction: column; /* Stack image and text vertically */
-            width: 90vw; /* Take more width on smaller screens */
+            flex-direction: column; 
+            width: 90vw; 
             padding: 20px;
-            text-align: center; /* Center text when stacked */
+            text-align: center; 
         }
         .portfolio-hero-image {
-            flex-basis: auto; /* Reset flex basis */
-            width: 50%; /* Image width relative to hero container */
-            max-width: 200px; /* Max image width on small screens */
+            flex-basis: auto; 
+            width: 50%; 
+            max-width: 200px; 
             margin-right: 0;
             margin-bottom: 20px;
         }
         .portfolio-hero-text {
-            flex-basis: auto; /* Reset flex basis */
-            text-align: center; /* Center hero text */
+            flex-basis: auto; 
+            text-align: center; 
+        }
+        .portfolio-section:not(.portfolio-hero) {
+            padding: 10px 0; /* Further reduced padding on small screens for non-hero */
         }
     }
 
