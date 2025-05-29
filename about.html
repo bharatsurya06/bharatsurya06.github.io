@@ -8,17 +8,39 @@
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
   <title>About</title>
   <style>
-    /* Basic styling for portfolio sections and fade-in animation */
+    /* New wrapper for the entire about page content, replacing .about-section from style.css */
+    .about-page-wrapper {
+        background-color: transparent !important;
+        padding: 20px 0; /* Vertical padding for the page */
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* New container for the main column of content, replacing .about-container from style.css */
+    .about-page-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers subsequent sections like education, research, etc. */
+        margin: 0 auto;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 20px; /* Horizontal padding for content within this container */
+    }
+
     .portfolio-section {
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      margin-bottom: 30px; /* Slightly reduced margin */
-      padding: 10px 0; /* Reduced padding, mainly vertical, no horizontal padding by default */
-      /* border-radius: 8px; */ /* Removed border-radius */
-      min-height: auto; /* Allow sections to be as tall as their content */
-      background-color: transparent !important; /* Ensure no background color from any source */
-      width: 100%; /* Sections will take full width of their container */
+      margin-bottom: 30px; 
+      padding: 10px 0; 
+      min-height: auto; 
+      background-color: transparent !important; 
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      width: 100%; 
     }
 
     .portfolio-section.visible {
@@ -43,10 +65,12 @@
         align-items: center; 
         width: 75vw; 
         max-width: 1200px; 
-        margin: 40px auto; 
+        margin: 40px auto; /* This centers the hero itself if its parent doesn't use align-items:center for it */
         padding: 2vw; 
-        background-color: transparent !important; /* Ensure hero is also transparent */
-        border-radius: 0; /* Ensure hero also has no border-radius if .portfolio-section had it before */
+        background-color: transparent !important; 
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
     }
 
     .portfolio-hero-image {
@@ -83,8 +107,12 @@
     /* Subsequent sections styling */
     .portfolio-section:not(.portfolio-hero) {
         max-width: 900px; 
-        padding: 15px 0; /* Adjusted padding for non-hero sections */
-        /* min-height from .portfolio-section is now auto, so this is fine */
+        padding: 15px 0; 
+        /* These are already covered by general .portfolio-section but reiterated for clarity if needed */
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
     }
 
     .portfolio-section h1, .portfolio-section h2, .portfolio-section h3 {
@@ -148,7 +176,7 @@
             text-align: center; 
         }
         .portfolio-section:not(.portfolio-hero) {
-            padding: 10px 0; /* Further reduced padding on small screens for non-hero */
+            padding: 10px 0; 
         }
     }
 
@@ -159,7 +187,8 @@
   <!-- Include the consistent navigation bar -->
   <div id="navbar"></div>
 
-  <div class="about-container portfolio-layout">
+  <div class="about-page-wrapper">
+    <div class="about-page-content-container portfolio-layout">
 
       <div class="portfolio-hero portfolio-section">
         <div class="portfolio-hero-image">
