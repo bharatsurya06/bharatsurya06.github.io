@@ -104,76 +104,117 @@
         font-size: clamp(1rem, 1.5vw, 1.25rem); 
     }
 
-    /* Education Section Specific Layout */
+    /* Education Section Specific Layout & Demarcation */
     .education-layout-section {
         display: flex;
         flex-direction: row;
-        align-items: center; /* Vertically center text and image deck */
-        width: 75vw; /* Overall section width */
-        max-width: 1200px; /* Match hero for consistency */
-        margin-left: auto; /* Center it if parent .about-page-content-container has align-items:center */
+        align-items: center; 
+        width: 75vw; 
+        max-width: 1200px; 
+        margin-left: auto; 
         margin-right: auto;
-        padding-top: 20px; /* Add some top padding */
-        padding-bottom: 20px; /* Add some bottom padding */
+        padding: 40px 3vw; /* Increased vertical and responsive horizontal padding */
+        background-color: #f8f9fa; /* Light background for light mode */
+        border-radius: 12px; /* Subtle rounded corners for the block */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.07); /* Subtle shadow for demarcation */
+        /* Ensure it still participates in the scroll animation */
+        opacity: 0; /* Keep this for initial animation state if it inherits .portfolio-section */
+        transform: translateY(50px); /* Keep this for initial animation state */
+    }
+    /* Apply .visible class for animation if needed, or override opacity/transform here if it shouldn't animate same as others */
+    .education-layout-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    body.dark-mode .education-layout-section {
+        background-color: #2c2f33; /* Darker background for dark mode */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Adjusted shadow for dark mode */
     }
 
     .education-text-content {
-        flex-basis: 40%; /* Text takes 40% of the 75vw */
-        padding-right: 5%; /* Space between text and images */
+        flex-basis: 40%; 
+        padding-right: 5%; 
     }
     .education-text-content h2 {
-        margin-bottom: 20px;
+        margin-bottom: 25px; /* Increased margin */
     }
     .education-text-content ul {
-        padding-left: 0; /* Remove default ul padding */
-        list-style: none; /* Remove default list bullets if icons are primary */
+        padding-left: 0; 
+        list-style: none; 
     }
     .education-text-content ul li {
-        margin-bottom: 15px; /* More space between edu items */
+        margin-bottom: 20px; /* More space between edu items */
         font-size: 1.05em;
+        display: flex; /* Align icon with the new text block */
+        align-items: flex-start; /* Align icon to the top of the text block */
     }
     .education-text-content ul li i {
-        margin-right: 10px; /* Space after icon */
-        color: var(--primary-color); /* Use theme color for icons */
+        margin-right: 12px; /* Space after icon */
+        color: var(--primary-color); 
+        font-size: 1.2em; /* Slightly larger icon */
+        margin-top: 5px; /* Align icon with first line of text better */
     }
     body.dark-mode .education-text-content ul li i {
         color: var(--dm-primary-color);
     }
+    .education-item-details span {
+        display: block; /* Each span on a new line */
+        line-height: 1.5;
+    }
+    .education-degree {
+        font-size: 1.1em;
+        margin-bottom: 4px;
+        color: var(--text-color-headings); /* Make degree stand out a bit */
+    }
+    body.dark-mode .education-degree {
+        color: var(--dm-text-color-headings); /* Ensure dark mode compatibility */
+    }
+    .education-course {
+        margin-bottom: 2px;
+    }
+    .education-university {
+        font-style: italic;
+        font-size: 0.95em;
+    }
 
     .education-image-deck {
-        flex-basis: 55%; /* Images part takes 55% (effectively the 35% + 5% spacing from text's padding-right) */
+        flex-basis: 55%; 
         position: relative;
-        min-height: 250px; /* Adjust as needed to contain the cards, can be percentage too */
-        display: flex; /* To help center the absolute positioned cards if needed */
+        min-height: 320px; /* Increased min-height */
+        display: flex; 
         align-items: center;
         justify-content: center;
     }
 
     .deck-card {
         position: absolute;
-        width: clamp(120px, 60%, 220px); /* Responsive width for cards */
-        aspect-ratio: 4 / 3; /* Common aspect ratio for photos */
+        width: clamp(160px, 75%, 280px); /* Increased size */
+        aspect-ratio: 4 / 3; 
         object-fit: cover;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
         transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-        border: 2px solid white; /* Adds a bit of definition */
+        border: 2px solid white; 
+    }
+    body.dark-mode .deck-card {
+        border: 2px solid #45494e; /* Darker border for cards in dark mode */
     }
     .deck-card:hover {
-        transform: scale(1.05) translateY(-10px) !important; /* Override individual transforms for a lift effect */
-        z-index: 10 !important; /* Bring hovered card to front */
+        transform: scale(1.05) translateY(-10px) !important; 
+        z-index: 10 !important; 
         box-shadow: 0 8px 16px rgba(0,0,0,0.25), 0 12px 40px rgba(0,0,0,0.22);
     }
 
-    .deck-card.card-1 { /* IITKGP - Top card */
+    .deck-card.card-1 { 
         z-index: 3;
         transform: rotate(5deg) translateX(10%) translateY(-5%);
     }
-    .deck-card.card-2 { /* NITRKL - Middle card */
+    .deck-card.card-2 { 
         z-index: 2;
         transform: rotate(-2deg) translateX(-5%) translateY(0%); 
     }
-    .deck-card.card-3 { /* RAGHU - Bottom card */
+    .deck-card.card-3 { 
         z-index: 1;
         transform: rotate(3deg) translateX(-15%) translateY(5%); 
     }
@@ -255,6 +296,8 @@
         .education-layout-section {
             flex-direction: column; /* Stack text and images */
             text-align: center; /* Center text */
+            width: 90vw; /* Match other sections on small screens */
+            padding: 30px 20px; /* Consistent padding */
         }
         .education-text-content {
             flex-basis: auto; /* Reset basis */
@@ -269,7 +312,7 @@
             margin-top: 20px;
         }
         .deck-card {
-            width: clamp(100px, 50%, 180px);
+            width: clamp(120px, 55%, 200px); /* Further adjust card size for small screens */
         }
         .deck-card.card-1 { transform: rotate(5deg) translateX(15%) translateY(-5%); }
         .deck-card.card-2 { transform: rotate(-2deg) translateX(0%) translateY(0%); }
@@ -279,10 +322,17 @@
     @media (max-width: 992px) { /* Adjust breakpoint for education section */
         .education-layout-section {
             width: 90vw; /* Wider on medium screens */
+            padding: 30px 2vw;
         }
         .deck-card.card-1 { transform: rotate(5deg) translateX(5%) translateY(-5%); }
         .deck-card.card-2 { transform: rotate(-2deg) translateX(-2%) translateY(0%); }
         .deck-card.card-3 { transform: rotate(3deg) translateX(-8%) translateY(5%); }
+        .deck-card {
+            width: clamp(140px, 70%, 240px); /* Adjust card size for medium screens */
+        }
+        .education-image-deck {
+            min-height: 280px; /* Adjust deck height */
+        }
     }
 
   </style>
@@ -314,8 +364,22 @@
         <div class="education-text-content">
           <h2>Education</h2>
           <ul>
-            <li><i class="fas fa-university"></i> <strong>M.Tech:</strong> Mechanical Engineering (Specilization in Cryogenics), NIT Rourkela</li>
-            <li><i class="fas fa-graduation-cap"></i> <strong>B.Tech:</strong> Mechanical Engineering, Raghu Engineering College, Visakhapatnam</li>
+            <li>
+              <i class="fas fa-university"></i>
+              <div class="education-item-details">
+                <span class="education-degree"><strong>M.Tech</strong></span>
+                <span class="education-course">Mechanical Engineering (Specialization in Cryogenics)</span>
+                <span class="education-university">NIT Rourkela</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-graduation-cap"></i>
+              <div class="education-item-details">
+                <span class="education-degree"><strong>B.Tech</strong></span>
+                <span class="education-course">Mechanical Engineering</span>
+                <span class="education-university">Raghu Engineering College, Visakhapatnam</span>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="education-image-deck">
@@ -328,7 +392,6 @@
       <div class="portfolio-section" data-section-name="research">
         <h2>Research Interests</h2>
         <!-- Placeholder for Research Image/Icon -->
-        <img src="https://via.placeholder.com/100x100.png?text=Research" alt="Research Icon" class="section-icon">
         <ul>
           <li><i class="fas fa-flask"></i> Cryogenic energy recovery</li>
           <li><i class="fas fa-cogs"></i> Enegry systems optimization</li>
