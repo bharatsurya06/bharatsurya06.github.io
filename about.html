@@ -193,12 +193,43 @@
     }
     .publications-layout-section h2 { color: var(--text-color-headings); margin-bottom: 25px; }
     body.dark-mode .publications-layout-section h2 { color: var(--dm-text-color-headings); }
-    .publications-section-modern .publications-list-modern { color: var(--text-color-body); margin:0; padding-left:0; list-style:none;}
+    .publications-section-modern .publications-list-modern { 
+        color: var(--text-color-body); 
+        margin:0; 
+        padding-left:0; 
+        list-style:none;
+    }
     body.dark-mode .publications-section-modern .publications-list-modern { color: var(--dm-text-color-body); }
-     .publications-list-modern li { margin-bottom: 15px; }
-    .pub-title { font-weight: 600; color: var(--primary-color); }
+     .publications-list-modern li {
+        margin-bottom: 20px; /* Increased spacing */
+        padding-left: 35px; /* Space for the icon */
+        position: relative;
+        line-height: 1.6;
+    }
+    .publications-list-modern li .pub-icon {
+        position: absolute;
+        left: 0;
+        top: 4px; /* Adjust for vertical alignment with first line */
+        font-size: 1.2em;
+        color: var(--primary-color);
+    }
+    body.dark-mode .publications-list-modern li .pub-icon {
+        color: var(--dm-primary-color);
+    }
+    .pub-title { 
+        font-weight: 600; 
+        color: var(--primary-color); 
+        text-decoration: none; /* Ensuring links are not underlined by default if not desired */
+    }
+    .pub-title.pub-link-hover:hover {
+        text-decoration: underline; /* Underline on hover for links */
+    }
     body.dark-mode .pub-title { color: var(--dm-primary-color); }
-    .pub-meta { font-size: 0.9em; }
+    .pub-meta { 
+        font-size: 0.9em; 
+        display: block; /* Ensure it takes its own line if not already */
+        margin-top: 4px;
+    }
 
 
     /* CV & Contact Section (Inner Content) */
@@ -212,8 +243,13 @@
         color: var(--text-color-body);
     }
     body.dark-mode .contact-grid { color: var(--dm-text-color-body); }
-    .contact-grid p a { color: var(--primary-color); }
+    .contact-grid p a { color: var(--primary-color); text-decoration: none; }
+    .contact-grid p a:hover { text-decoration: underline; }
     body.dark-mode .contact-grid p a { color: var(--dm-primary-color); }
+    .contact-box {
+      /* Ensuring no card-like styles are here */
+      padding: 10px; /* Some padding for internal spacing if needed */
+    }
 
 
     /* General paragraph styling (if any specific needed beyond body) */
@@ -363,24 +399,29 @@
           <h2>Recent Publications</h2>
           <ul class="publications-list-modern">
             <li>
+              <i class="fas fa-file-alt pub-icon"></i>
               <a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a><br>
-              <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span><br>
+              <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span>
             </li>
             <li>
+              <i class="fas fa-file-alt pub-icon"></i>
               <a href="https://dx.doi.org/10.2139/ssrn.5205398" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</span></a><br>
-              <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span><br>
+              <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span>
             </li>
             <li> 
+              <i class="fas fa-file-alt pub-icon"></i>
               <a href="https://inis.iaea.org/records/avqgm-qvy37 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</span></a><br>
-              <span class="pub-meta">Indian Journal of Cryogenics, 2023</span><br>
+              <span class="pub-meta">Indian Journal of Cryogenics, 2023</span>
             </li>
             <li>
+              <i class="fas fa-file-alt pub-icon"></i>
               <span class="pub-title">Artificial intelligence-based prediction of effective thermal conductivity of cryogenic insulations</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
+              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
             </li>
             <li>
+              <i class="fas fa-file-alt pub-icon"></i>
               <span class="pub-title">Numerical studies on thermal behavior of packed bed cryogenic energy storage system during standby period</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span><br>
+              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
             </li>
           </ul>
         </div>
@@ -412,7 +453,7 @@
                 <strong>Cryogenic Engineering Centre</strong><br>
                 Indian Institute of Technology Kharagpur<br>
                 Kharagpur, West Bengal 721302, India</p>
-                <div style="margin-top:10px; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                <div style="margin-top:10px; border-radius:10px; overflow:hidden; /* box-shadow:0 2px 8px rgba(0,0,0,0.08); Removed shadow */">
                   <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="220" style="border:0; min-width:220px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
