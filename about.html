@@ -230,27 +230,13 @@
     body.dark-mode .publications-layout-section h2 { color: var(--dm-text-color-headings); }
     .publications-section-modern .publications-list-modern { color: var(--text-color-body); margin:0; padding-left:0; list-style:none;}
     body.dark-mode .publications-section-modern .publications-list-modern { color: var(--dm-text-color-body); }
-    .publications-list-modern li {
-        margin-bottom: 22px;
-        padding: 0;
-        border: none;
-        background: none;
-        box-shadow: none;
-        font-size: 1.08em;
-        line-height: 1.5;
-        color: var(--text-color-body);
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-    }
-    .pub-list-icon {
-        font-size: 1.2em;
-        margin-top: 2px;
-        color: var(--primary-color);
-        flex-shrink: 0;
-    }
-    body.dark-mode .pub-list-icon {
-        color: var(--dm-primary-color);
+    .publications-list-modern li,
+    .publications-list-modern li:hover,
+    body.dark-mode .publications-list-modern li,
+    body.dark-mode .publications-list-modern li:hover {
+        background: none !important;
+        color: inherit !important;
+        box-shadow: none !important;
     }
     .publications-list-modern .pub-title,
     .publications-list-modern .pub-title:visited,
@@ -742,13 +728,11 @@
     }
 
     /* --- OVERRIDE: Remove background and shadow from publication list items (fixes gray hover) --- */
-    .publications-list-modern li,
-    .publications-list-modern li:hover,
     body.dark-mode .publications-list-modern li,
     body.dark-mode .publications-list-modern li:hover {
         background: none !important;
-        box-shadow: none !important;
         color: inherit !important;
+        box-shadow: none !important;
     }
 
     /* --- Contact Tiles Row Layout --- */
