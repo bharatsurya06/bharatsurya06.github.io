@@ -46,17 +46,72 @@
     /* Row container for side-by-side tiles */
     .tile-row {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        width: 75vw;
-        max-width: 1200px;
-        margin: 20px 0;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
     }
-    .tile-row .portfolio-tile { /* Tiles within a row */
-        flex: 1; /* Distribute space equally */
-        margin: 0; /* No margin for tiles inside a row, gap handles it */
-        width: auto; /* Override base tile width */
-        max-width: none; /* Override base tile max-width */
+    .about-tile.research-tile, .about-tile.tools-tile {
+        width: 50vw;
+        min-width: 320px;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e6f7f4;
+        position: relative;
+    }
+    .about-tile.tools-tile {
+        background: #fff9e6;
+    }
+    body.dark-mode .about-tile.research-tile {
+        background: #273f3f;
+    }
+    body.dark-mode .about-tile.tools-tile {
+        background: #4d4327;
+    }
+    .tile-content.research-tools-content {
+        width: 75%;
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 48px 0;
+    }
+    .research-tools-icon {
+        font-size: clamp(4rem, 10vw, 7rem);
+        margin-bottom: 24px;
+        color: var(--primary-color);
+        animation: floatIcon 2.5s ease-in-out infinite alternate;
+        display: inline-block;
+        will-change: transform;
+    }
+    .tools-tile .research-tools-icon {
+        color: #e6b800;
+        animation-delay: 1.2s;
+    }
+    @keyframes floatIcon {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-18px) scale(1.08); }
+    }
+    body.dark-mode .research-tools-icon {
+        color: var(--dm-primary-color);
+    }
+    body.dark-mode .tools-tile .research-tools-icon {
+        color: #ffe066;
+    }
+    @media (max-width: 900px) {
+        .about-tile.research-tile, .about-tile.tools-tile { min-width: 0; }
+        .tile-content.research-tools-content { width: 90%; padding: 32px 0; }
+    }
+    @media (max-width: 700px) {
+        .tile-row { flex-direction: column; }
+        .about-tile.research-tile, .about-tile.tools-tile { width: 100vw; }
+        .tile-content.research-tools-content { width: 95%; padding: 24px 0; }
     }
 
     /* Scroll animation class */
@@ -124,9 +179,13 @@
         display: flex;
         flex-direction: row;
         align-items: center; 
-        /* padding: 40px 3vw; /* Padding is on parent tile */
+        width: 100%;
+        height: 100%;
     }
-    .education-text-content { flex-basis: 40%; padding-right: 5%; }
+    .education-text-content {
+        flex: 0 0 40%;
+        padding-right: 5%;
+    }
     .education-text-content h2 { margin-bottom: 25px; color: var(--text-color-headings); }
     body.dark-mode .education-text-content h2 { color: var(--dm-text-color-headings); }
     .education-text-content ul { padding-left: 0; list-style: none; margin:0; }
@@ -139,44 +198,31 @@
     body.dark-mode .education-degree { color: var(--dm-text-color-headings); }
     .education-course { font-size: clamp(1rem, 1.4vw, 1.15rem); margin-bottom: 2px; line-height: 1.7; }
     .education-university { font-style: italic; font-size: 0.95rem; line-height: 1.7; }
-    .education-image-deck { flex-basis: 55%; position: relative; min-height: 320px; display: flex; align-items: center; justify-content: center; }
-    .deck-card { position: absolute; width: clamp(160px, 75%, 280px); aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19); transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; border: 2px solid white; }
-    body.dark-mode .deck-card { border: 2px solid #45494e; }
+    .education-image-deck {
+        flex: 0 0 55%;
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .deck-card {
+        position: absolute;
+        width: clamp(220px, 90%, 340px);
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        border: 2px solid white;
+    }
+    body.dark-mode .deck-card {
+        border: 2px solid #45494e;
+    }
     .deck-card:hover { transform: scale(1.05) translateY(-10px) !important; z-index: 10 !important; box-shadow: 0 8px 16px rgba(0,0,0,0.25), 0 12px 40px rgba(0,0,0,0.22); }
     .deck-card.card-1 { z-index: 3; transform: rotate(5deg) translateX(10%) translateY(-5%); }
     .deck-card.card-2 { z-index: 2; transform: rotate(-2deg) translateX(-5%) translateY(0%); }
     .deck-card.card-3 { z-index: 1; transform: rotate(3deg) translateX(-15%) translateY(5%); }
-
-    /* Research & Tools Tiles Content Styling */
-    .section-main-icon {
-        font-size: clamp(3rem, 8vw, 4.5rem); /* Adjusted icon size for tiles */
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-        color: var(--primary-color);
-    }
-    body.dark-mode .section-main-icon {
-        color: var(--dm-primary-color);
-    }
-    .research-content-tile .content-inner-block, 
-    .tools-content-tile .content-inner-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-        align-items: center; 
-        text-align: center; 
-        height: 100%; /* Make inner content block fill tile height for centering */
-    }
-    .research-content-tile h2, .tools-content-tile h2 { color: var(--text-color-headings); margin-bottom: 15px; }
-    body.dark-mode .research-content-tile h2, body.dark-mode .tools-content-tile h2 { color: var(--dm-text-color-headings); }
-    .research-content-tile ul, .tools-content-tile ul {
-        list-style: none; padding-left: 0; margin:0; color: var(--text-color-body);
-        display: inline-block; text-align: left; 
-    }
-    body.dark-mode .research-content-tile ul, body.dark-mode .tools-content-tile ul { color: var(--dm-text-color-body); }
-    .research-content-tile ul li, .tools-content-tile ul li { margin-bottom: 8px; display: flex; align-items: center; }
-    .research-content-tile ul li i, .tools-content-tile ul li i { margin-right: 8px; color: var(--primary-color); }
-    body.dark-mode .research-content-tile ul li i, body.dark-mode .tools-content-tile ul li i { color: var(--dm-primary-color); }
 
     /* Publications Section (Content within #publications-outer-section.portfolio-tile > .publications-layout-section.content-inner-block) */
     .publications-layout-section { /* padding is on parent tile */ }
@@ -184,14 +230,78 @@
     body.dark-mode .publications-layout-section h2 { color: var(--dm-text-color-headings); }
     .publications-section-modern .publications-list-modern { color: var(--text-color-body); margin:0; padding-left:0; list-style:none;}
     body.dark-mode .publications-section-modern .publications-list-modern { color: var(--dm-text-color-body); }
-    .publications-list-modern li { margin-bottom: 20px; padding-left: 35px; position: relative; line-height: 1.6;}
-    .publications-list-modern li .pub-icon { position: absolute; left: 0; top: 4px; font-size: 1.2em; color: var(--primary-color);}
-    body.dark-mode .publications-list-modern li .pub-icon { color: var(--dm-primary-color); }
-    .pub-title { font-weight: 600; color: var(--primary-color); text-decoration: none; }
-    .pub-title.pub-link-hover:hover { text-decoration: underline; }
-    body.dark-mode .pub-title { color: var(--dm-primary-color); }
-    .pub-meta { font-size: 0.9em; display: block; margin-top: 4px;}
-
+    .publications-list-modern li {
+        margin-bottom: 22px;
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+        font-size: 1.08em;
+        line-height: 1.5;
+        color: var(--text-color-body);
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .pub-list-icon {
+        font-size: 1.2em;
+        margin-top: 2px;
+        color: var(--primary-color);
+        flex-shrink: 0;
+    }
+    body.dark-mode .pub-list-icon {
+        color: var(--dm-primary-color);
+    }
+    .publications-list-modern .pub-title,
+    .publications-list-modern .pub-title:visited,
+    .publications-list-modern .pub-title:active {
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    .publications-list-modern .pub-title.pub-link-hover:hover,
+    .publications-list-modern .pub-title.pub-link-hover:focus,
+    .publications-list-modern .pub-title.pub-link-hover:active {
+        text-decoration: underline;
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    body.dark-mode .publications-list-modern .pub-title,
+    body.dark-mode .publications-list-modern .pub-title:visited,
+    body.dark-mode .publications-list-modern .pub-title:active {
+        color: var(--dm-primary-color);
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        font-weight: 700;
+    }
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:hover,
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:focus,
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:active {
+        color: var(--dm-primary-color);
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        font-weight: 700;
+    }
+    .publications-list-modern .pub-meta {
+        font-size: 0.95em;
+        color: var(--text-color-body);
+        display: block;
+        margin-top: 2px;
+    }
+    body.dark-mode .publications-list-modern li,
+    body.dark-mode .publications-list-modern .pub-meta {
+        color: var(--dm-text-color-body);
+    }
+    body.dark-mode .publications-list-modern .pub-title {
+        color: var(--dm-primary-color);
+    }
 
     /* CV & Contact Section (Content within #contact-outer-section.portfolio-tile > .cv-contact-combined-section.content-inner-block) */
     .cv-contact-combined-section { /* padding is on parent tile */ }
@@ -275,6 +385,512 @@
     }
 
     #education-outer-section { background-color: #f8f9fa; }
+
+    /* === TILE LAYOUT FOR ABOUT PAGE (NO GAP, NO RADIUS, FULL WIDTH) === */
+    .about-tile {
+        width: 100vw;
+        margin: 0;
+        background: #f8f9fa;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        position: relative;
+        min-height: 1px;
+        display: block;
+    }
+    body.dark-mode .about-tile {
+        background: #23272e;
+        box-shadow: none;
+    }
+    .about-tile.hero-tile {
+        background: #fff;
+        border-radius: 0;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    body.dark-mode .about-tile.hero-tile {
+        background: #181a1b;
+    }
+    .about-tile.education-tile {
+        background: #f3f6fd;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    body.dark-mode .about-tile.education-tile {
+        background: #232c3a;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .tile-content {
+        width: 75vw;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 0;
+        box-sizing: border-box;
+    }
+    @media (max-width: 900px) {
+        .tile-content { width: 95vw; padding: 32px 0; }
+    }
+    @media (max-width: 700px) {
+        .tile-content { flex-direction: column; text-align: center; padding: 24px 0; }
+        .portfolio-hero-image { margin-right: 0 !important; margin-bottom: 24px; }
+        .education-layout-section { flex-direction: column; }
+        .education-text-content { padding-right: 0 !important; margin-bottom: 24px; }
+    }
+    .portfolio-hero-image {
+        flex: 0 0 40%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    .portfolio-hero img#profile-photo {
+        width: 100%;
+        max-width: 300px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--primary-color);
+    }
+    body.dark-mode .portfolio-hero img#profile-photo {
+        border: 3px solid var(--dm-primary-color);
+    }
+    .portfolio-hero-text {
+        flex: 0 0 55%;
+        text-align: left;
+    }
+    .portfolio-hero-text h1 {
+        margin-bottom: 15px;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+    .portfolio-hero-text p {
+        font-size: clamp(1rem, 1.4vw, 1.15rem);
+        line-height: 1.7;
+    }
+    /* Education tile specifics */
+    .education-layout-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .education-text-content {
+        flex: 0 0 40%;
+        padding-right: 5%;
+    }
+    .education-image-deck {
+        flex: 0 0 55%;
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .deck-card {
+        position: absolute;
+        width: clamp(220px, 90%, 340px);
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        border: 2px solid white;
+    }
+    body.dark-mode .deck-card {
+        border: 2px solid #45494e;
+    }
+    .deck-card.card-1 { z-index: 3; transform: rotate(5deg) translateX(10%) translateY(-5%); }
+    .deck-card.card-2 { z-index: 2; transform: rotate(-2deg) translateX(-5%) translateY(0%); }
+    .deck-card.card-3 { z-index: 1; transform: rotate(3deg) translateX(-15%) translateY(5%); }
+    .about-tile.education-tile .tile-content {
+        padding-left: 3vw;
+    }
+    @media (max-width: 900px) {
+        .about-tile.education-tile .tile-content { padding-left: 2vw; }
+    }
+    @media (max-width: 700px) {
+        .about-tile.education-tile .tile-content { padding-left: 0; }
+    }
+    .education-item-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    .education-degree {
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 2px;
+        color: var(--text-color-headings);
+    }
+    .education-course {
+        font-size: 1em;
+        margin-bottom: 2px;
+        color: var(--text-color-body);
+    }
+    .education-university {
+        font-style: italic;
+        font-size: 0.95em;
+        color: var(--text-color-body);
+        margin-bottom: 0;
+    }
+    body.dark-mode .education-degree {
+        color: var(--dm-text-color-headings);
+    }
+    body.dark-mode .education-course, body.dark-mode .education-university {
+        color: var(--dm-text-color-body);
+    }
+    .research-tools-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+    .research-tools-content ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+        font-size: 1.08em;
+    }
+    .list-icon {
+        font-size: 1.2em;
+        margin-right: 14px;
+        min-width: 1.5em;
+        text-align: center;
+        color: var(--primary-color);
+    }
+    .tools-tile .list-icon {
+        color: #e6b800;
+    }
+    body.dark-mode .list-icon {
+        color: var(--dm-primary-color);
+    }
+    body.dark-mode .tools-tile .list-icon {
+        color: #ffe066;
+    }
+
+    /* --- Animated Icon Effects --- */
+    .icon-title-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    /* Gear spin on hover (icon or title) */
+    .tools-tile .icon-title-wrap:hover .research-tools-icon.fa-cogs,
+    .tools-tile .icon-title-wrap:focus .research-tools-icon.fa-cogs {
+        animation: spin 1.2s linear infinite;
+    }
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+    /* Flask boiling effect on hover (icon or title) */
+    .research-tile .icon-title-wrap:hover .research-tools-icon.fa-flask,
+    .research-tile .icon-title-wrap:focus .research-tools-icon.fa-flask {
+        animation: boil-shake 0.5s infinite alternate;
+    }
+    @keyframes boil-shake {
+        0% { transform: translateY(0) scale(1); }
+        30% { transform: translateY(-2px) scale(1.04) rotate(-2deg); }
+        60% { transform: translateY(2px) scale(0.98) rotate(2deg); }
+        100% { transform: translateY(0) scale(1); }
+    }
+    /* Bubbles for flask */
+    .research-tile .icon-title-wrap {
+        overflow: visible;
+    }
+    .research-tile .icon-title-wrap .flask-bubbles {
+        position: absolute;
+        left: 50%;
+        /* Adjust bottom so bubbles start at the mouth of the flask */
+        bottom: 1.2em;
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 2;
+        width: 2.2em;
+        height: 2.2em;
+        display: none;
+    }
+    .research-tile .icon-title-wrap:hover .flask-bubbles,
+    .research-tile .icon-title-wrap:focus .flask-bubbles {
+        display: block;
+    }
+    .flask-bubble {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        border-radius: 50%;
+        background: #7fd7e7;
+        opacity: 0.7;
+        animation: bubble-up 1.1s linear infinite;
+        pointer-events: none;
+    }
+    .flask-bubble.b1 {
+        width: 0.5em; height: 0.5em;
+        margin-left: -0.7em;
+        animation-delay: 0s;
+    }
+    .flask-bubble.b2 {
+        width: 0.35em; height: 0.35em;
+        margin-left: 0.1em;
+        animation-delay: 0.3s;
+    }
+    .flask-bubble.b3 {
+        width: 0.25em; height: 0.25em;
+        margin-left: 0.6em;
+        animation-delay: 0.6s;
+    }
+    @keyframes bubble-up {
+        0% { bottom: 0; opacity: 0.7; }
+        60% { opacity: 1; }
+        100% { bottom: 2em; opacity: 0; }
+    }
+
+    /* Publications tile: clean list, no card/box for each item */
+    .about-tile.publications-tile {
+        background: #fde8f0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    body.dark-mode .about-tile.publications-tile {
+        background: #452a30;
+    }
+    .publications-list-modern {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .publications-list-modern li {
+        margin-bottom: 22px;
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+        font-size: 1.08em;
+        line-height: 1.5;
+        color: var(--text-color-body);
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    .pub-list-icon {
+        font-size: 1.2em;
+        margin-top: 2px;
+        color: var(--primary-color);
+        flex-shrink: 0;
+    }
+    body.dark-mode .pub-list-icon {
+        color: var(--dm-primary-color);
+    }
+    .publications-list-modern .pub-title,
+    .publications-list-modern .pub-title:visited,
+    .publications-list-modern .pub-title:active {
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    .publications-list-modern .pub-title.pub-link-hover:hover,
+    .publications-list-modern .pub-title.pub-link-hover:focus,
+    .publications-list-modern .pub-title.pub-link-hover:active {
+        text-decoration: underline;
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    body.dark-mode .publications-list-modern .pub-title,
+    body.dark-mode .publications-list-modern .pub-title:visited,
+    body.dark-mode .publications-list-modern .pub-title:active {
+        color: var(--dm-primary-color);
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        font-weight: 700;
+    }
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:hover,
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:focus,
+    body.dark-mode .publications-list-modern .pub-title.pub-link-hover:active {
+        color: var(--dm-primary-color);
+        background: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        font-weight: 700;
+    }
+    .publications-list-modern .pub-meta {
+        font-size: 0.95em;
+        color: var(--text-color-body);
+        display: block;
+        margin-top: 2px;
+    }
+    body.dark-mode .publications-list-modern li,
+    body.dark-mode .publications-list-modern .pub-meta {
+        color: var(--dm-text-color-body);
+    }
+    body.dark-mode .publications-list-modern .pub-title {
+        color: var(--dm-primary-color);
+    }
+
+    /* --- OVERRIDE: Remove background and shadow from publication list items (fixes gray hover) --- */
+    .publications-list-modern li,
+    .publications-list-modern li:hover,
+    body.dark-mode .publications-list-modern li,
+    body.dark-mode .publications-list-modern li:hover {
+        background: none !important;
+        box-shadow: none !important;
+        color: inherit !important;
+    }
+
+    /* --- Contact Tiles Row Layout --- */
+    .contact-tile-row {
+      display: flex;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      gap: 0;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .contact-tile {
+      flex: 1 1 0;
+      min-width: 260px;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      background: #f8f9fa;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+    .contact-tile-content {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0;
+      box-sizing: border-box;
+    }
+    @media (max-width: 900px) {
+      .contact-tile-content { padding: 32px 0; }
+    }
+    @media (max-width: 700px) {
+      .contact-tile-row { flex-direction: column; }
+      .contact-tile { width: 100vw; }
+      .contact-tile-content { padding: 24px 0; }
+    }
+
+    /* --- Remove card appearance from contact tiles --- */
+    .contact-tile .contact-box,
+    .contact-tile .message-form {
+      background: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 0 18px 0 !important;
+    }
+
+    /* Contact tiles backgrounds to match research/tools tiles */
+    .about-tile.contact-tile-1 { background: #e6f7f4; }
+    .about-tile.contact-tile-2 { background: #fff9e6; }
+    .about-tile.contact-tile-3 { background: #e6f7f4; }
+    body.dark-mode .about-tile.contact-tile-1 { background: #273f3f; }
+    body.dark-mode .about-tile.contact-tile-2 { background: #4d4327; }
+    body.dark-mode .about-tile.contact-tile-3 { background: #273f3f; }
+    .contact-tile-1 .tile-content, .contact-tile-2 .tile-content, .contact-tile-3 .tile-content {
+      width: 75%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 0;
+    }
+    @media (max-width: 900px) {
+      .contact-tile-1 .tile-content, .contact-tile-2 .tile-content, .contact-tile-3 .tile-content { width: 90%; padding: 32px 0; }
+    }
+    @media (max-width: 700px) {
+      .contact-tile-row { flex-direction: column; }
+      .about-tile.contact-tile-1, .about-tile.contact-tile-2, .about-tile.contact-tile-3 { width: 100vw; }
+      .contact-tile-1 .tile-content, .contact-tile-2 .tile-content, .contact-tile-3 .tile-content { width: 95%; padding: 24px 0; }
+    }
+
+    /* Remove card style from send me a message form and its elements */
+    .contact-tile-3 .message-form,
+    .contact-tile-3 .message-form input,
+    .contact-tile-3 .message-form textarea,
+    .contact-tile-3 .message-form button {
+      background: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+    .contact-tile-3 .message-form {
+      padding: 0 !important;
+      margin-top: 0;
+      border: none !important;
+    }
+    .contact-tile-3 .message-form input,
+    .contact-tile-3 .message-form textarea {
+      border: 1px solid #bbb !important;
+      padding: 7px 10px;
+      font-size: 1em;
+      font-family: inherit;
+      margin-bottom: 10px;
+    }
+    .contact-tile-3 .message-form button {
+      border: 1px solid #23272a !important;
+      color: #23272a;
+      font-weight: 600;
+      padding: 8px 0;
+      margin-top: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .contact-tile-3 .message-form button:hover {
+      background: #23272a !important;
+      color: #fff !important;
+    }
+
+    /* Reduce vertical whitespace in contact tiles */
+    .contact-tile-1 .tile-content,
+    .contact-tile-2 .tile-content,
+    .contact-tile-3 .tile-content {
+      padding-top: 22px !important;
+      padding-bottom: 22px !important;
+    }
+    .contact-tile-1 .cv-button-container-section5 {
+      margin: 16px 0 0 0 !important;
+    }
+    .contact-tile-1 .contact-links {
+      margin: 10px 0 0 0 !important;
+    }
+    .contact-tile-3 .message-form {
+      margin-top: 12px !important;
+    }
+    .contact-tile-2 .address-block {
+      margin-bottom: 8px !important;
+    }
+    .contact-tile-2 .map-block iframe {
+      height: 140px !important;
+    }
+    .contact-tile-1 h2, .contact-tile-2 h2, .contact-tile-3 h3 {
+      margin-bottom: 10px !important;
+    }
   </style>
 </head>
 
@@ -284,155 +900,195 @@
   <div class="about-page-wrapper">
     <div class="about-page-content-container">
 
-      <!-- Section 1: Hero Tile -->
-      <div class="portfolio-tile portfolio-section" id="hero-outer-section" data-section-name="hero">
-        <!-- Content of hero is directly structured here due to its unique layout -->
-        <div class="portfolio-hero-image">
-          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
-        </div>
-        <div class="portfolio-hero-text">
-          <h1>Bharat Surya Chamarthi</h1>
-          <p class="about-desc">
-            I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
-            My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
-            enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
-            use of decision making tools and optimiation algorithms to design these systems.
-          </p>
-        </div>
-      </div>
-
-      <!-- Section 2: Education Tile -->
-      <div class="portfolio-tile portfolio-section" id="education-outer-section" data-section-name="education">
-        <div class="education-layout-section content-inner-block">
-          <div class="education-text-content">
-            <h2>Education</h2>
-            <ul>
-              <li>
-                <i class="fas fa-university"></i>
-                <div class="education-item-details">
-                  <span class="education-degree"><strong>M.Tech</strong></span>
-                  <span class="education-course">Mechanical Engineering (Specialization in Cryogenics)</span>
-                  <span class="education-university">NIT Rourkela</span>
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-graduation-cap"></i>
-                <div class="education-item-details">
-                  <span class="education-degree"><strong>B.Tech</strong></span>
-                  <span class="education-course">Mechanical Engineering</span>
-                  <span class="education-university">Raghu Engineering College, Visakhapatnam</span>
-                </div>
-              </li>
-            </ul>
+      <!-- HERO TILE -->
+      <div class="about-tile hero-tile">
+        <div class="tile-content portfolio-hero">
+          <div class="portfolio-hero-image">
+            <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
           </div>
-          <div class="education-image-deck">
-            <img src="assets/img/iitkgp.jpg" alt="IIT Kharagpur" class="deck-card card-1">
-            <img src="assets/img/nitrkl.jpg" alt="NIT Rourkela" class="deck-card card-2">
-            <img src="assets/img/raghu.jpg" alt="Raghu Engineering College" class="deck-card card-3">
+          <div class="portfolio-hero-text">
+            <h1>Bharat Surya Chamarthi</h1>
+            <p class="about-desc">
+              I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
+              My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
+              enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
+              use of decision making tools and optimiation algorithms to design these systems.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Section 3: Research & Tools Row with Two Tiles -->
-      <div class="tile-row portfolio-section" id="research-tools-tile-row" data-section-name="research-tools-row">
-        <div class="portfolio-tile research-content-tile" id="research-tile" data-section-name="research">
-          <div class="content-inner-block">
-            <i class="fas fa-flask section-main-icon"></i>
-            <h2>Research Interests</h2>
+      <!-- EDUCATION TILE -->
+      <div class="about-tile education-tile">
+        <div class="tile-content">
+          <div class="education-layout-section">
+            <div class="education-text-content">
+              <h2>Education</h2>
+              <ul>
+                <li>
+                  <i class="fas fa-university"></i>
+                  <div class="education-item-details">
+                    <span class="education-degree">M.Tech</span>
+                    <span class="education-course">Mechanical Engineering (Specialization in Cryogenics)</span>
+                    <span class="education-university">NIT Rourkela</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <div class="education-item-details">
+                    <span class="education-degree">B.Tech</span>
+                    <span class="education-course">Mechanical Engineering</span>
+                    <span class="education-university">Raghu Engineering College, Visakhapatnam</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="education-image-deck">
+              <img src="assets/img/iitkgp.jpg" alt="IIT Kharagpur" class="deck-card card-1">
+              <img src="assets/img/nitrkl.jpg" alt="NIT Rourkela" class="deck-card card-2">
+              <img src="assets/img/raghu.jpg" alt="Raghu Engineering College" class="deck-card card-3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH & TOOLS TILE ROW -->
+      <div class="tile-row">
+        <div class="about-tile research-tile">
+          <div class="tile-content research-tools-content">
+            <div class="icon-title-wrap" tabindex="0">
+              <i class="fas fa-flask research-tools-icon" aria-hidden="true"></i>
+              <div class="flask-bubbles" aria-hidden="true">
+                <span class="flask-bubble b1"></span>
+                <span class="flask-bubble b2"></span>
+                <span class="flask-bubble b3"></span>
+              </div>
+              <h2>Research Interests</h2>
+            </div>
             <ul>
-              <li><i class="fas fa-flask"></i> Cryogenic energy recovery</li>
-              <li><i class="fas fa-cogs"></i> Enegry systems optimization</li>
-              <li><i class="fas fa-recycle"></i> Waste heat recovery</li>
+              <li><i class="fas fa-flask list-icon"></i><span>Cryogenic energy recovery</span></li>
+              <li><i class="fas fa-cogs list-icon"></i><span>Energy systems optimization</span></li>
+              <li><i class="fas fa-recycle list-icon"></i><span>Waste heat recovery</span></li>
             </ul>
           </div>
         </div>
-        <div class="portfolio-tile tools-content-tile" id="tools-tile" data-section-name="tools">
-          <div class="content-inner-block">
-            <i class="fas fa-cogs section-main-icon"></i>
-            <h2>Tools I use</h2>
+        <div class="about-tile tools-tile">
+          <div class="tile-content research-tools-content">
+            <div class="icon-title-wrap" tabindex="0">
+              <i class="fas fa-cogs research-tools-icon" aria-hidden="true"></i>
+              <h2>Tools I use</h2>
+            </div>
             <ul>
-              <li><i class="fas fa-code"></i> MATLAB, Python</li>
-              <li><i class="fas fa-paint-brush"></i> HTML, CSS</li>
-              <li><i class="fas fa-tools"></i> FLUENT, SOLIDWORKS, AUTOCAD</li>
+              <li><i class="fas fa-code list-icon"></i><span>MATLAB, Python</span></li>
+              <li><i class="fas fa-paint-brush list-icon"></i><span>HTML, CSS</span></li>
+              <li><i class="fas fa-tools list-icon"></i><span>FLUENT, SOLIDWORKS, AUTOCAD</span></li>
             </ul>
           </div>
         </div>
       </div>
       
-      <!-- Section 4: Publications Tile -->
-      <div class="portfolio-tile portfolio-section" id="publications-outer-section" data-section-name="publications">
-        <div class="publications-layout-section publications-section-modern content-inner-block">
-          <h2>Recent Publications</h2>
-          <ul class="publications-list-modern">
-            <li>
-              <i class="fas fa-file-alt pub-icon"></i>
-              <a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a><br>
-              <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span>
-            </li>
-            <li>
-              <i class="fas fa-file-alt pub-icon"></i>
-              <a href="https://dx.doi.org/10.2139/ssrn.5205398" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</span></a><br>
-              <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span>
-            </li>
-            <li> 
-              <i class="fas fa-file-alt pub-icon"></i>
-              <a href="https://inis.iaea.org/records/avqgm-qvy37 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</span></a><br>
-              <span class="pub-meta">Indian Journal of Cryogenics, 2023</span>
-            </li>
-            <li>
-              <i class="fas fa-file-alt pub-icon"></i>
-              <span class="pub-title">Artificial intelligence-based prediction of effective thermal conductivity of cryogenic insulations</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
-            </li>
-            <li>
-              <i class="fas fa-file-alt pub-icon"></i>
-              <span class="pub-title">Numerical studies on thermal behavior of packed bed cryogenic energy storage system during standby period</span><br>
-              <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
-            </li>
-          </ul>
+      <!-- PUBLICATIONS TILE -->
+      <div class="about-tile publications-tile">
+        <div class="tile-content">
+          <div class="publications-layout-section publications-section-modern" style="width:100%;">
+            <h2>Recent Publications</h2>
+            <ul class="publications-list-modern">
+              <li>
+                <i class="fas fa-file-alt pub-list-icon"></i>
+                <div>
+                  <a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a>
+                  <span class="pub-meta">ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-file-alt pub-list-icon"></i>
+                <div>
+                  <a href="https://dx.doi.org/10.2139/ssrn.5205398" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</a>
+                  <span class="pub-meta">Article in Preprint, Presented at SDCEE 2024, Thapar University</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-file-alt pub-list-icon"></i>
+                <div>
+                  <a href="https://inis.iaea.org/records/avqgm-qvy37 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</a>
+                  <span class="pub-meta">Indian Journal of Cryogenics, 2023</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-file-alt pub-list-icon"></i>
+                <div>
+                  <span class="pub-title">Artificial intelligence-based prediction of effective thermal conductivity of cryogenic insulations</span>
+                  <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-file-alt pub-list-icon"></i>
+                <div>
+                  <span class="pub-title">Numerical studies on thermal behavior of packed bed cryogenic energy storage system during standby period</span>
+                  <span class="pub-meta">Proceedings of the 28th National Symposium on Cryogenics, 2022</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Section 5: CV & Contact Tile -->
-      <div class="portfolio-tile portfolio-section" id="contact-outer-section" data-section-name="cv-contact">
-        <div class="cv-contact-combined-section content-inner-block">
-          <div class="cv-button-container-section5">
-            <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
+      <!-- Section 5: Contact Tiles Row (Three Tiles) -->
+      <div class="tile-row contact-tile-row" style="margin-bottom: 40px;">
+        <!-- Tile 1: Contact Info, Social Links, CV -->
+        <div class="about-tile contact-tile-1">
+          <div class="tile-content research-tools-content">
+            <h2>Contact</h2>
+            <div class="contact-emails-row">
+              <a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a>
+              <span class="email-vbar"></span>
+              <a href="mailto:bharatsurya06@kgian.iitkgp.ac.in">bharatsurya06@kgpian.iitkgp.ac.in</a>
+            </div>
+            <div class="contact-links connect-row" style="margin:18px 0 0 0; flex-wrap: wrap; flex-direction: column; align-items: center;">
+              <div class="connect-row" style="justify-content: center; gap: 18px;">
+                <a href="https://github.com" target="_blank" title="GitHub" class="contact-icon"><i class="fab fa-github"></i></a>
+                <a href="https://researchgate.net" target="_blank" title="ResearchGate" class="contact-icon"><i class="fas fa-flask"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+              </div>
+              <div class="connect-row" style="justify-content: center; gap: 18px; margin-top: 8px;">
+                <a href="https://facebook.com" target="_blank" title="Facebook" class="contact-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram" class="contact-icon"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="cv-button-container-section5" style="margin: 28px 0 0 0;">
+              <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
+            </div>
           </div>
-          <div class="contact-grid-section5 contact-grid">
-              <div class="contact-box">
-                <h2>Contact Email</h2>
-                <p><a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a></p>
-                <p><a href="mailto:bharatsurya06@kgian.iitkgp.ac.in">bharatsurya06@kgian.iitkgp.ac.in</a></p>
-                <div class="contact-links connect-row" style="margin-top:15px;">
-                  <a href="https://github.com" target="_blank" title="GitHub" class="contact-icon"><i class="fab fa-github"></i></a>
-                  <a href="https://researchgate.net" target="_blank" title="ResearchGate" class="contact-icon"><i class="fas fa-flask"></i></a>
-                  <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="contact-icon"><i class="fab fa-linkedin"></i></a>
-                  <span class="connect-vbar"></span>
-                  <a href="https://facebook.com" target="_blank" title="Facebook" class="contact-icon"><i class="fab fa-facebook"></i></a>
-                  <a href="https://instagram.com" target="_blank" title="Instagram" class="contact-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-              <div class="contact-box">
-                <h2>Address</h2>
-                <p><strong>Process Intensification Labaratory</strong><br>
-                <strong>Cryogenic Engineering Centre</strong><br>
-                Indian Institute of Technology Kharagpur<br>
-                Kharagpur, West Bengal 721302, India</p>
-                <div style="margin-top:10px; border-radius:10px; overflow:hidden; /* box-shadow:0 2px 8px rgba(0,0,0,0.08); Removed shadow */">
-                  <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="220" style="border:0; min-width:220px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div>
-              <form class="message-form" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST">
-                <h3>Send me a message</h3>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
-                <button type="submit">Send</button>
-                <div id="form-status"></div>
-              </form>
+        </div>
+        <!-- Tile 2: Address and Map (stacked vertically) -->
+        <div class="about-tile contact-tile-2">
+          <div class="tile-content research-tools-content">
+            <h2>Address</h2>
+            <div class="address-block" style="margin-bottom:14px;">
+              <p style="margin-bottom:0;">Process Intensification Labaratory<br>
+                Cryogenic Engineering Centre, IIT Kharagpur, 721302<br>
+                
+                 </p>
+            </div>
+            <div class="map-block">
+              <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="180" style="border:0; min-width:180px; max-width:340px; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Tile 3: Send me a message -->
+        <div class="about-tile contact-tile-3">
+          <div class="tile-content research-tools-content">
+            <form class="message-form" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST" style="width:100%; max-width:340px; margin:0 auto;">
+              <h3>Send me a message</h3>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+              <button type="submit">Send</button>
+              <div id="form-status"></div>
+            </form>
           </div>
         </div>
       </div>
+      <!-- End Contact Tiles Row -->
     </div>
   </div>
 
