@@ -10,7 +10,7 @@
   <style>
     body {
         margin: 0;
-        padding-top: 60px; /* Adjust if navbar height changes */
+        padding-top: 60px; 
     }
     .about-page-wrapper {
         background-color: transparent !important;
@@ -21,90 +21,93 @@
     .about-page-content-container {
         display: flex;
         flex-direction: column;
-        align-items: stretch; /* Sections will stretch full width */
+        align-items: center; /* Center tiles/rows */
         margin: 0 auto;
-        background-color: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
         width: 100%; 
-    }
-
-    /* Outer Section Styling */
-    .full-vh-section {
-        min-height: 90vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 2vw; /* Vertical padding, responsive horizontal */
+        padding: 0 2vw; /* Padding for the overall container */
         box-sizing: border-box;
-        position: relative; /* For potential absolute positioned elements inside */
     }
 
-    /* .portfolio-section is now primarily for scroll animation targeting on full-vh-section */
-    .full-vh-section.portfolio-section { /* Added .full-vh-section here */
+    /* Base Tile Styling */
+    .portfolio-tile {
+        width: 75vw;
+        max-width: 1200px;
+        margin: 20px 0; /* Vertical spacing between tiles/rows */
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        /* Scroll animation properties - .portfolio-section will be added to these tiles */
+    }
+    body.dark-mode .portfolio-tile {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Row container for side-by-side tiles */
+    .tile-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 75vw;
+        max-width: 1200px;
+        margin: 20px 0;
+    }
+    .tile-row .portfolio-tile { /* Tiles within a row */
+        flex: 1; /* Distribute space equally */
+        margin: 0; /* No margin for tiles inside a row, gap handles it */
+        width: auto; /* Override base tile width */
+        max-width: none; /* Override base tile max-width */
+    }
+
+    /* Scroll animation class */
+    .portfolio-section { 
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    .full-vh-section.portfolio-section.visible { /* Added .full-vh-section here */
+    .portfolio-section.visible { 
       opacity: 1;
       transform: translateY(0);
     }
 
-    #hero-outer-section { /* Hero is visible by default, doesn't need .portfolio-section for animation */
-        opacity: 1;
+    /* Specific Tile Background Colors & Styles */
+    #hero-outer-section { /* This is now .portfolio-tile as well */
+        background-color: transparent;
+        box-shadow: none;
+        padding: 2vw; /* Original hero padding */
+         opacity: 1; /* Hero visible by default */
         transform: translateY(0);
-        background-color: transparent; 
-        min-height: 75vh; /* Hero can be a bit shorter */
     }
+    body.dark-mode #hero-outer-section {box-shadow: none;}
 
-    /* Background Colors and distinct styling for Outer Sections */
-    #education-outer-section, 
-    #research-tools-outer-section, 
-    #publications-outer-section, 
-    #contact-outer-section {
-        margin: 20px 0; /* Add some space between colored sections */
-         /* Removed border-radius and box-shadow from here to apply to inner-content if needed or keep clean */
-    }
+    #education-outer-section { background-color: #e8f0fe; } 
+    body.dark-mode #education-outer-section { background-color: #2a3045; } 
 
-    #research-tools-outer-section {
-        margin-top: 0; /* Remove top margin to make it continuous with the previous section */
-    }
+    /* Research & Tools Tiles - now separate */
+    #research-content-tile { background-color: #e6f7f4; }
+    body.dark-mode #research-content-tile { background-color: #273f3f; }
 
-    #education-outer-section { background-color: #f8f9fa; }
-    body.dark-mode #education-outer-section { background-color: #2c2f33; }
+    #tools-content-tile { background-color: #fff9e6; }
+    body.dark-mode #tools-content-tile { background-color: #4d4327; }
 
-    #research-tools-outer-section { background-color: #eef7ff; } 
-    body.dark-mode #research-tools-outer-section { background-color: #252c3a; } 
+    #publications-outer-section { background-color: #fde8f0; } 
+    body.dark-mode #publications-outer-section { background-color: #452a30; } 
 
-    #publications-outer-section { background-color: #f8f9fa; } 
-    body.dark-mode #publications-outer-section { background-color: #2c2f33; } 
-
-    #contact-outer-section { background-color: #f0f7f0; } 
-    body.dark-mode #contact-outer-section { background-color: #283a28; } 
+    #contact-outer-section { background-color: #f0eefc; } 
+    body.dark-mode #contact-outer-section { background-color: #302a45; } 
 
 
-    /* Inner Content Block Styling */
+    /* Inner Content Block Styling (useful for padding within tiles) */
     .content-inner-block {
-        width: 75vw; 
-        max-width: 1200px; 
-        padding: 2vw; /* Default padding for inner blocks, can be overridden */
+        /* padding: 2vw; /* Default padding, can be overridden. Base tile padding might be enough */
         box-sizing: border-box;
-        background-color: transparent; /* Inner blocks are transparent */
-        /* Styles like border-radius or box-shadow can be applied here if desired for a card effect */
-        /* For example, if you want shaded sections to have rounded content areas: */
-        /* #education-outer-section .content-inner-block, etc. { border-radius: 12px; box-shadow: ... } */
     }
     
-    /* Hero Section (Inner Content) */
-    .portfolio-hero { /* This class is on the content-inner-block for the hero */
+    /* Hero Section (Content lives directly in #hero-outer-section.portfolio-tile) */
+    #hero-outer-section {
         display: flex; 
         flex-direction: row; 
         align-items: center; 
-        /* padding: 2vw; /* Already on .content-inner-block */
     }
     .portfolio-hero-image { flex: 0 0 40%; margin-right: 5%; align-self: center; }
     .portfolio-hero img#profile-photo { width: 100%; aspect-ratio: 1 / 1; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color); max-width: 300px; }
@@ -116,12 +119,12 @@
     body.dark-mode .portfolio-hero-text p { color: var(--dm-text-color-body); }
 
 
-    /* Education Section (Inner Content) */
-    .education-layout-section { /* This class is on the content-inner-block */
+    /* Education Section (Content within #education-outer-section.portfolio-tile > .education-layout-section.content-inner-block) */
+    .education-layout-section { 
         display: flex;
         flex-direction: row;
         align-items: center; 
-        padding: 40px 3vw; 
+        /* padding: 40px 3vw; /* Padding is on parent tile */
     }
     .education-text-content { flex-basis: 40%; padding-right: 5%; }
     .education-text-content h2 { margin-bottom: 25px; color: var(--text-color-headings); }
@@ -144,170 +147,117 @@
     .deck-card.card-2 { z-index: 2; transform: rotate(-2deg) translateX(-5%) translateY(0%); }
     .deck-card.card-3 { z-index: 1; transform: rotate(3deg) translateX(-15%) translateY(5%); }
 
-    /* Research & Tools Section (Inner Content) */
+    /* Research & Tools Tiles Content Styling */
     .section-main-icon {
-        font-size: clamp(5rem, 12vw, 7rem); /* Large responsive icon */
+        font-size: clamp(3rem, 8vw, 4.5rem); /* Adjusted icon size for tiles */
         display: block;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: var(--primary-color);
     }
     body.dark-mode .section-main-icon {
         color: var(--dm-primary-color);
     }
-
-    .research-tools-combined-section { /* This class is on the content-inner-block */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around; /* Changed from space-between for better centering feel */
-        align-items: stretch; /* Stretch columns to fill height if content differs */
-        gap: 40px; 
-        padding: 30px 3vw; 
-    }
-    .research-column, .tools-column {
-        flex-basis: calc(45% - 20px); /* Slightly adjust basis if space-around is used */
+    .research-content-tile .content-inner-block, 
+    .tools-content-tile .content-inner-block {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Vertically center content in column */
-        align-items: center; /* Horizontally center content in column */
-        text-align: center; /* Center text for h2 and ul */
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        height: 100%; /* Make inner content block fill tile height for centering */
     }
-    .research-tools-combined-section h2 { color: var(--text-color-headings); margin-bottom: 20px; }
-    body.dark-mode .research-tools-combined-section h2 { color: var(--dm-text-color-headings); }
-    .research-tools-combined-section ul {
-        list-style: none; 
-        padding-left: 0; 
-        margin:0; 
-        color: var(--text-color-body);
-        display: inline-block; /* Allow ul to be centered */
-        text-align: left; /* Keep list items left-aligned */
+    .research-content-tile h2, .tools-content-tile h2 { color: var(--text-color-headings); margin-bottom: 15px; }
+    body.dark-mode .research-content-tile h2, body.dark-mode .tools-content-tile h2 { color: var(--dm-text-color-headings); }
+    .research-content-tile ul, .tools-content-tile ul {
+        list-style: none; padding-left: 0; margin:0; color: var(--text-color-body);
+        display: inline-block; text-align: left; 
     }
-    body.dark-mode .research-tools-combined-section ul { color: var(--dm-text-color-body); }
-    .research-tools-combined-section ul li { margin-bottom: 10px; display: flex; align-items: center; }
-    .research-tools-combined-section ul li i { margin-right: 10px; color: var(--primary-color); }
-    body.dark-mode .research-tools-combined-section ul li i { color: var(--dm-primary-color); }
+    body.dark-mode .research-content-tile ul, body.dark-mode .tools-content-tile ul { color: var(--dm-text-color-body); }
+    .research-content-tile ul li, .tools-content-tile ul li { margin-bottom: 8px; display: flex; align-items: center; }
+    .research-content-tile ul li i, .tools-content-tile ul li i { margin-right: 8px; color: var(--primary-color); }
+    body.dark-mode .research-content-tile ul li i, body.dark-mode .tools-content-tile ul li i { color: var(--dm-primary-color); }
 
-    /* Publications Section (Inner Content) */
-    .publications-layout-section { /* This class is on the content-inner-block */
-        padding: 40px 3vw; 
-    }
+    /* Publications Section (Content within #publications-outer-section.portfolio-tile > .publications-layout-section.content-inner-block) */
+    .publications-layout-section { /* padding is on parent tile */ }
     .publications-layout-section h2 { color: var(--text-color-headings); margin-bottom: 25px; }
     body.dark-mode .publications-layout-section h2 { color: var(--dm-text-color-headings); }
-    .publications-section-modern .publications-list-modern { 
-        color: var(--text-color-body); 
-        margin:0; 
-        padding-left:0; 
-        list-style:none;
-    }
+    .publications-section-modern .publications-list-modern { color: var(--text-color-body); margin:0; padding-left:0; list-style:none;}
     body.dark-mode .publications-section-modern .publications-list-modern { color: var(--dm-text-color-body); }
-     .publications-list-modern li {
-        margin-bottom: 20px; /* Increased spacing */
-        padding-left: 35px; /* Space for the icon */
-        position: relative;
-        line-height: 1.6;
-    }
-    .publications-list-modern li .pub-icon {
-        position: absolute;
-        left: 0;
-        top: 4px; /* Adjust for vertical alignment with first line */
-        font-size: 1.2em;
-        color: var(--primary-color);
-    }
-    body.dark-mode .publications-list-modern li .pub-icon {
-        color: var(--dm-primary-color);
-    }
-    .pub-title { 
-        font-weight: 600; 
-        color: var(--primary-color); 
-        text-decoration: none; /* Ensuring links are not underlined by default if not desired */
-    }
-    .pub-title.pub-link-hover:hover {
-        text-decoration: underline; /* Underline on hover for links */
-    }
+    .publications-list-modern li { margin-bottom: 20px; padding-left: 35px; position: relative; line-height: 1.6;}
+    .publications-list-modern li .pub-icon { position: absolute; left: 0; top: 4px; font-size: 1.2em; color: var(--primary-color);}
+    body.dark-mode .publications-list-modern li .pub-icon { color: var(--dm-primary-color); }
+    .pub-title { font-weight: 600; color: var(--primary-color); text-decoration: none; }
+    .pub-title.pub-link-hover:hover { text-decoration: underline; }
     body.dark-mode .pub-title { color: var(--dm-primary-color); }
-    .pub-meta { 
-        font-size: 0.9em; 
-        display: block; /* Ensure it takes its own line if not already */
-        margin-top: 4px;
-    }
+    .pub-meta { font-size: 0.9em; display: block; margin-top: 4px;}
 
 
-    /* CV & Contact Section (Inner Content) */
-    .cv-contact-combined-section { /* This class is on the content-inner-block */
-        padding: 30px 3vw; 
-    }
+    /* CV & Contact Section (Content within #contact-outer-section.portfolio-tile > .cv-contact-combined-section.content-inner-block) */
+    .cv-contact-combined-section { /* padding is on parent tile */ }
     .cv-contact-combined-section h2, .cv-contact-combined-section h3 { color: var(--text-color-headings); margin-bottom: 20px; }
     body.dark-mode .cv-contact-combined-section h2, body.dark-mode .cv-contact-combined-section h3 { color: var(--dm-text-color-headings); }
     .cv-button-container-section5 { text-align: center; margin-bottom: 40px; }
-    .contact-grid { /* Already defined, ensure it works well within new structure */
-        color: var(--text-color-body);
-    }
+    .contact-grid { color: var(--text-color-body); }
     body.dark-mode .contact-grid { color: var(--dm-text-color-body); }
     .contact-grid p a { color: var(--primary-color); text-decoration: none; }
     .contact-grid p a:hover { text-decoration: underline; }
     body.dark-mode .contact-grid p a { color: var(--dm-primary-color); }
-    .contact-box {
-      /* Ensuring no card-like styles are here */
-      padding: 10px; /* Some padding for internal spacing if needed */
-    }
+    .contact-box { padding: 10px; }
 
-
-    /* General paragraph styling (if any specific needed beyond body) */
-    .content-inner-block p {
+    /* General paragraph styling for content within .content-inner-block if not specifically styled */
+    .content-inner-block p:not(.about-desc) { /* Exclude hero description if it has unique styling */
         font-size: clamp(1rem, 1.4vw, 1.15rem); 
         line-height: 1.7;
         color: var(--text-color-body);
     }
-    body.dark-mode .content-inner-block p {
+    body.dark-mode .content-inner-block p:not(.about-desc) {
         color: var(--dm-text-color-body);
     }
 
     /* Responsive adjustments */
     @media (max-width: 992px) { 
-        .content-inner-block {
-             width: 85vw; /* Slightly wider content column on medium screens */
+        .portfolio-tile, .tile-row {
+             width: 85vw; 
         }
         .deck-card { width: clamp(140px, 70%, 240px); }
         .education-image-deck { min-height: 280px; }
     }
 
     @media (max-width: 768px) {
-        .full-vh-section {
-            min-height: 0; /* Allow sections to be naturally sized on mobile */
-            padding: 30px 5vw; 
-        }
-        .content-inner-block,
-        .portfolio-hero, 
-        .education-layout-section, 
-        .research-tools-combined-section, 
-        .publications-layout-section,
-        .cv-contact-combined-section {
+        .portfolio-tile, .tile-row {
             width: 90vw; 
+            padding: 20px;
+        }
+        .tile-row {
+            flex-direction: column; /* Stack tiles in a row on mobile */
+            gap: 20px; /* Gap remains for stacked tiles */
+        }
+        .tile-row .portfolio-tile { /* Tiles in a stacked row take full available width */
+            width: 100%; 
+        }
+
+        #hero-outer-section { 
             flex-direction: column; 
             align-items: center; 
-            padding: 20px; 
+            text-align: center;
         }
         .portfolio-hero-image { margin-right: 0; margin-bottom: 20px; width: 50%; max-width: 200px;}
         .portfolio-hero-text { text-align: center; }
 
-        .education-layout-section { text-align: center; }
-        .education-text-content { padding-right: 0; margin-bottom: 30px; width:100%; text-align: left;}
-        /* .education-text-content ul li { justify-content: flex-start; } */ /* Keep left aligned for lists */
+        .education-layout-section { flex-direction: column; text-align: center; }
+        .education-text-content { padding-right: 0; margin-bottom: 30px; width:100%; text-align: center;}
+        .education-text-content ul { display: inline-block; text-align: left;} /* Center the ul block, but text left */
 
-        .research-tools-combined-section { 
-            gap: 0; 
-            /* text-align:center; */ /* Already handled by column styles */
+        .research-content-tile .content-inner-block, 
+        .tools-content-tile .content-inner-block {
+            /* Centering already applied */
         }
-        .research-column, .tools-column {
-            flex-basis: auto; 
-            width: 100%;
-            margin-bottom: 30px; 
-            /* text-align: center; */ /* Already on by default now */
-        }
-        .research-tools-combined-section ul { /* Centering list items for research/tools on mobile */
-             /* align-items: center; */ /* Parent column handles this */
-             /* justify-content: center; */ 
-             /* display:inline-block; */ /* Already set */
+        .research-content-tile h2, .tools-content-tile h2, 
+        .publications-layout-section h2, 
+        .cv-contact-combined-section h2,
+        .education-text-content h2 { 
+            text-align: center; 
         }
     }
   </style>
@@ -319,26 +269,25 @@
   <div class="about-page-wrapper">
     <div class="about-page-content-container">
 
-      <!-- Section 1: Hero -->
-      <div class="full-vh-section" id="hero-outer-section" data-section-name="hero">
-        <div class="portfolio-hero content-inner-block">
-          <div class="portfolio-hero-image">
-            <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
-          </div>
-          <div class="portfolio-hero-text">
-            <h1>Bharat Surya Chamarthi</h1>
-            <p class="about-desc">
-              I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
-              My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
-              enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
-              use of decision making tools and optimiation algorithms to design these systems.
-            </p>
-          </div>
+      <!-- Section 1: Hero Tile -->
+      <div class="portfolio-tile portfolio-section" id="hero-outer-section" data-section-name="hero">
+        <!-- Content of hero is directly structured here due to its unique layout -->
+        <div class="portfolio-hero-image">
+          <img src="assets/img/photo.jpg" alt="Bharat Surya Chamarthi" id="profile-photo">
+        </div>
+        <div class="portfolio-hero-text">
+          <h1>Bharat Surya Chamarthi</h1>
+          <p class="about-desc">
+            I am currently purusing my Ph.D at the cryogenic engineering centre, IIT Kharagpur. 
+            My research studies the thermal performance of Phase change material based packed bed cryogenic energy recovery systems and ways to 
+            enhance their energy efficiency. My work involves both experimental and theoritical studies which include the 
+            use of decision making tools and optimiation algorithms to design these systems.
+          </p>
         </div>
       </div>
 
-      <!-- Section 2: Education -->
-      <div class="full-vh-section portfolio-section" id="education-outer-section" data-section-name="education">
+      <!-- Section 2: Education Tile -->
+      <div class="portfolio-tile portfolio-section" id="education-outer-section" data-section-name="education">
         <div class="education-layout-section content-inner-block">
           <div class="education-text-content">
             <h2>Education</h2>
@@ -369,10 +318,10 @@
         </div>
       </div>
 
-      <!-- Section 3: Research & Tools -->
-      <div class="full-vh-section portfolio-section" id="research-tools-outer-section" data-section-name="research-tools">
-        <div class="research-tools-combined-section content-inner-block">
-          <div class="research-column">
+      <!-- Section 3: Research & Tools Row with Two Tiles -->
+      <div class="tile-row portfolio-section" id="research-tools-tile-row" data-section-name="research-tools-row">
+        <div class="portfolio-tile research-content-tile" id="research-tile" data-section-name="research">
+          <div class="content-inner-block">
             <i class="fas fa-flask section-main-icon"></i>
             <h2>Research Interests</h2>
             <ul>
@@ -381,7 +330,9 @@
               <li><i class="fas fa-recycle"></i> Waste heat recovery</li>
             </ul>
           </div>
-          <div class="tools-column">
+        </div>
+        <div class="portfolio-tile tools-content-tile" id="tools-tile" data-section-name="tools">
+          <div class="content-inner-block">
             <i class="fas fa-cogs section-main-icon"></i>
             <h2>Tools I use</h2>
             <ul>
@@ -393,8 +344,8 @@
         </div>
       </div>
       
-      <!-- Section 4: Publications -->
-      <div class="full-vh-section portfolio-section" id="publications-outer-section" data-section-name="publications">
+      <!-- Section 4: Publications Tile -->
+      <div class="portfolio-tile portfolio-section" id="publications-outer-section" data-section-name="publications">
         <div class="publications-layout-section publications-section-modern content-inner-block">
           <h2>Recent Publications</h2>
           <ul class="publications-list-modern">
@@ -427,8 +378,8 @@
         </div>
       </div>
 
-      <!-- Section 5: CV & Contact -->
-      <div class="full-vh-section portfolio-section" id="contact-outer-section" data-section-name="cv-contact">
+      <!-- Section 5: CV & Contact Tile -->
+      <div class="portfolio-tile portfolio-section" id="contact-outer-section" data-section-name="cv-contact">
         <div class="cv-contact-combined-section content-inner-block">
           <div class="cv-button-container-section5">
             <a href="assets/img/resume.pdf" class="cv-button" download>Download CV</a>
@@ -457,7 +408,7 @@
                   <iframe src="https://www.google.com/maps?q=cryogenio+engineering+centre+IIT+Kharagpur&output=embed" width="100%" height="220" style="border:0; min-width:220px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
-              <form class="message-form" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST"> <!-- Removed .portfolio-section from form for this structure -->
+              <form class="message-form" id="contact-form" action="https://formspree.io/f/xeogevye" method="POST">
                 <h3>Send me a message</h3>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
@@ -511,7 +462,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       switchProfilePhoto(); 
 
-      const sectionsToReveal = document.querySelectorAll('.full-vh-section.portfolio-section'); // Target the outer wrappers
+      const sectionsToReveal = document.querySelectorAll('.portfolio-section'); // Targets tiles and tile-rows
 
       if ('IntersectionObserver' in window) {
         const sectionObserver = new IntersectionObserver((entries, observer) => {
