@@ -145,17 +145,43 @@
     .deck-card.card-3 { z-index: 1; transform: rotate(3deg) translateX(-15%) translateY(5%); }
 
     /* Research & Tools Section (Inner Content) */
+    .section-main-icon {
+        font-size: clamp(5rem, 12vw, 7rem); /* Large responsive icon */
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+    }
+    body.dark-mode .section-main-icon {
+        color: var(--dm-primary-color);
+    }
+
     .research-tools-combined-section { /* This class is on the content-inner-block */
         display: flex;
         flex-direction: row;
-        justify-content: space-between; 
+        justify-content: space-around; /* Changed from space-between for better centering feel */
+        align-items: stretch; /* Stretch columns to fill height if content differs */
         gap: 40px; 
         padding: 30px 3vw; 
     }
-    .research-column, .tools-column { flex-basis: calc(50% - 20px); }
+    .research-column, .tools-column {
+        flex-basis: calc(45% - 20px); /* Slightly adjust basis if space-around is used */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertically center content in column */
+        align-items: center; /* Horizontally center content in column */
+        text-align: center; /* Center text for h2 and ul */
+    }
     .research-tools-combined-section h2 { color: var(--text-color-headings); margin-bottom: 20px; }
     body.dark-mode .research-tools-combined-section h2 { color: var(--dm-text-color-headings); }
-    .research-tools-combined-section ul { list-style: none; padding-left: 0; margin:0; color: var(--text-color-body); }
+    .research-tools-combined-section ul {
+        list-style: none; 
+        padding-left: 0; 
+        margin:0; 
+        color: var(--text-color-body);
+        display: inline-block; /* Allow ul to be centered */
+        text-align: left; /* Keep list items left-aligned */
+    }
     body.dark-mode .research-tools-combined-section ul { color: var(--dm-text-color-body); }
     .research-tools-combined-section ul li { margin-bottom: 10px; display: flex; align-items: center; }
     .research-tools-combined-section ul li i { margin-right: 10px; color: var(--primary-color); }
@@ -232,27 +258,20 @@
         .education-text-content { padding-right: 0; margin-bottom: 30px; width:100%; text-align: left;}
         /* .education-text-content ul li { justify-content: flex-start; } */ /* Keep left aligned for lists */
 
-        .research-tools-combined-section { gap: 0; text-align:center;}
+        .research-tools-combined-section { 
+            gap: 0; 
+            /* text-align:center; */ /* Already handled by column styles */
+        }
         .research-column, .tools-column {
             flex-basis: auto; 
             width: 100%;
             margin-bottom: 30px; 
-            text-align: center;
-        }
-        .tools-column { margin-bottom: 0; }
-        .research-tools-combined-section h2, 
-        .publications-layout-section h2, 
-        .cv-contact-combined-section h2,
-        .education-text-content h2 { /* Center all section titles */
-            text-align: center; 
+            /* text-align: center; */ /* Already on by default now */
         }
         .research-tools-combined-section ul { /* Centering list items for research/tools on mobile */
-             align-items: center; 
-             /* justify-content: center; */ /* This might make single line items look odd */
-             display:inline-block; /* Allows text-align center on parent to work for block */
-        }
-         .research-tools-combined-section ul li {
-            /* justify-content: center; */ /* If you want icon + text centered as a block */
+             /* align-items: center; */ /* Parent column handles this */
+             /* justify-content: center; */ 
+             /* display:inline-block; */ /* Already set */
         }
     }
   </style>
@@ -318,6 +337,7 @@
       <div class="full-vh-section portfolio-section" id="research-tools-outer-section" data-section-name="research-tools">
         <div class="research-tools-combined-section content-inner-block">
           <div class="research-column">
+            <i class="fas fa-flask section-main-icon"></i>
             <h2>Research Interests</h2>
             <ul>
               <li><i class="fas fa-flask"></i> Cryogenic energy recovery</li>
@@ -326,6 +346,7 @@
             </ul>
           </div>
           <div class="tools-column">
+            <i class="fas fa-cogs section-main-icon"></i>
             <h2>Tools I use</h2>
             <ul>
               <li><i class="fas fa-code"></i> MATLAB, Python</li>
