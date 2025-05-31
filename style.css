@@ -515,37 +515,8 @@ footer {
     color: #555;
 }
 
-.publications-list-modern li {
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
 
-.publications-list-modern li:hover {
-    background: #23272a;
-    color: #fff;
-}
 
-.pub-link-hover {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.pub-link-hover:hover {
-    color: rgb(0, 136, 255);
-    text-decoration: none;
-}
-
-.publications-section-modern {
-    background: none;
-    box-shadow: none;
-    padding: 10;
-    margin: 0;
-}
 
 
 .cv-button {
@@ -590,35 +561,9 @@ footer {
     color: #3730a3;
 }
 
-/* Large rectangular about image for about page */
-.about-image-rect {
-    width: 340px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    border: 4px solid #fff;
-    background: #f7f7fa;
-}
 
-@media (max-width: 900px) {
-    .about-container.restructured {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 18px 8px;
-    }
-    .about-left, .about-right {
-        min-width: 0;
-    }
-    .about-links {
-        margin-top: 10px;
-    }
-    .about-image-rect {
-        width: 98vw;
-        height: 320px;
-        max-width: 98vw;
-    }
-}
+
+
 
 
 /* --- Social & Professional Icon Size and Hover Color for About Page --- */
@@ -639,32 +584,9 @@ footer {
   margin-right: 0;
 }
 
-/* --- Connect Card: Single Row with Vertical Bar --- */
 
-.connect-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-top: 10px;
-}
-.connect-vbar {
-  display: inline-block;
-  width: 2px;
-  height: 28px;
-  background:  #000000 ;
-  margin: 0 14px;
-  border-radius: 2px;
-}
-@media (max-width: 700px) {
-  .connect-row {
-    gap: 10px;
-  }
-  .connect-vbar {
-    height: 22px;
-    margin: 0 7px;
-  }
-}
+
+
 
 /* --- Research Page css --- */
 
