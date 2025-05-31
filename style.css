@@ -437,21 +437,6 @@ footer {
     margin-top: 18px;
 }
 
-.profile-links {
-    display: flex;
-    gap: 18px;
-}
-
-.profile-links a {
-    color: #4f46e5;
-    font-size: 1.7em;
-    transition: color 0.2s;
-    text-decoration: none;
-}
-
-.profile-links a:hover {
-    color: #3730a3;
-}
 
 
 /* --- Social & Professional Icon Size and Hover Color for About Page --- */
