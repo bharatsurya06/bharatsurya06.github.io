@@ -397,40 +397,6 @@ footer {
 
 
 
-.message-form h3 {
-    font-size: 1em;
-    margin: 0 0 4px 0;
-    color: #444;
-}
-
-.message-form input, .message-form textarea {
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    padding: 7px 10px;
-    font-size: 1em;
-    font-family: inherit;
-    background: #fff;
-    resize: none;
-}
-
-.message-form button {
-    color: #23272a;
-    border:  2px #23272a !important;
-    border-radius: 6px;
-    padding: 8px 0;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 4px;
-    transition: background 0.2s;
-}
-
-.message-form button:hover {
-    background: #23272a ;
-    color: #fff;
-    border-color: #23272a;
-}
-
 .about-right h1 {
     font-size: 1.7em;
     margin-bottom: 8px;
@@ -486,10 +452,6 @@ footer {
 .profile-links a:hover {
     color: #3730a3;
 }
-
-
-
-
 
 
 /* --- Social & Professional Icon Size and Hover Color for About Page --- */
