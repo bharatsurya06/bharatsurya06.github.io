@@ -33,7 +33,7 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  rgba(159, 158, 158, 0.667) 40%, rgba(159, 158, 158, 0.667) 50%,rgba(159, 158, 158, 0.667) 60% rgba(255, 255, 255, 0) 100%) !important;
     color: white;
     display: flex;
     justify-content: center;
@@ -41,18 +41,7 @@ nav {
     padding: 0;
     height: 48px; /* Reduced height to fit menu options */
     min-height: 0;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.06); /* Layered shadow */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Subtle bottom border */
-    transition: box-shadow 0.3s ease, background 0.3s ease;
-    border-radius: 8px; /* Subtle border radius */
-    transform: translateY(0);
-    transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.3s ease;
-}
-
-nav:hover {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%,  rgba(159, 158, 158, 0.7) 40%, rgba(159, 158, 158, 0.7) 50%,rgba(159, 158, 158, 0.7) 60% rgba(255, 255, 255, 0.05) 100%) !important; /* Subtle background change on hover */
-    box-shadow: 0 10px 24px rgba(0,0,0,0.18), 0 5px 10px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
-    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
   
@@ -62,38 +51,36 @@ nav:hover {
     align-items: center;
     width: 100%;
     height: 100%;
-    gap: 1.5em; /* Increased gap */
+    gap: 0.5em;
 }
 
 .nav-links a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin: 0; /* Remove margin, rely on gap */
+    margin: 0 15px;
     font-size: 1.1em;
     transition: color 0.2s ease;
-    line-height: 48px; /* Match navbar height */
-    padding: 0 12px; /* Consistent padding */
-    display: inline-block; /* Ensure padding/height apply */
-    box-sizing: border-box; /* Include padding in total size */
+    line-height: 48px;
+    padding: 0 4px;
 }
 
 .nav-links span {
     color: rgb(0, 0, 0);
-    margin: 0; /* Remove margin, rely on gap */
+    margin: 0 6px;
     font-size: 1.1em;
-    line-height: 48px; /* Match navbar height */
+    line-height: 48px;
 }
 
 .nav-links a:hover {
-    background: #23272a;
+    background: #000000;
     color: #ffffff;
-    font-size: 1.1em; /* Keep size consistent */
+    font-size: 1.1em;
     /* font-weight: 800; */
     border-radius: 0px;
-    padding: 0 12px; /* Keep padding consistent */
-    transition: background 0.2s, color 0.2s; /* Remove font-size from transition */
-    height: 48px; /* Match navbar height */
-    line-height: 48px; /* Vertically center the text */
+    padding: 0 10px;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
+    height: 25px;           /* Set the height of the hover background */
+    line-height: 25px;      /* Vertically center the text */
     display: inline-block;  /* Ensure height and line-height apply */
     box-sizing: border-box; /* Include padding in height */
 
@@ -126,8 +113,7 @@ body.index-page.dark-mode .hero-section {
     background-image: url('assets/img/rocket-2.jpg');
 }
 body.index-page nav {
-    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background:  rgba(159, 158, 158, 0.667);
     box-shadow: 0 4px 24px rgba(80,80,80,0.10);
     border-radius: 18px;
     padding: 0 32px;
@@ -145,19 +131,19 @@ body.index-page nav {
     align-items: center;
 }
 body.index-page .nav-links.nav-center {
-    gap: 1.5em; /* Increased gap */
+    gap: 0.8em;
 }
 body.index-page .nav-links a, body.index-page .nav-links span {
     color: #222;
-    line-height: 54px; /* Match index page navbar height */
+    line-height: 54px;
     font-size: 1.15em;
     /* Prevent background size/height jump on hover */
     display: inline-block;
-    height: 54px; /* Match index page navbar height */
-    line-height: 54px; /* Vertically center */
+    height: 38px;
+    line-height: 38px;
     box-sizing: border-box;
-    padding: 0 14px; /* Consistent padding */
-    transition: background 0.2s, color 0.2s; /* Remove font-size from transition */
+    padding: 0 12px;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
 }
 body.index-page .nav-links a:hover {
     background: #000000;
@@ -165,11 +151,11 @@ body.index-page .nav-links a:hover {
     border-radius: 0px;
     /* Keep size consistent on hover */
     font-size: 1.15em;
-    height: 54px; /* Match index page navbar height */
-    line-height: 54px; /* Vertically center */
+    height: 38px;
+    line-height: 38px;
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 14px; /* Keep padding consistent */
+    padding: 0 12px;
 }
 
 /* Hero Section Background */
@@ -184,7 +170,7 @@ body.index-page .nav-links a:hover {
     text-align: center;
 }
 
-
+/* Animated Hello! graphic style for landing page */
 .hello-graphic {
     font-size: 4.5em;
     font-weight: 800;
@@ -212,45 +198,15 @@ body.index-page .nav-links a:hover {
     }
 }
 
-
-.info-modal {
-    position: fixed;
-    top: 70px;
-    right: 40px;
-    background: #fff;
-    color: #23272a;
-    border-radius: 6px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    padding: 14px; /* Reduced padding */
-    max-width: 340px;
-    z-index: 100;
-    font-size: 1.08em;
-    transition: background 0.3s, color 0.3s;
-    display: none; /* Default hidden */
-    position: fixed;
-    top: 60vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: unset; /* Allow to be smaller */
-    min-width: unset; /* Allow to be smaller */
-    padding: 14px; /* Reduced padding */
-    text-align: center;
-    white-space: nowrap;
-  }
-  .info-modal-close {
-    margin-top: 14px;
-    background: #007cf0;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 16px;
-    cursor: pointer;
-  }
-  .info-modal-text {
-    display: inline-block;
-    font-size: 1.08em;
+/* Overall container for the About page content */
+.about-container {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center the container */
 }
-
 
 /* Footer Styles (From Footer Code) */
 footer, footer .container {
@@ -270,8 +226,7 @@ footer .container p {
 }
 
 footer {
-    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(159, 158, 158, 0.667); /* Set footer background to black */
     color: rgb(0, 0, 0); /* Set footer text color to white */
     width: 100%;
     text-align: center;
@@ -364,13 +319,6 @@ footer {
 }
 
 /* About Section Styles */
-
-
-/* Css for about page*/
-
-
-
-
 .about-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 30px 0 10px 0;
@@ -395,7 +343,87 @@ footer {
     min-width: 260px;
 }
 
+.profile-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
 
+.about-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border: 4px solid #fff;
+}
+
+.contact-box {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    font-size: 0.98em;
+}
+
+.contact-box h2 {
+    font-size: 1.1em;
+    margin: 0 0 6px 0;
+    color: #444;
+}
+
+.contact-box a {
+    color: #145eb8 ; 
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.message-form {
+    background: #f7f7fa;
+    border-radius: 10px;
+    padding: 14px 16px 10px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-form h3 {
+    font-size: 1em;
+    margin: 0 0 4px 0;
+    color: #444;
+}
+
+.message-form input, .message-form textarea {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 1em;
+    font-family: inherit;
+    background: #fff;
+    resize: none;
+}
+
+.message-form button {
+    background: transparent !important;
+    color: #000000;
+    border:  2px #000000;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background 0.2s;
+}
+
+.message-form button:hover {
+    background: #000000 !important;
+    color: #fff;
+    border-color: #000000;
+}
 
 .about-right h1 {
     font-size: 1.7em;
@@ -430,6 +458,25 @@ footer {
     color: #555;
 }
 
+.cv-button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: transparent!important;
+    color: #000000;
+    border: 2px #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(80,80,80,0.08);
+    transition: background 0.2s;
+}
+
+.cv-button:hover {
+    background: #000000 !important;
+    color: #fff;
+}
 
 .about-links {
     display: flex;
@@ -437,19 +484,107 @@ footer {
     margin-top: 18px;
 }
 
+.profile-links {
+    display: flex;
+    gap: 18px;
+}
 
+.profile-links a {
+    color: #4f46e5;
+    font-size: 1.7em;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.profile-links a:hover {
+    color: #3730a3;
+}
+
+/* Large rectangular about image for about page */
+.about-image-rect {
+    width: 340px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border: 4px solid #fff;
+    background: #f7f7fa;
+}
+
+@media (max-width: 900px) {
+    .about-container.restructured {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px 8px;
+    }
+    .about-left, .about-right {
+        min-width: 0;
+    }
+    .about-links {
+        margin-top: 10px;
+    }
+    .about-image-rect {
+        width: 98vw;
+        height: 320px;
+        max-width: 98vw;
+    }
+}
+
+/* Align icons next to the text for professional and social links */
+.professional-links a, .social-links a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px; /* Add spacing between links */
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 1.1em; /* Adjust icon size */
+    transition: color 0.3s ease;
+}
+
+.professional-links a i, .social-links a i {
+    margin-right: 8px; /* Add spacing between icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.professional-links a:hover, .social-links a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+/* Ensure professional links appear inline */
+.professional-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+    gap: 10px; /* Add spacing between links */
+}
+
+.professional-links h3 {
+    margin-right: 10px; /* Add spacing between the heading and links */
+}
+
+.professional-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.professional-links a i {
+    margin-right: 5px; /* Add spacing between icon and text */
+}
 
 /* --- Social & Professional Icon Size and Hover Color for About Page --- */
-
 .contact-links .contact-icon {
   font-size: 1.3em !important;
-  color: #23272a !important;
+  color: #000000 !important;
   transition: color 0.25s, transform 0.18s;
   margin-right: 12px;
   vertical-align: middle;
 }
 .contact-links .contact-icon:hover {
-  color: #e84708 !important; /* Teal */
+  color: #145eb8 !important; /* Teal */
   transform: scale(1.13);
 }
 
@@ -458,18 +593,52 @@ footer {
   margin-right: 0;
 }
 
+/* --- Connect Card: Single Row with Vertical Bar --- */
+.connect-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+.connect-vbar {
+  display: inline-block;
+  width: 2px;
+  height: 28px;
+  background:  #000000 ;
+  margin: 0 14px;
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .connect-row {
+    gap: 10px;
+  }
+  .connect-vbar {
+    height: 22px;
+    margin: 0 7px;
+  }
+}
 
-
-
-
-/* --- Research Page css --- */
-
-
+/* --- Research Page Modern Styles --- */
 .research-section {
     background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 40px 0 30px 0;
     min-height: 70vh;
     flex: 1 0 auto;
+}
+
+.research-intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    max-width: 950px;
+    margin: 0 auto 32px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(80,80,80,0.10);
+    padding: 32px 24px;
 }
 
 .research-intro-text {
@@ -489,6 +658,61 @@ footer {
     margin-bottom: 0;
 }
 
+.research-intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-image {
+    max-width: 220px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: #fff;
+}
+
+.publications-section {
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(80,80,80,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 20px 18px 20px;
+}
+
+.publications-section h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.publications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publications-list li {
+    margin-bottom: 12px;
+    font-size: 1.08em;
+    color: #444;
+}
+
+.publications-list a {
+    color: #4f46e5;
+    text-decoration: none;
+    border-bottom: 1px dotted #bdbdbd;
+    transition: color 0.2s;
+}
+
+.publications-list a:hover {
+    color: #3730a3;
+    border-bottom: 1px solid #4f46e5;
+}
+
+/* --- Vibrant Research Container Styles --- */
 .research-container-vibrant {
     background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
     border-radius: 18px;
@@ -501,7 +725,162 @@ footer {
     align-items: center;
 }
 
+.research-intro-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
 
+.research-intro-text {
+    flex: 2;
+    min-width: 220px;
+}
+
+.research-image-large {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: #fff;
+}
+
+.research-image-center {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 0 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-image-xl {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: #fff;
+    display: block;
+}
+
+.publications-section-modern {
+    background: rgba(255,255,255,0.92);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(80,80,80,0.08);
+    margin: 0 auto;
+    padding: 18px 18px 10px 18px;
+}
+
+.publications-section-modern h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.publications-list-modern {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publications-list-modern li {
+    margin-bottom: 10px;
+    font-size: 0.98em;
+    color: #444;
+    line-height: 1.4;
+}
+
+.pub-title {
+    font-weight: 600;
+    font-size: 0.98em;
+    color: #222;
+}
+
+.pub-meta {
+    font-size: 0.92em;
+    color: #666;
+}
+
+.pub-doi {
+    font-size: 0.92em;
+    color: #4f46e5;
+}
+
+.pub-doi a {
+    color: #4f46e5;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+}
+
+.pub-doi a:hover {
+    color: #3730a3;
+}
+
+/* Publication link hover effect */
+.pub-link-hover {
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.pub-link-hover:hover {
+    color: #145eb8  !important;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .research-intro-container {
+        flex-direction: column;
+        padding: 18px 8px;
+        gap: 18px;
+    }
+    .research-intro-image {
+        margin-top: 10px;
+    }
+    .publications-section {
+        padding: 14px 6px 10px 6px;
+    }
+    .research-intro-flex {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .research-container-vibrant {
+        padding: 16px 6px 12px 6px;
+    }
+    .research-image-large {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .research-image-xl {
+        max-width: 98vw;
+    }
+}
+
+/* Center and enlarge the research image on research.html */
+.research-image-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 18px 0;
+}
+.research-image-xl {
+    width: 420px;
+    height: 340px;
+    max-width: 98vw;
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: #ffffff00;
+}
+@media (max-width: 700px) {
+    .research-image-xl {
+        width: 98vw;
+        height: 220px;
+    }
+}
 
 /* Research page: Make text span full card width and image fully visible, centered below text */
 .research-container-vibrant.research-report-layout {
@@ -522,79 +901,31 @@ footer {
     text-align: left;
     padding: 0;
 }
-/* Re-added minimal rule for centering */
 .research-image-center {
-    width: 100%; /* Take full width of parent */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center;
-    margin: 20px 0; /* Add vertical space */
-}
-
-/* Consolidated and simplified rule for the research report image */
-.research-image-xl.research-image-report {
-    width: 100%; /* Allow image to scale up to max-width */
-    max-width: 75%; /* Increased from 50% to enlarge image by 50% */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the whole image is visible */
-    border-radius: 0; /* Remove border radius */
-    box-shadow: none; /* Remove shadow */
-    background: none; /* Remove background */
-    display: block; /* Ensure it behaves as a block element for max-width */
-}
-
-/* Map container styling for Research Page */
-#lngMapContainer {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#map {
-    height: 650px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 18px 0;
 }
-
-/* Leaflet Popup Customization */
-.leaflet-popup-content-wrapper {
-    background: #f9f9f9;
-    color: #333;
-    border-radius: 5px;
+.research-image-xl.research-image-report {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    background: none;
+    display: block;
 }
-.leaflet-popup-content {
-    margin: 10px !important;
-    min-width: 150px;
-}
-.leaflet-popup-content b {
-    color: #0056b3;
-}
-
-/* Legend styling */
-.legend {
-    padding: 10px;
-    font-size: 14px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    line-height: 1.8;
-    color: #555;
-}
-.legend h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    text-align: center;
-    color: #333;
-}
-.legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.9;
-    border-radius: 50%;
-    border: 1px solid #777;
+@media (max-width: 950px) {
+    .research-container-vibrant.research-report-layout {
+        max-width: 99vw;
+        padding: 12px 2vw 12px 2vw;
+    }
+    .research-full-width, .research-image-xl.research-image-report {
+        max-width: 98vw;
+    }
 }
 
 /* --- Blog Section Modern Creative Styles --- */
@@ -820,13 +1151,6 @@ footer {
     opacity: 1;
     max-height: 200px;
     transition: opacity 0.3s, max-height 0.3s;
-}
-
-.blog-card-content .blog-date {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 6px;
-    display: block;
 }
 
 /* Blog card gradient overlay on hover for category */
@@ -1111,8 +1435,64 @@ footer {
     }
 }
 
+/* --- Blaugrana (FC Barcelona) Blog Theme Enhancements --- */
 
+/* Blaugrana gradient border for blog cards */
+/* .blog-card.barca {
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
+    border-image-slice: 1;
+    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
+} */
 
+/* Blaugrana gradient border for blog tiles */
+/* .blog-tile.barca {
+    border: 3px solid;
+    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
+    border-image-slice: 1;
+    box-shadow: 0 8px 32px rgba(63, 94, 251, 0.13), 0 2px 8px rgba(252, 70, 107, 0.10);
+} */
+
+/* Blaugrana button and category enhancements */
+/* .blog-btn.barca-btn {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
+    color: #fff;
+    border: 2px solid #FC466B;
+    box-shadow: 0 2px 12px rgba(63, 94, 251, 0.13);
+} */
+
+/* .blog-btn.barca-btn:hover {
+    background: linear-gradient(90deg, #FC466B 0%, #3f5efb 100%) !important;
+    color: #fff;
+    border: 2px solid #3f5efb;
+    filter: brightness(1.08);
+} */
+
+/* .blog-category.barca {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%) !important;
+    color: #fff;
+    border: 1.5px solid #FC466B;
+} */
+
+/* Blog card hover effect for Blaugrana */
+/* .blog-card.barca:hover {
+    box-shadow: 0 16px 40px rgba(252, 70, 107, 0.18), 0 8px 32px rgba(63, 94, 251, 0.18);
+    transform: scale(1.07);
+} */
+
+/* Optional: Add a subtle background to the blog section for Barca posts */
+/* .blog-section.barca-theme {
+    background: linear-gradient(120deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%, #fff 120%);
+} */
+
+/* Optional: Accent headings for Barca blog */
+/* .blog-header.barca-theme h1 {
+    background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+} */
 
 /* --- Blog Post Template Styles --- */
 body.blogpost-page {
@@ -1189,6 +1569,7 @@ body.blogpost-page {
     }
 }
 
+/* --- Blog Post Template Styles --- */
 .blogpost-list {
     list-style: none;
     margin: 0;
@@ -1345,7 +1726,38 @@ body.dark-mode .barca-quiz-question {
     color: #fff !important;
     border-color: #FC466B !important;
 }
-
+body.dark-mode #quiz-options label {
+    background: #23272a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+body.dark-mode #quiz-options label:hover,
+body.dark-mode #quiz-options label.selected {
+    background: #FC466B;
+    color: #fff;
+    border-color: #FC466B;
+}
+body.dark-mode #quiz-options label.correct {
+    background: #2ecc40 !important;
+    color: #fff !important;
+    border-color: #2ecc40 !important;
+}
+body.dark-mode #quiz-options label.incorrect {
+    background: #FC466B !important;
+    color: #fff !important;
+    border-color: #FC466B !important;
+}
+.barca-quiz-feedback {
+    margin-top: 12px;
+    font-weight: 600;
+    min-height: 24px;
+    color: #23272a;
+    text-align: center;
+    transition: color 0.2s;
+}
+body.dark-mode .barca-quiz-feedback {
+    color: #fff;
+}
 .barca-quiz-controls {
     display: flex;
     align-items: center;
@@ -1412,124 +1824,15 @@ body.dark-mode .barca-quiz-question {
 }
 
 .barca-quiz-anim-container {
-    font-size: 4em; /* Reduced emoji size */
-    margin: 18px 0 8px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
+  font-size: 6.4em;
+  margin: 18px 0 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
 }
 
-.barca-quiz-tier-msg {
-    font-size: 1.2em; /* Increased message font size */
-    margin-top: 25px; /* Increased space above the message */
-    color: #23272a; /* Ensure text color is readable in light mode */
-    font-weight: bold; /* Make the message bold */
-    /* Add other styling as needed, e.g., text-align */
-}
-
-/* Apply gradient color to the final score title */
-.final-score-title {
-    font-size: 1.5em; /* Adjust size to fit */
-    text-align: center;
-    margin-bottom: 12px;
-    background: linear-gradient(90deg, #FC466B 0% , #042bed 100%); /* Apply gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    font-weight: 700; /* Ensure the whole title is bold */
-}
-
-/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
-.switch {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 64px;
-    height: 34px;
-  }
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #73C0FC;
-    transition: .4s;
-    border-radius: 30px;
-  }
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    left: 2px;
-    bottom: 2px;
-    z-index: 2;
-    background-color: #e8e8e8;
-    transition: .4s;
-  }
-  .sun svg {
-    position: absolute;
-    top: 5px;
-    left: 36px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-  }
-  .moon svg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    transition: fill 0.4s;
-    fill: #73C0FC;
-  }
-  .switch:hover .sun svg {
-    animation: rotate 15s linear infinite;
-  }
-  @keyframes rotate {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
-  }
-  .switch:hover .moon svg {
-    animation: tilt 5s linear infinite;
-  }
-  @keyframes tilt {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-10deg); }
-    75% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
-  }
-  .input:checked + .slider {
-    background-color: #d432327a;
-  }
-  .input:focus + .slider {
-    box-shadow: 0 0 1px #d432327a;
-  }
-  .input:checked + .slider:before {
-    transform: translateX(30px);
-  }
-  .input:checked + .slider .moon svg {
-    fill: #fff !important;
-  }
-  .input:checked + .slider .sun svg {
-    opacity: 0.5;
-  }
-
-  /* ===================== DARK MODE SUPPORT ===================== */
+/* ===================== DARK MODE SUPPORT ===================== */
 body.dark-mode {
     background: linear-gradient(to bottom, #181a1b, #23272a) !important;
     color: #e0e0e0 !important;
@@ -1557,6 +1860,8 @@ body.dark-mode .about-container.restructured,
 body.dark-mode .about-info-box,
 body.dark-mode .contact-box,
 body.dark-mode .message-form,
+body.dark-mode .publications-section,
+body.dark-mode .publications-section-modern,
 body.dark-mode .research-container-vibrant,
 body.dark-mode .research-container-vibrant.research-report-layout {
     background: #23272a !important;
@@ -1676,9 +1981,9 @@ body.dark-mode .read-full-blog {
     color: #fff !important;
 }
 body.dark-mode .blogpost-sidebar {
-    background:  #181a1b !important;
+    background: #181a1b !important;
     color: #e0e0e0 !important;
-    border-right: 1.5px solid #ffffff !important;
+    border-image: linear-gradient(180deg, #23272a 0%, #444 100%) 1 !important;
 }
 body.dark-mode .blogpost-sidebar h3 {
     color: #a8ff78 !important;
@@ -1688,9 +1993,9 @@ body.dark-mode .blogpost-link {
 }
 body.dark-mode .blogpost-link.active,
 body.dark-mode .blogpost-link:hover {
-    background: #ffffff !important;
-    color: #4447a1 !important;
-    /* border-left: 4px solid #fa0000 !important; */
+    background: linear-gradient(90deg, #23272a 60%, #181a1b 100%) !important;
+    color: #fa0000 !important;
+    border-left: 4px solid #fa0000 !important;
 }
 body.dark-mode .barca-article-card,
 body.dark-mode .cryogenics-article-card {
@@ -1735,18 +2040,19 @@ body.dark-mode .contact-links .contact-icon:hover {
 body.dark-mode .connect-vbar {
     background: linear-gradient(180deg, #8ab4f8 0%, #ffffff 100%) !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+body.dark-mode .pub-title,
+body.dark-mode .pub-meta,
+body.dark-mode .publications-list-modern,
+body.dark-mode .publications-section-modern h2 {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .pub-link-hover {
+    color: #ffffff !important;
+}
+body.dark-mode .pub-link-hover:hover {
+  
+    color: #8ab4f8 !important;
+}
 body.dark-mode .message-form h3 {
     color: #e0e0e0 !important;
 }
@@ -1764,6 +2070,93 @@ body.index-page #darkmode-toggle-navbar {
     display: none !important;
 }
 
+/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+.sun svg {
+  position: absolute;
+  top: 5px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.moon svg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  transition: fill 0.4s;
+  fill: #73C0FC;
+}
+.switch:hover .sun svg {
+  animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+.switch:hover .moon svg {
+  animation: tilt 5s linear infinite;
+}
+@keyframes tilt {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+.input:checked + .slider {
+  background-color: #d432327a;
+}
+.input:focus + .slider {
+  box-shadow: 0 0 1px #d432327a;
+}
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+.input:checked + .slider .moon svg {
+  fill: #fff !important;
+}
+.input:checked + .slider .sun svg {
+  opacity: 0.5;
+}
 
 body.dark-mode .research-section, 
 body.dark-mode .research-section *,
@@ -1774,9 +2167,44 @@ body.dark-mode .research-desc {
     color: #fff !important;
 }
 
+/* Info Modal and Icon Styles */
+.info-modal {
+  position: fixed;
+  top: 70px;
+  right: 40px;
+  background: #fff;
+  color: #23272a;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 22px 28px;
+  max-width: 340px;
+  z-index: 100;
+  font-size: 1.08em;
+  transition: background 0.3s, color 0.3s;
+}
+.info-modal-close {
+  margin-top: 14px;
+  background: #007cf0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
 body.dark-mode .info-modal {
   background: #23272a;
   color: #fff;
+}
+#info-icon i {
+  color: #007cf0 !important;
+  transition: color 0.3s;
+  animation: rgb-glow 2.5s linear infinite;
+}
+@keyframes rgb-glow {
+  0% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+  33% { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
+  66% { color: #0000ff; text-shadow: 0 0 8px #0000ff; }
+  100% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
 }
 
 body.blogpost-page.dark-mode {
@@ -1808,74 +2236,3 @@ body.blogpost-page.dark-mode .blogpost-link:hover {
     color: #4447a1 !important;
     /* border-left: 4px solid #fa0000 !important; */
 }
-body.dark-mode .barca-quiz-tier-msg {
-    color: #e0e0e0; /* Ensure text color is readable in dark mode */
-}
-
-body.dark-mode #quiz-options label {
-    background: #23272a;
-    color: #fff;
-    border: 2px solid #fff;
-}
-body.dark-mode #quiz-options label:hover,
-body.dark-mode #quiz-options label.selected {
-    background: #FC466B;
-    color: #fff;
-    border-color: #FC466B;
-}
-body.dark-mode #quiz-options label.correct {
-    background: #2ecc40 !important;
-    color: #fff !important;
-    border-color: #2ecc40 !important;
-}
-body.dark-mode #quiz-options label.incorrect {
-    background: #FC466B !important;
-    color: #fff !important;
-    border-color: #FC466B !important;
-}
-.barca-quiz-feedback {
-    margin-top: 12px;
-    font-weight: 600;
-    min-height: 24px;
-    color: #23272a;
-    text-align: center;
-    transition: color 0.2s;
-}
-body.dark-mode .barca-quiz-feedback {
-    color: #fff;
-}
-
-
-/* Preserve map styles in dark mode */
-body.dark-mode #lngMapContainer {
-    background: none !important;
-    border: 1px solid #ccc !important;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
-}
-body.dark-mode #map {
-    background: none !important;
-}
-body.dark-mode .leaflet-popup-content-wrapper {
-    background: #f9f9f9 !important;
-    color: #333 !important;
-}
-body.dark-mode .leaflet-popup-content {
-    color: #333 !important;
-}
-body.dark-mode .leaflet-popup-content b {
-    color: #0056b3 !important;
-}
-body.dark-mode .legend {
-    background: rgba(255,255,255,0.9) !important;
-    color: #555 !important;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2) !important;
-}
-body.dark-mode .legend h4 {
-    color: #333 !important;
-}
-body.dark-mode .legend i {
-    border: 1px solid #777 !important;
-}
-
-
-

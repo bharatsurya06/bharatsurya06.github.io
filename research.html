@@ -10,6 +10,47 @@
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
   <title>Research</title>
+  <style>
+    /* Scoped styles for the Previous projects cards on this page */
+    .previous-projects { max-width:1100px; margin:36px auto; padding:18px 16px; }
+    .previous-projects h2 { font-size:1.35rem; margin-bottom:14px; }
+    .projects-row { display:flex; gap:18px; align-items:stretch; }
+
+    /* Square cards using aspect-ratio; image above text */
+    .project-card {
+      flex:1;
+      display:grid;
+      grid-template-rows: 1fr auto;
+      aspect-ratio: 1/1;
+      background:#ffffff;
+      color:var(--text-color, #111);
+      border:1px solid rgba(0,0,0,0.08);
+      text-decoration:none;
+      border-radius:10px;
+      overflow:hidden;
+      transition:transform .15s ease, box-shadow .15s ease;
+      box-shadow:0 1px 6px rgba(11,34,60,0.04);
+    }
+    .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(11,34,60,0.12); }
+
+    .project-media { width:100%; height:100%; overflow:hidden; display:block; }
+    .project-media img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    .project-body { padding:12px 14px 18px; background:transparent; }
+    .project-title { font-weight:700; margin-bottom:8px; }
+    .project-desc { font-size:0.95rem; color:rgba(0,0,0,0.72); margin-bottom:8px; }
+    .project-cta { display:inline-block; margin-top:6px; font-weight:600; color:var(--accent-color,#0b66c3); }
+
+    @media (max-width:900px) {
+      .projects-row { flex-direction:column; }
+      .project-card { aspect-ratio: auto; grid-template-rows: auto 1fr; }
+      .project-media { height:220px; }
+    }
+
+    /* Dark mode adjustments (respects site dark-mode class) */
+    body.dark-mode .project-card { background:#0f0f12; color:#e8eef8; border-color:rgba(255,255,255,0.06); box-shadow:none; }
+    body.dark-mode .project-desc { color:rgba(255,255,255,0.78); }
+  </style>
 </head>
 
 <body>
@@ -38,6 +79,34 @@
       </div>
     </div>
   </div>
+
+  <!-- Previous projects section -->
+  <section id="previous-projects" class="previous-projects" aria-labelledby="previous-projects-title">
+    <h2 id="previous-projects-title">Previous projects</h2>
+    <div class="projects-row">
+      <a class="project-card" href="mtech.html" title="Know more">
+        <div class="project-media">
+          <img src="assets/img/barca.jpg" alt="Barça preview">
+        </div>
+        <div class="project-body">
+          <div class="project-title">Chilldown analysis of a cryogenic tranfer line</div>
+          <div class="project-desc">A collection of analysis and write-ups related to Barça club, tactics and blog posts. Click to open the Barça project page.</div>
+          <div class="project-cta">Know more →</div>
+        </div>
+      </a>
+
+      <a class="project-card" href="btech.html" title="Know more">
+        <div class="project-media">
+          <img src="assets/img/regas.png" alt="Cryogenics preview">
+        </div>
+        <div class="project-body">
+          <div class="project-title">CFD analysis of airfoil</div>
+          <div class="project-desc">Research notes and articles on cryogenic energy recovery, LNG terminals and related simulations. Click to open the Cryogenics project page.</div>
+          <div class="project-cta">Know more →</div>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
