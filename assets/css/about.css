@@ -1,0 +1,37 @@
+/* Per-page stylesheet for about.html */
+body {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* Minimal per-page styles for About */
+.about {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(17,24,39,0.06);
+}
+
+.about h1 {
+  font-family: 'Exo 2', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.lede {
+  color: #374151;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-figure { display:flex; justify-content:center; margin: 18px 0; }
+.about-img { width: 220px; height:220px; object-fit:cover; border-radius:50%; border:3px solid #e6eef6; }
+
+.about-details { color: #444; line-height:1.7; }
+
+@media (max-width: 720px) {
+  .about { margin: 20px 12px; padding: 18px; }
+  .about-img { width: 160px; height:160px; }
+}

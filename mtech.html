@@ -5,47 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/mtech.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
   <title>MTech Projects</title>
-  <style>
-    /* Small scoped tweaks to match research page aesthetics */
-    .project-hero { max-width:1100px; margin:28px auto; padding:18px; display:flex; gap:18px; align-items:center; }
-    .project-hero img { width:320px; max-width:40%; border-radius:10px; object-fit:cover; }
-    .project-hero .hero-body { flex:1; }
-    .project-list { max-width:1100px; margin:18px auto; padding:18px; }
-    .project-item { background:var(--card-bg,#fff); border-radius:8px; padding:12px; margin-bottom:12px; border:1px solid rgba(0,0,0,0.06); }
-    body.dark-mode .project-item { background:#0f0f12; border-color:rgba(255,255,255,0.04); }
-  </style>
 </head>
 
 <body>
   <div id="navbar"></div>
 
-  <main class="research-section">
-    <div class="research-container-vibrant research-report-layout">
-      <section class="project-hero">
-        <img src="assets/img/rocket.jpg" alt="MTech project illustration">
-        <div class="hero-body">
-          <h1>MTech — Selected projects</h1>
-          <p class="research-desc">This page collects a selection of MTech-level projects, thesis abstracts and short summaries. Use this page as a placeholder and replace content with full project pages when ready.</p>
-        </div>
-      </section>
+  <main class="container">
+    <article class="project">
+      <h1 class="title">Investigation of chilldown in a LIN transfer line</h1>
+      <p class="lead">Chilldown of cryogenic equipment such as storage tanks and transfer lines  is a critical process which happens during 
+        start-up of cryogenic systems. As the name suggets, chilldowwn represents the intial cool down period of the 
+        cryogenic equipment such from their inital temperature to the operating temperature of the flowing liquid cryogen. By the end of this period, the liquid cryogen 
+        flows through the system steadily and the system is ready for normal operation. The chilldown presents a critical stage in the operation of cryogenic systems, as it involves complex transient thermal phenomena, including rapid cooling, phase change and thermal stresses
+        during the flow. It leads to various types of two phase flow phenomena  as the liquid trasnitions from various boiling regrimes. Charecterizing the chilldown behaviour is  important for optimizing the start-up procedures, ensuring safe operation, i.e, pressure fluctuations and minimal loss of cryogen.
 
-      <section class="project-list" aria-labelledby="mtech-list-title">
-        <h2 id="mtech-list-title">Featured MTech projects</h2>
-        <article class="project-item">
-          <h3>1. Chilldown analysis of a cryogenic transfer line</h3>
-          <p>A short description of the chilldown study, objectives, methodology and expected outcomes. Placeholder content for now.</p>
-          <p><a href="#" class="project-cta">Read more →</a></p>
-        </article>
+      <figure class="figure">
+        <img src="assets/img/mtechimage.png" alt="MTech project illustration" class="hero-img">
+      </figure>
 
-        <article class="project-item">
-          <h3>2. Thermal storage integration for small-scale regasification</h3>
-          <p>Summary of a project exploring thermal storage media and integration strategies. Replace with actual content later.</p>
-          <p><a href="#" class="project-cta">Read more →</a></p>
-        </article>
+      <section class="details">
+        <p>
+          The current research focussed on charecterizing the velocity and thermal temperature profiles in the film boiling regime of the chilldown phenomena. Film boiling occurs 
+        </p>
       </section>
-    </div>
+    </article>
+  </main>
+
+
   </main>
 
   <footer>
@@ -54,31 +43,7 @@
     </div>
   </footer>
 
-  <script>
-    fetch('components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-        function applyDarkModeSetting() {
-          const isDark = localStorage.getItem('darkMode') === 'true';
-          document.body.classList.toggle('dark-mode', isDark);
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) toggle.checked = isDark;
-        }
-        setTimeout(() => {
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) {
-            toggle.checked = localStorage.getItem('darkMode') === 'true';
-            toggle.addEventListener('change', function() {
-              document.body.classList.toggle('dark-mode', this.checked);
-              localStorage.setItem('darkMode', this.checked);
-            });
-          }
-          applyDarkModeSetting();
-        }, 50);
-        applyDarkModeSetting();
-      });
-  </script>
+  <script src="assets/js/navbar.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryogenics for Dummies</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/cryogenics.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,51 +21,8 @@
     <div class="container">
       <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
-  </footer>
-  <script>
-    fetch('components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-        // Dark mode logic for animated switch
-        function applyDarkModeSetting() {
-          const isDark = localStorage.getItem('darkMode') === 'true';
-          document.body.classList.toggle('dark-mode', isDark);
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) toggle.checked = isDark;
-        }
-        setTimeout(() => {
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) {
-            toggle.checked = localStorage.getItem('darkMode') === 'true';
-            toggle.addEventListener('change', function() {
-              document.body.classList.toggle('dark-mode', this.checked);
-              localStorage.setItem('darkMode', this.checked);
-            });
-          }
-          applyDarkModeSetting();
-        }, 50);
-        applyDarkModeSetting();
-      });
-
-    // Dynamically load blog tiles from JSON
-    fetch('blogposts-cryogenics.json')
-      .then(response => response.json())
-      .then(posts => {
-        const tileList = document.getElementById('cryogenics-tile-list');
-        tileList.innerHTML = posts.map((post, idx) => `
-          <div class=\"blog-tile\" onclick=\"window.location.href='blogpost-cryogenics.html?id=${idx}&src=cryogenics'\">
-            <img src=\"${post.image}\" alt=\"${post.title}\">
-            <div class="blog-tile-overlay"><span></span></div>
-            <div class=\"blog-tile-content\">
-              <h2>${post.title}</h2>
-              <p>${post.headline}</p>
-              <span class=\"read-more\">Read More <span class=\"read-more-symbol\">&rarr;</span></span>
-            </div>
-          </div>
-        `).join('');
-      });
-  </script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

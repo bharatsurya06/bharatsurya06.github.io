@@ -1,0 +1,70 @@
+/* Minimal per-page stylesheet for research.html */
+body {
+  background: #ffffff;
+  color: #111;
+  font-family: 'Exo 2', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site-content { max-width: 980px; margin: 28px auto; padding: 0 16px; }
+.research h1 { font-size: 1.8rem; margin: 0 0 8px; }
+.lede { color: #444; margin: 0 0 18px; }
+.hero img { width: 100%; max-width: 720px; display: block; margin: 14px 0; border-radius: 8px; }
+.summary p { color: #333; line-height: 1.5; }
+.map { width: 100%; height: 340px; border-radius: 8px; margin: 10px 0 24px; }
+.publications ul { padding-left: 18px; }
+
+/* keep footer readable with solid background from global stylesheet */
+footer .container { padding: 12px 0; text-align: center; }
+
+/* Ongoing research */
+.ongoing { margin: 20px 0 28px; }
+.ongoing:after { content: ""; display: table; clear: both; }
+.ongoing-grid { display: block; }
+.ongoing-image { float: left; width: 48%; max-width: 420px; min-width: 260px; margin: 0 22px 12px 0; }
+.ongoing-image img { width: 100%; height: auto; border-radius: 8px; display: block; background:#fff; }
+.ongoing-desc { overflow: hidden; }
+.ongoing-desc h3 { margin-top: 0; }
+.ongoing-desc p { margin: 0; color: #333; line-height: 1.6; text-align: justify; hyphens: auto; }
+.ongoing-desc p + p { clear: left; margin-top: 12px; }
+
+/* full-width block that uses same font/spacing but spans whole width below floats */
+.ongoing-desc.full-width-desc { clear: both; width: 100%; overflow: visible; margin-top: 12px; }
+.ongoing-desc.full-width-desc p { margin: 0; color: #333; line-height: 1.6; text-align: justify; hyphens: auto; font-family: inherit; }
+
+@media (max-width:800px) {
+  .ongoing-grid { grid-template-columns: 1fr; }
+  .ongoing-image { float: none; width: 100%; max-width: none; margin: 0 0 12px; }
+  .ongoing-desc { overflow: visible; }
+  .ongoing-desc p { text-align: left; }
+}
+
+
+@media (max-width:100px) {
+  .cards { flex-direction: column; }
+  .card { width: 60%; }
+}
+.other-work { margin: 30px 0; }
+.cards { display:flex; gap:80px; flex-wrap:wrap; justify-content:center; }
+.card { display:block; width:300px; max-width:46%; text-decoration:none; color:inherit; background:#fafafa; border:1px solid #000; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06); transition:transform .18s ease; }
+.card:hover { transform: translateY(-6px); }
+
+/* keep the media area at 1:1.2 (width:height = 1:1.2) */
+.card-media { position:relative; width:100%; aspect-ratio: 2 ; overflow:hidden; background:#fff; }
+.card-media img { width:100%; height:100%; object-fit:contain; object-position:center; display:block; }
+
+/* overlay appears on hover */
+.card-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fdfdfd; font-weight:700; font-size:1rem; background:rgb(0, 0, 0); opacity:0; }
+.card:hover .card-overlay { background:rgba(0, 0, 0, 0.797); opacity:1; }
+.card-overlay span { padding:6px 10px; border-radius:6px; backdrop-filter: blur(2px); }
+
+.card-body { padding:12px; }
+.card h3 { margin:0 0 6px; font-size:1.05rem; }
+.card p { margin:0; color:#444; font-size:0.95rem; }
+
+@media (max-width:800px) {
+  .cards { flex-direction:column; }
+  .card { width:100%; }
+}
+

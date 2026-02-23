@@ -1,171 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Include the consistent navigation bar -->
-    <div id="navbar"></div>
+  <div id="navbar"></div>
 
-    <div class="blog-section">
-        <div class="blog-header" style="text-align: center;">
-            <h1>Blog</h1>
-            <p>Explore my latest posts on Cryogenics for Dummies and FC Barcelona Match Reviews!</p>
-            <div class="blog-category-buttons">
-                <a href="cryogenics.html" class="blog-btn cryo-btn">Cryogenics for Dummies</a>
-                <a href="barca.html" class="blog-btn barca-btn">FC Barcelona Match Reviews</a>
+  <main class="site-content">
+    <section class="blog-carousel-section">
+      <button class="carousel-btn left" id="carousel-left"><i class="fas fa-chevron-left"></i></button>
+      <div class="blog-carousel-viewport">
+        <div class="blog-carousel" id="blog-carousel-js"></div>
+      </div>
+      <button class="carousel-btn right" id="carousel-right"><i class="fas fa-chevron-right"></i></button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"><p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p></div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script>
+    // Fetch posts from both JSON files, merge, sort, and display 5 most recent
+    let blogPosts = [];
+    let carouselStart = 0;
+    const visibleCards = 3;
+    let isSliding = false;
+
+    function parseDate(dateStr) {
+      let d = Date.parse(dateStr);
+      if (!isNaN(d)) return new Date(d);
+      let match = dateStr.match(/(\d{4}-\d{2}-\d{2})/);
+      if (match) return new Date(match[1]);
+      return new Date(0);
+    }
+
+    function mapPost(post, categoryOverride, idx, src) {
+      let link = '';
+      if (src === 'barca') link = `blogpost-template.html?id=${idx}&src=barca`;
+      else if (src === 'cryogenics') link = `blogpost-cryogenics.html?id=${idx}&src=cryogenics`;
+      return {
+        image: post.image,
+        category: categoryOverride || post.category,
+        categoryClass: src === 'barca' ? 'barca' : 'cryo',
+        title: post.title,
+        excerpt: post.headline || post.excerpt || '',
+        link,
+        date: parseDate(post.date)
+      };
+    }
+
+    function renderCarousel() {
+      const carousel = document.getElementById('blog-carousel-js');
+      if(!carousel || blogPosts.length===0) return;
+      let cardsToShow = [];
+      for (let i = -1; i < visibleCards + 1; i++) {
+        const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
+        const post = blogPosts[idx];
+        cardsToShow.push(`
+          <a href="${post.link}" class="blog-card ${post.categoryClass}" tabindex="0">
+            <div class="blog-card-image" style="background-image: url('${post.image}');"></div>
+            <div class="blog-hover-overlay"></div>
+            <div class="blog-card-content">
+              <span class="blog-category ${post.categoryClass}">${post.category}</span>
+              <span class="blog-date">${post.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+              <h2 class="blog-title">${post.title}</h2>
+              <p class="blog-excerpt">${post.excerpt}</p>
             </div>
-            <h2 class="recent-posts-title">Recent Posts</h2>
-        </div>
-        <div class="blog-carousel-container">
-            <button class="carousel-btn left" id="carousel-left"><i class="fas fa-chevron-left"></i></button>
-            <div class="blog-carousel-viewport">
-                <div class="blog-carousel" id="blog-carousel-js">
-                    <!-- JS will render 3 cards here -->
-                </div>
-            </div>
-            <button class="carousel-btn right" id="carousel-right"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </div>
+          </a>
+        `);
+      }
+      carousel.innerHTML = cardsToShow.join('');
+      const card = document.querySelector('.blog-card');
+      if(card) {
+        const cardWidth = card.offsetWidth + 12;
+        carousel.style.transition = 'none';
+        carousel.style.transform = `translateX(-${cardWidth}px)`;
+      }
+    }
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
-        </div>
-    </footer>
+    function moveCarousel(direction) {
+      if (isSliding) return;
+      isSliding = true;
+      const carousel = document.getElementById('blog-carousel-js');
+      const card = document.querySelector('.blog-card');
+      if(!carousel || !card) { isSliding = false; return; }
+      const cardWidth = card.offsetWidth + 12;
+      carousel.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1)';
+      carousel.style.transform = `translateX(-${cardWidth * (1 + direction)}px)`;
+      carousel.addEventListener('transitionend', function onTransitionEnd() {
+        carousel.removeEventListener('transitionend', onTransitionEnd);
+        carouselStart = (carouselStart + direction + blogPosts.length) % blogPosts.length;
+        renderCarousel();
+        isSliding = false;
+      });
+    }
 
-    <script>
-        fetch('components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-                // Dark mode logic for animated switch
-                function applyDarkModeSetting() {
-                  const isDark = localStorage.getItem('darkMode') === 'true';
-                  document.body.classList.toggle('dark-mode', isDark);
-                  const toggle = document.querySelector('.input#darkModeToggle');
-                  if (toggle) toggle.checked = isDark;
-                }
-                setTimeout(() => {
-                  const toggle = document.querySelector('.input#darkModeToggle');
-                  if (toggle) {
-                    toggle.checked = localStorage.getItem('darkMode') === 'true';
-                    toggle.addEventListener('change', function() {
-                      document.body.classList.toggle('dark-mode', this.checked);
-                      localStorage.setItem('darkMode', this.checked);
-                    });
-                  }
-                  applyDarkModeSetting();
-                }, 50);
-                applyDarkModeSetting();
-            });
+    async function loadAndRenderPosts() {
+      const [cryoRes, barcaRes] = await Promise.all([
+        fetch('blogposts-cryogenics.json'),
+        fetch('blogposts-barca.json')
+      ]);
+      const cryoPosts = await cryoRes.json();
+      const barcaPosts = await barcaRes.json();
+      let allPosts = [
+        ...cryoPosts.map((p, idx) => mapPost(p, 'Cryogenics for Dummies', idx, 'cryogenics')),
+        ...barcaPosts.map((p, idx) => mapPost(p, 'FC Barcelona Match Review', idx, 'barca'))
+      ];
+      allPosts.sort((a,b)=>b.date - a.date);
+      blogPosts = allPosts.slice(0,5);
+      renderCarousel();
+    }
 
-        // Fetch posts from both JSON files, merge, sort, and display 5 most recent
-        let blogPosts = [];
-        let carouselStart = 0;
-        const visibleCards = 3;
-        let isSliding = false;
-
-        function parseDate(dateStr) {
-            // Try to parse various date formats
-            let d = Date.parse(dateStr);
-            if (!isNaN(d)) return new Date(d);
-            // Try to handle custom formats (e.g., '2025-04-27 05:30 (IST)')
-            let match = dateStr.match(/(\d{4}-\d{2}-\d{2})/);
-            if (match) return new Date(match[1]);
-            return new Date(0); // fallback to epoch
-        }
-
-        function mapPost(post, categoryOverride, idx, src) {
-            let link = '';
-            if (src === 'barca') {
-                link = `blogpost-template.html?id=${idx}&src=barca`;
-            } else if (src === 'cryogenics') {
-                link = `blogpost-cryogenics.html?id=${idx}&src=cryogenics`;
-            }
-            return {
-                image: post.image,
-                category: categoryOverride || post.category,
-                categoryClass: src === 'barca' ? 'barca' : 'cryo',
-                title: post.title,
-                excerpt: post.headline || post.excerpt || '',
-                link,
-                date: parseDate(post.date)
-            };
-        }
-
-        function renderCarousel() {
-            const carousel = document.getElementById('blog-carousel-js');
-            let cardsToShow = [];
-            for (let i = -1; i < visibleCards + 1; i++) {
-                const idx = (carouselStart + i + blogPosts.length) % blogPosts.length;
-                const post = blogPosts[idx];
-                cardsToShow.push(`
-                    <a href="${post.link}" class="blog-card ${post.categoryClass}" tabindex="0">
-                        <div class="blog-card-image" style="background-image: url('${post.image}'); background-color: #222; background-blend-mode: lighten;"></div>
-                        <div class="blog-hover-overlay"></div>
-                        <div class="blog-card-content">
-                            <span class="blog-category ${post.categoryClass}">${post.category}</span>
-                            <span class="blog-date">${post.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                            <h2 class="blog-title">${post.title}</h2>
-                            <p class="blog-excerpt">${post.excerpt}</p>
-                        </div>
-                    </a>
-                `);
-            }
-            carousel.innerHTML = cardsToShow.join('');
-            const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
-            carousel.style.transition = 'none';
-            carousel.style.transform = `translateX(-${cardWidth}px)`;
-        }
-
-        function moveCarousel(direction) {
-            if (isSliding) return;
-            isSliding = true;
-            const carousel = document.getElementById('blog-carousel-js');
-            const cardWidth = document.querySelector('.blog-card').offsetWidth + 12;
-            carousel.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1)';
-            carousel.style.transform = `translateX(-${cardWidth * (1 + direction)}px)`;
-            carousel.addEventListener('transitionend', onTransitionEnd, { once: true });
-            function onTransitionEnd() {
-                carouselStart = (carouselStart + direction + blogPosts.length) % blogPosts.length;
-                renderCarousel();
-                isSliding = false;
-            }
-        }
-
-        async function loadAndRenderPosts() {
-            const [cryoRes, barcaRes] = await Promise.all([
-                fetch('blogposts-cryogenics.json'),
-                fetch('blogposts-barca.json')
-            ]);
-            const cryoPosts = await cryoRes.json();
-            const barcaPosts = await barcaRes.json();
-            // Map and merge posts with correct links
-            let allPosts = [
-                ...cryoPosts.map((p, idx) => mapPost(p, 'Cryogenics for Dummies', idx, 'cryogenics')),
-                ...barcaPosts.map((p, idx) => mapPost(p, 'FC Barcelona Match Review', idx, 'barca'))
-            ];
-            // Sort by date descending
-            allPosts.sort((a, b) => b.date - a.date);
-            blogPosts = allPosts.slice(0, 5);
-            renderCarousel();
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            loadAndRenderPosts();
-            document.getElementById('carousel-left').onclick = () => moveCarousel(-1);
-            document.getElementById('carousel-right').onclick = () => moveCarousel(1);
-            window.addEventListener('resize', () => renderCarousel());
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+    window.addEventListener('DOMContentLoaded', () => {
+      loadAndRenderPosts();
+      const left = document.getElementById('carousel-left');
+      const right = document.getElementById('carousel-right');
+      if(left) left.onclick = ()=>moveCarousel(-1);
+      if(right) right.onclick = ()=>moveCarousel(1);
+      window.addEventListener('resize', () => renderCarousel());
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

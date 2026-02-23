@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, #d3d3d3, #f0f0f0); /* Light grey gradient */
+    background: none; /* Page-specific backgrounds are set in per-page CSS files */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -22,9 +22,6 @@ body {
     /* Make nav stick to top */
     position: relative;
     min-height: 100vh; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 main, .blog-section, .about-section, .research-section {
@@ -226,8 +223,8 @@ footer .container p {
 }
 
 footer {
-    background-color: rgba(159, 158, 158, 0.667); /* Set footer background to black */
-    color: rgb(0, 0, 0); /* Set footer text color to white */
+    background-color: #9F9E9E; /* Solid footer background across the site */
+    color: rgb(0, 0, 0);
     width: 100%;
     text-align: center;
     padding: 10px 0;

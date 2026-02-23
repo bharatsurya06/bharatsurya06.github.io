@@ -2,191 +2,136 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Research</title>
-  <style>
-    /* Scoped styles for the Previous projects cards on this page */
-    .previous-projects { max-width:1100px; margin:36px auto; padding:18px 16px; }
-    .previous-projects h2 { font-size:1.35rem; margin-bottom:14px; }
-    .projects-row { display:flex; gap:18px; align-items:stretch; }
-
-    /* Square cards using aspect-ratio; image above text */
-    .project-card {
-      flex:1;
-      display:grid;
-      grid-template-rows: 1fr auto;
-      aspect-ratio: 1/1;
-      background:#ffffff;
-      color:var(--text-color, #111);
-      border:1px solid rgba(0,0,0,0.08);
-      text-decoration:none;
-      border-radius:10px;
-      overflow:hidden;
-      transition:transform .15s ease, box-shadow .15s ease;
-      box-shadow:0 1px 6px rgba(11,34,60,0.04);
-    }
-    .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(11,34,60,0.12); }
-
-    .project-media { width:100%; height:100%; overflow:hidden; display:block; }
-    .project-media img { width:100%; height:100%; object-fit:cover; display:block; }
-
-    .project-body { padding:12px 14px 18px; background:transparent; }
-    .project-title { font-weight:700; margin-bottom:8px; }
-    .project-desc { font-size:0.95rem; color:rgba(0,0,0,0.72); margin-bottom:8px; }
-    .project-cta { display:inline-block; margin-top:6px; font-weight:600; color:var(--accent-color,#0b66c3); }
-
-    @media (max-width:900px) {
-      .projects-row { flex-direction:column; }
-      .project-card { aspect-ratio: auto; grid-template-rows: auto 1fr; }
-      .project-media { height:220px; }
-    }
-
-    /* Dark mode adjustments (respects site dark-mode class) */
-    body.dark-mode .project-card { background:#0f0f12; color:#e8eef8; border-color:rgba(255,255,255,0.06); box-shadow:none; }
-    body.dark-mode .project-desc { color:rgba(255,255,255,0.78); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/research.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body>
-  <!-- Include the consistent navigation bar -->
   <div id="navbar"></div>
 
-  <div class="research-section">
-    <div class="research-container-vibrant research-report-layout">
-      <div class="research-intro-text research-full-width">
-        <h1 class="research-title">Cryogenic energy recovery</h1>
-        <p class="research-desc">
-          Cryogenic energy recovery, more commonly referred as cold recovery is one of the ways to achieve sustainability in industrial processes using cryogenic fluids. A huge exploiter of cold recovery is the LNG industry, where LNG at the import terminals is heated up to meet the natural gas demands of doemstic and industrial consumers. The cold energy eveoleved durign the regasfication can serve a multitude of refrigeration intensive applications starting from industrial  gas liquefaction, space cooling, ware house refrigeration , carbon capture and distirct cooling.  The aim of developing technologies aiding crygoenic energy recovery would ultimately lead to lessser dependency on the grid for cooling demands, thus reducing the global carbon footprint. Another important use of crygoenic energy recovery is in the Liquid Air energy storage technology where grid scale excess energy is used to liquefy airt an store. When demand peaks, the liquid crygoen is regasified to produce power. Codl recvoery during regasification in this system through lwiuefaction gerealty improves the turnaround efficiencies of LAES.  
-        </p>
-      </div>
-      <div class="research-image-center">
-        <img src="assets/img/supplychain.png" alt="Research Illustration" class="research-image-xl research-image-report">
-      </div>
-      <p class="research-desc">
-        One of the major bootlenecks in achieving  100% energy recovery lies in the operational duration of the regasification process and the cold application. the mismatch in the duty cycles of these two systems makes direct intergation of cold infeasible. The solution to this problem lies in the use of a cryogenic energy recovery (CER) system that had the abaility to store energy for a required idle duration. historically, packed beds have been a popular choice for similiar kind of probelms in steel and cement industries where waste heat was stored and used for low grade heating applications. These kind of systems have been recently studied for CER.  A CER system is a closed loop system that uses a cryogenic fluid to recover the cold energy from the regasification process and store it in a thermal storage medium. The stored cold energy can then be used to meet the cooling demands of the application. The CER system can be designed to operate independently of the regasification process, allowing for greater flexibility in the operation of both systems.
-        
-        
-        Moreover, the intergation of these two proecesses by a CER system shoudl not affect the process conditions of the parent system.  
-      </p>
-      <div id="lngMapContainer">
-        <div id="map"></div>
-      </div>
-    </div>
-  </div>
+  <main class="site-content">
 
-  <!-- Previous projects section -->
-  <section id="previous-projects" class="previous-projects" aria-labelledby="previous-projects-title">
-    <h2 id="previous-projects-title">Previous projects</h2>
-    <div class="projects-row">
-      <a class="project-card" href="mtech.html" title="Know more">
-        <div class="project-media">
-          <img src="assets/img/barca.jpg" alt="Barça preview">
-        </div>
-        <div class="project-body">
-          <div class="project-title">Chilldown analysis of a cryogenic tranfer line</div>
-          <div class="project-desc">A collection of analysis and write-ups related to Barça club, tactics and blog posts. Click to open the Barça project page.</div>
-          <div class="project-cta">Know more →</div>
-        </div>
-      </a>
+     <!-- Ongoing research: image + description -->
+      <section class="ongoing">
+        <h2>Ongoing research: PCM based Packed beds for cryogenic energy recovery</h2>
+        <div class="ongoing-grid">
+          <div class="ongoing-image">
+            <img src="assets/img/ongoing.png" alt="Ongoing research illustration">
+          </div>
+          <div class="ongoing-desc">
+            <p>
+              Cryogenic cold recovery is a key area of research with potential to significantly improve energy efficiency 
+              and reduce carbon footprint of process industries with refrigeration needs. Commonly these applications include
+              gas liquefaction, cryogenic carbon capture, cold chain, freeze desalination etc.   A vast amount of cryogenic cold of temperatures around -162 C goes is left unused 
+              on a large scale at LNG regasification termianls.  
+              In similair applications for heat recovery, Packed beds are a promising technology for 
+              cold recovery as they offer relaibilty, flexibility in operation.  They act as a thermal battery/ buffer storage solutiosn until the need for cold arises.
+              However, the thermal performance and feasibility of such systems for cryogenic cold recovery is not studied in detail.
+            </p>
+          </div>
+          <div class="ongoing-desc full-width-desc">
+            <p>
+               The design of such systems which encompasses 
+              the selection of storage material, geometric and process parameters are cruciall to enable efficienct cold recovery. 
+              The ongoing work at the Process Intensification laboratory addresses the design and performance analysis of these systems, specifically packed beds with 
+              phase change materials (PCMs)  as the storage medium. Both experimental and theoritical studies are undertaken. Various optimization frameworks are also explored 
+              to identify optimal design and operation strategies for these systems. You can find more details about the ongoing work and related publications below.
+            </p>
+            
+            
+            <h2>Read more here below:</h2>
 
-      <a class="project-card" href="btech.html" title="Know more">
-        <div class="project-media">
-          <img src="assets/img/regas.png" alt="Cryogenics preview">
+            
+            <ul>
+              <li>
+                <span class="pub-title-row"><span class="pub-list-bullet"></span><a href="https://doi.org/10.1016/j.est.2025.119780" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">A Multi Criteria Decision Analysis to Select Phase Change Material for Packed Bed Cryogenic Energy Recovery Systems</a></span>
+                <br>
+                <span class="pub-meta">Journal of Energy Storage, Volume 143, 2026 </span>
+              </li>
+              <br>
+              <li>
+                <span class="pub-title-row"><span class="pub-list-bullet"></span><a href="http://dx.doi.org/10.5958/2349-2120.2023.00013.3 " class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Exergy analysis of cold recovery in a cryogenic packed bed system</a></span>
+                <br>
+                <span class="pub-meta">Indian Journal of Cryogenics, Volume 48, Issue 1, 2023</span>
+              </li>
+              <br>
+              <li>
+                <span class="pub-title-row"><span class="pub-list-bullet"></span><a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">Conceptual Genetic Algorithm-Based Optimization of the Layer Heights in a Cascaded Packed Bed for Cryogenic Energy Storage</a></span>
+                <br>
+                <span class="pub-meta">Proceedings of the ASME International Mechanical Engineering Congress and Exposition, 2024, Portland, USA</span>
+              </li>
+
+        </ul>
+
+
+          </div>
         </div>
-        <div class="project-body">
-          <div class="project-title">CFD analysis of airfoil</div>
-          <div class="project-desc">Research notes and articles on cryogenic energy recovery, LNG terminals and related simulations. Click to open the Cryogenics project page.</div>
-          <div class="project-cta">Know more →</div>
+      </section>
+    </article>
+
+
+
+      <!-- Other research work: two cards linking to project pages -->
+      <section class="other-work">
+        <h2>Other research</h2>
+        <div class="cards">
+          <a class="card" href="mtech.html">
+            <div class="card-media">
+              <img src="assets/img/mtechimage.png" alt="Chilldown analysis">
+              <div class="card-overlay"><span>Read more</span></div>
+            </div>
+            <div class="card-body">
+              <h3>Chilldown analysis</h3>
+              <p>Chilldown of cryogenic transfer lines — A CFD study.</p>
+            </div>
+          </a>
+
+          <a class="card" href="btech.html">
+            <div class="card-media">
+              <img src="assets/img/btechimage.png" alt="CFD analysis">
+              <div class="card-overlay"><span>Read more</span></div>
+            </div>
+            <div class="card-body">
+              <h3>CFD analysis of airfoil</h3>
+              <p>CFD studies and supporting materials from undergraduate projects.</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-  </section>
+      </section>
+
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
-    </div>
+    <div class="container"><p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p></div>
   </footer>
 
-  <script>
-    fetch('components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-        // Dark mode logic for animated switch
-        function applyDarkModeSetting() {
-          const isDark = localStorage.getItem('darkMode') === 'true';
-          document.body.classList.toggle('dark-mode', isDark);
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) toggle.checked = isDark;
-        }
-        setTimeout(() => {
-          const toggle = document.querySelector('.input#darkModeToggle');
-          if (toggle) {
-            toggle.checked = localStorage.getItem('darkMode') === 'true';
-            toggle.addEventListener('change', function() {
-              document.body.classList.toggle('dark-mode', this.checked);
-              localStorage.setItem('darkMode', this.checked);
-            });
-          }
-          applyDarkModeSetting();
-        }, 50);
-        applyDarkModeSetting();
-      });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/navbar.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const EXPORT_COLOR = '#E60000';
-    const IMPORT_COLOR = '#0033CC';
-    const map = L.map('map').setView([20, 10], 2.5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    function addTerminalMarkers(lngTerminals) {
-      lngTerminals.forEach(terminal => {
-        const markerColor = terminal.type === 'export' ? EXPORT_COLOR : IMPORT_COLOR;
-        const markerTypeLabel = terminal.type === 'export' ? 'Export (Liquefaction)' : 'Import (Regasification)';
-        const marker = L.circleMarker([terminal.lat, terminal.lon], {
-          radius: 6,
-          fillColor: markerColor,
-          color: '#000',
-          weight: 1,
-          opacity: 1,
-          fillOpacity: 0.85
-        }).addTo(map);
-        const popupContent = `<b>${terminal.name}</b><br>Type: ${markerTypeLabel}<br>Capacity: ${terminal.capacity}`;
-        marker.bindPopup(popupContent);
-      });
-    }
-    const legend = L.control({position: 'bottomright'});
-    legend.onAdd = map => {
-      const div = L.DomUtil.create('div', 'info legend');
-      const types = [
-        { label: 'Export Terminal', color: EXPORT_COLOR },
-        { label: 'Import Terminal', color: IMPORT_COLOR }
-      ];
-      let html = '<h4>LNG Terminals</h4>';
-      types.forEach(type => {
-        html += `<i style="background:${type.color}"></i> ${type.label}<br>`;
-      });
-      div.innerHTML = html;
-      return div;
-    };
-    legend.addTo(map);
-    fetch('lng_terminals.json')
-      .then(response => response.json())
-      .then(data => addTerminalMarkers(data))
-      .catch(error => console.error('Error loading LNG terminal data:', error));
+    // Minimal map init — safe if #map exists
+    (function(){
+      const el = document.getElementById('map');
+      if(!el) return;
+      const map = L.map(el).setView([20,10], 2.5);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      fetch('lng_terminals.json').then(r=>r.json()).then(data=>{
+        data.forEach(t=>{
+          const col = t.type==='export' ? '#E60000' : '#0033CC';
+          L.circleMarker([t.lat,t.lon],{radius:6,fillColor:col,color:'#000',weight:1,fillOpacity:0.85}).bindPopup(`<b>${t.name}</b><br>${t.capacity||''}`).addTo(map);
+        });
+      }).catch(()=>{});
+    })();
   </script>
+  <!-- removed carousel script; card links are plain anchors -->
 </body>
 
 </html>

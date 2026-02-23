@@ -1,0 +1,17 @@
+/* Minimal per-page stylesheet for btech.html */
+body {
+  background-color: #f4f6f8;
+  color: #111;
+  font-family: 'Exo 2', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container { max-width: 900px; margin: 28px auto; padding: 0 16px; }
+.title { font-size: 1.6rem; margin: 6px 0 12px; }
+.lead { color: #444; margin: 0 0 16px; }
+.figure { margin: 14px 0; text-align: center; }
+.hero-img { width: 100%; max-width: 720px; height: auto; border-radius: 8px; display:block; margin: 0 auto; }
+.details p { color: #333; line-height: 1.6; }
+
+footer .container { padding: 12px 0; text-align: center; }
