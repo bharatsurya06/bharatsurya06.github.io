@@ -39,6 +39,7 @@ nav {
     height: 48px; /* Reduced height to fit menu options */
     min-height: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-bottom: 1px solid #000000;
 }
 
   
@@ -110,7 +111,7 @@ body.index-page.dark-mode .hero-section {
     background-image: url('assets/img/rocket-2.jpg');
 }
 body.index-page nav {
-    background:  rgba(159, 158, 158, 0.667);
+    background: #ffffff !important;
     box-shadow: 0 4px 24px rgba(80,80,80,0.10);
     border-radius: 18px;
     padding: 0 32px;
@@ -223,7 +224,7 @@ footer .container p {
 }
 
 footer {
-    background-color: #9F9E9E; /* Solid footer background across the site */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  rgba(159, 158, 158, 0.667) 40%, rgba(159, 158, 158, 0.667) 50%,rgba(159, 158, 158, 0.667) 60% rgba(255, 255, 255, 0) 100%) !important; /* Match header gradient */
     color: rgb(0, 0, 0);
     width: 100%;
     text-align: center;
@@ -232,6 +233,7 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
+    border-top: 1px solid #000000;
 }
 
 /* Left Side: Logo */
@@ -927,9 +929,13 @@ footer {
 
 /* --- Blog Section Modern Creative Styles --- */
 .blog-section {
-    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
     padding: 40px 0 30px 0;
     min-height: 70vh;
+}
+
+/* Keep global blog-section background off the Barça page */
+body:not(.barca-page) .blog-section {
+    background: linear-gradient(120deg, #f0f0f0 0%, #e0e7ff 100%);
 }
 
 .blog-header {
@@ -1847,7 +1853,7 @@ body.dark-mode .nav-links a:hover {
     background: #ffffff;
     color: #181a1b!important;
 }
-body.dark-mode .blog-section,
+body.dark-mode:not(.barca-page) .blog-section,
 body.dark-mode .about-section,
 body.dark-mode .research-section {
     background: linear-gradient(120deg, #23272a 0%, #181a1b 100%) !important;

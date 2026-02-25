@@ -21,8 +21,32 @@
     <div class="container">
       <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
     </div>
+  </footer>
+
   <script src="assets/js/navbar.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Dynamically load Cryogenics blog posts from JSON
+    fetch('blogposts-cryogenics.json')
+      .then(response => response.json())
+      .then(posts => {
+        const list = document.getElementById('cryogenics-tile-list');
+        if (!list) return;
+        list.innerHTML = posts.map((post, idx) => `
+          <div class="blog-tile" onclick="window.location.href='blogpost-cryogenics.html?id=${idx}&src=cryogenics'">
+            <img src="${post.image}" alt="${post.title}">
+            <div class="blog-tile-overlay"><span></span></div>
+            <div class="blog-tile-content">
+              <h2>${post.title}</h2>
+              <p>${post.headline}</p>
+            </div>
+          </div>
+        `).join('');
+      })
+      .catch(() => {
+        const list = document.getElementById('cryogenics-tile-list');
+        if (list) list.innerHTML = '<p>Unable to load posts right now.</p>';
+      });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

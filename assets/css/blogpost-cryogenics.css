@@ -3,3 +3,9 @@ body {
   background-color: #f4f6f8;
   min-height: 100vh;
 }
+
+/* Justify article text on left and right */
+#cryogenics-article .blogpost-content,
+#cryogenics-article .blogpost-content p {
+  text-align: justify;
+}

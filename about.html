@@ -8,71 +8,108 @@
   <link rel="stylesheet" href="assets/css/about.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="about-page">
   <div id="navbar"></div>
 
-  <main class="site-content">
-    <section class="about-hero">
-      <div class="hero-inner">
-        <div class="hero-media">
-          <img src="assets/img/profile.jpg" alt="Profile photo" class="hero-photo">
+  <main class="site-content about-shell">
+    <header class="about-header">
+      <div class="about-header-main">
+        <div class="about-photo-wrap">
+          <img src="assets/img/photo.jpg" alt="Profile photo" class="about-photo">
         </div>
-        <div class="hero-copy">
-          <h1 class="hero-title">Bharat Surya Chamarthi</h1>
-          <p class="hero-sub">Researcher — Cryogenics & Energy Recovery</p>
-          <p class="hero-lede">I research cryogenic energy recovery and low-temperature systems, combining experiments, modelling and optimisation to improve system efficiency.</p>
-          <p class="hero-contacts"><a href="mailto:info@example.com">info@example.com</a> &middot; <a href="research.html">Research</a> &middot; <a href="blog.html">Blog</a></p>
+        <div class="about-header-text">
+          <h1 class="about-name">Bharat Surya Chamarthi</h1>
+          <p class="about-role">Doctoral Student, Cryogenic Engineering Centre — IIT Kharagpur</p>
+          <p class="about-summary">
+            I work on the performance analysis and design of packed‑bed cryogenic energy recovery systems,
+            combining experiments, modelling and optimisation to improve efficiency in low‑temperature energy systems.
+          </p>
         </div>
       </div>
+      <div class="about-header-meta">
+        <a href="mailto:bharatsurya06@gmail.com" class="about-email">bharatsurya06@gmail.com</a>
+        <div class="about-social">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/bharatsurya06" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://researchgate.net/profile/yourprofile" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-main-grid">
+      <section id="skills" class="about-section-block">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python for scientific computing and data analysis</li>
+          <li>Applied machine learning and surrogate modelling</li>
+          <li>CFD and numerical simulation of thermal systems</li>
+          <li>Design and analysis of cryogenic and thermal equipment</li>
+          <li>Experimental methods and laboratory measurements</li>
+          <li>Optimisation and techno‑economic assessment</li>
+        </ul>
+      </section>
+
+      <section id="education" class="about-section-block">
+        <h2>Education</h2>
+        <ul class="about-timeline">
+          <li>
+            <div class="degree-line">
+              <span class="degree-title">Ph.D (ongoing)</span>
+              <span class="degree-inst">Cryogenic Engineering Centre, IIT Kharagpur</span>
+            </div>
+          </li>
+          <li>
+            <div class="degree-line">
+              <span class="degree-title">M.Tech — Mechanical Engineering</span>
+              <span class="degree-inst">NIT Rourkela</span>
+            </div>
+          </li>
+          <li>
+            <div class="degree-line">
+              <span class="degree-title">B.Tech — Mechanical Engineering</span>
+              <span class="degree-inst">Raghu Engineering College</span>
+            </div>
+          </li>
+        </ul>
+      </section>
     </section>
 
-    <section id="education" class="about-section">
-      <h2>Education</h2>
-      <ul class="education-list">
-        <li>
-          <strong>Ph.D (ongoing)</strong>
-          <div class="muted">Cryogenic Engineering Centre — IIT Kharagpur</div>
-        </li>
-        <li>
-          <strong>M.Tech — Mechanical Engineering</strong>
-          <div class="muted">NIT Rourkela</div>
-        </li>
-        <li>
-          <strong>B.Tech — Mechanical Engineering</strong>
-          <div class="muted">Raghu Engineering College</div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="research" class="about-section">
-      <h2>Ongoing Research</h2>
-      <p>Current work includes packed-bed cryogenic energy storage, phase-change material selection using multi-criteria decision analysis, and optimization of boil-off reduction strategies. See <a href="research.html">research</a> for project details.</p>
-    </section>
-
-    <section id="publications" class="about-section">
-      <h2>Selected Publications</h2>
-      <ul class="publications-list">
-        <li><a href="#">A Multi Criteria Decision Analysis to Select Phase Change Material — Journal of Energy Storage, 2026</a></li>
-        <li><a href="#">Exergy analysis of cold recovery in a cryogenic packed bed system — Indian Journal of Cryogenics, 2023</a></li>
-        <li><a href="#">Genetic Algorithm-Based Optimization of Layer Heights — ASME IMECE 2024</a></li>
-      </ul>
-    </section>
-
-    <section id="contact" class="about-section">
+    <section id="contact" class="about-section-block contact-section">
       <h2>Contact</h2>
-      <p>If you'd like to collaborate, email <a href="mailto:info@example.com">info@example.com</a>.</p>
       <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p><a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a></p>
+        <div class="contact-form-panel">
+          <h3>Send a message</h3>
+          <form id="contact-form" action="forms/contact.php" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="about-button">Send message</button>
+            <div id="form-status"></div>
+          </form>
         </div>
-        <div class="contact-card">
-          <h3>Address</h3>
-          <p>Process Intensification Lab, Cryogenic Engineering Centre, IIT Kharagpur</p>
+
+        <div class="contact-info-panel">
+          <h3>Details</h3>
+          <p><strong>Email</strong><br><a href="mailto:cbs.radon@gmail.com">cbs.radon@gmail.com</a></p>
+          <p><strong>Address</strong><br>Process Intensification Lab, Cryogenic Engineering Centre, IIT Kharagpur</p>
+          <p><strong>CV</strong><br><a href="assets/img/resume.pdf" download>Download CV</a></p>
         </div>
-        <div class="contact-card">
-          <h3>CV</h3>
-          <p><a href="assets/img/resume.pdf" download>Download CV</a></p>
+
+        <div class="contact-map-panel">
+          <h3>Location</h3>
+          <div class="map-frame">
+            <iframe src="https://maps.google.com/maps?q=IIT%20Kharagpur&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
     </section>

@@ -25,94 +25,106 @@
         </div>
     </footer>
   <script src="assets/js/navbar.js"></script>
-            });
-
+  <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
 
-        const src = getQueryParam('src');
-        const id = parseInt(getQueryParam('id'), 10) || 0;
-        const jsonFile = src === 'barca' ? 'blogposts-barca.json' : 'blogposts.json';
+        const src = getQueryParam('src') || 'barca';
+        const idParam = parseInt(getQueryParam('id'), 10);
+        const id = isNaN(idParam) ? 0 : idParam;
+        const jsonFile = 'blogposts-barca.json';
+
+        function buildContentHtml(post) {
+            let contentHtml = '';
+            if (typeof post.content === 'string') {
+                contentHtml = post.content;
+            } else if (Array.isArray(post.content) && post.content.length > 0) {
+                const data = post.content[0];
+                if (data.season_overview) contentHtml += `<p>${data.season_overview}</p>`;
+                if (data.introduction_paragraph) contentHtml += data.introduction_paragraph;
+                if (data.attackers) {
+                    contentHtml += '<h2>Attackers</h2>';
+                    data.attackers.forEach(att => {
+                        contentHtml += `<h3>${att.name} (${att.position})</h3>`;
+                        if (att.category) contentHtml += `<p><strong>${att.category}</strong></p>`;
+                        if (att.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${att.Verdict}</p>`;
+                        contentHtml += `<p>${att.review}</p>`;
+                    });
+                }
+                if (data.midfielders) {
+                    contentHtml += '<h2>Midfielders</h2>';
+                    data.midfielders.forEach(m => {
+                        contentHtml += `<h3>${m.name} (${m.position})</h3>`;
+                        if (m.category) contentHtml += `<p><strong>${m.category}</strong></p>`;
+                        if (m.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${m.Verdict}</p>`;
+                        contentHtml += `<p>${m.review}</p>`;
+                    });
+                }
+                if (data.defenders_and_goalkeepers) {
+                    contentHtml += '<h2>Defenders & Goalkeepers</h2>';
+                    data.defenders_and_goalkeepers.forEach(def => {
+                        contentHtml += `<h3>${def.name} (${def.position})</h3>`;
+                        if (def.category) contentHtml += `<p><strong>${def.category}</strong></p>`;
+                        if (def.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${def.Verdict}</p>`;
+                        contentHtml += `<p>${def.review}</p>`;
+                    });
+                }
+            }
+            return contentHtml;
+        }
+
+        function renderPost(posts, index) {
+            const article = document.getElementById('barca-article');
+            const post = posts[index];
+            if (!article || !post) {
+                if (article) article.innerHTML = '<p>Post not found.</p>';
+                return;
+            }
+            document.title = post.title;
+            const contentHtml = buildContentHtml(post);
+            article.innerHTML = `
+                <h1 style="font-size: 2.2rem; margin-bottom: 0.5em; background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">${post.title}</h1>
+                <h2 style="font-size: 1.3rem; color: #FC466B; margin-bottom: 1.5em;">${post.headline}</h2>
+                <p style="color: #3f5efb; font-size: 1rem; margin-bottom: 0.5em;">${post.date} &bull; ${post.author}</p>
+                <span style="display:inline-block;background:#FC466B;color:#fff;padding:2px 10px;border-radius:12px;font-size:0.95em;margin-bottom:1.5em;">${post.category}</span>
+                <img src="${post.image}" alt="Blog image" style="display: block; margin: 32px auto; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(63,94,251,0.13); border: 2px solid #FC466B;">
+                <div class="blogpost-content" style="font-size: 1.15rem; line-height: 1.7; color: #222; margin-top: 1.5em;">${contentHtml}</div>
+            `;
+            window.history.replaceState({}, '', `blogpost-template.html?id=${index}&src=barca`);
+        }
+
+        function renderSidebar(posts, activeIndex) {
+            const sidebarList = document.getElementById('blogpost-sidebar-list');
+            if (!sidebarList) return;
+            sidebarList.innerHTML = posts.map((post, idx) => `
+                <li>
+                    <a class="blogpost-link${idx === activeIndex ? ' active' : ''}" href="blogpost-template.html?id=${idx}&src=barca" data-index="${idx}">${post.title}</a>
+                </li>
+            `).join('');
+            sidebarList.querySelectorAll('.blogpost-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const idx = parseInt(link.getAttribute('data-index'), 10);
+                    renderSidebar(posts, idx);
+                    renderPost(posts, idx);
+                });
+            });
+        }
 
         fetch(jsonFile)
             .then(response => response.json())
             .then(posts => {
-                // Sidebar list
-                const sidebarList = document.getElementById('blogpost-sidebar-list');
-                sidebarList.innerHTML = posts.map((post, idx) => `
-                    <li>
-                        <a class="blogpost-link${idx === id ? ' active' : ''}" href="blogpost-template.html?id=${idx}&src=${src || 'barca'}">${post.title}</a>
-                    </li>
-                `).join('');
-
-                // Main article
-                const post = posts[id];
-                if (!post) {
-                    document.getElementById('barca-article').innerHTML = '<p>Post not found.</p>';
-                    return;
-                }
-                document.title = post.title;
-                // Prepare content HTML
-                let contentHtml = '';
-                if (typeof post.content === 'string') {
-                    contentHtml = post.content;
-                } else if (Array.isArray(post.content)) {
-                    const data = post.content[0];
-                    if (data.season_overview) contentHtml += `<p>${data.season_overview}</p>`;
-                    if (data.introduction_paragraph) contentHtml += data.introduction_paragraph;
-                    if (data.attackers) {
-                        contentHtml += '<h2>Attackers</h2>';
-                        data.attackers.forEach(att => {
-                            contentHtml += `<h3>${att.name} (${att.position})</h3>`;
-                            if (att.category) {
-                                contentHtml += `<p><strong>${att.category}</strong></p>`;
-                            }
-                            if (att.Verdict) {
-                                contentHtml += `<p><strong>Verdict:</strong> ${att.Verdict}</p>`;
-                            }
-                            contentHtml += `<p>${att.review}</p>`;
-                        });
-                    }
-                    if (data.midfielders) {
-                        contentHtml += '<h2>Midfielders</h2>';
-                        data.midfielders.forEach(mid => {
-                            contentHtml += `<h3>${mid.name} (${mid.position})</h3>`;
-                            if (mid.category) {
-                                contentHtml += `<p><strong>${mid.category}</strong></p>`;
-                            }
-                            if (mid.Verdict) {
-                                contentHtml += `<p><strong>Verdict:</strong> ${mid.Verdict}</p>`;
-                            }
-                            contentHtml += `<p>${mid.review}</p>`;
-                        });
-                    }
-                    if (data.defenders_and_goalkeepers) {
-                        contentHtml += '<h2>Defenders & Goalkeepers</h2>';
-                        data.defenders_and_goalkeepers.forEach(def => {
-                            contentHtml += `<h3>${def.name} (${def.position})</h3>`;
-                            if (def.category) {
-                                contentHtml += `<p><strong>${def.category}</strong></p>`;
-                            }
-                            if (def.Verdict) {
-                                contentHtml += `<p><strong>Verdict:</strong> ${def.Verdict}</p>`;
-                            }
-                            contentHtml += `<p>${def.review}</p>`;
-                        });
-                    }
-                }
-                document.getElementById('barca-article').innerHTML = `
-                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5em; background: linear-gradient(90deg, #0A174E 0%, #3f5efb 60%, #FC466B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent;">${post.title}</h1>
-                    <h2 style="font-size: 1.3rem; color: #FC466B; margin-bottom: 1.5em;">${post.headline}</h2>
-                    <p style="color: #3f5efb; font-size: 1rem; margin-bottom: 0.5em;">${post.date} &bull; ${post.author}</p>
-                    <span style="display:inline-block;background:#FC466B;color:#fff;padding:2px 10px;border-radius:12px;font-size:0.95em;margin-bottom:1.5em;">${post.category}</span>
-                    <img src="${post.image}" alt="Blog image" style="display: block; margin: 32px auto; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(63,94,251,0.13); border: 2px solid #FC466B;">
-                    <div class="blogpost-content" style="font-size: 1.15rem; line-height: 1.7; color: #222; margin-top: 1.5em;">
-                        ${contentHtml}
-                    </div>
-                `;
+                const safeIndex = Math.max(0, Math.min(id, posts.length - 1));
+                renderSidebar(posts, safeIndex);
+                renderPost(posts, safeIndex);
+            })
+            .catch(() => {
+                const article = document.getElementById('barca-article');
+                if (article) article.innerHTML = '<p>Unable to load this post.</p>';
             });
-    </script>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,3 +3,9 @@ body {
   background-color: #f4f6f8;
   min-height: 100vh;
 }
+
+/* Justify article text on left and right */
+#barca-article .blogpost-content,
+#barca-article .blogpost-content p {
+  text-align: justify;
+}

@@ -8,29 +8,29 @@
   <link rel="stylesheet" href="assets/css/barca.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700,800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="barca-page">
   <div id="navbar"></div>
   <div class="blog-section">
     <div class="blog-header">
       <h1>All FC Barcelona Blog posts</h1>
       <p>Been a culer since 2011, just sharing my thoughts on Barca games whenever I can</p>
-      <script src="assets/js/navbar.js"></script>
-            toggle.checked = localStorage.getItem('darkMode') === 'true';
-            toggle.addEventListener('change', function() {
-              document.body.classList.toggle('dark-mode', this.checked);
-              localStorage.setItem('darkMode', this.checked);
-            });
-          }
-          applyDarkModeSetting();
-        }, 50);
-        applyDarkModeSetting();
-      });
+    </div>
+    <div class="blog-tile-list" id="barca-blog-list"></div>
+  </div>
 
-    // Dynamically load Barca blog posts from JSON
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bharat Surya Chamarthi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script>
     fetch('blogposts-barca.json')
       .then(response => response.json())
       .then(posts => {
         const list = document.getElementById('barca-blog-list');
+        if (!list) return;
         list.innerHTML = posts.map((post, idx) => `
           <div class="blog-tile" onclick="window.location.href='blogpost-template.html?id=${idx}&src=barca'">
             <img src="${post.image}" alt="${post.title}">
@@ -41,6 +41,10 @@
             </div>
           </div>
         `).join('');
+      })
+      .catch(() => {
+        const list = document.getElementById('barca-blog-list');
+        if (list) list.innerHTML = '<p>Unable to load posts right now.</p>';
       });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>

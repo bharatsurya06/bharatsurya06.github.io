@@ -4,18 +4,31 @@ body {
   min-height: 100vh;
 }
 
+/* Header + buttons */
+.blog-page-header {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+}
+
+.blog-page-header .blog-header {
+  text-align: center;
+}
+
 /* Carousel layout */
 .blog-carousel-section {
+  max-width: 1100px;
+  margin: 24px auto 56px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 48px 12px;
 }
 
 .blog-carousel-viewport {
-  width: 86%;
-  max-width: 1100px;
+  flex: 1 1 auto;
+  max-width: 1000px;
   overflow: hidden;
 }
 
