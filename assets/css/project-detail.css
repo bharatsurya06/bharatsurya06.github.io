@@ -1,0 +1,107 @@
+/* Project detail pages (insulation, vicer, peltier) — match about.html aesthetics */
+
+body.project-detail-page {
+  background-color: #ffffff;
+  color: #111111;
+  font-family: 'Exo 2', Arial, sans-serif;
+}
+
+/* Container width: same as about.html */
+.project-detail-page .site-content.project-detail-shell {
+  max-width: 1040px;
+  margin: 48px auto 64px;
+  padding: 0 24px;
+}
+
+/* Header — match about section feel */
+.project-detail-page .project-detail-hero {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dedede;
+}
+
+.project-detail-page .project-detail-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #111111;
+}
+
+.project-detail-page .project-detail-hero .lede {
+  margin: 0;
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Figure / image */
+.project-detail-page .project-detail-figure {
+  margin: 28px 0 32px;
+  text-align: center;
+}
+
+.project-detail-page .project-detail-figure img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+}
+
+.project-detail-page .project-detail-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Content sections — same h2 style as about-section-block */
+.project-detail-page .project-detail-content {
+  padding: 0;
+}
+
+.project-detail-page .project-detail-content h2 {
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 28px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cccccc;
+  color: #111111;
+}
+
+.project-detail-page .project-detail-content h2:first-child {
+  margin-top: 0;
+}
+
+.project-detail-page .project-detail-content p {
+  margin: 0 0 14px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #333333;
+  text-align: justify;
+}
+
+.project-detail-page .project-detail-content a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.project-detail-page .project-detail-content a:hover {
+  opacity: 0.7;
+}
+
+.project-detail-page .thesis-link,
+.project-detail-page .project-detail-content .thesis-link {
+  margin-top: 24px;
+  font-size: 0.96rem;
+  color: #333333;
+}
+
+@media (max-width: 600px) {
+  .project-detail-page .site-content.project-detail-shell {
+    padding: 0 16px;
+    margin-top: 32px;
+  }
+}

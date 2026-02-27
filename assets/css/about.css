@@ -29,14 +29,23 @@ body.about-page {
 
 .about-photo-wrap {
   flex-shrink: 0;
+  text-align: center;
 }
 
 .about-photo {
-  width: 160px;
-  height: 160px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #000000;
+  object-fit: fill;
+  border: 0.5px solid #000000;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-photo-wrap .about-social {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .about-header-text {
@@ -74,9 +83,6 @@ body.about-page {
 .about-email {
   font-size: 0.96rem;
   color: #000000;
-  text-decoration: none;
-  border-bottom: 1px solid #000000;
-  padding-bottom: 2px;
 }
 
 .about-email:hover {
@@ -87,20 +93,32 @@ body.about-page {
   display: flex;
   gap: 14px;
   font-size: 1.2rem;
+  background-color: #382f2f60;
+  border-radius: 20px;
+  padding: 10px;
+  width: 140px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 .about-social a {
   text-decoration: none;
 }
 
 /* Allow social media brand colours only */
-.about-social a[title="LinkedIn"] { color: #0a66c2; }
+.about-social a[title="LinkedIn"] { color: #000000; }
 .about-social a[title="GitHub"] { color: #000000; }
-.about-social a[title="Twitter"] { color: #1da1f2; }
-.about-social a[title="ResearchGate"] { color: #00ccbb; }
+.about-social a[title="Twitter"] { color: #000000; }
+.about-social a[title="ResearchGate"] { color: #000000; }
 
 .about-social a:hover {
-  opacity: 0.8;
+  opacity: 1;
+  color: #ffffff;
+
 }
 
 /* Main grid: skills + education */
@@ -132,6 +150,17 @@ body.about-page {
   padding: 0;
 }
 
+.about-section-block ul.about-two-col-list {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.about-section-block ul.about-two-col-list li {
+  list-style: disc;
+  list-style-position: inside;
+  break-inside: avoid;
+}
+
 .about-section-block li {
   font-size: 0.96rem;
   line-height: 1.7;
@@ -140,7 +169,12 @@ body.about-page {
   border-bottom: 1px solid #f3f3f3;
 }
 
-.about-section-block li:last-child {
+.about-section-block ul.about-two-col-list li {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.about-section-block li:last-child,
+.about-section-block ul.about-two-col-list li:last-child {
   border-bottom: none;
 }
 
@@ -178,6 +212,10 @@ body.about-page {
   font-size: 1rem;
   margin: 0 0 12px;
   color: #222222;
+}
+
+.contact-info-panel i.fa-location-dot {
+  margin-right: 6px;
 }
 
 .form-group {
@@ -220,16 +258,16 @@ body.about-page {
   padding: 10px 22px;
   border-radius: 4px;
   border: 1px solid #000000;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff00;
+  color: #000000;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
 }
 
 .about-button:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #form-status {
@@ -287,6 +325,9 @@ body.about-page {
 @media (max-width: 600px) {
   .about-page .site-content.about-shell {
     padding: 0 16px;
+  }
+  .about-section-block ul.about-two-col-list {
+    column-count: 1;
     margin-top: 32px;
   }
 
@@ -478,8 +519,8 @@ body {
 
 button[type="submit"] {
   padding: 12px 30px;
-  background: #667eea;
-  color: white;
+  background: #0000003c;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -489,7 +530,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #5a67d8;
+  background: #000000;
+  color: #ffffff;
 }
 
 #form-status {

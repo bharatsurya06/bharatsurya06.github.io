@@ -2,34 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI prediction — Effective Thermal Conductivity</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="assets/css/project-detail.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="project-detail-page">
   <div id="navbar"></div>
 
-  <main class="site-content">
-    <article class="project">
+  <main class="site-content project-detail-shell">
+    <header class="project-detail-hero">
       <h1>AI prediction of effective thermal conductivity</h1>
-      <p class="lede">Placeholder summary — replace with full project description.</p>
+      <p class="lede">Machine-learning models to predict effective thermal conductivity of cryogenic insulations using microstructure and material descriptors.</p>
+    </header>
 
-      <figure style="max-width:720px;margin:18px auto;text-align:center;">
-        <img src="assets/img/insulation.png" alt="Insulation ML" style="width:100%;max-width:560px;border-radius:8px;">
-        <figcaption>Model illustration (placeholder)</figcaption>
-      </figure>
 
-      <section class="details">
-        <h2>Overview</h2>
-        <p>This project uses machine learning to predict effective thermal conductivity of cryogenic insulation materials from microstructure and compositional descriptors. Placeholder for method, datasets and model performance.</p>
+    <section class="project-detail-content details">
+      <h2>Overview</h2>
+      <p>In cryogenic systems, preventing heat inleak from the surroundings is 
+        essential because even small heat gains can cause the cryogen to warm up and evaporate, 
+        leading to product loss, pressure buildup, and reduced storage efficiency. 
+        Minimizing this parasitic heat transfer therefore helps maintain low temperatures, 
+        improves safety, and reduces operating costs.
 
-        <h2>Results</h2>
-        <p>Placeholder for accuracy, metrics and sample predictions.</p>
+        To limit this heat inleak, multilayer insulation (MLI) is commonly used. 
+        It is placed in the annular space between the inner and outer walls of cryogenic equipment such as
+         storage tanks and transfer lines. MLI consists of alternating layers of reflective and spacer materials,
+          typically maintained under vacuum. This arrangement suppresses radiation, conduction, and convection, 
+          thereby reducing the rate at which heat enters the cryogenic system.
 
-        <p class="thesis-link">Thesis / report (placeholder): <a href="assets/documents/insulation-thesis.pdf">Open (will be added)</a></p>
-      </section>
-    </article>
+          A MLI system is charecterized by its effective thermal conductivity, which is a measure of its ability to 
+          resist heat transfer. The effective thermal conductivity represents the combined effect of all these mechanisms as a single equivalent property, allowing the insulation to be treated like a homogeneous material for analysis and design.
+
+          This parameter is important because it provides a practical way to compare different MLI configurations, l
+          ayer densities, and vacuum conditions. A lower effective thermal conductivity indicates better insulation 
+          performance, meaning less heat inleak and lower cryogen losses. 
+          Therefore, evaluating and selecting MLI based on its effective thermal conductivity helps 
+          engineers choose insulation systems that ensure efficient, safe, and economical operation of cryogenic equipment.
+          <figure class="project-detail-figure">
+            <img src="assets/img/insulation.png" alt="MLI placed between the cold inner wall and the hot outer wall">
+            <figcaption>MLI placed between the cold inner wall and the hot outer wall</figcaption>
+          </figure>
+      <p> The effective thermal conductivity of MLI is strongly influenced by several interacting factors, 
+        including the properties of the reflector and spacer materials, layer density and thickness, and the
+         level of vacuum. Because heat transfer in MLI occurs through multiple coupled mechanisms, developing 
+         analytical expressions that accurately capture the influence of all these parameters is highly complex a
+         nd often impractical.
+
+        Although experimental measurements can provide reliable values of effective thermal conductivity, 
+        conducting such tests for every new material combination or operating condition is time-consuming, 
+        expensive, and technically demanding. Existing analytical and semi-empirical models attempt to estimate 
+        this property, but most are limited in their ability to incorporate the full range of influencing variables 
+        simultaneously.
+
+        To address these limitations, this work employs an artificial neural network (ANN) to 
+        predict the effective thermal conductivity of MLI.Machine learning provides a data-driven way to learn how 
+        different parameters interact, even when the relationships are complex and nonlinear. This allows us to obtain
+         quick and reasonably accurate predictions without performing numerous experiments or relying on 
+         overly simplified theoretical models.
+       
+          <h2>Results</h2>
+      <p>The results of the study may be found in 
+        <a href="assets/documents/Ann_based_MLI.pdf">Predictions of ANN for MLI thermal conductivity</a>.
+      </p>
+
+    </section>
+
   </main>
 
   <footer>
