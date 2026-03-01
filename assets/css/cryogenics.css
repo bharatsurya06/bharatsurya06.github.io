@@ -1,5 +1,109 @@
 /* Per-page stylesheet for cryogenics.html */
+
 body {
-  background-color: #f4f6f8;
+  background-color: #f6f6f6;
   min-height: 100vh;
+  color: #111111;
+}
+
+.blog-section {
+  max-width: 1040px;
+  margin: 48px auto 64px;
+  padding: 0 24px;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.blog-header h1 {
+  font-size: 2.1rem;
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.blog-header p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #555555;
+}
+
+.blog-tile-list {
+  width: 100%;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.blog-tile {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1),
+              box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+              background-color 220ms cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+
+.blog-tile img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-tile-overlay {
+  display: none;
+}
+
+.blog-tile-content {
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-tile-content h2 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.blog-tile-content p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.blog-tile:hover {
+  transform: translateY(-4px);
+  background: #f2f2f2;
+  box-shadow: 0 12px 30px rgba(18,24,36,0.16);
+}
+
+@media (max-width: 900px) {
+  .blog-section {
+    padding: 0 16px;
+  }
+  .blog-tile-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-tile-list {
+    grid-template-columns: 1fr;
+  }
 }
