@@ -20,11 +20,11 @@
       <h2>Tripping on....</h2>
       <div class="spotify-grid">
         <div class="spotify-embed">
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6bl2cA03RSC3uodBpq66Jt?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2aibwv5hGXSgw7Yru8IYTO?utm_source=generator&si=0f31154591184740" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
         </div>
 
         <div class="spotify-embed">
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4CynbtCIynnanmhYj1FW7Q?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2H4LybC5ZimpGKS8uZzaiN?utm_source=generator&si=a204007a8c0943cb" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
         </div>
 
         <div class="spotify-embed">
@@ -32,8 +32,8 @@
         </div>
 
         <div class="spotify-embed">
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6z2me6sElr4zT80y9biqxN?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3pySSHItdnd1OSXIs5efpQ?utm_source=generator&si=a801e1c8d176401b" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>      
+      </div>
 
         <div class="spotify-embed">
           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6WaeBF1XmVP5OAOFDGCU1p?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -87,31 +87,38 @@
       </div>
     </section>
 
-    <section class="beyond-section movie-section">
-      <h2>Photo dump</h2>
-      <div class="movie-list">
-        <figure class="movie-card">
-          <img src="assets/img/swades.webp" alt="Swades movie still">
-          <figcaption>Swades (Hindi)</figcaption>
-        </figure>
-        <figure class="movie-card">
-          <img src="assets/img/hfo.jpeg" alt="HFO image">
-          <figcaption>The hundred foot journey (English)</figcaption>
-        </figure>
-        <figure class="movie-card">
-          <img src="assets/img/keeda cola.avif" alt="keeda image">
-          <figcaption>Keeda Cola (Telugu)</figcaption>
-        </figure>
-        <figure class="movie-card">
-          <img src="assets/img/yuva.jpeg" alt="keeda image">
-          <figcaption>Yuva (Telugu/Tamil/Hindi)</figcaption>
-        </figure>
-        <figure class="movie-card">
-          <img src="assets/img/the menu.jpg" alt="keeda image">
-          <figcaption>The menu (English)</figcaption>
-        </figure>
-      </div>
-    </section>
+    <br>
+
+    <button id="galleryBtn">PHOTO DUMP →</button>
+
+    <!-- Modal -->
+    <div id="galleryModal" class="gallery-modal">
+
+        <div class="modal-content">
+
+          <span class="close-gallery">&times;</span>
+
+          <h2>Photos for no reason</h2>
+          <div class="gallery-grid" id="galleryGrid"></div>
+
+
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+
+      <span class="close-lightbox">&times;</span>
+
+      <span class="prev">&#10094;</span>
+
+      <img id="lightboxImage">
+
+      <span class="next">&#10095;</span>
+
+    </div>
+
+
+
   </main>
 
   <footer>
@@ -119,6 +126,191 @@
   </footer>
 
   <script src="assets/js/navbar.js"></script>
+
+  <script>
+    const modal = document.getElementById("galleryModal");
+    const btn = document.getElementById("galleryBtn");
+    const closeBtn = document.querySelector(".close-gallery");
+
+    btn.onclick = function(){
+
+        modal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+    closeBtn.onclick = function(){
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+    }
+
+    // Close when clicking outside
+
+    window.onclick = function(e){
+
+        if(e.target == modal){
+
+            modal.classList.remove("active");
+
+            document.body.style.overflow = "auto";
+
+        }
+
+    }
+  </script>
+
+  <script>
+    async function loadGallery() {
+
+      const response = await fetch("photos.json");
+      const photos = await response.json();
+
+      const gallery = document.getElementById("galleryGrid");
+
+      photos.forEach(photo => {
+
+          gallery.innerHTML += `
+              <div class="gallery-item">
+
+                  <img src="${photo.image}" alt="${photo.title}">
+
+                  <div class="photo-info">
+
+                      <h3>${photo.title}</h3>
+
+                      <p>📍 ${photo.location}</p>
+
+                      <p>📷 ${photo.camera}</p>
+                  </div>
+
+              </div>
+          `;
+
+    });}
+    loadGallery();
+  </script>
+
+  
+
+  
+
+
+  <script>
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    const closeLightbox = document.querySelector(".close-lightbox");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+
+    const gallery = document.getElementById("galleryGrid");
+
+    let images = [];
+    let currentIndex = 0;
+
+    /* Open image */
+
+    gallery.addEventListener("click", function(e){
+
+        if(!e.target.matches(".gallery-item img"))
+            return;
+
+        images = [...document.querySelectorAll(".gallery-item img")];
+
+        currentIndex = images.indexOf(e.target);
+
+        showImage();
+
+        lightbox.classList.add("active");
+
+    });
+
+    /* Display current image */
+
+    function showImage(){
+
+        if(images.length === 0) return;
+
+        lightboxImage.src = images[currentIndex].src;
+
+    }
+
+    /* Next image */
+
+    next.addEventListener("click", function(){
+
+        if(images.length === 0) return;
+
+        currentIndex = (currentIndex + 1) % images.length;
+
+        showImage();
+
+    });
+
+    /* Previous image */
+
+    prev.addEventListener("click", function(){
+
+        if(images.length === 0) return;
+
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+
+        showImage();
+
+    });
+
+    /* Close button */
+
+    closeLightbox.addEventListener("click", function(){
+
+        lightbox.classList.remove("active");
+
+    });
+
+    /* Click outside image */
+
+    lightbox.addEventListener("click", function(e){
+
+        if(e.target === lightbox)
+            lightbox.classList.remove("active");
+
+    });
+
+    /* Keyboard controls */
+
+    document.addEventListener("keydown", function(e){
+
+        if(!lightbox.classList.contains("active"))
+            return;
+
+        if(e.key === "ArrowRight"){
+
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+
+        }
+
+        if(e.key === "ArrowLeft"){
+
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+
+        }
+
+        if(e.key === "Escape"){
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+  </script>  
 </body>
 </html>
 

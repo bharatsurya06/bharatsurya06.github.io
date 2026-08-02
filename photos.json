@@ -1,0 +1,67 @@
+[
+    {
+        "image": "assets/img/photography/1.jpg",
+        "title": "JoyChandi Pahad",
+        "location": "West Bengal, India",
+        "camera": "Pixel 6A"
+    },
+    {
+        "image": "assets/img/photography/2.jpg",
+        "title": "Geyeokbukgung Palace",
+        "location": "Seoul, South Korea",
+        "camera": "Pixel 6A"
+    },
+    {
+        "image": "assets/img/photography/3.jpg",
+        "title": "Geyeokbukgung Palace Lake",
+        "location": "Seoul, South Korea",
+        "camera": "Pixel 6A"
+    },
+
+
+    {
+        "image": "assets/img/photography/5.jpg",
+        "title": "Singapore city view",
+        "location": "Boeing 737 Max 8, Singapore",
+        "camera": "Pixel 6A"
+    },
+    {
+        "image": "assets/img/photography/6.jpg",
+        "title": "Imjingang Peace Park Memorial",
+        "location": "Paju, DMZ, South Korea",
+        "camera": "Pixel 6A"
+    },
+        {
+        "image": "assets/img/photography/7.jpg",
+        "title": "Hanbat Arboretum Botanical Park",
+        "location": "Daejeon, South Korea",
+        "camera": "Pixel 6A"
+    }, 
+            {
+        "image": "assets/img/photography/8.jpg",
+        "title": "IT Sez beach",
+        "location": "Visakhapatnam, India",
+        "camera": "Nothing Phone 1"
+    },
+            {
+        "image": "assets/img/photography/9.jpg",
+        "title": "Shipwreck at the Tenneti beach",
+        "location": "Visakhapatnam, India",
+        "camera": "Pixel 6A"
+    },
+            {
+        "image": "assets/img/photography/10.jpg",
+        "title": "Bay of Bengal Coast line",
+        "location": "Visakhapatnam, India",
+        "camera": "Pixel 6A"
+    }
+
+
+
+
+
+
+
+
+
+]

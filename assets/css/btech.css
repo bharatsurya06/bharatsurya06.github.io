@@ -1,4 +1,7 @@
-/* Minimal per-page stylesheet for btech.html */
+
+
+
+/* Minimal per-page stylesheet for mtech.html */
 body {
   background-color: #f4f6f8;
   color: #111;
@@ -9,9 +12,10 @@ body {
 
 .container { max-width: 900px; margin: 28px auto; padding: 0 16px; }
 .title { font-size: 1.6rem; margin: 6px 0 12px; }
-.lead { color: #444; margin: 0 0 16px; }
+.lead { color: #444; margin: 0 0 18px; text-align: justify; hyphens: auto;  line-height: 1.6;}
 .figure { margin: 14px 0; text-align: center; }
-.hero-img { width: 100%; max-width: 720px; height: auto; border-radius: 8px; display:block; margin: 0 auto; }
-.details p { color: #333; line-height: 1.6; }
+.hero-img { width: 100%; max-width: 640px; height: auto; border-radius: 8px; display:block; margin: 0 auto; }
+.details p { color: #333; line-height: 1.6; text-align: justify; hyphens: auto; margin: 0 0 12px; }
 
 footer .container { padding: 12px 0; text-align: center; }
+
