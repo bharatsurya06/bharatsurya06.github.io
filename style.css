@@ -30,16 +30,10 @@ main, .blog-section, .about-section, .research-section {
 
 /* Navigation Bar Styles */
 nav {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  rgba(159, 158, 158, 0.667) 40%, rgba(159, 158, 158, 0.667) 50%,rgba(159, 158, 158, 0.667) 60% rgba(255, 255, 255, 0) 100%) !important;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    height: 48px; /* Reduced height to fit menu options */
+    background: transparent !important;
     min-height: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    border-bottom: 1px solid #000000;
+    box-shadow: 0 2px 60px rgba(0,0,0,0.04);
+    border-bottom: 10px solid #ccc6c7e7;
 }
 
   
@@ -50,10 +44,11 @@ nav {
     width: 100%;
     height: 100%;
     gap: 0.5em;
+    background-color: #000000;
 }
 
 .nav-links a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.05em;
@@ -63,7 +58,7 @@ nav {
 }
 
 .nav-links span {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin: 0 6px;
     font-size: 1.05em;
     line-height: 48px;
@@ -71,8 +66,8 @@ nav {
 
 .nav-links a:hover {
     background: #000000;
-    color: #ffffff;
-    font-size: 1.1em;
+    color: #f8acac;
+    font-size: 1.35em;
     /* font-weight: 800; */
     border-radius: 0px;
     padding: 0 10px;
@@ -134,16 +129,16 @@ nav {
 
 .logo { display: none; }
 
-/* Unique transparent card-style navbar for index.html only */
-body.index-page {
-    background: none !important;
-}
+
+
+/* index page css */
+
+
 body.index-page .hero-section {
-    background-image: url('assets/img/rocket.jpg');
+    background-image: url('assets/img/rocket-2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -153,20 +148,18 @@ body.index-page .hero-section {
     justify-content: flex-end;
     transition: background-image 0.7s cubic-bezier(.77,0,.18,1), background 0.7s cubic-bezier(.77,0,.18,1);
 }
-body.index-page.dark-mode .hero-section {
-    background-image: url('assets/img/rocket-2.jpg');
-}
+
 body.index-page nav {
     /* Simple, lightweight navbar for the home page */
-    background: #ffffff !important;
-    border-radius: 8px;
+    background: rgb(0, 0, 0)!important;
+    border-radius: 100px;
     padding: 0 12px;
-    height: 48px;
-    margin: 12px auto 0;
+    height: 72px;
+    margin: 8px auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 60%;
     max-width: 1100px;
     box-sizing: border-box;
 }
@@ -183,7 +176,7 @@ body.index-page .nav-links.nav-center {
 body.index-page .nav-links a,
 body.index-page .nav-links span,
 body.index-page .nav-links .dropdown-toggle {
-    color: #222;
+    color: #ffffff;
     font-size: 1em;
     display: inline-flex;
     align-items: center;
@@ -224,20 +217,11 @@ body.index-page .nav-links .dropdown:hover .dropdown-menu {
 body.index-page .nav-links a:hover,
 body.index-page .nav-links .dropdown-toggle:hover {
     background: #000;
-    color: #fff;
+    color: #e49b9b;
+    font-size: 1.35em;
 }
 
 /* Hero Section Background */
-.hero-section {
-    background-image: url('../assets/img/rocket.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 /* Animated Hello! graphic style for landing page */
 .hello-graphic {
@@ -286,62 +270,19 @@ footer, footer .container {
     align-items: center !important;
     margin: 0 auto;
     padding: 10px 0;
+    background-color:#000000
 }
 
 footer .container p {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    color:#eee
 }
 
-footer {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  rgba(159, 158, 158, 0.667) 40%, rgba(159, 158, 158, 0.667) 50%,rgba(159, 158, 158, 0.667) 60% rgba(255, 255, 255, 0) 100%) !important; /* Match header gradient */
-    color: rgb(0, 0, 0);
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    flex-shrink: 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid #000000;
-}
 
 /* Left Side: Logo */
-.footer-logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
-/* Center: Social Links */
-.footer-social {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.footer-social li {
-    margin: 0 10px;
-}
-
-.footer-social a {
-    color: white;
-    font-size: 1.5em;
-    /* Size of the icons */
-    display: inline-block;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: #bbb;
-    /* Lighter color on hover */
-}
-
-/* Right Side: Contact Info */
-.footer-contact {
-    text-align: right;
-}
 
 /* Tab Styles */
 .tab-container {
@@ -1754,340 +1695,6 @@ body.dark-mode .barca-quiz-feedback {
   animation: pop-in 0.7s cubic-bezier(.77,0,.18,1);
 }
 
-/* ===================== DARK MODE SUPPORT ===================== */
-body.dark-mode {
-    background: linear-gradient(to bottom, #181a1b, #23272a) !important;
-    color: #e0e0e0 !important;
-}
-body.dark-mode nav {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-body.dark-mode .nav-links a,
-body.dark-mode .nav-links span {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .nav-links a:hover {
-    background: #ffffff;
-    color: #181a1b!important;
-}
-body.dark-mode:not(.barca-page) .blog-section,
-body.dark-mode .about-section,
-body.dark-mode .research-section {
-    background: linear-gradient(120deg, #23272a 0%, #181a1b 100%) !important;
-}
-body.dark-mode .about-container,
-body.dark-mode .about-container.restructured,
-body.dark-mode .about-info-box,
-body.dark-mode .contact-box,
-body.dark-mode .message-form,
-body.dark-mode .publications-section,
-body.dark-mode .publications-section-modern,
-body.dark-mode .research-container-vibrant,
-body.dark-mode .research-container-vibrant.research-report-layout {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.30);
-}
-body.dark-mode .about-info-box h3,
-body.dark-mode .contact-box h2,
-body.dark-mode .about-right h1,
-body.dark-mode .research-title {
-    color: #fff !important;
-}
-body.dark-mode .about-desc,
-body.dark-mode .about-info-box ul,
-body.dark-mode .about-info-box,
-body.dark-mode .about-info-box h3,
-body.dark-mode .about-info-box ul,
-body.dark-mode .about-info-box li,
-body.dark-mode .about-info-box strong {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .cv-button
-{
-    background: transparent !important;
-    color: #fff !important;
-    border: 2px solid #ffffff !important;
-     
-}
-body.dark-mode .cv-button:hover {
-    background: #ffffff !important;
-    color: #23272a!important;
-}
-body.dark-mode .profile-links a {
-    color: #8ab4f8 !important;
-}
-body.dark-mode .profile-links a:hover {
-    color: #fa0000 !important;
-}
-body.dark-mode .footer-logo,
-body.dark-mode .footer-social a,
-body.dark-mode .footer-contact {
-    color: #e0e0e0 !important;
-}
-body.dark-mode footer {
-    background:  #23272a!important;
-    color: #e0e0e0 !important;
-}
-body.dark-mode .tab-content {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    border-color: #444 !important;
-}
-body.dark-mode .tabs {
-    background: #181a1b !important;
-    border-bottom: 1px solid #444 !important;
-}
-body.dark-mode .tab-link {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .tab-link:hover {
-    background: #333 !important;
-    color: #fa0000 !important;
-}
-body.dark-mode .about-image-rect,
-body.dark-mode .about-image,
-body.dark-mode .research-image,
-body.dark-mode .research-image-large,
-body.dark-mode .research-image-xl,
-body.dark-mode .blog-card-image,
-body.dark-mode .blog-tile img {
-    filter: brightness(1.15) contrast(1.08) !important;
-    border-color: #444 !important;
-}
-body.dark-mode .blog-carousel .blog-card-image {
-    filter: brightness(1.18) contrast(1.12) !important;
-    
-}
-body.dark-mode .blog-header h1,
-body.dark-mode .blog-header p {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .blog-featured,
-body.dark-mode .blog-card,
-body.dark-mode .blog-tile,
-body.dark-mode .blog-featured-content,
-body.dark-mode .blog-card-content,
-body.dark-mode .blog-tile-content {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.30);
-}
-body.dark-mode .blog-card-content,
-body.dark-mode .blog-card-content *,
-body.dark-mode .blog-tile-content,
-body.dark-mode .blog-tile-content * {
-    color: #fff !important;
-}
-body.dark-mode .blog-category.cryo {
-    background: linear-gradient(90deg, #007cf0 60%, #00dfd8 100%) !important;
-    color: #fff !important;
-}
-body.dark-mode .blog-category.barca {
-    background: linear-gradient(90deg, #fc466b 60%, #3f5efb 100%) !important;
-    color: #fff !important;
-}
-body.dark-mode .read-more,
-body.dark-mode .blog-tile-content .read-more {
-    color: #8ab4f8 !important;
-}
-body.dark-mode .read-more:hover,
-body.dark-mode .blog-tile-content .read-more:hover {
-    color: #fa0000 !important;
-}
-body.dark-mode .blog-hover-overlay .read-full-blog,
-body.dark-mode .read-full-blog {
-    background: #23272a !important;
-    color: #fff !important;
-}
-body.dark-mode .blogpost-sidebar {
-    background: #181a1b !important;
-    color: #e0e0e0 !important;
-    border-image: linear-gradient(180deg, #23272a 0%, #444 100%) 1 !important;
-}
-body.dark-mode .blogpost-sidebar h3 {
-    color: #a8ff78 !important;
-}
-body.dark-mode .blogpost-link {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .blogpost-link.active,
-body.dark-mode .blogpost-link:hover {
-    background: linear-gradient(90deg, #23272a 60%, #181a1b 100%) !important;
-    color: #fa0000 !important;
-    border-left: 4px solid #fa0000 !important;
-}
-body.dark-mode .barca-article-card,
-body.dark-mode .cryogenics-article-card {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.30);
-    border-image: linear-gradient(90deg, #23272a 0%, #444 100%) 1 !important;
-}
-body.dark-mode .barca-article-card h1,
-body.dark-mode #barca-article h1 {
-    background: linear-gradient(90deg, #a8ff78 0%, #fa0000 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    text-fill-color: transparent !important;
-}
-body.dark-mode .blogpost-content {
-    color: #e0e0e0 !important;
-}
-body.dark-mode input,
-body.dark-mode textarea {
-    background: #181a1b !important;
-    color: #e0e0e0 !important;
-    border: 1px solid #444 !important;
-}
-body.dark-mode .message-form button {
-    background: transparent !important;
-    color: #fff !important;
-    border: 2px solid #ffffff !important;
-}
-
-body.dark-mode .message-form button:hover {
-    background: #ffffff  !important;
-    color:  #181a1b  !important;/*#145eb8*/ 
-}
-body.dark-mode .contact-links .contact-icon {
-    color: #ffffff !important;
-}
-body.dark-mode .contact-links .contact-icon:hover {
-    color: #8ab4f8 !important;
-}
-body.dark-mode .connect-vbar {
-    background: linear-gradient(180deg, #8ab4f8 0%, #ffffff 100%) !important;
-}
-body.dark-mode .pub-title,
-body.dark-mode .pub-meta,
-body.dark-mode .publications-list-modern,
-body.dark-mode .publications-section-modern h2 {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .pub-link-hover {
-    color: #ffffff !important;
-}
-body.dark-mode .pub-link-hover:hover {
-  
-    color: #8ab4f8 !important;
-}
-body.dark-mode .message-form h3 {
-    color: #e0e0e0 !important;
-}
-body.dark-mode .message-form input,
-body.dark-mode .message-form textarea {
-    background: #23272a !important;
-    color: #e0e0e0 !important;
-    border: 1px solid #444 !important;
-}
-body.dark-mode .moon svg {
-  fill: #fff !important;
-}
-
-body.index-page #darkmode-toggle-navbar {
-    display: none !important;
-}
-
-/* --- Sun/Moon Animated Dark Mode Switch: Improved for correct toggle and moon color --- */
-.switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 34px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
-  border-radius: 30px;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 30px;
-  border-radius: 20px;
-  left: 2px;
-  bottom: 2px;
-  z-index: 2;
-  background-color: #e8e8e8;
-  transition: .4s;
-}
-.sun svg {
-  position: absolute;
-  top: 5px;
-  left: 36px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-}
-.moon svg {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 1;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  transition: fill 0.4s;
-  fill: #73C0FC;
-}
-.switch:hover .sun svg {
-  animation: rotate 15s linear infinite;
-}
-@keyframes rotate {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
-}
-.switch:hover .moon svg {
-  animation: tilt 5s linear infinite;
-}
-@keyframes tilt {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-10deg); }
-  75% { transform: rotate(10deg); }
-  100% { transform: rotate(0deg); }
-}
-.input:checked + .slider {
-  background-color: #d432327a;
-}
-.input:focus + .slider {
-  box-shadow: 0 0 1px #d432327a;
-}
-.input:checked + .slider:before {
-  transform: translateX(30px);
-}
-.input:checked + .slider .moon svg {
-  fill: #fff !important;
-}
-.input:checked + .slider .sun svg {
-  opacity: 0.5;
-}
-
-body.dark-mode .research-section, 
-body.dark-mode .research-section *,
-body.dark-mode .research-container-vibrant,
-body.dark-mode .research-container-vibrant *,
-body.dark-mode .research-title,
-body.dark-mode .research-desc {
-    color: #fff !important;
-}
 
 /* Info Modal and Icon Styles */
 .info-modal {
@@ -2113,10 +1720,6 @@ body.dark-mode .research-desc {
   padding: 6px 16px;
   cursor: pointer;
 }
-body.dark-mode .info-modal {
-  background: #23272a;
-  color: #fff;
-}
 #info-icon i {
   color: #007cf0 !important;
   transition: color 0.3s;
@@ -2129,35 +1732,6 @@ body.dark-mode .info-modal {
   100% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
 }
 
-body.blogpost-page.dark-mode {
-    background: #181a1b !important;
-}
-body.blogpost-page.dark-mode .blogpost-layout {
-    background: #23272a !important;
-}
-body.blogpost-page.dark-mode .blogpost-main,
-body.blogpost-page.dark-mode #barca-article-card,
-body.blogpost-page.dark-mode #cryogenics-article-card,
-body.blogpost-page.dark-mode #barca-article,
-body.blogpost-page.dark-mode #cryogenics-article {
-    background:  #181a1b   !important; /*#23272a*/
-    color: #e0e0e0 !important;
-    box-shadow: none !important;
-}
-body.blogpost-page.dark-mode .blogpost-sidebar {
-    background:  #181a1b !important;
-    color: #e0e0e0 !important;
-    border-right: 1.5px solid #ffffff !important;
-}
-body.blogpost-page.dark-mode .blogpost-link {
-    color: #e0e0e0 !important;
-}
-body.blogpost-page.dark-mode .blogpost-link.active,
-body.blogpost-page.dark-mode .blogpost-link:hover {
-    background: #ffffff !important;
-    color: #4447a1 !important;
-    /* border-left: 4px solid #fa0000 !important; */
-}
 
 /* Small corner link to IJC paper (index page) */
 .ijc-corner-link {
@@ -2173,10 +1747,4 @@ body.blogpost-page.dark-mode .blogpost-link:hover {
 }
 .ijc-corner-link:hover {
     opacity: 0.7;
-}
-body.dark-mode .ijc-corner-link {
-    opacity: 0.35;
-}
-body.dark-mode .ijc-corner-link:hover {
-    opacity: 0.6;
 }
