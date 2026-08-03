@@ -41,11 +41,13 @@
         <img src="assets/img/icec_work.png" alt="ICEC Results" class="hero-img">
       </figure>
 
-      <p class="lead"> <strong>Methodology:</strong> The optimization of the layer heights in a cascaded PCM 
-        based PB-CERS was performed using a genetic algorithm. The objective function was defined to maximize 
-        the bed utilization and second law efficiency. The heat transfer model provided temperature profiles for each layer,
-         which were used to evaluate the performance of different configurations. The genetic algorithm iteratively adjusted the heights of the PCM layers, selecting for configurations that improved the objective function. 
-         This process continued until convergence was achieved, resulting in an optimized design for the packed bed system. </span><a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">(Read Publication)</a></span></p> 
+      <p class="lead"> <strong>Methodology:</strong> The time evolution of SoC is majorly influenced by the inlet operating conditions of the PB-CERS. These 
+        include mass flow rate, temperature during charge and discharge. Further, the initial temperature distribution within the bed also dictates the 
+        time evolution of the bed SoC and temperature. In this work, we first propose a set of input parameters for the prediction of SoC using ML. The necessary data 
+        comprising the inputs and the SoC values were generated using a one dimensional transient heat transfer model using LTNE framework. Further,standard ML steps were followed to
+        execute the SoC prediction. Four ML models - XGB,MLP, simple and LSTM RNN were trained and tested using the generated datasets. The performance of these models 
+        was evaluated using R2 and RMSE metrics.  For detialed methodology and results, please refer to the publication 
+         </span><a href="https://doi.org/10.1115/IMECE2024-145630" class="pub-title pub-link-hover" target="_blank" title="Open publication in new tab">here  →</a></span></p> 
       </p>
 
 
