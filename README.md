@@ -45,5 +45,4 @@ bharatsurya06.github.io
 
 Bharat Surya Chamarthi  
 Cryogenic Engineering Centre  
-Indian Institute of Technology Kharagpur, India  
-Email: [your-email@example.com] (replace with your actual email)
+Indian Institute of Technology Kharagpur, India
