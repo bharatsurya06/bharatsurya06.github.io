@@ -40,21 +40,61 @@
             {
         "image": "assets/img/photography/8.jpg",
         "title": "IT Sez beach",
-        "location": "Visakhapatnam, India",
+        "location": "Visakhapatnam, Andhra Pradesh, India",
         "camera": "Nothing Phone 1"
     },
             {
         "image": "assets/img/photography/9.jpg",
         "title": "Shipwreck at the Tenneti beach",
-        "location": "Visakhapatnam, India",
+        "location": "Visakhapatnam, Andhra Pradesh, India",
         "camera": "Pixel 6A"
     },
             {
         "image": "assets/img/photography/10.jpg",
         "title": "Bay of Bengal Coast line",
-        "location": "Visakhapatnam, India",
+        "location": "Visakhapatnam, Andhra Pradesh, India",
         "camera": "Pixel 6A"
-    }
+    },
+
+                {
+        "image": "assets/img/photography/11.jpg",
+        "title": "Coit tower from lombard street",
+        "location": "San Francisco, CA, USA",
+        "camera": "Pixel 6A"
+    },
+
+
+                {
+        "image": "assets/img/photography/12.jpg",
+        "title": "Golden Gate Bridge",
+        "location": "San Francisco, CA,  USA",
+        "camera": "Pixel 6A"
+    },
+
+                {
+        "image": "assets/img/photography/13.jpg",
+        "title": "Portland Waterfront view",
+        "location": "Portland, OR, USA",
+        "camera": "Pixel 6A"
+    },
+
+                    {
+        "image": "assets/img/photography/14.jpg",
+        "title": "Iconic cable car at Powell street",
+        "location": "San Francisco, CA,  USA",
+        "camera": "Pixel 6A"
+    },
+
+                        {
+        "image": "assets/img/photography/15.jpg",
+        "title": "NIT pond",
+        "location": "ROourkela, Odisha,  India",
+        "camera": "Pixel 6A"
+    },
+
+
+
+
 
 
 
