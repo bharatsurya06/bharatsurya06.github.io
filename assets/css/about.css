@@ -93,14 +93,12 @@ body.about-page {
   display: flex;
   gap: 14px;
   font-size: 1.2rem;
-  background-color: #382f2f60;
-  border-radius: 20px;
   padding: 10px;
   width: 140px;
   height: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 
@@ -117,7 +115,8 @@ body.about-page {
 
 .about-social a:hover {
   opacity: 1;
-  color: #ffffff;
+  color: #590ce8;
+  transform: scale(1.25);
 
 }
 

@@ -35,15 +35,32 @@ main, .blog-section, .about-section, .research-section {
 /* index page css */
 
 
-body.index-page .hero-section {
+/* body.index-page .hero-section {
     background-image: url('assets/img/rocket-2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background-image 0.7s cubic-bezier(.77,0,.18,1), background 0.7s cubic-bezier(.77,0,.18,1);
+} */
+
+body.index-page .hero-section {
+    position: relative; /* Context layer for absolute children */
+    background-image: url('assets/img/rocket-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding-top: 80px; /* Optional: prevents hero text/content from hiding under the navbar */
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -51,19 +68,28 @@ body.index-page .hero-section {
 }
 
 body.index-page nav {
-    /* Simple, lightweight navbar for the home page */
+    /* Absolute positioning removes it from document flow */
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the absolute fixed width navbar */
+
+    /* Your existing styles */
     background: rgb(0, 0, 0)!important;
     border-radius: 100px;
     padding: 0 12px;
     height: 72px;
-    margin: 8px auto 0;
+    margin: 0; /* Clear margin since top handles offset */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 40%;
     max-width: 1100px;
     box-sizing: border-box;
+    z-index: 10;
 }
+
+
 
 /* Index-page: clean single-line nav links */
 body.index-page .nav-links.nav-center {
@@ -118,8 +144,9 @@ body.index-page .nav-links .dropdown:hover .dropdown-menu {
 body.index-page .nav-links a:hover,
 body.index-page .nav-links .dropdown-toggle:hover {
     background: #000;
-    color: #e49b9b;
+    color: #9073c5;
     font-size: 1.35em;
+    transition: background 0.2s, color 0.2s, font-size 0.2s;
 }
 
 /* Hero Section Background */
