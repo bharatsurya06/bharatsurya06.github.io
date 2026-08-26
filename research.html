@@ -78,7 +78,7 @@
         </div>
       </section>
 
-            <!-- Other research work: cards matching projects.html style -->
+           
       <section class="other-work">
         <h2>International conference presentations</h2>
 
@@ -136,6 +136,7 @@
 
         
       </section>
+      </section> 
 
 
 
@@ -143,61 +144,60 @@
       <!-- Other research work: cards matching projects.html style -->
       <section class="other-work">
         <h2>Other research</h2>
-      </section>
+      
 
-      <section class="research-carousel-wrapper">
-        <div class="carousel-flex-row">
-          <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
-          <div class="carousel-viewport">
-            <div class="carousel-track">
-                        
+        <section class="research-carousel-wrapper">
+          <div class="carousel-flex-row">
+            <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                          
+              <article class="research-card">
+                <div class="research-card-media">
+                  <img src="assets/img/lng.png" alt="Portable cooler prototype">
+                </div>
+                <div class="research-card-body">
+                  <h3>India's LNG question ?</h3>
+                  <p>Deep dive into the landscape, challenges and oppurtunities of LNG sector in India. Find out how crygogenic energy recovery  fits into India's energy and LNG plans. </p>
+                </div>
+                <div class="research-card-actions">
+                  <a href="lng.html" class="research-card-btn">Find out more</a>
+                </div>
+              </article>
+
+        
             <article class="research-card">
               <div class="research-card-media">
-                <img src="assets/img/lng.png" alt="Portable cooler prototype">
+                <img src="assets/img/mtechimage.png" alt="Chilldown analysis">
               </div>
               <div class="research-card-body">
-                <h3>India's LNG question ?</h3>
-                <p>Deep dive into the landscape, challenges and oppurtunities of LNG sector in India. Find out how crygogenic energy recovery  fits into India's energy and LNG plans. </p>
+                <h3>Chilldown analysis</h3>
+                <p>Chilldown of cryogenic transfer lines — A CFD study.</p>
               </div>
               <div class="research-card-actions">
-                <a href="lng.html" class="research-card-btn">Find out more</a>
+                <a href="mtech.html" class="research-card-btn">Find out more</a>
               </div>
             </article>
 
-       
-          <article class="research-card">
-            <div class="research-card-media">
-              <img src="assets/img/mtechimage.png" alt="Chilldown analysis">
+            <article class="research-card">
+              <div class="research-card-media">
+                <img src="assets/img/btechimage.png" alt="CFD analysis">
+              </div>
+              <div class="research-card-body">
+                <h3>CFD analysis of airfoil</h3>
+                <p>CFD studies and supporting materials from undergraduate projects.</p>
+              </div>
+              <div class="research-card-actions">
+                <a href="btech.html" class="research-card-btn">Find out more</a>
+              </div>
+            </article>
             </div>
-            <div class="research-card-body">
-              <h3>Chilldown analysis</h3>
-              <p>Chilldown of cryogenic transfer lines — A CFD study.</p>
             </div>
-            <div class="research-card-actions">
-              <a href="mtech.html" class="research-card-btn">Find out more</a>
-            </div>
-          </article>
 
-          <article class="research-card">
-            <div class="research-card-media">
-              <img src="assets/img/btechimage.png" alt="CFD analysis">
+            <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
             </div>
-            <div class="research-card-body">
-              <h3>CFD analysis of airfoil</h3>
-              <p>CFD studies and supporting materials from undergraduate projects.</p>
-            </div>
-            <div class="research-card-actions">
-              <a href="btech.html" class="research-card-btn">Find out more</a>
-            </div>
-          </article>
-          </div>
-          </div>
-
-          <!-- Pagination Indicators (Generated via JS or static) -->
-          
-          <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
-          </div>
-          <div class="carousel-dots"></div>
+            <div class="carousel-dots"></div>
+      </section>
     </section>
 
 
@@ -210,23 +210,7 @@
   <script src="assets/js/navbar.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script>
-    // Minimal map init — safe if #map exists
-    (function(){
-      const el = document.getElementById('map');
-      if(!el) return;
-      const map = L.map(el).setView([20,10], 2.5);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-      fetch('lng_terminals.json').then(r=>r.json()).then(data=>{
-        data.forEach(t=>{
-          const col = t.type==='export' ? '#E60000' : '#0033CC';
-          L.circleMarker([t.lat,t.lon],{radius:6,fillColor:col,color:'#000',weight:1,fillOpacity:0.85}).bindPopup(`<b>${t.name}</b><br>${t.capacity||''}`).addTo(map);
-        });
-      }).catch(()=>{});
-    })();
-  </script>
+  
 <script>
   document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.research-carousel-wrapper');

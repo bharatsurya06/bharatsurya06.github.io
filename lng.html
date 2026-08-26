@@ -27,12 +27,12 @@
 
         <li>
           <button class="chapter-btn active" data-target="chapter-1">
-            <span class="num">01</span> LNG sector in India : An overview
+            <span class="num">01</span> India's energy sector at a glance
           </button>
         </li>
         <li>
           <button class="chapter-btn" data-target="chapter-2">
-            <span class="num">02</span> India's LNG plans
+            <span class="num">02</span> LNG sector landscape
           </button>
         </li>
         <li>
@@ -57,27 +57,30 @@
         <figure class="figure">
           <img src="assets/img/lng.png" alt="LNG import terminal facility" class="hero-img">
         </figure>
-        <p class="lead">Chilldown is a critical process that happens during the start up of cryogenic equipment such as storage tanks and transfer lines. It involves the cooling of cryogenic equipment from ambient temperature to the operating temperature of the flowing liquid cryogen. Controlled chilldown of a transfer line is essential to ensure the safe and steady flow of cryogenic fluids, as it prevents thermal stresses, pressure fluctuations, and loss of cryogen happening due to ambient heat inleaks. Chilldown is achieved typically by letting a small part of the liquid cryogen through the equipment in order to cool the walls of the equipment safely towards the operating temperatures of the cryogen. During this flow, the liquid absorbs heat from the walls and boils off, thus leading to a two-phase flow inside the lines. As the liquid cryogen undergoes various boiling regimes, the flow experiences various two-phase flow regimes which impact the thermal and hydrodynamic behavior of the chilldown process. The study of heat transfer and fluid flow of chilldown is therefore essential to design efficient chilldown systems which use as little cryogen as possible and reduce chilldown times.</p>
+        <p class="lead">The following series is an attempt to deep dive into the LNG sector in India and idenify how cryogenic energy recovery can help the struggling LNG sector </p>
       </article>
 
       <!-- Chapter 1 -->
-      <article class="chapter-content active" id="chapter-1">
-        <h1 class="title">India's LNG Landscape</h1>
-        <p class="lead">About 70\% of India's electricity generation is from coal based. Surprsingly, natural gas and oil only account for 6% of the electicity production. </p>
-        <figure class="figure">
-          <img src="assets/img/lng.png" alt="LNG import terminal facility" class="hero-img">
-        </figure>
-        <p class="lead">Chilldown is a critical process that happens during the start up of cryogenic equipment such as storage tanks and transfer lines. It involves the cooling of cryogenic equipment from ambient temperature to the operating temperature of the flowing liquid cryogen. Controlled chilldown of a transfer line is essential to ensure the safe and steady flow of cryogenic fluids, as it prevents thermal stresses, pressure fluctuations, and loss of cryogen happening due to ambient heat inleaks. Chilldown is achieved typically by letting a small part of the liquid cryogen through the equipment in order to cool the walls of the equipment safely towards the operating temperatures of the cryogen. During this flow, the liquid absorbs heat from the walls and boils off, thus leading to a two-phase flow inside the lines. As the liquid cryogen undergoes various boiling regimes, the flow experiences various two-phase flow regimes which impact the thermal and hydrodynamic behavior of the chilldown process. The study of heat transfer and fluid flow of chilldown is therefore essential to design efficient chilldown systems which use as little cryogen as possible and reduce chilldown times.</p>
+      <article class="chapter-content " id="chapter-1">
+        <h1 class="title">India's energy sector at a glance</h1>
+        <p class="lead">India is the third largest emiiter of carbon di oxide  accounting for 8% (3 billion tonne) of the total Co2 emissions worldwide  
+           [<a href="https://www.worldometers.info/co2-emissions/co2-emissions-by-country/"  target="_blank" >Worldometer</a>].  The energy sector alone contributes to more than 75% of these emissions [<a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2092311&reg=48&lang=2" target = "_blank"> MoEFC,2025 </a> ]. 
+           Electrcity generation , due to the grid reliance of coal based power plants, takes the largrest share (around )of the energy sector emissions. Although this share has been reduced from 2023 to  2025, thanks to an increase in reneawbale grid penertration [<a href="https://www.carbonbrief.org/analysis-indias-co2-emissions-in-2025-grew-at-slowest-rate-in-two-decades" target = "_blank"> Carbon brief</a>] , the number still represents a significant challenge to meet India's energy ambitions.   
         <div class="chart-card">
           <div class="chart-card-header">
-            <h2>LNG Imports Overview</h2>
-            <p>Monthly distribution metrics</p>
+            <p>Contribution by type</p>
           </div>
-          <div class="chart-wrapper">
-            <canvas id="myBarChart"></canvas>
+          <div class="chart-wrapper" >
+            <canvas class="dynamic-pie-chart" data-json="assets/data/power_sector.json"></canvas>
           </div>
-        </div>      
-      </article>
+          <div class="chart-card-header">
+          <p> Data source : <a href="https://iced.niti.gov.in/energy/electricity/generation/capacity"  target="_blank" >ICED NITI Aayog</a></p>
+          </div>
+        </div>   
+         
+         <p class="lead"> The bridge fuel, natural gas only accounts for 6% India's power generation and its growth has been limited for a while. On the other hand, renewables such as solar and wind power has seen significnat capacity additions in the recent years. With stagnant growth of natural gase, renewbale seem to be only way to switch to reduce carbon emissions and the forecasts also support the same.</p>  
+         <p class="lead"> Apart from the power generation, the energy sector emissions arise from the need for heating and cooling applications.  </p>
+        </article>
 
       <!-- Chapter 2 -->
       <article class="chapter-content" id="chapter-2">

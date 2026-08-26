@@ -1,0 +1,8 @@
+
+{
+  "title": "Total Power Generation : 512 BU",
+  "unit": "%",
+  "colorMode": "multi",
+  "labels": ["Coal", "Hydro", "Nuclear", "Oil & Gas", "small hydro", "Solar" , "Wind", "Bio power" ],
+  "data": [69.6, 7.12, 3.17, 1.30, 0.3,11.79,6.26,0.47]
+}

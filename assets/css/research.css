@@ -235,16 +235,16 @@ footer .container { padding: 12px 0; text-align: center; }
 
 
 /* Arrow Navigation Buttons */
-.carousel-btn .prev-btn .next-btn {
+.carousel-btn {
   position: static !important; 
   top: 50%;
   transform: translateY(-50%); /* Vertically centers the buttons */
   background: #ffffff;
-  border: 1px solid #e9ecef;
-  color: #333;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 10%;
   font-size: 1.2rem;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -256,9 +256,8 @@ footer .container { padding: 12px 0; text-align: center; }
 }
 
 .carousel-btn:hover {
-  background: #000000;
-  color: #000000;
-  border-color: #0056b3;
+  background: #000000 !important;
+  color:#ffffff !important;
 }
 
 .prev-btn { left: 0; }
