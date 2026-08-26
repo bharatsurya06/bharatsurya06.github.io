@@ -81,7 +81,14 @@
             <!-- Other research work: cards matching projects.html style -->
       <section class="other-work">
         <h2>International conference presentations</h2>
-        <div class="research-cards">
+
+      <section class="research-carousel-wrapper">
+        <div class="carousel-flex-row">
+          <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+
+        
           <article class="research-card">
             <div class="research-card-media">
               <img src="assets/img/imece.png" alt="imece 2024">
@@ -120,7 +127,14 @@
               <a href="sdewes.html" class="research-card-btn">Find out more</a>
             </div>
           </article>
-        </div>
+          </div>
+          </div>
+
+          <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
+          </div>
+          <div class="carousel-dots"></div>
+
+        
       </section>
 
 
@@ -129,7 +143,28 @@
       <!-- Other research work: cards matching projects.html style -->
       <section class="other-work">
         <h2>Other research</h2>
-        <div class="research-cards">
+      </section>
+
+      <section class="research-carousel-wrapper">
+        <div class="carousel-flex-row">
+          <button class="carousel-btn prev-btn" aria-label="Previous slide">&#10094;</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+                        
+            <article class="research-card">
+              <div class="research-card-media">
+                <img src="assets/img/lng.png" alt="Portable cooler prototype">
+              </div>
+              <div class="research-card-body">
+                <h3>India's LNG question ?</h3>
+                <p>Deep dive into the landscape, challenges and oppurtunities of LNG sector in India. Find out how crygogenic energy recovery  fits into India's energy and LNG plans. </p>
+              </div>
+              <div class="research-card-actions">
+                <a href="lng.html" class="research-card-btn">Find out more</a>
+              </div>
+            </article>
+
+       
           <article class="research-card">
             <div class="research-card-media">
               <img src="assets/img/mtechimage.png" alt="Chilldown analysis">
@@ -155,8 +190,15 @@
               <a href="btech.html" class="research-card-btn">Find out more</a>
             </div>
           </article>
-        </div>
-      </section>
+          </div>
+          </div>
+
+          <!-- Pagination Indicators (Generated via JS or static) -->
+          
+          <button class="carousel-btn next-btn" aria-label="Next slide">&#10095;</button>
+          </div>
+          <div class="carousel-dots"></div>
+    </section>
 
 
   </main>
@@ -185,7 +227,56 @@
       }).catch(()=>{});
     })();
   </script>
-  <!-- removed carousel script; card links are plain anchors -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('.research-carousel-wrapper');
+  if (!wrapper) return;
+
+  const viewport = wrapper.querySelector('.carousel-viewport');
+  const track = wrapper.querySelector('.carousel-track');
+  const cards = track.querySelectorAll('.research-card');
+  const prevBtn = wrapper.querySelector('.prev-btn');
+  const nextBtn = wrapper.querySelector('.next-btn');
+  const dotsContainer = wrapper.querySelector('.carousel-dots');
+
+  // Calculate card scroll width including column gap
+  const getScrollAmount = () => {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return cardWidth + gap;
+  };
+
+  // Scroll Actions
+  nextBtn.addEventListener('click', () => {
+    viewport.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    viewport.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  // Dynamic Pagination Dots
+  cards.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      viewport.scrollTo({ left: getScrollAmount() * index, behavior: 'smooth' });
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  // Update Active Dot on Scroll
+  const dots = dotsContainer.querySelectorAll('.carousel-dot');
+  viewport.addEventListener('scroll', () => {
+    const scrollIndex = Math.round(viewport.scrollLeft / getScrollAmount());
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === scrollIndex);
+    });
+  });
+});
+</script>
+
 </body>
 
 </html>

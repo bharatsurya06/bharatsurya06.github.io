@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/navbar-all.css">
+  <link rel="stylesheet" href="assets/css/lng.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>India's LNG question</title>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <main class="container layout-wrapper">
+    <!-- Chapter Sidebar Navigation -->
+    <aside class="chapter-sidebar">
+      <h2 class="sidebar-title">Chapters</h2>
+      <ul class="chapter-list">
+        <li>
+          <button class="chapter-btn active" data-target="chapter-0">
+            <span class="num">00</span> About the article series
+          </button>
+        </li>
+
+        <li>
+          <button class="chapter-btn active" data-target="chapter-1">
+            <span class="num">01</span> LNG sector in India : An overview
+          </button>
+        </li>
+        <li>
+          <button class="chapter-btn" data-target="chapter-2">
+            <span class="num">02</span> India's LNG plans
+          </button>
+        </li>
+        <li>
+          <button class="chapter-btn" data-target="chapter-3">
+            <span class="num">03</span> Challenges of the sector
+          </button>
+        </li>
+        <li>
+          <button class="chapter-btn" data-target="chapter-4">
+            <span class="num">04</span> Strategies to make LNG affordable
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Chapter Content Area -->
+    <section class="chapter-content-container">
+      
+      <article class="chapter-content active" id="chapter-0">
+        <h1 class="title">About the article series</h1>
+        <p class="lead">The following series is an attempt to deep dive into the LNG sector in India and idenify how cryogenic energy recovery can help the struggling LNG sector </p>
+        <figure class="figure">
+          <img src="assets/img/lng.png" alt="LNG import terminal facility" class="hero-img">
+        </figure>
+        <p class="lead">Chilldown is a critical process that happens during the start up of cryogenic equipment such as storage tanks and transfer lines. It involves the cooling of cryogenic equipment from ambient temperature to the operating temperature of the flowing liquid cryogen. Controlled chilldown of a transfer line is essential to ensure the safe and steady flow of cryogenic fluids, as it prevents thermal stresses, pressure fluctuations, and loss of cryogen happening due to ambient heat inleaks. Chilldown is achieved typically by letting a small part of the liquid cryogen through the equipment in order to cool the walls of the equipment safely towards the operating temperatures of the cryogen. During this flow, the liquid absorbs heat from the walls and boils off, thus leading to a two-phase flow inside the lines. As the liquid cryogen undergoes various boiling regimes, the flow experiences various two-phase flow regimes which impact the thermal and hydrodynamic behavior of the chilldown process. The study of heat transfer and fluid flow of chilldown is therefore essential to design efficient chilldown systems which use as little cryogen as possible and reduce chilldown times.</p>
+      </article>
+
+      <!-- Chapter 1 -->
+      <article class="chapter-content active" id="chapter-1">
+        <h1 class="title">India's LNG Landscape</h1>
+        <p class="lead">About 70\% of India's electricity generation is from coal based. Surprsingly, natural gas and oil only account for 6% of the electicity production. </p>
+        <figure class="figure">
+          <img src="assets/img/lng.png" alt="LNG import terminal facility" class="hero-img">
+        </figure>
+        <p class="lead">Chilldown is a critical process that happens during the start up of cryogenic equipment such as storage tanks and transfer lines. It involves the cooling of cryogenic equipment from ambient temperature to the operating temperature of the flowing liquid cryogen. Controlled chilldown of a transfer line is essential to ensure the safe and steady flow of cryogenic fluids, as it prevents thermal stresses, pressure fluctuations, and loss of cryogen happening due to ambient heat inleaks. Chilldown is achieved typically by letting a small part of the liquid cryogen through the equipment in order to cool the walls of the equipment safely towards the operating temperatures of the cryogen. During this flow, the liquid absorbs heat from the walls and boils off, thus leading to a two-phase flow inside the lines. As the liquid cryogen undergoes various boiling regimes, the flow experiences various two-phase flow regimes which impact the thermal and hydrodynamic behavior of the chilldown process. The study of heat transfer and fluid flow of chilldown is therefore essential to design efficient chilldown systems which use as little cryogen as possible and reduce chilldown times.</p>
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2>LNG Imports Overview</h2>
+            <p>Monthly distribution metrics</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="myBarChart"></canvas>
+          </div>
+        </div>      
+      </article>
+
+      <!-- Chapter 2 -->
+      <article class="chapter-content" id="chapter-2">
+        <h1 class="title">Film Boiling & Heat Transfer</h1>
+        <p class="lead">The current research focused on characterizing the velocity and thermal temperature profiles in the film boiling regime of the chilldown phenomena.</p>
+        <p>Film boiling occurs when the wall temperature is significantly higher than the saturation temperature of the cryogen, creating a vapor layer that insulates the liquid core from the pipe walls...</p>
+      </article>
+
+      <!-- Chapter 3 -->
+      <article class="chapter-content" id="chapter-3">
+        <h1 class="title">Two-Phase Flow Regimes</h1>
+        <p class="lead">Understanding the transition between different flow patterns during line cool-down.</p>
+        <p>As the liquid cryogen travels down the pipeline, it undergoes transitions through film, transition, and nucleate boiling regimes, shifting from dispersed vapor flow to stratified or wavy flow patterns...</p>
+      </article>
+
+      <!-- Chapter 4 -->
+      <article class="chapter-content" id="chapter-4">
+        <h1 class="title">Optimization & Efficiency</h1>
+        <p class="lead">Strategies to minimize cryogen consumption while maintaining structural integrity.</p>
+        <p>By optimizing mass flow rates during the initial injection phase, operators can reduce overall cooldown duration and avoid excessive boil-off gas generation...</p>
+      </article>
+
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bharat Surya Chamarthi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/lng_related.js"></script>
+
+</body>
+
+</html>
