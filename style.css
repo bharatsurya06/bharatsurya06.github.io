@@ -1676,3 +1676,9 @@ body.dark-mode .barca-quiz-feedback {
 .ijc-corner-link:hover {
     opacity: 0.7;
 }
+
+
+    a {
+        color: #0011ff;
+        text-decoration: none;
+    }

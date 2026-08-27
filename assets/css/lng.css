@@ -136,12 +136,12 @@ footer .container { padding: 12px 0; text-align: center; }
 /* Container & Layout Styling */
 .chart-card {
   background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: 2px;
+  padding: 0.5rem;
   max-width: 480px;
-  margin: 2.5rem auto;
+  margin: 0.5rem auto;
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
-  border: 1px solid rgb(0, 0, 0);
+  border: 0.5px solid rgba(155, 150, 150, 0.61) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -150,22 +150,22 @@ footer .container { padding: 12px 0; text-align: center; }
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 } */
 
-/* .chart-card-header {
-  margin-bottom: 1.5rem;
-  text-align: left;
-} */
+.chart-card-header {
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
 
-/* .chart-card-header h2 {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1a202c;
-  margin: 0 0 0.5rem 0;
-} */
+.chart-card-header h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #080808;
+  margin: 0 0 0.6rem 0;
+}
 
 .chart-card-header p {
-  font-size: 0.9rem;
-  color: #718096;
+  font-size: 0.75rem;
+  color: #121213;
   margin: 0;
 }
 
