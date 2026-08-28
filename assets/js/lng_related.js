@@ -30,13 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // CASE 2: Multi Color (Default) - Dynamic HSL generation
+
+
+
     const backgroundColors = [];
     const borderColors = [];
 
     for (let i = 0; i < count; i++) {
       const hue = Math.floor((360 / count) * i);
-      backgroundColors.push(`hsla(${hue}, 70%, 60%, 0.75)`);
-      borderColors.push(`hsla(${hue}, 75%, 45%, 1)`);
+      // backgroundColors.push(palette[i % palette.length]);
+      backgroundColors.push(`hsla(${hue}, 82%, 50%, 1)`);
+      // borderColors.push(`hsla(${hue}, 75%, 45%, 1)`);
     }
 
     return {
@@ -76,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
           responsive: true,
           barPercentage: 0.5,
           maintainAspectRatio: false,
+         
           plugins: {
             title: {
               display: !!json.title,
@@ -126,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < count; i++) {
       const hue = Math.floor((360 / count) * i);
-      backgroundColors.push(`hsla(${hue}, 70%, 60%, 0.85)`);
+      backgroundColors.push(`hsla(${hue}, 40%, 60%, 1)`);
       borderColors.push('#ffffff');
     }
 
