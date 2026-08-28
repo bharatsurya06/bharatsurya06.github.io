@@ -32,7 +32,7 @@
         </li>
         <li>
           <button class="chapter-btn" data-target="chapter-2">
-            <span class="num">02</span> LNG sector landscape
+            <span class="num">02</span> A special focus on the role of natural gas 
           </button>
         </li>
         <li>
@@ -63,28 +63,43 @@
       <!-- Chapter 1 -->
       <article class="chapter-content " id="chapter-1">
         <h1 class="title">India's energy sector at a glance</h1>
-        <p class="lead">India is the third largest emiiter of carbon di oxide  accounting for 8% (3 billion tonne) of the total Co2 emissions worldwide  
+        <p class="lead">India is the third largest emiiter of greenhouse emissions accounting for 8% (3 billion tonne) of the total GHG emissions worldwide  
            [<a href="https://www.worldometers.info/co2-emissions/co2-emissions-by-country/"  target="_blank" >Worldometer</a>].  The energy sector alone contributes to more than 75% of these emissions [<a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2092311&reg=48&lang=2" target = "_blank"> MoEFC,2025 </a> ]. 
-           Electrcity generation , due to the grid reliance of coal based power plants, takes the largrest share (around )of the energy sector emissions. Although this share has been reduced from 2023 to  2025, thanks to an increase in reneawbale grid penertration [<a href="https://www.carbonbrief.org/analysis-indias-co2-emissions-in-2025-grew-at-slowest-rate-in-two-decades" target = "_blank"> Carbon brief</a>] , the number still represents a significant challenge to meet India's energy ambitions.   
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <h2>Power sector by fuel use</h2>
-          </div>
+           Within this sector, the carbon emissions from burning of fossil fuels for electrcity and heat generation is the largest contributors.   
+        
+          <div class="chart-card" style="height: 500px; width:800px">
+
           <div class="chart-wrapper" >
-            <canvas class="dynamic-pie-chart" data-json="assets/data/power_sector.json"></canvas>
+            <iframe src="https://ourworldindata.org/grapher/ghg-emissions-by-sector?tab=discrete-bar&time=2021&country=~IND" loading="lazy" style="width: 100%; height: 500px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
           </div>
           <div class="chart-card-header">
           <p> Data source : <a href="https://iced.niti.gov.in/energy/electricity/generation/capacity"  target="_blank" >ICED NITI Aayog</a></p>
           </div>
         </div>   
          
-         <p class="lead"> The bridge fuel, natural gas only accounts for 6% India's power generation and its growth has been limited for a while. On the other hand, renewables such as solar and wind power has seen significnat capacity additions in the recent years. With stagnant growth of natural gase, renewbale seem to be only way to switch to reduce carbon emissions and the forecasts also support the same.</p>  
-         <p class="lead"> Apart from the power generation, the energy sector emissions arise from the need for heating and cooling applications.  </p>
-          <div class="chart-card" style="height: 500px; width:800px">
+         <p class="lead"> Currently, the share of coal based electricity stands at an alarming value of nearlyu 70 % while the transition fuel, natural gas contirbutes to less than 1% of India's total electricity production.  Thanks to the increased penetration of solar and wind which together contribute to about 18% of the generation, the grid has become less reliant on coal. Consequenlty, the recent years, particularly from 2023-2005,  the  CO2 emissions of power indsutry  have fallen and lead to a slower growth rate of overall emissions. 
+          [<a href="https://www.carbonbrief.org/analysis-indias-co2-emissions-in-2025-grew-at-slowest-rate-in-two-decades" target = "_blank"> Carbon brief</a>]. </p>  
+         <div class="chart-card">
+         <div class="chart-card-header">
+            <h2>Power sector by fuel use</h2>
+          </div>
+
            <div class="chart-wrapper" >
-          <iframe src="https://ourworldindata.org/grapher/ghg-emissions-by-sector?tab=discrete-bar&time=2021&country=~IND" loading="lazy" style="width: 100%; height: 500px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
-        </div>
-        </div>
+            <canvas class="dynamic-pie-chart" data-json="assets/data/power_sector.json"></canvas>
+            </div>
+             </div>
+          <p class="lead"> The next larger culprits of GHG emissions is agriculture, manufacturing and transport industry. 
+            The agro and allied sectors in India contribute the largest share (17-18 %) to India's GDP [<a href="https://www.ifad.org/en/w/countries/india" target = "_blank"> IFAD</a>] with 54.6 % of its people involved directly or indirectly with agriculture. 
+            Activities such as fertilize use, livestock manure management, rice cultivation and field burning of agricultural residuals lead to substantial levels of CH4, N2O and Co2 emissions  [<a href="https://link.springer.com/article/10.1007/s11356-024-33975-7" target = "_blank"> Katina 2023</a>].
+            In the similiar lines, the rapid industrialization and urbanization has lead to increased emission levels from manufaturing and transport sector respectively. 
+            Industial and domestic heating and cooling deamnds pose another significnat emission realted challenges apart from the above mentioned sectors. 
+            It is these sectors which are going to experience the largest increase in energy intensity in the coming decaded in India. This is evidently driven increasing tmeperatures driven by climate change. DOemstic cooling and HVAC are realint on HFC or CFC refrigerants whereas indsutail heating is met by coal or natural gas burning both of which emit CO2.  
+            In light of these, various policies and regulatory frameworks are ratified to curb these emissions. The effectiveness of these frameworks will ultimately depend on their ability to translate into practical, large-scale implementation in support of India’s clean energy ambitions.
+              </p>
+
+        
+       
         </article>
 
       <!-- Chapter 2 -->
