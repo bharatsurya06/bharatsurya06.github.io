@@ -10,6 +10,7 @@ body {
 
 .container { max-width: 1200px; margin: 28px auto; padding: 0 16px; }
 .title { font-size: 1.6rem; margin: 6px 0 12px; }
+.title h2 {font-size: 0.8 rem; margin: 6px 0 12px; }
 
 .figure { margin: 14px 0; text-align: center; }
 .hero-img { width: 100%; max-width: 640px; height: auto; border-radius: 8px; display:block; margin: 0 auto; }
@@ -25,6 +26,8 @@ footer .container { padding: 12px 0; text-align: center; }
     hyphens: auto;
     line-height: 1.6;
 }
+
+
 
 
 
