@@ -12,13 +12,40 @@
 
 
 {
-  "title": "#11 FC Barcelona - Season and squad preview 2026-27 ",
-  "headline": " How barca can line up and what to expect for next season",
+  "title": "#11 FC Barcelona - Season and squad preview 2026-27",
+  "headline": "How Barca can line up and what to expect for next season",
   "date": "2026-08-02 18:00 (IST)",
   "author": "Bharat Surya Chamarthi",
-  "image": "assets/img/barca_blogs/barca.jpg",
+  "image": "assets/img/barca_blogs/lineup.jpg",
   "category": "Thoughts",
-  "content": "<p> Blog will be up  post the summer transfer window on 02nd September 2026. Stay tuned !!! </p>" 
+
+  "content": [
+    {
+      "introduction_paragraph": "<p>Now that the transfer window is closed and the squad has settled, let's analyze the squad and what to expect for the upcoming season. </p>",
+
+      "sections": [
+        {
+          "heading": "Attack",
+          "paragraph": "<p>With the departures of goal scorers like Lewandowski and Ferran Torres, signing a number 9 became a priority. Barca tried to sign Julian Alvarez but had to settle for Gabriel Jesus. At best, Gabriel Jesus can be a good backup option for Rapinha, who has shown great form as the striker. Next, the signings of Anthony Gordon and Karim Adeyemi dd excellent depth to the attack which was missing last season. Anthony Gordon, in particular has beeen impressive on the left wing. From what we have seen in the opening fixtures, the preferred attacking trio and also the strongest is with Yamal and Gordon on the wings with Rapinha as the striker. Karim Adeyemi is another important signing who gives the much needed depth in attack for Barcelona. His ability to play any positon upfront will give much needed rest to the front three before huge chamopins league games.  Jesse Bisiwu, left winger, showed promise in the pre-season. So, if he develops enough confidence, I can see him starting in the preliminary stages of copa del rey while coming off the bench in champions league games. The biggest surprise package, however, in Barca's attack is Hamza Abdelkarim. Hamza, unlike other attackers in the sqaud, is an out and out striker. He has shown good aerial ability  and  hold up play during the pre-season. With Jesus's arrival, Hamza's minutes might be limited as of now. However, I can see him being brought in match situations to break the deadlock against low block opppositons. Overall, Barcelona shouldnt have problem scoring goals this season. The only question is if the fitness and experince levels of the backups like Jesus and Hamza. This could become a problem when games start happening thrice a week. </p>"
+        },
+
+        {
+          "heading": "Midfield",
+          "paragraph": "<p>Barcelona's midfield is perhaps the most complete and strongest suite of the team. Fermin and Olmo have been the best attacking midfielders for a while now. With addition of Rodri, the missing piece of Barca's midfield (if any) has been solved. While Pedri and De Jong were outstanding in a double pivot role last season, none of them out and out defensive midfielders and had to limit certain aspects of their game. With Rodri's arrival, he gives the much needed freedom to Pedri for ball progression. This will make Barca's attack even more effective. It is expected that Rodri and Pedri with either Olmo/Fermin will be the preferred midfield eventually as we go into the season. Having said that, the options off the bench are not inferior at all. Bernal, Gavi and DeJong (injured at the moment) is a midfield that can walk into any top team in the world.  With all the bases and positions covered, Barca's midfield will play a major role this season. </p>"
+        },
+
+        {
+          "heading": "Defense",
+          "paragraph": "<p> A major factor for Barca's sucess in the recent years is the brand of high risj-high reward approach orignitaing from maintianing a high defensive line and start pressing as a unit. To implement such a system, the centre backs need superior match awareness in terms of positioning, communication and ball distribution. With Araujo leaving on a loan to liverpool and no reinfrocements in the center back position, Barcelona's first signs of weakness appear. Apart from Pau Cubarsi, there remian questions regarding Christensen's fitness and Martin's big match ability. While Koude and Eric Garcia can chip in as center backs when needed, it remains to be seen how effective the back line will be in their presence. The wing back positions are well rounded, both from attacka and defense perspective. Cancelo and Espart can play both the wings while Balde, Eric and Kounde offer the backup options.  </p>"
+        },
+
+        {
+          "heading": "Overall Assessment",
+          "paragraph": "<p>The lack of a strong central defender and a striker can be a casue for cocnern in some moments. These issues mean that winning the champions league is highly unlikely. However, I expect Barcelona to continue its dominance in Spain this season as well. </p>"
+        }
+      ]
+    }
+  ]
 },
 
 
@@ -43,176 +70,180 @@
   "content": " <p>It's been about 1 year, 2 months since I last blogged. The reason is straightforward - I was busy with Ph.D stuff. Now that I am in pursuit of finsihing up that part of the job, I thought why not finish what I started with this blog. So, I am back. A lot has happened with football the past year. Barecelona won a domestic double, PSG went back to back with champions league. Then came the FIFA world cup, which personally ended  with a bitter-sweet experience. I know it's too late to talk about the world cup now that the club football season is around the corner. But hey, who's judging, if I am the only one reads these blogs. Nonetheless, I will try to cover my thoughts on the FIFA world cup and upcoming season in the next few blogposts. Having said that, I am not pomising anything !!!!   </p>"
 },
 
+
 {
-  "title": "#8 Player Review : 2024-25",
+  "title": "#8 FC Barcelona - Season and squad review 2025-26",
   "headline": "The surprises, and the disappointments",
   "date": "2025-05-24 23:30 (IST)",
   "author": "Bharat Surya Chamarthi",
   "image": "assets/img/barca_blogs/barcateam.png",
   "category": "Thoughts",
+
   "content": [
     {
-      
       "introduction_paragraph": "<p>Now that the season is done, here are my thoughts on how each player has fared. I will be giving my assesemnet based on the expectations and how the players have done.</p>",
-      "attackers": [
+
+      "sections": [
         {
-          "name": "Lamine Yamal",
-          "position": "RW",
-          "review": "Yamal carried on his explosive breakoutfrom the euros 2024. He has been the main creator of Barcelona'a attack just like how Messi was. Yamal has tremendously improved his finishing and dribbling this season. His play in the  semifianl tie vs Inter Milan is one of the best iunduvidual performances i have seen from a Barcelona player. Its safe to say the Yamal ranks easily in the top three for Barcelona this season. However, there are still some areas to refine as to making the right pass and playing to the situation, which i am sure he will learn with time. ",
-          "Verdict":  "Outstanding"
+          "heading": "Attackers",
+          "players": [
+            {
+              "name": "Lamine Yamal",
+              "position": "RW",
+              "review": "Yamal carried on his explosive breakoutfrom the euros 2024. He has been the main creator of Barcelona'a attack just like how Messi was. Yamal has tremendously improved his finishing and dribbling this season. His play in the semifianl tie vs Inter Milan is one of the best iunduvidual performances i have seen from a Barcelona player. Its safe to say the Yamal ranks easily in the top three for Barcelona this season. However, there are still some areas to refine as to making the right pass and playing to the situation, which i am sure he will learn with time.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Robert Lewandowski",
+              "position": "ST",
+              "review": "Lewandwski has sort of exceeded the expectations this season raking in 30+ goals in all competitions. Given his age and a poor 23-24 season according to his standards, Lewy has done incredibly well for most part of the season. He was in the golden boot race and poised to win the pichichi till the end if not for the injury at the most critical part of the season. However, there were also time where he has missed simple chances and his poor control sometimes cost good counter attack oppurtunities. But thats what you get from a striker.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Rapinha",
+              "position": "LW",
+              "review": "Imagine being shipped to Saudi at the prime of your football capabilities and then suddenly become the contender for the best player in the world. This rise is alone a testamnet to the season he had. He was the most clutch player this season. His high moments were the hatrick against Bayern Munich and his goals against real madrid. Howevber, if you look beyond, he scored some most decisive goals which helped in securing the league. His last minute pressure penalty vs Celta, his goal against Valladolid at the fag end of the season- all helped the team to retain points and put pressure on Madrid. Sad that what seemed to be winner against Inter Milan was undone in the last moments of the game. Apart from the goals and assists, he was cental to the pressing structure of barceloan. You could see his intensity from the first to the last minute- pressing, recovery and defeding. The most complete season by far for Rapihna in Barcelona shirt.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Ferran Torres",
+              "position": "LW/RW/ST",
+              "review": "Ferran has been the most effective player this season. COming off the bench to increase the intensity of the game which was at times lost due to Lewy's phsyical condition, he has scored important goals against Altetico Madrid, Real Madrid in the copa del rey. I think he has the highers goals per minute ration in Europe this season. While his holdup play is not at the levels of Lewy, his ability to lurk around the defense line and create spaces for others remain as his gratest skills.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Ansu Fati",
+              "position": "ST/LW",
+              "review": "Never really got enough minutes to show wether he has improved or not. But while has on the pitch, he certianly tried to prove himself infront of the goal. It felt like he was trying too hard only for the goals. He still was tentaive with take-ons and did not seem to show any signs of wanting to track back and recover which is needed from wingers in Flick's system. It's better if he leaves barcelona this season and play in a less demanding leagure or team to save his football career.",
+              "verdict": "Disappointing"
+            }
+          ]
         },
+
         {
-          "name": "Robert Lewandowski",
-          "position": "ST",
-          "review": "Lewandwski has sort of exceeded the expectations this season raking in 30+ goals in all competitions. Given his age and a poor 23-24 season according to his standards, Lewy has done incredibly well for most part of the season. He was in the golden boot race and poised to win the pichichi till the end if not for the injury at the most critical part of the season. However, there were also time where he has missed simple chances and his poor control sometimes cost good counter attack oppurtunities. But thats what you get from a striker.  ",
-          "Verdict":  "Good"
+          "heading": "Midfielders",
+          "players": [
+            {
+              "name": "Pedri",
+              "position": "CM/AMF/CDM",
+              "review": "This year, Pedri cemented his place as one of the best midifelders in the world. And, its safe to say that he is going to be engine of Barca's mdifled for the next ten years if all goes well. While his ability to control the tempo of the game has been lauded this season, I feel its his work rate off the ball has become the most improved aspect of his game. I remember in some of the matches, he has covered more than 13 kms on the pitch with the same intensity from start to finish. Such is the improvement to a player who was barely able to play 70 mins last season. Definelty one of the top three players for me this season.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Gavi",
+              "position": "AMF/CDM",
+              "review": "Returned from his long-term injury with his trademark tenacity and passion. However, I felt that his role was not clearly defined this season. This is understandable since Flick made his system with a certain set of players. Thus, Gavi had to play the role of AMF ometimes. To be honest, he wasnt suited that role this and often looked out of options there. As a CDM, he has offered some intensity to defending. I think the next season is crucial for Gavi to see how he fits in this system. To his standards, he has been average this season.",
+              "verdict": "Average"
+            },
+            {
+              "name": "Frenkie de Jong",
+              "position": "CDM",
+              "review": "De Jong career was touted to be finsihed at Barca before December. Casado's impressive performances kept him out of the squad in addition to his injury. But progressively, he became a vital cog in the midfield. His presence helped De Jong to show his on the ball prowess. De-Jong and Pedri's midifled partnership has been one of the best in Europe this season. Perhaps, this is the season wher De JOng showed his Ajax's standards and his role was clearly defined.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Fermín López",
+              "position": "AMF",
+              "review": "Fermín is one such La Masia player who offers a new dimension to this Barca sqaud. Just like Ferran, he came off the bench and scored some crucial goals. Even when he started in absence of Olmo, he was up to the task. He may need to improve a bit on his fininshing and channelizing his shot power to improve accuracy but definitley a player Barca need right now.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Dani Olmo",
+              "position": "AMF",
+              "review": "Wasnt at his absolute best this season but still came up with some important goals and assists. The injury mid-seaon did affect his game. However, he still remains to be the player who can unlock low block teams.",
+              "verdict": "Average"
+            },
+            {
+              "name": "Marc Casadó",
+              "position": "DM",
+              "review": "Casadó has been the surpise of the season. Sad to see an injury finishing off his season, but was intense when he was on the pitch. He provided solid cover in the defensive midfield role. Came up with some key passes in UCL and La liga in big games. Proably adding a bit of control to his game will make him a better player.",
+              "verdict": "Good"
+            }
+          ]
         },
+
         {
-          "name": "Rapinha",
-          "position": "LW",
-          "review": " Imagine being shipped to Saudi at the prime of your football capabilities and then suddenly become the contender for the best player in the world. This rise is alone a testamnet to the season he had. He was the most clutch player this season. His high moments were the hatrick against Bayern Munich and his goals against real madrid. Howevber, if you look beyond, he scored some most decisive goals which helped in securing the league. His last minute pressure penalty vs Celta, his goal against Valladolid at the fag end of the season- all helped the team to retain points and put pressure on Madrid. Sad that what seemed to be winner against Inter Milan was undone in the last moments of the game. Apart from the goals and assists, he was cental to the pressing structure of barceloan. You could see his intensity from the first to the last minute- pressing, recovery and defeding. The most complete season by far for Rapihna in Barcelona shirt. ",
-          "Verdict":  "Outstanding"
+          "heading": "Defenders & Goalkeepers",
+          "players": [
+            {
+              "name": "Ronald Araújo",
+              "position": "CB/RB",
+              "review": "Araújo was an undisputed starter the season before. however, his poor positional awareness and lack of ball playing abiliites clearly kept him on the bench for major part of the season. Barring a couple of games, whenever he was put on, he had struggles to adjsut to the offisde trap. If not for his recovery pace, Araujo would be long gone from Barca.",
+              "verdict": "Dissapointing"
+            },
+            {
+              "name": "Pau Cubarsí",
+              "position": "CB",
+              "review": "Cubarsí built on his phenomenal breakthrough season, establishing himself as a starting center-back. His line breaking passes and ball distribution ability was top notch. It is his postional sense that made Flick's ideas to work. He is one of the standout players this season and definitely has a long career in Barc's defence.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Inigo Martinez",
+              "position": "CB",
+              "review": "Similiar to Cubarsí, his ball distribution and positional awareness made Flick trust him for the starting spot. He was the leader in the Barca's defence and perfectly lead the defence to execute the offisde trap. Imagine being written off by the fans and then coming back to be the best defender in the team.",
+              "verdict": "Outstanding"
+            },
+            {
+              "name": "Alejandro Balde",
+              "position": "LB",
+              "review": "Balde, right now is the best left back in the world. He has improved in two aspects this season: the forward runs were with a purpose and often lead to goal scoring oppurtunities and secondly, he improved his defensive ability. His attacking abilities is what made rapinha be so effective this season. Unfornuate that he was injured at a crucial time of the season.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Jules Koundé",
+              "position": "CB/RB",
+              "review": "Koundé this season around had a fixed role as a right back, His partnership with Yamal was crucail in teams sucess. He improved his attacking game often making overlapping runs on the right and providing space for Lamine Yamal. Again, a case where injury at the wrong time costed us this season. However, he also had some games where he was completely rolled over by the opponents.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Gerard Martin",
+              "position": "LB",
+              "review": "No one was really sure as to what he provided to this team. I think Flick had no option but to start him. Barring the Inter Milan away game, never really showed where his stenghts lied. Defensively he was out of shape numerous times and attacking wise - his passes into the box and crosses were all a miss. I define his role as a fill in for Balde. For that reason, I would give him an average season as there were no expectations from him.",
+              "verdict": "Average"
+            },
+            {
+              "name": "Héctor Fort",
+              "position": "RB",
+              "review": "Fort did play a few minutes and showed he his better in attack, However, he still lacks the maturity in the final third. He has to work on his defensive aspects if he were to make himself as an reliable rigth back for the next season.",
+              "verdict": "Average"
+            },
+            {
+              "name": "Eric Garcia",
+              "position": "RB/CB/CDM",
+              "review": "Eric Garcia palyed multiple roles this season and did well to major extent. He was relaible as a right back and came up with some clutch goals this season. He has alos improved his positioanl awarness this time around. Barca would like to have him for the coming seasons given his versatality.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Marc-André ter Stegen",
+              "position": "GK",
+              "review": "I think its better if Ter Stegen accepts a secondary role at Barca from next season. He has been dissapointing between the sticks and you could see the shakiness in his game. Its time he accepts the fact that his levels have dropped off. With the high line now Barca plays, he would be facing more shots than before and I think he is simply not at the level to face them.",
+              "verdict": "Average"
+            },
+            {
+              "name": "Woscjaik Schcezeny",
+              "position": "GK",
+              "review": "Had to wait for his chance to play. Was really shaky in the intial few matches and gave away penalties in many games. However, there were also games where he saved Barca from losing. He came up with some crucial one on one saves that helped us win the league.",
+              "verdict": "Good"
+            },
+            {
+              "name": "Iñaki Peña",
+              "position": "GK",
+              "review": "Pena inexplicably fell out of favour by the start of the year. While his performances were decent, never really felt that he would win us games on his own.",
+              "verdict": "Average"
+            }
+          ]
         },
+
         {
-          "name": "Ferran Torres",
-          "position": "LW/RW/ST",
-          "review": "Ferran has been the most effective player this season. COming off the bench to increase the intensity of the game which was at times lost due to Lewy's phsyical condition, he has scored important goals against Altetico Madrid, Real Madrid in the copa del rey. I think he has the highers goals per minute ration in Europe this season. While his holdup play is not at the levels of Lewy, his ability to lurk around the defense line and create spaces for others remain as his gratest skills. ",
-          "Verdict":  "Outstanding"
-        },
-        {
-          "name": "Ansu Fati",
-          "position": "ST/LW",
-          "review": "Never really got enough minutes to show wether he has improved or not. But while has on the pitch, he certianly tried to prove himself infront of the goal. It felt like he was trying too hard only for the goals. He still was tentaive with take-ons and did not seem to show any signs of wanting to track back and recover which is needed from wingers in Flick's system. It's better if he leaves barcelona this season and play in a less demanding leagure or team to save his football career. ",
-          "Verdict":  "Disappointing"
+          "heading": "Conclusion",
+          "paragraph": "<p>I have omitted players like Bernal, Pablo Torre, Christensen and Pau Torres from this review. They were either injured or never really got enough minutes. If you ask the dramtic shifts this season, Flick managed to bring the best out of most of the players, improved the physical and mental conditioning of the playuers. I hope this continues in the seasons to come.</p>"
         }
-
-
-      ],
-      "midfielders": [
-        {
-          "name": "Pedri",
-          "position": "CM/AMF/CDM",
-          "review": "This year, Pedri  cemented his place as one of the best midifelders in the world. And, its safe to say that he is going to be engine of Barca's mdifled for the next ten years if all goes well. While his ability to control the tempo of the game has been lauded this season, I feel its his work rate off the ball has become the most improved aspect of his game. I remember in some of the matches, he has covered more than 13 kms on the pitch with the same intensity from start to finish. Such is the improvement to a player who was barely able to play 70 mins last season. Definelty one of the top three players for me this season. ",
-          "Verdict":  "Outstanding"
-        },
-        {
-          "name": "Gavi",
-          "position": "AMF/CDM",
-          "review": "Returned from his long-term injury with his trademark tenacity and passion. However, I felt that his role was not clearly defined this season. This is understandable since Flick made his system with a certain set of players. Thus, Gavi had to play the role of AMF ometimes. To be honest, he wasnt suited that role this and often looked out of options there. As a CDM, he has offered some intensity to defending.  I think the next season is crucial for Gavi to see how he fits in this system. To his standards, he has been average this season.",
-          "Verdict":  "Average"
-        },
-        {
-          "name": "Frenkie de Jong",
-          "position": "CDM",
-          "review": "De Jong career was touted to be finsihed at Barca before December. Casado's impressive performances kept him out of the squad in addition to his injury. But progressively, he became a vital cog in the midfield . His presence helped De Jong to show his on the ball prowess. De-Jong and Pedri's midifled partnership has been one of the best in Europe this season. Perhaps, this is the season wher De JOng showed his Ajax's standards and his role was clearly defined",
-          "Verdict":  "Good"
-        },
-        {
-          "name": "Fermín López",
-          "position": "AMF",
-          "review": "Fermín is one such La Masia player who offers a new dimension to this Barca sqaud. Just like Ferran, he came off the bench and scored some crucial goals. Even when he started in absence of Olmo, he was up to the task. He may need to improve a bit on his fininshing and channelizing his shot power to improve accuracy but definitley a player Barca need right now. ",
-          "Verdict":  "Good"
-        },
-        {
-          "name": "Dani Olmo",
-          "position": "AMF",
-          "review": "Wasnt at his absolute best this season but still came up with some important goals and assists. The injury mid-seaon did affect his game. However, he still remains to be the player who can unlock low block teams.  ",
-          "Verdict":  "Average "
-        },
-        {
-          "name": "Marc Casadó",
-          "position": "DM",
-          "review": "Casadó has been the surpise of the season. Sad to see an injury finishing off his season, but was intense when he was on the pitch. He provided solid cover in the defensive midfield role. Came up with some key passes in UCL and La liga in big games.  Proably adding a bit of control to his game will make him a better player.",
-          "Verdict":  "Good"
-        }
-
-      ],
-      "defenders_and_goalkeepers": [
-        {
-          "name": "Ronald Araújo",
-          "position": "CB/RB",
-          "review": "Araújo was an undisputed starter the season before. however, his poor positional awareness and lack of ball playing abiliites clearly kept him on the bench for major part of the season. Barring a couple of games, whenever he was put on , he had struggles to adjsut to the offisde trap. If not for his recovery pace, Araujo would be long gone from Barca. ",
-          "Verdict":  "Dissapointing"
-        },
-        {
-          "name": "Pau Cubarsí",
-          "position": "CB",
-          "review": "Cubarsí built on his phenomenal breakthrough season, establishing himself as a starting center-back. His line breaking passes and ball distribution ability was top notch. It is his postional sense that made Flick's ideas to work. He is one of the standout players this season and definitely has a long career in Barc's defence. ",
-          "Verdict":  "Outstanding"
-        },
-
-        {
-          "name": "Inigo Martinez",
-          "position": "CB",
-          "review": " Similiar to Cubarsí, his ball distribution and positional awareness made Flick trust him for the starting spot. He was the leader in the Barca's defence and perfectly lead the defence to execute the offisde trap. Imagine being written off by the fans and then coming back to be the best defender in the team. ",
-          "Verdict":  "Outstanding"
-        },
-
-
-
-        {
-          "name": "Alejandro Balde",
-          "position": "LB",
-          "review": "Balde, right now is the best left back in the world. He has improved in two aspects this season: the  forward runs were with a purpose and often lead to goal scoring oppurtunities and secondly, he improved his defensive ability. His attacking abilities is what made rapinha be so effective this season. Unfornuate that he was injured at a crucial time of the season. ",
-          "Verdict":  "Good"
-        },
-        {
-          "name": "Jules Koundé",
-          "position": "CB/RB",
-          "review": "Koundé this season around had a fixed role as a right back, His partnership with Yamal was crucail in teams sucess. He improved his attacking game often making overlapping runs on the right and  providing space for Lamine Yamal. Again, a case where injury at the wrong time costed us this season. However, he also had some games where he was completely rolled over by the opponents.",
-          "Verdict":  "Good"
-        },
-        {
-          "name": "Gerard Martin",
-          "position": "LB",
-          "review": "No one was really sure as to what he provided to this team. I think Flick had no option but to start him. Barring the Inter Milan away game, never really showed where his stenghts lied. Defensively he was out of shape numerous times and attacking wise - his passes into the box and crosses were all a miss. I define his role as a fill in for Balde. For that reason, I would give him an average season as there were no expectations from him " ,
-          "Verdict":  "Average"
-        },
-        {
-          "name": "Héctor Fort",
-          "position": "RB",
-          "review": "Fort did play a few minutes and showed he his better in attack, However, he still lacks the maturity in the final third. He has to work on his defensive aspects if he were to make himself as an reliable rigth back for the next season.",
-          "Verdict":  "Average"
-        },
-
-        {
-          "name": "Eric Garcia",
-          "position": "RB/CB/CDM",
-          "review": "Eric Garcia palyed multiple roles this season and did well to major extent. He was relaible as a right back and came up with some clutch goals this season. He has alos improved his positioanl awarness this time around. Barca would like to have him for the coming seasons  given his versatality.",
-          "Verdict":  "Good"
-        },
-
-
-        {
-          "name": "Marc-André ter Stegen",
-          "position": "GK",
-          "review": "I think its better if Ter Stegen accepts a secondary role at Barca from next season. He has been dissapointing between the sticks and you could see the shakiness in his game. Its time he accepts the fact that his levels have dropped off. With the high line now Barca plays, he would be facing more shots than before and I think he is simply not at the level to face them",
-          "Verdict":  "Average"
-        },
-
-        {
-          "name": "Woscjaik Schcezeny",
-          "position": "GK",
-          "review": "Had to wait for his chance to play.Was really shaky in the intial few matches and gave away penalties in many games. However, there were also games where he saved Barca from losing. He came up with some crucial one on one saves that helped us win the league.",
-          "Verdict":  "Good"
-        },
-        {
-          "name": "Iñaki Peña",
-          "position": "GK",
-          "review": "Pena inexplicably fell out of favour by the start of the year. While his performances were decent, never really felt that he would win us games on his own. ",
-          "Verdict":  "Average"
-        }
-
-
-      ],
-    
-      "conclusion_paragraph": "<p>I have omitted players like Bernal, Pablo Torre, Christensen and Pau Torres from this review. They were either injured or never really got enough minutes. If you ask the dramtic shifts this season, Flick managed to bring the best out of most of the players, improved the physical and mental conditioning of the playuers. I hope this continues in the seasons to come. </p>"
-
-
+      ]
     }
-    
   ]
 },
+
+
 
 {
   "title": "#7 Season Review : 2024-25 ",

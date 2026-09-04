@@ -36,44 +36,76 @@
         const id = isNaN(idParam) ? 0 : idParam;
         const jsonFile = 'blogposts-barca.json';
 
-        function buildContentHtml(post) {
-            let contentHtml = '';
-            if (typeof post.content === 'string') {
-                contentHtml = post.content;
-            } else if (Array.isArray(post.content) && post.content.length > 0) {
-                const data = post.content[0];
-                if (data.season_overview) contentHtml += `<p>${data.season_overview}</p>`;
-                if (data.introduction_paragraph) contentHtml += data.introduction_paragraph;
-                if (data.attackers) {
-                    contentHtml += '<h2>Attackers</h2>';
-                    data.attackers.forEach(att => {
-                        contentHtml += `<h3>${att.name} (${att.position})</h3>`;
-                        if (att.category) contentHtml += `<p><strong>${att.category}</strong></p>`;
-                        if (att.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${att.Verdict}</p>`;
-                        contentHtml += `<p>${att.review}</p>`;
-                    });
-                }
-                if (data.midfielders) {
-                    contentHtml += '<h2>Midfielders</h2>';
-                    data.midfielders.forEach(m => {
-                        contentHtml += `<h3>${m.name} (${m.position})</h3>`;
-                        if (m.category) contentHtml += `<p><strong>${m.category}</strong></p>`;
-                        if (m.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${m.Verdict}</p>`;
-                        contentHtml += `<p>${m.review}</p>`;
-                    });
-                }
-                if (data.defenders_and_goalkeepers) {
-                    contentHtml += '<h2>Defenders & Goalkeepers</h2>';
-                    data.defenders_and_goalkeepers.forEach(def => {
-                        contentHtml += `<h3>${def.name} (${def.position})</h3>`;
-                        if (def.category) contentHtml += `<p><strong>${def.category}</strong></p>`;
-                        if (def.Verdict) contentHtml += `<p><strong>Verdict:</strong> ${def.Verdict}</p>`;
-                        contentHtml += `<p>${def.review}</p>`;
-                    });
-                }
+function buildContentHtml(post) {
+    let contentHtml = '';
+
+    if (typeof post.content === 'string') {
+        return post.content;
+    }
+
+    if (!Array.isArray(post.content) || post.content.length === 0) {
+        return '';
+    }
+
+    const data = post.content[0];
+
+    // Introduction
+    if (data.introduction_paragraph) {
+        contentHtml += data.introduction_paragraph;
+    }
+
+    // Sections
+    if (Array.isArray(data.sections)) {
+
+        data.sections.forEach(section => {
+
+            // Section heading
+            if (section.heading) {
+                contentHtml += `<h2>${section.heading}</h2>`;
             }
-            return contentHtml;
-        }
+
+            // Paragraph section
+            if (section.paragraph) {
+                contentHtml += section.paragraph;
+            }
+
+            // Player section
+            if (Array.isArray(section.players)) {
+
+                section.players.forEach(player => {
+
+                    if (player.name) {
+                        contentHtml += `
+                            <h3>${player.name} (${player.position || ''})</h3>
+                        `;
+                    }
+
+                    if (player.category) {
+                        contentHtml += `
+                            <p><strong>${player.category}</strong></p>
+                        `;
+                    }
+
+                    if (player.verdict) {
+                        contentHtml += `
+                            <p><strong>Verdict:</strong> ${player.verdict}</p>
+                        `;
+                    }
+
+                    if (player.review) {
+                        contentHtml += `
+                            <p>${player.review}</p>
+                        `;
+                    }
+
+                });
+            }
+
+        });
+    }
+
+    return contentHtml;
+}
 
         function renderPost(posts, index) {
             const article = document.getElementById('barca-article');
