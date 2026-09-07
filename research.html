@@ -212,55 +212,132 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const wrapper = document.querySelector('.research-carousel-wrapper');
-  if (!wrapper) return;
+document.addEventListener('DOMContentLoaded', () => {
 
-  const viewport = wrapper.querySelector('.carousel-viewport');
-  const track = wrapper.querySelector('.carousel-track');
-  const cards = track.querySelectorAll('.research-card');
-  const prevBtn = wrapper.querySelector('.prev-btn');
-  const nextBtn = wrapper.querySelector('.next-btn');
-  const dotsContainer = wrapper.querySelector('.carousel-dots');
+  const carousels = document.querySelectorAll('.research-carousel-wrapper');
 
-  // Calculate card scroll width including column gap
-  const getScrollAmount = () => {
-    const cardWidth = cards[0].offsetWidth;
-    const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    return cardWidth + gap;
-  };
+  carousels.forEach(wrapper => {
 
-  // Scroll Actions
-  nextBtn.addEventListener('click', () => {
-    viewport.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-  });
+    const viewport = wrapper.querySelector('.carousel-viewport');
+    const track = wrapper.querySelector('.carousel-track');
+    const cards = track.querySelectorAll('.research-card');
+    const prevBtn = wrapper.querySelector('.prev-btn');
+    const nextBtn = wrapper.querySelector('.next-btn');
+    const dotsContainer = wrapper.querySelector('.carousel-dots');
 
-  prevBtn.addEventListener('click', () => {
-    viewport.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-  });
+    if (!viewport || !track || !cards.length) return;
 
-  // Dynamic Pagination Dots
-  cards.forEach((_, index) => {
-    const dot = document.createElement('button');
-    dot.classList.add('carousel-dot');
-    if (index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      viewport.scrollTo({ left: getScrollAmount() * index, behavior: 'smooth' });
+    // Calculate card scroll width including gap
+    const getScrollAmount = () => {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+      return cardWidth + gap;
+    };
+
+    // Calculate how many cards are visible
+    const getVisibleCards = () => {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+      return Math.floor(
+        (viewport.offsetWidth + gap) / (cardWidth + gap)
+      );
+    };
+
+    // Create pagination dots
+    const updateDots = () => {
+
+      dotsContainer.innerHTML = '';
+
+      const visibleCards = getVisibleCards();
+
+      // Number of possible scroll positions
+      const totalPositions = Math.max(
+        1,
+        cards.length - visibleCards + 1
+      );
+
+      for (let index = 0; index < totalPositions; index++) {
+
+        const dot = document.createElement('button');
+
+        dot.classList.add('carousel-dot');
+
+        if (index === 0) {
+          dot.classList.add('active');
+        }
+
+        dot.addEventListener('click', () => {
+
+          viewport.scrollTo({
+            left: getScrollAmount() * index,
+            behavior: 'smooth'
+          });
+
+        });
+
+        dotsContainer.appendChild(dot);
+      }
+    };
+
+    // Initial dots
+    updateDots();
+
+
+    // Next button
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+
+        viewport.scrollBy({
+          left: getScrollAmount(),
+          behavior: 'smooth'
+        });
+
+      });
+    }
+
+
+    // Previous button
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+
+        viewport.scrollBy({
+          left: -getScrollAmount(),
+          behavior: 'smooth'
+        });
+
+      });
+    }
+
+
+    // Update active dot
+    viewport.addEventListener('scroll', () => {
+
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+      const scrollIndex = Math.round(
+        viewport.scrollLeft / getScrollAmount()
+      );
+
+      dots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+          'active',
+          index === scrollIndex
+        );
+
+      });
+
     });
-    dotsContainer.appendChild(dot);
+
+
+    // Recalculate when window size changes
+    window.addEventListener('resize', updateDots);
+
   });
 
-  // Update Active Dot on Scroll
-  const dots = dotsContainer.querySelectorAll('.carousel-dot');
-  viewport.addEventListener('scroll', () => {
-    const scrollIndex = Math.round(viewport.scrollLeft / getScrollAmount());
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === scrollIndex);
-    });
-  });
-});
-</script>
-
+}); </script>
 </body>
 
 </html>
