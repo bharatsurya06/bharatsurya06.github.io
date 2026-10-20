@@ -18,7 +18,7 @@
         <p>Browse the latest posts here, or jump straight into a series.</p>
         <div class="blog-category-buttons">
           <a href="cryogenics.html" class="blog-btn">Cryogenics for Dummies</a>
-          <a href="barca.html" class="blog-btn">FC Barcelona Match Reviews</a>
+          <a href="barca.html" class="blog-btn">Football</a>
         </div>
       </div>
     </section>
@@ -122,7 +122,7 @@
       const barcaPosts = await barcaRes.json();
       let allPosts = [
         ...cryoPosts.map((p, idx) => mapPost(p, 'Cryogenics for Dummies', idx, 'cryogenics')),
-        ...barcaPosts.map((p, idx) => mapPost(p, 'FC Barcelona Match Review', idx, 'barca'))
+        ...barcaPosts.map((p, idx) => mapPost(p, 'Football', idx, 'barca'))
       ];
       allPosts.sort((a,b)=>b.date - a.date);
       blogPosts = allPosts.slice(0,5);
