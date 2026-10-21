@@ -22,8 +22,6 @@ footer .container { padding: 12px 0; text-align: center; }
 .ongoing { margin: 20px 0 28px; }
 .ongoing:after { content: ""; display: table; clear: both; }
 .ongoing-grid { display: block; }
-.ongoing-image { float: left; width: 48%; max-width: 420px; min-width: 260px; margin: 0 22px 12px 0; }
-.ongoing-image img { width: 100%; height: auto; border-radius: 8px; display: block; background:#fff; }
 .ongoing-desc { overflow: hidden; }
 .ongoing-desc h3 { margin-top: 0; }
 .ongoing-desc p { margin: 0; color: #333; line-height: 1.6; text-align: justify; hyphens: auto; }
@@ -35,11 +33,25 @@ footer .container { padding: 12px 0; text-align: center; }
 
 @media (max-width:800px) {
   .ongoing-grid { grid-template-columns: 1fr; }
-  .ongoing-image { float: none; width: 100%; max-width: none; margin: 0 0 12px; }
+  .ongoing-image { float: center; width: 100%; max-width: none; margin: 0 0 12px; }
   .ongoing-desc { overflow: visible; }
   .ongoing-desc p { text-align: left; }
 }
 
+.ongoing-image {
+    width: 75%;
+    max-width: 600px;
+    min-width: 260px;
+    margin: 12px auto 12px;
+}
+
+.ongoing-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    background: #fff;
+}
 
 @media (max-width:100px) {
   .cards { flex-direction: column; }
