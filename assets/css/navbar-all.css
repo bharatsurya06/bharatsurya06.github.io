@@ -11,9 +11,10 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
+    /* transform: translateX(20%); */
     height: 100%;
     gap: 0.5em;
-    background-color: #000000;
+    background-color: #182836;
 }
 
 .nav-links a {
@@ -34,12 +35,12 @@ nav {
 }
 
 .nav-links a:hover {
-    background: #000000;
-    color: #f8acac;
-    font-size: 1.35em;
+    /* background: #fdfafa; */
+    color: #7dc5d8;
+    /* font-size: 1.35em; */
     /* font-weight: 800; */
     border-radius: 0px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     transition: background 0.2s, color 0.2s, font-size 0.2s;
     height: 25px;           /* Set the height of the hover background */
     line-height: 25px;      /* Vertically center the text */

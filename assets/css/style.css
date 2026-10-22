@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background: none; /* Page-specific backgrounds are set in per-page CSS files */
+    background: #ffffff; /* Page-specific backgrounds are set in per-page CSS files */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -75,7 +75,7 @@ body.index-page nav {
     transform: translateX(-50%); /* Centers the absolute fixed width navbar */
 
     /* Your existing styles */
-    background: rgb(0, 0, 0)!important;
+    background:  #182836 !important;
     border-radius: 100px;
     padding: 0 12px;
     height: 72px;
@@ -143,9 +143,9 @@ body.index-page .nav-links .dropdown:hover .dropdown-menu {
 
 body.index-page .nav-links a:hover,
 body.index-page .nav-links .dropdown-toggle:hover {
-    background: #000;
-    color: #9073c5;
-    font-size: 1.35em;
+    /* background: #000; */
+    color:#7dc5d8;
+    /* font-size: 1.35em; */
     transition: background 0.2s, color 0.2s, font-size 0.2s;
 }
 
@@ -1334,7 +1334,7 @@ body.blogpost-page {
     right: 0;
     width: 1.5px;
     height: 100%;
-    background: #e0e0e0;
+    background: #182836;
 }
 
 .blogpost-layout .blogpost-main {
@@ -1383,9 +1383,9 @@ body.blogpost-page {
 }
 .blogpost-link.active,
 .blogpost-link:hover {
-    background: linear-gradient(90deg, #f3f6fd 60%, #e6eafc 100%);
-    color: #FC466B;
-    border-left: 4px solid #3f5efb;
+    background: #182836;
+    color: #ffffff;
+    border-left: 4px solid #b1b2b4;
     font-weight: 700;
 }
 .barca-article-card {
@@ -1393,7 +1393,7 @@ body.blogpost-page {
     border-radius: 8px;
     box-shadow: 0 8px 32px rgba(63,94,251,0.13), 0 2px 8px rgba(252,70,107,0.10);
     border: 3px solid;
-    border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%);
+    /* border-image: linear-gradient(90deg, #0A174E 0%, #3f5efb 50%, #FC466B 100%); */
     border-image-slice: 1;
     padding: 32px 24px;
 }
@@ -1454,10 +1454,8 @@ body.blogpost-page {
     flex-direction: column;
     align-items: stretch;
 }
-body.dark-mode .barca-quiz-card {
-    background: #23272a;
-    color: #fff;
-}
+
+
 .barca-quiz-title {
     text-align: center;
     margin-bottom: 18px;
@@ -1546,9 +1544,7 @@ body.dark-mode #quiz-options label.incorrect {
     text-align: center;
     transition: color 0.2s;
 }
-body.dark-mode .barca-quiz-feedback {
-    color: #fff;
-}
+
 .barca-quiz-controls {
     display: flex;
     align-items: center;

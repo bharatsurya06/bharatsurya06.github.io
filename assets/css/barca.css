@@ -43,8 +43,8 @@ body.barca-page .blog-tile-list {
 body.barca-page .blog-tile {
   position: relative;
   width: 100%;
-  background: #ffffff;
-  border: 1px solid #000000;
+  background:  #e3e4e4;;
+  border: 0.75px solid #182836;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -91,9 +91,24 @@ body.barca-page .blog-tile-content p {
 
 body.barca-page .blog-tile:hover {
   transform: translateY(-4px);
-  background: #f2f2f2;
+  background: #182836;
   box-shadow: 0 12px 30px rgba(18,24,36,0.16);
 }
+
+body.barca-page .blog-tile:hover h2 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+body.barca-page .blog-tile:hover p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
 
 @media (max-width: 900px) {
   body.barca-page .blog-section {
